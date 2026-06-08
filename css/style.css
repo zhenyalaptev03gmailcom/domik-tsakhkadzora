@@ -2694,9 +2694,22 @@ html[lang="hy"] h3 { line-height: 1.2; }
   /* iOS: inputs ≥16px so focusing a field doesn't auto-zoom the page */
   input, textarea, select { font-size: 16px; }
 
-  /* menu category tabs: keep the decorative blurred halo from overflowing the screen */
+  /* menu category tabs: ONE swipeable row instead of wrapping into many rows */
   .menu-nav::before { display: none; }
-  .menu-nav { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+  .menu-nav {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    padding: 0.7rem 1rem;
+    scrollbar-width: none;
+  }
+  .menu-nav::-webkit-scrollbar { display: none; }
+  .menu-tab { flex: 0 0 auto; white-space: nowrap; }
+
+  /* phone: hide the maps rating bar on the menu page — keep the menu clean */
+  body.page-menu #map-rating-bar { display: none !important; }
 
   /* keep any stray decorative overflow off the horizontal scroll */
   body { overflow-x: hidden; }
@@ -2806,3 +2819,59 @@ html[lang="hy"] h3 { line-height: 1.2; }
   .menu-arrow { display: none; }
   .menu-row::before, .menu-row::after { width: 2rem; }
 }
+
+/* ====================================================================
+   REVIEWS: interactive contact buttons (WhatsApp / Instagram / Phone)
+   ==================================================================== */
+.contact-cta { text-align: center; }
+.contact-cta__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  font-weight: 500;
+  color: var(--bronze-light);
+  margin-bottom: 1.4rem;
+}
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+.contact-btn svg { width: 22px; height: 22px; flex: 0 0 auto; }
+.contact-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+.contact-btn:active { transform: translateY(0); }
+.contact-btn--whatsapp { background: #25d366; }
+.contact-btn--instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.contact-btn--phone { background: linear-gradient(135deg, var(--bronze), #8a6a3f); }
+
+/* ====================================================================
+   CONTACTS: make the "Как нас найти" block larger / more prominent
+   ==================================================================== */
+.contact-grid > div > h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
+  font-weight: 500;
+  color: var(--bronze-light);
+  margin-bottom: 0.6rem;
+}
+.contact-grid > div > p { font-size: 1.1rem; line-height: 1.6; }
+.contact-grid > div > p a { color: var(--bronze-light); }
+.contact-grid > div > p a[href^="tel:"] { font-size: 1.25rem; font-weight: 600; }
