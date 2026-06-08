@@ -1547,7 +1547,7 @@ body.page-menu .site-header {
     height: 72px;
   }
 
-  nav {
+  .site-header nav {
     position: fixed;
     top: 72px;
     left: 0;
@@ -1559,9 +1559,9 @@ body.page-menu .site-header {
     justify-self: stretch;
   }
 
-  nav.open { transform: translateY(0); }
+  .site-header nav.open { transform: translateY(0); }
 
-  nav ul {
+  .site-header nav ul {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
@@ -2707,6 +2707,8 @@ html[lang="hy"] h3 { line-height: 1.2; }
   }
   .menu-nav::-webkit-scrollbar { display: none; }
   .menu-tab { flex: 0 0 auto; white-space: nowrap; }
+  /* a little breathing room below the hero before the tabs */
+  body.page-menu .menu-nav { margin-top: 0.75rem; }
 
   /* phone: hide the maps rating bar on the menu page — keep the menu clean */
   body.page-menu #map-rating-bar { display: none !important; }
