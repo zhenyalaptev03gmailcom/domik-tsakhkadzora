@@ -1,0 +1,43 @@
+{
+  "updated_at": "2026-06-06",
+  "sources": {
+    "yandex": {
+      "rating": 5.0,
+      "review_count": 89,
+      "url": "https://yandex.com/maps/org/domik/241007402187/"
+    },
+    "google": {
+      "rating": 4.6,
+      "review_count": 65,
+      "url": "https://www.google.com/maps/search/?api=1&query=DoMik%20Restaurant%20Tsaghkadzor"
+    },
+    "tripadvisor": {
+      "rating": 4.7,
+      "review_count": 16,
+      "url": "https://www.tripadvisor.com/Restaurant_Review-g2151208-d24943103-Reviews-DoMik_Restaurant-Tsakhkadzor_Kotayk_Province.html"
+    }
+  },
+  "reviews": [
+    {
+      "source": "tripadvisor",
+      "author": "Alina Y.",
+      "date": "Июль 2025",
+      "rating": 5,
+      "text": "Every dish at DoMik is a masterpiece. The flavors are bold, balanced, and deeply satisfying."
+    },
+    {
+      "source": "tripadvisor",
+      "author": "Anna Meliksetyan",
+      "date": "Январь 2026",
+      "rating": 5,
+      "text": "This is one of the coziest spots in Armenia with intentional, beautiful details throughout."
+    },
+    {
+      "source": "tripadvisor",
+      "author": "Diksha R.",
+      "date": "Декабрь 2024",
+      "rating": 5,
+      "text": "The food was above expectations, coming as great comfort in cold weather to our hungry selves."
+    }
+  ]
+}

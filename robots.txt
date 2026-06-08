@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: после выбора домена добавить строку:
+# Sitemap: https://ВАШ-ДОМЕН/sitemap.xml

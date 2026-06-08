@@ -1,0 +1,25 @@
+{
+  "comment": "20 самых популярных блюд (id из menu.json). На главной браузер сам выбирает 5 разных каждую ISO-неделю — файл должен быть на хостинге в data/.",
+  "dish_ids": [
+    "veal-bbq23",
+    "dolma-combined",
+    "signature-goulash-with-pork",
+    "assortment-of-barbecue",
+    "assorted-lamb",
+    "assorted-pork",
+    "spicy-chicken-wings234",
+    "salad-domik",
+    "burata",
+    "armenian-salad23",
+    "pasta-with-seafood2345",
+    "german-set",
+    "viking2",
+    "jellyfish",
+    "strip-steak",
+    "ribeye-steak2345678910111213",
+    "salmon23456789101112",
+    "prosciutto234567",
+    "chocolate-volcano",
+    "dome"
+  ]
+}

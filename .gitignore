@@ -1,0 +1,23 @@
+# Local tooling / agent metadata
+.claude/
+
+# LocalWP live-link helper (not part of the site)
+wp-content/
+
+# Editor & OS junk
+.DS_Store
+Thumbs.db
+*~
+
+# Backups
+*.bak
+*.bak3
+
+# Working sources & dev notes (not needed for the live site)
+img/menu/_src/
+img/menu/_orderin-sebastian.jpg
+MISSING-IMAGES.txt
+data/maps-config.example.json
+
+# Build / deploy artifacts
+*.zip

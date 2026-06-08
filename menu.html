@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.menu">Меню</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="img/hero-bg.webp" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="css/style.css?v=35">
+<meta name="description" content="Меню ресторана «Домик Цахкадзора»: закуски, салаты, паста, блюда на углях, рыба и морепродукты, пицца и десерты.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0c0a09">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<!-- Open Graph / превью ссылки. TODO при публикации: заменить пути og:image на абсолютные https://ВАШ-ДОМЕН/img/og-cover.jpg -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Домик Цахкадзора">
+<meta property="og:title" content="Меню — Домик Цахкадзора">
+<meta property="og:description" content="Меню ресторана «Домик Цахкадзора»: закуски, салаты, паста, блюда на углях, рыба и морепродукты, пицца и десерты.">
+<meta property="og:image" content="img/og-cover.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="page-menu">
+<header class="site-header">
+<div class="nav-inner">
+  <div class="nav-left">
+    <a href="index.html" class="logo logo--header">
+      <img src="img/logo-domik.svg" alt="DoMik" class="logo-mark" width="112" height="38">
+    </a>
+  </div>
+  <nav><ul><li><a href="index.html" data-i18n="nav.home">Главная</a></li><li><a href="menu.html" data-i18n="nav.menu" class="active">Меню</a></li><li><a href="gallery.html" data-i18n="nav.gallery">Галерея</a></li><li><a href="events.html" data-i18n="nav.events">Мероприятия</a></li><li><a href="reviews.html" data-i18n="nav.reviews">Отзывы</a></li><li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li></ul></nav>
+  <div class="nav-right">
+    
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" data-lang="ru" class="active">RU</button>
+  <button type="button" data-lang="en">EN</button>
+  <button type="button" data-lang="hy">HY</button>
+</div>
+    <a href="contacts.html" class="btn-book-outline" data-i18n="hero.btn2">Забронировать столик</a>
+    <a class="ya-rating" href="https://yandex.com/maps/org/domik/241007402187/" target="_blank" rel="noopener" title="Рейтинг 5,0 в Яндексе">
+      <iframe src="https://yandex.ru/sprav/widget/rating-badge/241007402187?type=rating&theme=dark" width="180" height="64" frameborder="0" scrolling="no" loading="lazy" title="Рейтинг в Яндексе"></iframe>
+    </a>
+    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</div>
+</header>
+<section class="page-hero page-hero--menu">
+  <div class="page-hero__bg" aria-hidden="true"></div>
+  <div class="page-hero__overlay" aria-hidden="true"></div>
+  <div class="page-hero__frame">
+    <span class="page-hero__ornament">◆ ◆ ◆</span>
+    <h1 data-i18n="page.menu.h1">Меню</h1>
+    <span class="page-hero__line" aria-hidden="true"></span>
+    <p data-i18n="page.menu.sub">Традиционная кухня · цены в драмах (֏)</p>
+  </div>
+</section>
+<div id="map-rating-bar" class="map-rating-bar container" hidden aria-label="Рейтинг на картах"></div>
+<nav class="menu-nav container" aria-label="Разделы меню">
+  <a href="#cat-0" class="menu-tab" data-category="cat-0">Завтрак</a>
+  <a href="#cat-1" class="menu-tab" data-category="cat-1">Закуски</a>
+  <a href="#cat-2" class="menu-tab" data-category="cat-2">Салаты</a>
+  <a href="#cat-3" class="menu-tab" data-category="cat-3">Суп</a>
+  <a href="#cat-4" class="menu-tab" data-category="cat-4">Паста</a>
+  <a href="#cat-5" class="menu-tab" data-category="cat-5">Основные блюда приготовленные на углях</a>
+  <a href="#cat-6" class="menu-tab" data-category="cat-6">Блюда от шеф-повара</a>
+  <a href="#cat-7" class="menu-tab" data-category="cat-7">Пицца</a>
+  <a href="#cat-8" class="menu-tab" data-category="cat-8">Жареная рыба и морепродукты</a>
+  <a href="#cat-9" class="menu-tab" data-category="cat-9">Гарниры</a>
+  <a href="#cat-10" class="menu-tab" data-category="cat-10">Детское меню</a>
+  <a href="#cat-11" class="menu-tab" data-category="cat-11">Часть любви</a>
+</nav>
+<div class="menu-page-wrap">
+  <div class="container menu-page">
+      <section class="menu-category" id="cat-0" data-category="cat-0">
+        <h3>Завтрак</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=french-breakfast2345" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Французский Завтрак — 4 000 ֏">
+          <picture><source srcset="img/menu/французский-завтрак.webp?v=ctr1" type="image/webp"><img src="img/menu/французский-завтрак.jpg?v=ctr1" alt="Французский Завтрак" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Французский Завтрак</span>
+            <span class="price">4 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=fried-eggs" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Яичница — 2 400 ֏">
+          <picture><source srcset="img/menu/яичница.webp?v=eg2" type="image/webp"><img src="img/menu/яичница.jpg?v=eg2" alt="Яичница" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Яичница</span>
+            <span class="price">2 400 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pancake-with-nutella-and-poppy-seeds" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Панкейк с нутеллой и маком — 2 100 ֏">
+          <picture><source srcset="img/menu/панкейк-с-нутеллой.webp?v=ctr1" type="image/webp"><img src="img/menu/панкейк-с-нутеллой.jpg?v=ctr1" alt="Панкейк с нутеллой и маком" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Панкейк с нутеллой и маком</span>
+            <span class="price">2 100 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=chocolate-syrniki" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Сырники шоколадные — 2 000 ֏">
+          <picture><source srcset="img/menu/сырники-шоколадные.webp?v=ctr1" type="image/webp"><img src="img/menu/сырники-шоколадные.jpg?v=ctr1" alt="Сырники шоколадные" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Сырники шоколадные</span>
+            <span class="price">2 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pancakes-with-cottage-cheese23" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Блины с творогом — 2 200 ֏">
+          <picture><source srcset="img/menu/блины-с-творогом.webp?v=st3" type="image/webp"><img src="img/menu/блины-с-творогом.jpg?v=st3" alt="Блины с творогом" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Блины с творогом</span>
+            <span class="price">2 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=chia-pudding234" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Чиа пудинг — 2 000 ֏">
+          <picture><source srcset="img/menu/чиа-пудинг.webp?v=ctr1" type="image/webp"><img src="img/menu/чиа-пудинг.jpg?v=ctr1" alt="Чиа пудинг" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Чиа пудинг</span>
+            <span class="price">2 000 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-1" data-category="cat-1">
+        <h3>Закуски</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=burata" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Бурата — 4 500 ֏">
+          <picture><source srcset="img/menu/бурата.webp?v=ctr3" type="image/webp"><img src="img/menu/бурата.jpg?v=ctr3" alt="Бурата" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Бурата</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=baked-meat-and-vegetables-in-dough" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Запеченное мясо овощи в тесте — 2 700 ֏">
+          <picture><source srcset="img/menu/запеченное-мясо.webp?v=ctr1" type="image/webp"><img src="img/menu/запеченное-мясо.jpg?v=ctr1" alt="Запеченное мясо овощи в тесте" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Запеченное мясо овощи в тесте</span>
+            <span class="price">2 700 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=bruschetta2345678910" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Брускетта — 2 200 ֏">
+          <picture><source srcset="img/menu/брускетта.webp?v=ctr1" type="image/webp"><img src="img/menu/брускетта.jpg?v=ctr1" alt="Брускетта" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Брускетта</span>
+            <span class="price">2 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=wine-plate2345" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Винная тарелка — 8 000 ֏">
+          <picture><source srcset="img/menu/винная-тарелка.webp?v=fit800" type="image/webp"><img src="img/menu/винная-тарелка.jpg?v=fit800" alt="Винная тарелка" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Винная тарелка</span>
+            <span class="price">8 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=armenian-cheese-plate" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Армянская сырная тарелка — 2 200 - 4 200 ֏">
+          <picture><source srcset="img/menu/армянская-сырная-тарел.webp?v=fit800" type="image/webp"><img src="img/menu/армянская-сырная-тарел.jpg?v=fit800" alt="Армянская сырная тарелка" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Армянская сырная тарелка</span>
+            <p class="menu-card__note">малый · большой</p>
+            <span class="price">2 200 - 4 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=armenian-greens234" class="menu-card menu-card--link" style="transition-delay:0.30s" aria-label="Армянская зелень — 1 800 ֏">
+          <picture><source srcset="img/menu/армянская-зелень.webp?v=fit800" type="image/webp"><img src="img/menu/армянская-зелень.jpg?v=fit800" alt="Армянская зелень" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Армянская зелень</span>
+            <span class="price">1 800 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=armenian-snack" class="menu-card menu-card--link" style="transition-delay:0.35s" aria-label="Армянская закуска — 4 500 ֏">
+          <picture><source srcset="img/menu/армянская-закуска.webp?v=ig1" type="image/webp"><img src="img/menu/армянская-закуска.jpg?v=ig1" alt="Армянская закуска" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Армянская закуска</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=armenian-meat-plate2" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Армянская мясная тарелка — 4 500 ֏">
+          <picture><source srcset="img/menu/армянская-мясная-тарел.webp?v=fit800" type="image/webp"><img src="img/menu/армянская-мясная-тарел.jpg?v=fit800" alt="Армянская мясная тарелка" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Армянская мясная тарелка</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=german-snack" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Немецкая закуска — 4 600 ֏">
+          <picture><source srcset="img/menu/немецкая-закуска.webp?v=ig2" type="image/webp"><img src="img/menu/немецкая-закуска.jpg?v=ig2" alt="Немецкая закуска" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Немецкая закуска</span>
+            <span class="price">4 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=grilled-cheese2" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Жареный сыр — 2 500 ֏">
+          <picture><source srcset="img/menu/жареный-сыр.webp?v=fit800" type="image/webp"><img src="img/menu/жареный-сыр.jpg?v=fit800" alt="Жареный сыр" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Жареный сыр</span>
+            <span class="price">2 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pickling" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Соления — 2 000 ֏">
+          <picture><source srcset="img/menu/соления.webp?v=fit800" type="image/webp"><img src="img/menu/соления.jpg?v=fit800" alt="Соления" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Соления</span>
+            <span class="price">2 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=tandoor-bread2" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Тандырный хлеб — 700 ֏">
+          <picture><source srcset="img/menu/тандырный-хлеб.webp?v=fit800" type="image/webp"><img src="img/menu/тандырный-хлеб.jpg?v=fit800" alt="Тандырный хлеб" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Тандырный хлеб</span>
+            <span class="price">700 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=matsun-expressed" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Мацун сцеженый — 1 200 ֏">
+          <picture><source srcset="img/menu/мацун-сцеженый.webp?v=fit800" type="image/webp"><img src="img/menu/мацун-сцеженый.jpg?v=fit800" alt="Мацун сцеженый" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Мацун сцеженый</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=rezhan234567891011" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Режан — 1 200 ֏">
+          <picture><source srcset="img/menu/режан.webp?v=fit800" type="image/webp"><img src="img/menu/режан.jpg?v=fit800" alt="Режан" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Режан</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=hummus23456789101112131415161718" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Хумус — 1 200 ֏">
+          <picture><source srcset="img/menu/хумус.webp?v=fit800" type="image/webp"><img src="img/menu/хумус.jpg?v=fit800" alt="Хумус" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Хумус</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=focaccia2345" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Фокачча — 1 200 ֏">
+          <picture><source srcset="img/menu/фокачча.webp?v=fit800" type="image/webp"><img src="img/menu/фокачча.jpg?v=fit800" alt="Фокачча" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фокачча</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-2" data-category="cat-2">
+        <h3>Салаты</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=salad-domik" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Салат Домик — 4 800 ֏">
+          <picture><source srcset="img/menu/салат-домик.webp?v=ctr1" type="image/webp"><img src="img/menu/салат-домик.jpg?v=ctr1" alt="Салат Домик" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Салат Домик</span>
+            <span class="price">4 800 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=salad-with-shrimp2345" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Салат с креветками — 4 800 ֏">
+          <picture><source srcset="img/menu/салат-с-креветками.webp?v=fit800" type="image/webp"><img src="img/menu/салат-с-креветками.jpg?v=fit800" alt="Салат с креветками" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Салат с креветками</span>
+            <span class="price">4 800 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=armenian-salad23" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Армянский салат — 4 000 ֏">
+          <picture><source srcset="img/menu/армянский-салат.webp?v=ctr1" type="image/webp"><img src="img/menu/армянский-салат.jpg?v=ctr1" alt="Армянский салат" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Армянский салат</span>
+            <span class="price">4 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=salad-with-tuna23" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Салат с тунцом — 4 500 ֏">
+          <picture><source srcset="img/menu/салат-с-тунцом.webp?v=fit800" type="image/webp"><img src="img/menu/салат-с-тунцом.jpg?v=fit800" alt="Салат с тунцом" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Салат с тунцом</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=caesar-salad2345678910111213141516171819202122232425262728293031" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Салат цезарь — 3 000 ֏">
+          <picture><source srcset="img/menu/салат-цезарь.webp?v=fit800" type="image/webp"><img src="img/menu/салат-цезарь.jpg?v=fit800" alt="Салат цезарь" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Салат цезарь</span>
+            <span class="price">3 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=greek-salad23456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Греческий салат — 3 000 ֏">
+          <picture><source srcset="img/menu/греческий-салат.webp?v=fit800" type="image/webp"><img src="img/menu/греческий-салат.jpg?v=fit800" alt="Греческий салат" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Греческий салат</span>
+            <span class="price">3 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=summer-salad2345678910111213141516171819202122232425262728293031323334" class="menu-card menu-card--link" style="transition-delay:0.30s" aria-label="Летный салат — 2 400 ֏">
+          <picture><source srcset="img/menu/летный-салат.webp?v=fit800" type="image/webp"><img src="img/menu/летный-салат.jpg?v=fit800" alt="Летный салат" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Летный салат</span>
+            <span class="price">2 400 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=caprese-salad2345" class="menu-card menu-card--link" style="transition-delay:0.35s" aria-label="Салат капрезе — 3 200 ֏">
+          <picture><source srcset="img/menu/салат-капрезе.webp?v=fit800" type="image/webp"><img src="img/menu/салат-капрезе.jpg?v=fit800" alt="Салат капрезе" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Салат капрезе</span>
+            <span class="price">3 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=grilled-salad" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Салат гриль — 3 200 ֏">
+          <picture><source srcset="img/menu/салат-гриль.webp?v=fit800" type="image/webp"><img src="img/menu/салат-гриль.jpg?v=fit800" alt="Салат гриль" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Салат гриль</span>
+            <span class="price">3 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=angus-steak-salad" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Салат из стейка ангус — 4 500 ֏">
+          <picture><source srcset="img/menu/салат-из-стейка-ангус.webp?v=fit800" type="image/webp"><img src="img/menu/салат-из-стейка-ангус.jpg?v=fit800" alt="Салат из стейка ангус" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Салат из стейка ангус</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=thai-salad" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Тай салат — 3 400 ֏">
+          <picture><source srcset="img/menu/тай-салат.webp?v=fit800" type="image/webp"><img src="img/menu/тай-салат.jpg?v=fit800" alt="Тай салат" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Тай салат</span>
+            <span class="price">3 400 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-3" data-category="cat-3">
+        <h3>Суп</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=tomato-cream-soup234567" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Томатный крем суп — 1 800 ֏">
+          <picture><source srcset="img/menu/томатный-крем-суп.webp?v=fit800" type="image/webp"><img src="img/menu/томатный-крем-суп.jpg?v=fit800" alt="Томатный крем суп" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Томатный крем суп</span>
+            <span class="price">1 800 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=seafood-soup23456789101112" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Суп из морепродуктов — 4 000 ֏">
+          <picture><source srcset="img/menu/суп-из-морепродуктов.webp?v=fit800" type="image/webp"><img src="img/menu/суп-из-морепродуктов.jpg?v=fit800" alt="Суп из морепродуктов" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Суп из морепродуктов</span>
+            <span class="price">4 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=mexican-soup23" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Суп мексиканский — 3 000 ֏">
+          <picture><source srcset="img/menu/суп-мексиканский.webp?v=fit800" type="image/webp"><img src="img/menu/суп-мексиканский.jpg?v=fit800" alt="Суп мексиканский" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Суп мексиканский</span>
+            <span class="price">3 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=cream-soup2" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Крем-суп — 3 000 ֏">
+          <picture><source srcset="img/menu/крем-суп.webp?v=fit800" type="image/webp"><img src="img/menu/крем-суп.jpg?v=fit800" alt="Крем-суп" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Крем-суп</span>
+            <span class="price">3 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=spas23456789101112131415161718192021222324252627282930" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Спас — 1 400 ֏">
+          <picture><source srcset="img/menu/спас.webp?v=fit800" type="image/webp"><img src="img/menu/спас.jpg?v=fit800" alt="Спас" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Спас</span>
+            <span class="price">1 400 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-4" data-category="cat-4">
+        <h3>Паста</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=pasta-with-seafood2345" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Паста с морепродуктами — 4 500 ֏">
+          <picture><source srcset="img/menu/паста-с-морепродуктами.webp?v=fit800" type="image/webp"><img src="img/menu/паста-с-морепродуктами.jpg?v=fit800" alt="Паста с морепродуктами" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Паста с морепродуктами</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pasta-with-beef" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Паста с говядиной — 4 100 ֏">
+          <picture><source srcset="img/menu/паста-с-говядиной.webp?v=fit800" type="image/webp"><img src="img/menu/паста-с-говядиной.jpg?v=fit800" alt="Паста с говядиной" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Паста с говядиной</span>
+            <span class="price">4 100 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pancetta-pasta" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Паста панчетта — 3 600 ֏">
+          <picture><source srcset="img/menu/паста-панчетта.webp?v=ctr1" type="image/webp"><img src="img/menu/паста-панчетта.jpg?v=ctr1" alt="Паста панчетта" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Паста панчетта</span>
+            <span class="price">3 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=four-cheese-pasta" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Паста четыре сыра — 3 500 ֏">
+          <picture><source srcset="img/menu/паста-четыре-сыра.webp?v=fit800" type="image/webp"><img src="img/menu/паста-четыре-сыра.jpg?v=fit800" alt="Паста четыре сыра" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Паста четыре сыра</span>
+            <span class="price">3 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pasta-pelati" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Паста пелати — 2 500 ֏">
+          <picture><source srcset="img/menu/паста-пелати.webp?v=ig1" type="image/webp"><img src="img/menu/паста-пелати.jpg?v=ig1" alt="Паста пелати" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Паста пелати</span>
+            <span class="price">2 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=risotto-pasta" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Паста ризотто — 3 000 ֏">
+          <picture><source srcset="img/menu/паста-ризотто.webp?v=fit800" type="image/webp"><img src="img/menu/паста-ризотто.jpg?v=fit800" alt="Паста ризотто" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Паста ризотто</span>
+            <span class="price">3 000 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-5" data-category="cat-5">
+        <h3>Основные блюда приготовленные на углях</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=assortment-of-barbecue" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Ассорти шашлыков — 27 000 ֏">
+          <picture><source srcset="img/menu/ассорти-шашлыков.webp?v=fit800" type="image/webp"><img src="img/menu/ассорти-шашлыков.jpg?v=fit800" alt="Ассорти шашлыков" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Ассорти шашлыков</span>
+            <span class="price">27 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=assorted-pork" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Свиная ассорти — 7 800 ֏">
+          <picture><source srcset="img/menu/свиная-ассорти.webp?v=ctr1" type="image/webp"><img src="img/menu/свиная-ассорти.jpg?v=ctr1" alt="Свиная ассорти" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Свиная ассорти</span>
+            <span class="price">7 800 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=assorted-lamb" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Баранина ассорти — 9 000 ֏">
+          <picture><source srcset="img/menu/баранина-ассорти.webp?v=ctr1" type="image/webp"><img src="img/menu/баранина-ассорти.jpg?v=ctr1" alt="Баранина ассорти" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Баранина ассорти</span>
+            <span class="price">9 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=veal-bbq23" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Шашлык из телятины — 9 000 ֏">
+          <picture><source srcset="img/menu/шашлык-из-телятины.webp?v=fit800" type="image/webp"><img src="img/menu/шашлык-из-телятины.jpg?v=fit800" alt="Шашлык из телятины" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Шашлык из телятины</span>
+            <span class="price">9 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=signature-kebab2" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Фирменный кебаб — 2 500 ֏">
+          <picture><source srcset="img/menu/фирменный-кебаб.webp?v=fit800" type="image/webp"><img src="img/menu/фирменный-кебаб.jpg?v=fit800" alt="Фирменный кебаб" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фирменный кебаб</span>
+            <span class="price">2 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pork-knuckle234" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Свиная рулька — 8 500 ֏">
+          <picture><source srcset="img/menu/свиная-рулька.webp?v=fit800" type="image/webp"><img src="img/menu/свиная-рулька.jpg?v=fit800" alt="Свиная рулька" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Свиная рулька</span>
+            <span class="price">8 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pork-ribs23456789101112131415161718192021222324252627282930" class="menu-card menu-card--link" style="transition-delay:0.30s" aria-label="Свиные ребрышки — 7 500 ֏">
+          <picture><source srcset="img/menu/свиные-ребрышки.webp?v=fit800" type="image/webp"><img src="img/menu/свиные-ребрышки.jpg?v=fit800" alt="Свиные ребрышки" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Свиные ребрышки</span>
+            <span class="price">7 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=assorted-german-sausages" class="menu-card menu-card--link" style="transition-delay:0.35s" aria-label="Ассорти немецких сосисок — 7 500 ֏">
+          <picture><source srcset="img/menu/ассорти-немецких-сосис.webp?v=fit800" type="image/webp"><img src="img/menu/ассорти-немецких-сосис.jpg?v=fit800" alt="Ассорти немецких сосисок" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Ассорти немецких сосисок</span>
+            <span class="price">7 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=spicy-chicken-wings234" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Острые куриные крылышки — 3 000 ֏">
+          <picture><source srcset="img/menu/острые-куриные-крылышки.webp?v=ctr1" type="image/webp"><img src="img/menu/острые-куриные-крылышки.jpg?v=ctr1" alt="Острые куриные крылышки" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Острые куриные крылышки</span>
+            <span class="price">3 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=burger-grill" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Бургер гриль — 2 500 ֏">
+          <picture><source srcset="img/menu/бургер-гриль.webp?v=fit800" type="image/webp"><img src="img/menu/бургер-гриль.jpg?v=fit800" alt="Бургер гриль" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Бургер гриль</span>
+            <span class="price">2 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=sandwich-grill" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Сэндвич гриль — 2 500 ֏">
+          <picture><source srcset="img/menu/сэндвич-гриль.webp?v=fit800" type="image/webp"><img src="img/menu/сэндвич-гриль.jpg?v=fit800" alt="Сэндвич гриль" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Сэндвич гриль</span>
+            <span class="price">2 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=dolma-combined" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Долма — 3 500 - 3 600 ֏">
+          <picture><source srcset="img/menu/долма-с-индейкой.webp?v=fit800" type="image/webp"><img src="img/menu/долма-с-индейкой.jpg?v=fit800" alt="Долма" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Долма</span>
+            <span class="price">3 500 - 3 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=stuffed-eggplants2" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Баклажаны фаршированные — 2 500 ֏">
+          <picture><source srcset="img/menu/баклажаны-фаршированны.webp?v=fit800" type="image/webp"><img src="img/menu/баклажаны-фаршированны.jpg?v=fit800" alt="Баклажаны фаршированные" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Баклажаны фаршированные</span>
+            <span class="price">2 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=teppanyaki-with-grilled-pork" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Тепаньяки со свининой на гриле — 3 500 ֏">
+          <div class="menu-card__ph"><span>Фото скоро</span></div>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Тепаньяки со свининой на гриле</span>
+            <span class="price">3 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=chicken-with-vegetables234" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Курица с овощами — 3 600 ֏">
+          <picture><source srcset="img/menu/курица-с-овощами.webp?v=fit800" type="image/webp"><img src="img/menu/курица-с-овощами.jpg?v=fit800" alt="Курица с овощами" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Курица с овощами</span>
+            <span class="price">3 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=signature-goulash-with-pork" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Фирменный гуляш со свининой — 3 600 ֏">
+          <picture><source srcset="img/menu/фирменный-гуляш-со-сви.webp?v=fit800" type="image/webp"><img src="img/menu/фирменный-гуляш-со-сви.png?v=fit800" alt="Фирменный гуляш со свининой" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фирменный гуляш со свининой</span>
+            <span class="price">3 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=grilled-turkey-with-citrus-sauce-and-quinoa" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Индейка на гриле с цитрусовым соусом и киноа — 5 500 ֏">
+          <picture><source srcset="img/menu/индейка-на-гриле-с-цит.webp?v=fit800" type="image/webp"><img src="img/menu/индейка-на-гриле-с-цит.jpg?v=fit800" alt="Индейка на гриле с цитрусовым соусом и киноа" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Индейка на гриле с цитрусовым соусом и киноа</span>
+            <span class="price">5 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=chicken-fillet-with-rice" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Куриное филе с рисом — 3 300 ֏">
+          <picture><source srcset="img/menu/куриное-филе-с-рисом.webp?v=fit800" type="image/webp"><img src="img/menu/куриное-филе-с-рисом.jpg?v=fit800" alt="Куриное филе с рисом" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Куриное филе с рисом</span>
+            <span class="price">3 300 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-6" data-category="cat-6">
+        <h3>Блюда от шеф-повара</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=assorted-angus-meat" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Ассорти из мяса ангуса — 45 000 ֏">
+          <picture><source srcset="img/menu/ассорти-из-мяса-ангуса.webp?v=st1" type="image/webp"><img src="img/menu/ассорти-из-мяса-ангуса.jpg?v=st1" alt="Ассорти из мяса ангуса" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Ассорти из мяса ангуса</span>
+            <span class="price">45 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=german-set" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Немецкий сет — 25 000 ֏">
+          <picture><source srcset="img/menu/немецкий-сет.webp?v=ctr1" type="image/webp"><img src="img/menu/немецкий-сет.jpg?v=ctr1" alt="Немецкий сет" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Немецкий сет</span>
+            <span class="price">25 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=flamingo2" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Фламинго — 14 500 ֏">
+          <picture><source srcset="img/menu/фламинго.webp?v=st2" type="image/webp"><img src="img/menu/фламинго.jpg?v=st2" alt="Фламинго" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фламинго</span>
+            <span class="price">14 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=jellyfish" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Медуза — 27 500 ֏">
+          <picture><source srcset="img/menu/медуза.webp?v=ctr1" type="image/webp"><img src="img/menu/медуза.jpg?v=ctr1" alt="Медуза" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Медуза</span>
+            <span class="price">27 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=viking2" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Викинг — 11 500 ֏">
+          <picture><source srcset="img/menu/викинг.webp?v=ctr1" type="image/webp"><img src="img/menu/викинг.jpg?v=ctr1" alt="Викинг" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Викинг</span>
+            <span class="price">11 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=strip-steak" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Стейк стрипто — 12 000 ֏">
+          <picture><source srcset="img/menu/стейк-стрипто.webp?v=st1" type="image/webp"><img src="img/menu/стейк-стрипто.jpg?v=st1" alt="Стейк стрипто" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Стейк стрипто</span>
+            <span class="price">12 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=ribeye-steak2345678910111213" class="menu-card menu-card--link" style="transition-delay:0.30s" aria-label="Стейк рибай — 16 000 ֏">
+          <picture><source srcset="img/menu/стейк-рибай.webp?v=fit800" type="image/webp"><img src="img/menu/стейк-рибай.jpg?v=fit800" alt="Стейк рибай" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Стейк рибай</span>
+            <span class="price">16 000 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-7" data-category="cat-7">
+        <h3>Пицца</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=prosciutto234567" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Прошутто — 4 500 ֏">
+          <picture><source srcset="img/menu/прошутто.webp?v=fit800" type="image/webp"><img src="img/menu/прошутто.jpg?v=fit800" alt="Прошутто" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Прошутто</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=pepperoni2345678910111213141516171819" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Пеперони — 4 500 ֏">
+          <picture><source srcset="img/menu/пеперони.webp?v=fit800" type="image/webp"><img src="img/menu/пеперони.jpg?v=fit800" alt="Пеперони" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Пеперони</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=four-cheeses23456" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Четыре сыра — 3 900 ֏">
+          <picture><source srcset="img/menu/четыре-сыра.webp?v=fit800" type="image/webp"><img src="img/menu/четыре-сыра.jpg?v=fit800" alt="Четыре сыра" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Четыре сыра</span>
+            <span class="price">3 900 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=margarita234567891011121314151617181920212223" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Маргарита — 2 800 ֏">
+          <picture><source srcset="img/menu/маргарита.webp?v=fit800" type="image/webp"><img src="img/menu/маргарита.jpg?v=fit800" alt="Маргарита" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Маргарита</span>
+            <span class="price">2 800 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=avocado234" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Авокадо — 3 500 ֏">
+          <picture><source srcset="img/menu/авокадо.webp?v=fit800" type="image/webp"><img src="img/menu/авокадо.jpg?v=fit800" alt="Авокадо" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Авокадо</span>
+            <span class="price">3 500 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-8" data-category="cat-8">
+        <h3>Жареная рыба и морепродукты</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=trout234567" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Форель — 6 000 ֏">
+          <picture><source srcset="img/menu/форель.webp?v=fit800" type="image/webp"><img src="img/menu/форель.jpg?v=fit800" alt="Форель" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Форель</span>
+            <span class="price">6 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=tarap" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Тарап — 8 600 ֏">
+          <picture><source srcset="img/menu/тарап.webp?v=st1" type="image/webp"><img src="img/menu/тарап.jpg?v=st1" alt="Тарап" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Тарап</span>
+            <span class="price">8 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=salmon23456789101112" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Лосось — 7 000 ֏">
+          <picture><source srcset="img/menu/лосось.webp?v=fit800" type="image/webp"><img src="img/menu/лосось.jpg?v=fit800" alt="Лосось" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Лосось</span>
+            <span class="price">7 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=shrimps2" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Креветки — 5 000 ֏">
+          <picture><source srcset="img/menu/креветки.webp?v=fit800" type="image/webp"><img src="img/menu/креветки.jpg?v=fit800" alt="Креветки" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Креветки</span>
+            <span class="price">5 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=trout-fillet-with-green-onions" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Филе форели с зеленым луком — 4 500 ֏">
+          <picture><source srcset="img/menu/филе-форели-с-зеленым.webp?v=fit800" type="image/webp"><img src="img/menu/филе-форели-с-зеленым.jpg?v=fit800" alt="Филе форели с зеленым луком" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Филе форели с зеленым луком</span>
+            <span class="price">4 500 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-9" data-category="cat-9">
+        <h3>Гарниры</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=country-style-potatoes2345" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Картофель по деревенски — 1 200 ֏">
+          <picture><source srcset="img/menu/картофель-по-деревенск.webp?v=fit800" type="image/webp"><img src="img/menu/картофель-по-деревенск.jpg?v=fit800" alt="Картофель по деревенски" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Картофель по деревенски</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=rice23456789101112131415161718192021222324252627282930" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Рис — 1 200 ֏">
+          <picture><source srcset="img/menu/рис.webp?v=fit800" type="image/webp"><img src="img/menu/рис.jpg?v=fit800" alt="Рис" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Рис</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=grilled-vegetables234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Овощи гриль — 2 100 ֏">
+          <picture><source srcset="img/menu/овощи-гриль.webp?v=fit800" type="image/webp"><img src="img/menu/овощи-гриль.jpg?v=fit800" alt="Овощи гриль" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Овощи гриль</span>
+            <span class="price">2 100 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=grilled-potatoes23456" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Картофель гриль — 1 100 ֏">
+          <picture><source srcset="img/menu/картофель-гриль.webp?v=fit800" type="image/webp"><img src="img/menu/картофель-гриль.jpg?v=fit800" alt="Картофель гриль" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Картофель гриль</span>
+            <span class="price">1 100 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=arishta2345678910" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Аришта — 1 400 ֏">
+          <picture><source srcset="img/menu/аришта.webp?v=fit800" type="image/webp"><img src="img/menu/аришта.jpg?v=fit800" alt="Аришта" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Аришта</span>
+            <span class="price">1 400 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=stuffed-mushrooms23" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Фаршированные грибы — 1 900 ֏">
+          <picture><source srcset="img/menu/фаршированные-грибы.webp?v=fit800" type="image/webp"><img src="img/menu/фаршированные-грибы.jpg?v=fit800" alt="Фаршированные грибы" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фаршированные грибы</span>
+            <span class="price">1 900 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=stuffed-potatoes" class="menu-card menu-card--link" style="transition-delay:0.30s" aria-label="Фаршированный картофель — 1 500 ֏">
+          <picture><source srcset="img/menu/фаршированный-картофел.webp?v=fit800" type="image/webp"><img src="img/menu/фаршированный-картофел.jpg?v=fit800" alt="Фаршированный картофель" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фаршированный картофель</span>
+            <span class="price">1 500 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-10" data-category="cat-10">
+        <h3>Детское меню</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=chicken-soup2345678910111213141516171819202122232425262728293031" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Куриный суп — 1 700 ֏">
+          <picture><source srcset="img/menu/куриный-суп.webp?v=fit800" type="image/webp"><img src="img/menu/куриный-суп.jpg?v=fit800" alt="Куриный суп" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Куриный суп</span>
+            <span class="price">1 700 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=rice-porrige2" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Рисовая каша — 1 200 ֏">
+          <picture><source srcset="img/menu/рисовая-каша.webp?v=fit800" type="image/webp"><img src="img/menu/рисовая-каша.jpg?v=fit800" alt="Рисовая каша" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Рисовая каша</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=mashed-potatoes2345678910111213141516171819202122232425262728293031323334" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Картофель пюре — 1 200 ֏">
+          <picture><source srcset="img/menu/картофель-пюре.webp?v=fit800" type="image/webp"><img src="img/menu/картофель-пюре.jpg?v=fit800" alt="Картофель пюре" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Картофель пюре</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=french-fries23456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Картофель фри — 1 000 ֏">
+          <picture><source srcset="img/menu/картофель-фри.webp?v=fit800" type="image/webp"><img src="img/menu/картофель-фри.jpg?v=fit800" alt="Картофель фри" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Картофель фри</span>
+            <span class="price">1 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=spaghetti-mac-and-cheese" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Спагетти мак энд чиз — 1 200 ֏">
+          <picture><source srcset="img/menu/спагетти-мак-энд-чиз.webp?v=fit800" type="image/webp"><img src="img/menu/спагетти-мак-энд-чиз.jpg?v=fit800" alt="Спагетти мак энд чиз" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Спагетти мак энд чиз</span>
+            <span class="price">1 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=mini-burger-with-chicken-breast-and-fries" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Мини бургер с куриной грудкой и фри — 2 000 ֏">
+          <picture><source srcset="img/menu/мини-бургер-с-куриной.webp?v=fit800" type="image/webp"><img src="img/menu/мини-бургер-с-куриной.jpg?v=fit800" alt="Мини бургер с куриной грудкой и фри" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Мини бургер с куриной грудкой и фри</span>
+            <span class="price">2 000 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="menu-category" id="cat-11" data-category="cat-11">
+        <h3>Часть любви</h3>
+        <div class="menu-grid">
+        <a href="dish.html?id=coconut-tart" class="menu-card menu-card--link" style="transition-delay:0.00s" aria-label="Кокосовый тарт — 2 200 ֏">
+          <picture><source srcset="img/menu/кокосовый-тарт.webp?v=fit800" type="image/webp"><img src="img/menu/кокосовый-тарт.jpg?v=fit800" alt="Кокосовый тарт" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Кокосовый тарт</span>
+            <span class="price">2 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=brownie2345678910111213141516171819" class="menu-card menu-card--link" style="transition-delay:0.05s" aria-label="Брауни — 2 200 ֏">
+          <picture><source srcset="img/menu/брауни.webp?v=fit800" type="image/webp"><img src="img/menu/брауни.jpg?v=fit800" alt="Брауни" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Брауни</span>
+            <span class="price">2 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=chocolate-volcano" class="menu-card menu-card--link" style="transition-delay:0.10s" aria-label="Шоколадный вулкан — 1 900 ֏">
+          <picture><source srcset="img/menu/шоколадный-вулкан.webp?v=fit800" type="image/webp"><img src="img/menu/шоколадный-вулкан.jpg?v=fit800" alt="Шоколадный вулкан" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Шоколадный вулкан</span>
+            <span class="price">1 900 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=cheesecake-san-sebastian" class="menu-card menu-card--link" style="transition-delay:0.15s" aria-label="Чизкейк сан-себастьян — 2 400 ֏">
+          <picture><source srcset="img/menu/чизкейк-сан-себастьян.webp?v=ig1" type="image/webp"><img src="img/menu/чизкейк-сан-себастьян.jpg?v=ig1" alt="Чизкейк сан-себастьян" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Чизкейк сан-себастьян</span>
+            <span class="price">2 400 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=classic-cheesecake-with-berries" class="menu-card menu-card--link" style="transition-delay:0.20s" aria-label="Чизкейк классический с ягодами — 1 600 ֏">
+          <picture><source srcset="img/menu/чизкейк-классический-с.webp?v=fit800" type="image/webp"><img src="img/menu/чизкейк-классический-с.jpg?v=fit800" alt="Чизкейк классический с ягодами" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Чизкейк классический с ягодами</span>
+            <span class="price">1 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=tiramisu234567891011121314151617" class="menu-card menu-card--link" style="transition-delay:0.25s" aria-label="Тирамису — 2 200 ֏">
+          <picture><source srcset="img/menu/тирамису.webp?v=fit800" type="image/webp"><img src="img/menu/тирамису.jpg?v=fit800" alt="Тирамису" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Тирамису</span>
+            <span class="price">2 200 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=chocolate-pie" class="menu-card menu-card--link" style="transition-delay:0.30s" aria-label="Шоколадный пирог — 1 600 ֏">
+          <picture><source srcset="img/menu/шоколадный-пирог.webp?v=fit800" type="image/webp"><img src="img/menu/шоколадный-пирог.jpg?v=fit800" alt="Шоколадный пирог" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Шоколадный пирог</span>
+            <span class="price">1 600 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=carrot-tart" class="menu-card menu-card--link" style="transition-delay:0.35s" aria-label="Морковный тарт — 2 000 ֏">
+          <picture><source srcset="img/menu/морковный-тарт.webp?v=fit800" type="image/webp"><img src="img/menu/морковный-тарт.jpg?v=fit800" alt="Морковный тарт" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Морковный тарт</span>
+            <span class="price">2 000 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=ice-cream234567891011" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Мороженое — 700 ֏">
+          <picture><source srcset="img/menu/мороженое.webp?v=fit800" type="image/webp"><img src="img/menu/мороженое.jpg?v=fit800" alt="Мороженое" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Мороженое</span>
+            <span class="price">700 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=fruit-icecream" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Фруктовое мороженое — 1 500 ֏">
+          <picture><source srcset="img/menu/фруктовое-мороженое.webp?v=fit800" type="image/webp"><img src="img/menu/фруктовое-мороженое.jpg?v=fit800" alt="Фруктовое мороженое" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фруктовое мороженое</span>
+            <span class="price">1 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=fruit-assortment-seasonal" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Фруктовый ассорти — 2 500 - 3 500 - 7 500 ֏">
+          <picture><source srcset="img/menu/фруктовый-ассорти.webp?v=fit800" type="image/webp"><img src="img/menu/фруктовый-ассорти.jpg?v=fit800" alt="Фруктовый ассорти" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Фруктовый ассорти</span>
+            <p class="menu-card__note">по сезону</p>
+            <span class="price">2 500 - 3 500 - 7 500 ֏</span>
+          </div>
+        </a>
+        <a href="dish.html?id=dome" class="menu-card menu-card--link" style="transition-delay:0.40s" aria-label="Доме — 2 000 ֏">
+          <picture><source srcset="img/menu/доме.webp?v=ig1" type="image/webp"><img src="img/menu/доме.jpg?v=ig1" alt="Доме" width="800" height="600" loading="lazy" decoding="async"></picture>
+          <div class="menu-card__body">
+            <span class="menu-card__name">Доме</span>
+            <span class="price">2 000 ֏</span>
+          </div>
+        </a>
+        </div>
+      </section>
+    <p class="menu-source">Меню с <a href="https://orderin.am/ru/menu/restaurant/menu/show/domik" target="_blank" rel="noopener">orderin.am</a></p>
+  </div>
+</div>
+<footer class="site-footer">
+<div class="container footer-grid">
+  <div class="footer-col footer-col--brand">
+    <a href="index.html" class="footer-logo" aria-label="DoMik"><img src="img/logo-domik.svg" alt="DoMik" width="140" height="47"></a>
+    <p class="footer-tagline" data-i18n="footer.tagline">Ресторан смешанной кухни в сердце Цахкадзора — европейская классика, мангал и местные специалитеты.</p>
+    <a class="ya-rating ya-rating--footer" href="https://yandex.com/maps/org/domik/241007402187/" target="_blank" rel="noopener" title="Рейтинг 5,0 в Яндексе">
+      <iframe src="https://yandex.ru/sprav/widget/rating-badge/241007402187?type=rating&amp;theme=dark" width="150" height="50" frameborder="0" scrolling="no" loading="lazy" title="Рейтинг в Яндексе"></iframe>
+    </a>
+  </div>
+  <nav class="footer-col footer-col--nav" aria-label="Footer">
+    <h4 class="footer-h" data-i18n="footer.nav">Навигация</h4>
+    <ul>
+      <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+      <li><a href="menu.html" data-i18n="nav.menu">Меню</a></li>
+      <li><a href="gallery.html" data-i18n="nav.gallery">Галерея</a></li>
+      <li><a href="events.html" data-i18n="nav.events">Мероприятия</a></li>
+      <li><a href="reviews.html" data-i18n="nav.reviews">Отзывы</a></li>
+      <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col--contacts">
+    <h4 class="footer-h" data-i18n="nav.contacts">Контакты</h4>
+    <ul class="footer-contact-list">
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 10-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg><span data-i18n="contacts.addr.val">Цахкадзор, ул. Хачатура Кечареци 6</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4c0 1-8 2-15-5S5 5 6 4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg><a href="tel:+37495505656">+374 95 505 656</a></li>
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span data-i18n="footer.hours.val">Ежедневно 10:00 — 23:00</span></li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col--connect">
+    <h4 class="footer-h" data-i18n="footer.follow">Мы в сети</h4>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/domiktsaghkadzor" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h2.6l.4-3.1H14V3.9c0-.9.25-1.5 1.55-1.5H17.1V-.2C16.8-.25 15.85-.3 14.75-.3 12.45-.3 11 1.1 11 3.6v2.3H8.4V9H11v8h3V9z"/></svg></a>
+      <a href="https://www.instagram.com/domik_restaurant/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a>
+    </div>
+    <a href="contacts.html#book" class="btn-book-solid footer-book" data-i18n="hero.btn.book">Забронировать столик</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <div class="container footer-bottom__inner">
+    <span data-i18n="footer.copy">© 2026 Домик Цахкадзора</span>
+    <span class="footer-madeby">Цахкадзор · Армения</span>
+  </div>
+</div>
+</footer>
+<script src="js/i18n.js?v=10"></script>
+<script src="js/main.js?v=7"></script>
+<script src="js/enhance.js?v=4"></script>
+<script src="js/menu-scroll.js?v=4"></script>
+<script src="js/map-rating.js?v=3"></script>
+</body>
+</html>

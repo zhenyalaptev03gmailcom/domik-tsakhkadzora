@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta.reviews">Отзывы</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css?v=35">
+<meta name="description" content="Отзывы гостей о ресторане «Домик Цахкадзора».">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0c0a09">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="img/favicon-32.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<!-- Open Graph / превью ссылки. TODO при публикации: заменить пути og:image на абсолютные https://ВАШ-ДОМЕН/img/og-cover.jpg -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Домик Цахкадзора">
+<meta property="og:title" content="Отзывы — Домик Цахкадзора">
+<meta property="og:description" content="Отзывы гостей о ресторане «Домик Цахкадзора».">
+<meta property="og:image" content="img/og-cover.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<header class="site-header">
+<div class="nav-inner">
+  <div class="nav-left">
+    <a href="index.html" class="logo logo--header">
+      <img src="img/logo-domik.svg" alt="DoMik" class="logo-mark" width="112" height="38">
+    </a>
+  </div>
+  <nav><ul><li><a href="index.html" data-i18n="nav.home">Главная</a></li><li><a href="menu.html" data-i18n="nav.menu">Меню</a></li><li><a href="gallery.html" data-i18n="nav.gallery">Галерея</a></li><li><a href="events.html" data-i18n="nav.events">Мероприятия</a></li><li><a href="reviews.html" data-i18n="nav.reviews" class="active">Отзывы</a></li><li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li></ul></nav>
+  <div class="nav-right">
+    
+<div class="lang-switch" role="group" aria-label="Language">
+  <button type="button" data-lang="ru" class="active">RU</button>
+  <button type="button" data-lang="en">EN</button>
+  <button type="button" data-lang="hy">HY</button>
+</div>
+    <a href="contacts.html" class="btn-book-outline" data-i18n="hero.btn2">Забронировать столик</a>
+    <a class="ya-rating" href="https://yandex.com/maps/org/domik/241007402187/" target="_blank" rel="noopener" title="Рейтинг 5,0 в Яндексе">
+      <iframe src="https://yandex.ru/sprav/widget/rating-badge/241007402187?type=rating&theme=dark" width="180" height="64" frameborder="0" scrolling="no" loading="lazy" title="Рейтинг в Яндексе"></iframe>
+    </a>
+    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</div>
+</header>
+
+<section class="page-hero page-hero--menu page-hero--reviews">
+  <div class="page-hero__bg" aria-hidden="true" style="background-image:url('img/gallery-14.jpg?v=2')"></div>
+  <div class="page-hero__overlay" aria-hidden="true"></div>
+  <div class="page-hero__frame">
+    <span class="page-hero__ornament">◆ ◆ ◆</span>
+    <h1 data-i18n="page.reviews.h1">Отзывы</h1>
+    <span class="page-hero__line" aria-hidden="true"></span>
+    <p data-i18n="page.reviews.sub">Гости на Яндекс.Картах и Google</p>
+  </div>
+</section>
+<section class="page-section"><div class="container" id="reviews-dynamic">
+  <p class="reviews-loading" data-i18n="maps.loading">Загрузка отзывов…</p>
+</div></section>
+<section class="page-section" style="padding-top:0"><div class="container">
+  <div class="ya-reviews-panel">
+    <div class="ya-reviews-panel__head">
+      <span class="ya-reviews-panel__title">Свежие отзывы на <b>Яндекс.Картах</b></span>
+      <a class="ya-reviews-panel__more" href="https://yandex.com/maps/org/domik/241007402187/" target="_blank" rel="noopener">Все отзывы →</a>
+    </div>
+    <div class="ya-reviews">
+      <iframe src="https://yandex.ru/maps-reviews-widget/241007402187?comments" title="Отзывы о ресторане «Домик Цахкадзора» на Яндекс.Картах" loading="lazy"></iframe>
+    </div>
+  </div>
+</div></section>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+  <div class="footer-col footer-col--brand">
+    <a href="index.html" class="footer-logo" aria-label="DoMik"><img src="img/logo-domik.svg" alt="DoMik" width="140" height="47"></a>
+    <p class="footer-tagline" data-i18n="footer.tagline">Ресторан смешанной кухни в сердце Цахкадзора — европейская классика, мангал и местные специалитеты.</p>
+    <a class="ya-rating ya-rating--footer" href="https://yandex.com/maps/org/domik/241007402187/" target="_blank" rel="noopener" title="Рейтинг 5,0 в Яндексе">
+      <iframe src="https://yandex.ru/sprav/widget/rating-badge/241007402187?type=rating&amp;theme=dark" width="150" height="50" frameborder="0" scrolling="no" loading="lazy" title="Рейтинг в Яндексе"></iframe>
+    </a>
+  </div>
+  <nav class="footer-col footer-col--nav" aria-label="Footer">
+    <h4 class="footer-h" data-i18n="footer.nav">Навигация</h4>
+    <ul>
+      <li><a href="index.html" data-i18n="nav.home">Главная</a></li>
+      <li><a href="menu.html" data-i18n="nav.menu">Меню</a></li>
+      <li><a href="gallery.html" data-i18n="nav.gallery">Галерея</a></li>
+      <li><a href="events.html" data-i18n="nav.events">Мероприятия</a></li>
+      <li><a href="reviews.html" data-i18n="nav.reviews">Отзывы</a></li>
+      <li><a href="contacts.html" data-i18n="nav.contacts">Контакты</a></li>
+    </ul>
+  </nav>
+  <div class="footer-col footer-col--contacts">
+    <h4 class="footer-h" data-i18n="nav.contacts">Контакты</h4>
+    <ul class="footer-contact-list">
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-11a7 7 0 10-14 0c0 5.8 7 11 7 11z" stroke="currentColor" stroke-width="1.3"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.3"/></svg><span data-i18n="contacts.addr.val">Цахкадзор, ул. Хачатура Кечареци 6</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4c0 1-8 2-15-5S5 5 6 4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg><a href="tel:+37495505656">+374 95 505 656</a></li>
+      <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.3"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg><span data-i18n="footer.hours.val">Ежедневно 10:00 — 23:00</span></li>
+    </ul>
+  </div>
+  <div class="footer-col footer-col--connect">
+    <h4 class="footer-h" data-i18n="footer.follow">Мы в сети</h4>
+    <div class="footer-social">
+      <a href="https://www.facebook.com/domiktsaghkadzor" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h2.6l.4-3.1H14V3.9c0-.9.25-1.5 1.55-1.5H17.1V-.2C16.8-.25 15.85-.3 14.75-.3 12.45-.3 11 1.1 11 3.6v2.3H8.4V9H11v8h3V9z"/></svg></a>
+      <a href="https://www.instagram.com/domik_restaurant/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="7" r="1.1" fill="currentColor"/></svg></a>
+    </div>
+    <a href="contacts.html#book" class="btn-book-solid footer-book" data-i18n="hero.btn.book">Забронировать столик</a>
+  </div>
+</div>
+<div class="footer-bottom">
+  <div class="container footer-bottom__inner">
+    <span data-i18n="footer.copy">© 2026 Домик Цахкадзора</span>
+    <span class="footer-madeby">Цахкадзор · Армения</span>
+  </div>
+</div>
+</footer>
+<script src="js/i18n.js?v=10"></script>
+<script src="js/main.js?v=7"></script>
+<script src="js/enhance.js?v=4"></script>
+<script src="js/map-rating.js?v=3"></script>
+</body>
+</html>
