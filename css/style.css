@@ -3047,11 +3047,11 @@ html[lang="hy"] h3 { line-height: 1.2; }
   .hall-svg .ht:hover, .hall-svg .ht:focus, .hall-svg .ht.is-active { transform: scale(1.08); }
 }
 /* legend palette for the floor plan */
-.hall-legend__item[data-loc="window"] i { background: #5b86b3; }
-.hall-legend__item[data-loc="hall"] i { background: #b08d5b; }
-.hall-legend__item[data-loc="bar"] i { background: #c79a5e; }
-.hall-legend__item[data-loc="terrace"] i { background: #6aa37a; }
-.hall-legend__item[data-loc="gazebo"] i { background: #c2864f; }
+.hall-legend__item[data-loc="window"] i { background: #5b8cc8; }
+.hall-legend__item[data-loc="hall"] i { background: #b89055; }
+.hall-legend__item[data-loc="bar"] i { background: #dcb33f; }
+.hall-legend__item[data-loc="terrace"] i { background: #5f9a66; }
+.hall-legend__item[data-loc="gazebo"] i { background: #cf5a30; }
 .hall-legend__item[data-loc="private"] i { background: #a07bbf; }
 @media (max-width: 640px) {
   .hall-plan { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 0.5rem; }
