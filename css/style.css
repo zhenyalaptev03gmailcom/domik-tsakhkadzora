@@ -2877,3 +2877,93 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .contact-grid > div > p { font-size: 1.1rem; line-height: 1.6; }
 .contact-grid > div > p a { color: var(--bronze-light); }
 .contact-grid > div > p a[href^="tel:"] { font-size: 1.25rem; font-weight: 600; }
+
+/* ====================================================================
+   CONTACTS: interactive hall / seating scheme
+   ==================================================================== */
+.hall-section { text-align: center; }
+.hall-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  font-weight: 500;
+  color: var(--bronze-light);
+  margin-bottom: 0.4rem;
+}
+.hall-sub { color: var(--muted); max-width: 640px; margin: 0 auto 1.6rem; }
+
+.hall-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "main bar"
+    "vip  kids"
+    "terrace terrace";
+  gap: 0.9rem;
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: left;
+}
+.hall-zone {
+  position: relative;
+  border: 1px solid rgba(201, 169, 98, 0.28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.025);
+  padding: 2.2rem 1rem 1rem;
+  min-height: 96px;
+}
+.hall-zone--main { grid-area: main; }
+.hall-zone--bar { grid-area: bar; }
+.hall-zone--vip { grid-area: vip; }
+.hall-zone--kids { grid-area: kids; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; }
+.hall-zone--terrace { grid-area: terrace; background: rgba(90, 159, 106, 0.06); border-color: rgba(90, 159, 106, 0.3); }
+.hall-zone__name {
+  position: absolute; top: 0.55rem; left: 0.9rem;
+  font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--bronze-light);
+}
+.hall-edge {
+  position: absolute; top: 0.5rem; right: 0.9rem;
+  font-size: 0.66rem; color: var(--muted);
+  background: rgba(0,0,0,0.25); border-radius: 99px; padding: 2px 8px;
+}
+.hall-kids-ico { font-size: 1.6rem; }
+
+.hall-tables { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.hall-table {
+  width: 38px; height: 38px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.82rem; font-weight: 600; color: #fff;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: #8a6a3f; cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.hall-table:hover, .hall-table:focus-visible { transform: translateY(-2px) scale(1.08); filter: brightness(1.12); outline: none; }
+.hall-table.is-active { box-shadow: 0 0 0 3px rgba(231,200,138,0.7); transform: scale(1.1); }
+.hall-table[data-loc="window"] { background: #4a78b0; }
+.hall-table[data-loc="sofa"]   { background: #7ba0c4; }
+.hall-table[data-loc="bar"]    { background: #c79a5e; }
+.hall-table[data-loc="terrace"]{ background: #5a9f6a; }
+.hall-table[data-loc="garden"] { background: #3f8f5f; }
+.hall-table[data-loc="vip"]    { background: #a172a8; }
+.hall-table[data-loc="hall"]   { background: #9a8050; }
+
+.hall-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; justify-content: center; margin: 1.4rem auto 0.6rem; max-width: 720px; }
+.hall-legend__item { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--muted); }
+.hall-legend__item i { width: 13px; height: 13px; border-radius: 50%; display: inline-block; }
+.hall-legend__item[data-loc="window"] i { background: #4a78b0; }
+.hall-legend__item[data-loc="sofa"] i   { background: #7ba0c4; }
+.hall-legend__item[data-loc="bar"] i    { background: #c79a5e; }
+.hall-legend__item[data-loc="terrace"] i{ background: #5a9f6a; }
+.hall-legend__item[data-loc="garden"] i { background: #3f8f5f; }
+.hall-legend__item[data-loc="vip"] i    { background: #a172a8; }
+.hall-legend__item[data-loc="hall"] i   { background: #9a8050; }
+
+.hall-caption {
+  min-height: 1.4em; margin-top: 0.4rem;
+  color: var(--bronze-light); font-weight: 500; font-size: 1.05rem;
+}
+
+@media (max-width: 640px) {
+  .hall-map { grid-template-columns: 1fr; grid-template-areas: "main" "bar" "vip" "kids" "terrace"; }
+  .hall-table { width: 34px; height: 34px; font-size: 0.78rem; }
+}

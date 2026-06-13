@@ -1064,8 +1064,7 @@
         "name": "Доме",
         "price": "2 000",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": true,
-        "local_image": "img/menu/доме.jpg?v=ig1",
+        "has_image": false,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/dome"
       },
       {
@@ -1074,6 +1073,14 @@
         "price": "2 200",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false
+      },
+      {
+        "id": "medovik",
+        "name": "Медовик",
+        "price": "2 000",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": true,
+        "local_image": "img/menu/доме.jpg?v=ig1"
       }
     ]
   },
