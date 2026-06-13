@@ -2893,15 +2893,19 @@ html[lang="hy"] h3 { line-height: 1.2; }
 
 .hall-map {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.85fr 1.15fr;
   grid-template-areas:
-    "main bar"
-    "vip  kids"
-    "terrace terrace";
-  gap: 0.9rem;
+    "zal2 garden"
+    "zal2 zal1"
+    "gazebo gazebo";
+  gap: 0.7rem;
   max-width: 880px;
   margin: 0 auto;
   text-align: left;
+  padding: 0.7rem;
+  border: 2px solid rgba(201, 169, 98, 0.4);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
 }
 .hall-zone {
   position: relative;
@@ -2911,11 +2915,11 @@ html[lang="hy"] h3 { line-height: 1.2; }
   padding: 2.2rem 1rem 1rem;
   min-height: 96px;
 }
-.hall-zone--main { grid-area: main; }
-.hall-zone--bar { grid-area: bar; }
-.hall-zone--vip { grid-area: vip; }
-.hall-zone--kids { grid-area: kids; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; }
-.hall-zone--terrace { grid-area: terrace; background: rgba(90, 159, 106, 0.06); border-color: rgba(90, 159, 106, 0.3); }
+.hall-zone--zal2 { grid-area: zal2; }
+.hall-zone--zal1 { grid-area: zal1; }
+.hall-zone--garden { grid-area: garden; background: rgba(90, 159, 106, 0.06); border-color: rgba(90, 159, 106, 0.3); }
+.hall-zone--gazebo { grid-area: gazebo; background: rgba(194, 112, 63, 0.06); border-color: rgba(194, 112, 63, 0.3); }
+.hall-entrance { display: block; text-align: center; margin-top: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--bronze-light); }
 .hall-zone__name {
   position: absolute; top: 0.55rem; left: 0.9rem;
   font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
@@ -2946,6 +2950,7 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .hall-table[data-loc="garden"] { background: #3f8f5f; }
 .hall-table[data-loc="vip"]    { background: #a172a8; }
 .hall-table[data-loc="hall"]   { background: #9a8050; }
+.hall-table[data-loc="gazebo"] { background: #c2703f; }
 
 .hall-legend { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; justify-content: center; margin: 1.4rem auto 0.6rem; max-width: 720px; }
 .hall-legend__item { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; color: var(--muted); }
@@ -2957,6 +2962,7 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .hall-legend__item[data-loc="garden"] i { background: #3f8f5f; }
 .hall-legend__item[data-loc="vip"] i    { background: #a172a8; }
 .hall-legend__item[data-loc="hall"] i   { background: #9a8050; }
+.hall-legend__item[data-loc="gazebo"] i { background: #c2703f; }
 
 .hall-caption {
   min-height: 1.4em; margin-top: 0.4rem;
@@ -2964,6 +2970,6 @@ html[lang="hy"] h3 { line-height: 1.2; }
 }
 
 @media (max-width: 640px) {
-  .hall-map { grid-template-columns: 1fr; grid-template-areas: "main" "bar" "vip" "kids" "terrace"; }
+  .hall-map { grid-template-columns: 1fr; grid-template-areas: "zal2" "garden" "zal1" "gazebo"; }
   .hall-table { width: 34px; height: 34px; font-size: 0.78rem; }
 }

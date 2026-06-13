@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=39">
+<link rel="stylesheet" href="css/style.css?v=40">
 <meta name="description" content="Контакты и бронирование столика в ресторане «Домик Цахкадзора».">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0c0a09">
@@ -98,93 +98,89 @@
 </div></section>
 <section class="page-section hall-section"><div class="container">
   <h2 class="hall-title">Схема зала</h2>
-  <p class="hall-sub">Наведите (или нажмите) на стол — покажем зону. Нужен конкретный стол — скажите при бронировании, подберём.</p>
+  <p class="hall-sub">План ресторана сверху. Наведите или нажмите на стол — покажем зону. Нужен конкретный — скажите при бронировании.</p>
   <div class="hall-map">
-    <div class="hall-zone hall-zone--main" style="grid-area:main">
-      <span class="hall-zone__name">Основной зал</span>
+    <div class="hall-zone hall-zone--zal2" style="grid-area:zal2">
+      <span class="hall-zone__name">Зал 2</span>
+      <span class="hall-edge hall-edge--bar">🍷 Барная стойка</span>
+      <div class="hall-tables">
+          <button type="button" class="hall-table" data-loc="bar" data-zone="у бара" aria-label="Стол 20, у бара">20</button>
+          <button type="button" class="hall-table" data-loc="bar" data-zone="у бара" aria-label="Стол 21, у бара">21</button>
+          <button type="button" class="hall-table" data-loc="bar" data-zone="у бара" aria-label="Стол 22, у бара">22</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 23, зал">23</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 24, зал">24</button>
+          <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 25, у окна">25</button>
+          <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 26, у окна">26</button>
+          <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 27, у окна">27</button>
+          <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 28, у окна">28</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 29, зал">29</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 30, зал">30</button>
+      </div>
+    </div>
+    <div class="hall-zone hall-zone--garden" style="grid-area:garden">
+      <span class="hall-zone__name">Сад с террасой ☂️</span>
+      <div class="hall-tables">
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 33, терраса">33</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 34, терраса">34</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 35, терраса">35</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 36, терраса">36</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 37, терраса">37</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 38, терраса">38</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 39, терраса">39</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 40, терраса">40</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 41, терраса">41</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 42, терраса">42</button>
+          <button type="button" class="hall-table" data-loc="terrace" data-zone="терраса" aria-label="Стол 43, терраса">43</button>
+          <button type="button" class="hall-table" data-loc="garden" data-zone="сад" aria-label="Стол 50, сад">50</button>
+          <button type="button" class="hall-table" data-loc="garden" data-zone="сад" aria-label="Стол 51, сад">51</button>
+          <button type="button" class="hall-table" data-loc="garden" data-zone="сад" aria-label="Стол 52, сад">52</button>
+          <button type="button" class="hall-table" data-loc="garden" data-zone="сад" aria-label="Стол 53, сад">53</button>
+          <button type="button" class="hall-table" data-loc="garden" data-zone="сад" aria-label="Стол 54, сад">54</button>
+          <button type="button" class="hall-table" data-loc="garden" data-zone="сад" aria-label="Стол 55, сад">55</button>
+      </div>
+    </div>
+    <div class="hall-zone hall-zone--zal1" style="grid-area:zal1">
+      <span class="hall-zone__name">Зал 1</span>
       <span class="hall-edge hall-edge--win">🪟 Окна в сад</span>
       <div class="hall-tables">
           <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 10, у окна">10</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 11, зал">11</button>
+          <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 12, у окна">12</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 13, зал">13</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 14, зал">14</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 15, зал">15</button>
           <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 16, у окна">16</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна" aria-label="Стол 15, у окна">15</button>
-          <button type="button" class="hall-table" data-loc="sofa" data-zone="у дивана" aria-label="Стол 12, у дивана">12</button>
-          <button type="button" class="hall-table" data-loc="sofa" data-zone="у дивана" aria-label="Стол 11, у дивана">11</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="в центре зала" aria-label="Стол 17, в центре зала">17</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="в центре зала" aria-label="Стол 18, в центре зала">18</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="у лестницы" aria-label="Стол 13, у лестницы">13</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="у лестницы" aria-label="Стол 14, у лестницы">14</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 17, зал">17</button>
+          <button type="button" class="hall-table" data-loc="hall" data-zone="зал" aria-label="Стол 18, зал">18</button>
       </div>
     </div>
-    <div class="hall-zone hall-zone--bar" style="grid-area:bar">
-      <span class="hall-zone__name">Барный зал</span>
-      <span class="hall-edge hall-edge--bar">🍷 Барная стойка</span>
+    <div class="hall-zone hall-zone--gazebo" style="grid-area:gazebo">
+      <span class="hall-zone__name">Беседка у входа</span>
       <div class="hall-tables">
-          <button type="button" class="hall-table" data-loc="bar" data-zone="у барной стойки" aria-label="Стол 20, у барной стойки">20</button>
-          <button type="button" class="hall-table" data-loc="bar" data-zone="у барной стойки" aria-label="Стол 21, у барной стойки">21</button>
-          <button type="button" class="hall-table" data-loc="bar" data-zone="у барной стойки" aria-label="Стол 22, у барной стойки">22</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (диван)" aria-label="Стол 25, у окна (диван)">25</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (диван)" aria-label="Стол 26, у окна (диван)">26</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (диван)" aria-label="Стол 27, у окна (диван)">27</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (диван)" aria-label="Стол 28, у окна (диван)">28</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="в центре" aria-label="Стол 23, в центре">23</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="в центре" aria-label="Стол 24, в центре">24</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="в центре" aria-label="Стол 29, в центре">29</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="в центре" aria-label="Стол 30, в центре">30</button>
+          <button type="button" class="hall-table" data-loc="gazebo" data-zone="беседка у входа" aria-label="Стол 44, беседка у входа">44</button>
+          <button type="button" class="hall-table" data-loc="gazebo" data-zone="беседка у входа" aria-label="Стол 45, беседка у входа">45</button>
+          <button type="button" class="hall-table" data-loc="gazebo" data-zone="беседка у входа" aria-label="Стол 46, беседка у входа">46</button>
+          <button type="button" class="hall-table" data-loc="gazebo" data-zone="беседка у входа" aria-label="Стол 47, беседка у входа">47</button>
       </div>
-    </div>
-    <div class="hall-zone hall-zone--vip" style="grid-area:vip">
-      <span class="hall-zone__name">VIP</span>
-      <div class="hall-tables">
-          <button type="button" class="hall-table" data-loc="vip" data-zone="VIP-зона" aria-label="Стол 31, VIP-зона">31</button>
-          <button type="button" class="hall-table" data-loc="vip" data-zone="VIP-зона" aria-label="Стол 32, VIP-зона">32</button>
-      </div>
-    </div>
-    <div class="hall-zone hall-zone--kids" style="grid-area:kids">
-      <span class="hall-zone__name">Детская комната</span>
-      <span class="hall-kids-ico">🧸</span>
-    </div>
-    <div class="hall-zone hall-zone--terrace" style="grid-area:terrace">
-      <span class="hall-zone__name">Летняя терраса и сад ☂️</span>
-      <div class="hall-tables">
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 33, на террасе">33</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 34, на террасе">34</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 35, на террасе">35</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 36, на террасе">36</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 37, на террасе">37</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 38, на террасе">38</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 39, на террасе">39</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 40, на террасе">40</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 41, на террасе">41</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 42, на террасе">42</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="на террасе" aria-label="Стол 43, на террасе">43</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="в саду / беседка" aria-label="Стол 50, в саду / беседка">50</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="в саду / беседка" aria-label="Стол 51, в саду / беседка">51</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="в саду / беседка" aria-label="Стол 52, в саду / беседка">52</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="в саду / беседка" aria-label="Стол 53, в саду / беседка">53</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="в саду / беседка" aria-label="Стол 54, в саду / беседка">54</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="в саду / беседка" aria-label="Стол 55, в саду / беседка">55</button>
-      </div>
+      <span class="hall-entrance">↑ Вход</span>
     </div>
   </div>
   <div class="hall-legend">
     <span class="hall-legend__item" data-loc="window"><i></i> У окна</span>
-    <span class="hall-legend__item" data-loc="sofa"><i></i> У дивана</span>
     <span class="hall-legend__item" data-loc="bar"><i></i> У бара</span>
+    <span class="hall-legend__item" data-loc="hall"><i></i> В зале</span>
     <span class="hall-legend__item" data-loc="terrace"><i></i> Терраса</span>
     <span class="hall-legend__item" data-loc="garden"><i></i> Сад</span>
-    <span class="hall-legend__item" data-loc="vip"><i></i> VIP</span>
-    <span class="hall-legend__item" data-loc="hall"><i></i> Зал</span>
+    <span class="hall-legend__item" data-loc="gazebo"><i></i> Беседка</span>
   </div>
   <p class="hall-caption" aria-live="polite">Выберите стол на схеме</p>
 </div></section>
 <script>
 (function(){
-  var cap=document.querySelector('.hall-caption');
-  var sel=null;
+  var cap=document.querySelector('.hall-caption'); var sel=null;
   document.querySelectorAll('.hall-table').forEach(function(t){
     function show(){ if(cap) cap.textContent='Стол '+t.textContent.trim()+' · '+t.dataset.zone; }
-    t.addEventListener('mouseenter',show);
-    t.addEventListener('focus',show);
+    t.addEventListener('mouseenter',show); t.addEventListener('focus',show);
     t.addEventListener('click',function(){ if(sel)sel.classList.remove('is-active'); sel=t; t.classList.add('is-active'); show(); });
   });
 })();
