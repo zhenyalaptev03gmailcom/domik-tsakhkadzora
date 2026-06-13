@@ -2893,12 +2893,15 @@ html[lang="hy"] h3 { line-height: 1.2; }
 
 .hall-map {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-columns: 0.8fr 1.5fr 0.5fr;
   grid-template-areas:
-    "zal2 garden"
-    "zal2 zal1"
-    "gazebo gazebo";
-  gap: 0.7rem;
+    "kids     terrace  terrace"
+    "separate terrace  terrace"
+    "bar      corridor toilet"
+    "zal2     zal1     zal1"
+    "window   zal1     zal1"
+    "gazebo   gazebo   gazebo";
+  gap: 0.55rem;
   max-width: 880px;
   margin: 0 auto;
   text-align: left;
@@ -2915,11 +2918,26 @@ html[lang="hy"] h3 { line-height: 1.2; }
   padding: 2.2rem 1rem 1rem;
   min-height: 96px;
 }
-.hall-zone--zal2 { grid-area: zal2; }
 .hall-zone--zal1 { grid-area: zal1; }
-.hall-zone--garden { grid-area: garden; background: rgba(90, 159, 106, 0.06); border-color: rgba(90, 159, 106, 0.3); }
+.hall-zone--zal2 { grid-area: zal2; }
+.hall-zone--terrace { grid-area: terrace; background: rgba(90, 159, 106, 0.06); border-color: rgba(90, 159, 106, 0.3); }
 .hall-zone--gazebo { grid-area: gazebo; background: rgba(194, 112, 63, 0.06); border-color: rgba(194, 112, 63, 0.3); }
-.hall-entrance { display: block; text-align: center; margin-top: 0.5rem; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--bronze-light); }
+.hall-zone--kids { grid-area: kids; }
+.hall-zone--separate { grid-area: separate; }
+.hall-zone--bar { grid-area: bar; }
+.hall-zone--corridor { grid-area: corridor; }
+.hall-zone--toilet { grid-area: toilet; }
+.hall-zone--window { grid-area: window; min-height: 34px; }
+/* service (non-dining) zones: muted, dashed, centred label */
+.hall-zone--svc {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 0.25rem; min-height: 52px; padding: 0.6rem;
+  background: rgba(255, 255, 255, 0.015);
+  border-style: dashed; border-color: rgba(255, 255, 255, 0.14);
+}
+.hall-zone--svc .hall-zone__name { position: static; }
+.hall-ico { font-size: 1.25rem; line-height: 1; }
+.hall-note { font-size: 0.64rem; color: var(--muted); text-align: center; }
 .hall-zone__name {
   position: absolute; top: 0.55rem; left: 0.9rem;
   font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
@@ -2970,6 +2988,6 @@ html[lang="hy"] h3 { line-height: 1.2; }
 }
 
 @media (max-width: 640px) {
-  .hall-map { grid-template-columns: 1fr; grid-template-areas: "zal2" "garden" "zal1" "gazebo"; }
+  .hall-map { grid-template-columns: 1fr; grid-template-areas: "kids" "separate" "bar" "zal2" "window" "terrace" "corridor" "toilet" "zal1" "gazebo"; }
   .hall-table { width: 34px; height: 34px; font-size: 0.78rem; }
 }
