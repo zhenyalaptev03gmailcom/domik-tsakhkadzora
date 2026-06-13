@@ -3014,26 +3014,37 @@ html[lang="hy"] h3 { line-height: 1.2; }
    CONTACTS: hall floor-plan (SVG, top-down)
    ==================================================================== */
 .hall-plan {
-  max-width: 880px; margin: 0 auto;
-  border: 1px solid rgba(201, 169, 98, 0.2);
-  border-radius: 16px; padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.015);
+  max-width: 900px; margin: 0 auto; padding: 1.1rem;
+  border: 1px solid transparent;
+  border-image: linear-gradient(160deg, rgba(217, 184, 122, 0.45), rgba(74, 18, 32, 0.35)) 1;
+  border-radius: 20px;
+  background: radial-gradient(120% 90% at 50% 0%, rgba(255, 255, 255, 0.04), rgba(12, 10, 9, 0)), #0e0b08;
+  box-shadow: inset 0 1px 0 rgba(217, 184, 122, 0.12), 0 30px 60px -30px rgba(0, 0, 0, 0.65);
 }
 .hall-svg { width: 100%; height: auto; display: block; }
-.hall-svg .wall { stroke: rgba(231, 200, 138, 0.5); stroke-width: 2.2; stroke-linecap: round; }
-.hall-svg .win { stroke: #6f9fce; stroke-width: 5; stroke-linecap: round; }
-.hall-svg .door-arrow { stroke: var(--bronze-light); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.hall-svg .door-label { fill: var(--muted); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
-.hall-svg .room-label { fill: var(--bronze-light); font-family: 'Cormorant Garamond', serif; letter-spacing: 1px; opacity: 0.92; }
-.hall-svg .room-ico { fill: var(--muted); font-size: 13px; letter-spacing: 1px; }
-.hall-svg .stool { fill: rgba(231, 200, 138, 0.4); }
-.hall-svg .ht-num { fill: #fff; font-size: 12px; font-weight: 600; pointer-events: none; }
-.hall-svg .ht { cursor: pointer; }
-.hall-svg .ht circle, .hall-svg .ht rect { stroke: rgba(0, 0, 0, 0.28); stroke-width: 1; transition: stroke 0.15s ease, filter 0.15s ease; }
-.hall-svg .ht:hover circle, .hall-svg .ht:hover rect,
-.hall-svg .ht:focus circle, .hall-svg .ht:focus rect,
-.hall-svg .ht.is-active circle, .hall-svg .ht.is-active rect {
-  stroke: #e7c88a; stroke-width: 3; filter: brightness(1.15); outline: none;
+.hall-svg .bld { fill: url(#floorGrad); stroke: rgba(217, 184, 122, 0.5); stroke-width: 2; }
+.hall-svg .room { stroke: rgba(217, 184, 122, 0.4); stroke-width: 1.4; }
+.hall-svg .win { stroke: url(#glassGrad); stroke-width: 6; stroke-linecap: round; filter: url(#glassGlow); }
+.hall-svg .door-arrow { stroke: var(--bronze-light); stroke-width: 2.4; fill: none; stroke-linecap: round; }
+.hall-svg .door-label { fill: var(--muted); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; }
+.hall-svg .room-rule { fill: var(--bronze-light); }
+.hall-svg .room-label { fill: var(--bronze-light); font-family: 'Cormorant Garamond', serif; font-weight: 500; text-transform: uppercase; }
+.hall-svg .room-label--zone { font-size: 22px; letter-spacing: 0.16em; }
+.hall-svg .room-label--room { font-size: 17px; letter-spacing: 0.14em; opacity: 0.86; }
+.hall-svg .room-label--sub { font-size: 14px; letter-spacing: 0.18em; opacity: 0.86; }
+.hall-svg .room-ico { fill: var(--muted); font-size: 12px; letter-spacing: 0.18em; }
+.hall-svg .stool { fill: url(#gBar); opacity: 0.85; }
+.hall-svg .ht-num { fill: #fdf6e6; font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 600; pointer-events: none; paint-order: stroke; stroke: rgba(12, 10, 9, 0.55); stroke-width: 2.5px; }
+.hall-svg .ht { cursor: pointer; filter: url(#tableSh); transform-box: fill-box; transform-origin: center; }
+.hall-svg .ht circle, .hall-svg .ht rect { stroke: rgba(255, 240, 210, 0.18); stroke-width: 1; transition: stroke 0.15s ease; }
+.hall-svg .ht:hover circle, .hall-svg .ht:focus circle, .hall-svg .ht.is-active circle,
+.hall-svg .ht:hover rect, .hall-svg .ht:focus rect, .hall-svg .ht.is-active rect {
+  stroke: #d9b87a; stroke-width: 2.5; outline: none;
+}
+.hall-svg .ht.is-active { filter: url(#tableGlow); }
+@media (prefers-reduced-motion: no-preference) {
+  .hall-svg .ht { transition: transform 0.18s ease, filter 0.18s ease; }
+  .hall-svg .ht:hover, .hall-svg .ht:focus, .hall-svg .ht.is-active { transform: scale(1.08); }
 }
 /* legend palette for the floor plan */
 .hall-legend__item[data-loc="window"] i { background: #5b86b3; }
