@@ -161,13 +161,13 @@
   }
 
   function bindCards() {
-    document.querySelectorAll("button.menu-card[data-dish-id]").forEach((card) => {
-      card.addEventListener("click", () => openDish(card));
+    document.querySelectorAll(".menu-card[data-dish-id]").forEach((card) => {
+      card.addEventListener("click", (e) => { e.preventDefault(); openDish(card); });
     });
 
     document.querySelectorAll(".menu-page").forEach((page) => {
       page.addEventListener("selectstart", (e) => {
-        if (e.target.closest("button.menu-card[data-dish-id]")) e.preventDefault();
+        if (e.target.closest(".menu-card[data-dish-id]")) e.preventDefault();
       });
     });
   }
