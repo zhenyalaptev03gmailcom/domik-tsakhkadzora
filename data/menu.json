@@ -57,6 +57,27 @@
         "has_image": true,
         "local_image": "img/menu/чиа-пудинг.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chia-pudding234"
+      },
+      {
+        "id": "italian-breakfast",
+        "name": "Итальянский завтрак",
+        "price": "4 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "english-breakfast",
+        "name": "Английский завтрак",
+        "price": "4 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "croissant",
+        "name": "Круассан",
+        "price": "2 200",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
       }
     ]
   },
@@ -602,6 +623,13 @@
         "has_image": true,
         "local_image": "img/menu/куриное-филе-с-рисом.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chicken-fillet-with-rice"
+      },
+      {
+        "id": "dolma-turkey",
+        "name": "Долма с индейкой",
+        "price": "3 700",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
       }
     ]
   },
@@ -674,6 +702,13 @@
         "has_image": true,
         "local_image": "img/menu/стейк-рибай.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/ribeye-steak2345678910111213"
+      },
+      {
+        "id": "carpaccio",
+        "name": "Карпаччо",
+        "price": "4 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
       }
     ]
   },
@@ -745,7 +780,7 @@
       },
       {
         "id": "tarap",
-        "name": "Тарап",
+        "name": "Стерлядь цельная",
         "price": "8 600",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": true,
@@ -909,6 +944,13 @@
         "has_image": true,
         "local_image": "img/menu/мини-бургер-с-куриной.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/mini-burger-with-chicken-breast-and-fries"
+      },
+      {
+        "id": "pelmeni",
+        "name": "Пельмени",
+        "price": "1 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
       }
     ]
   },
@@ -1025,6 +1067,104 @@
         "has_image": true,
         "local_image": "img/menu/доме.jpg?v=ig1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/dome"
+      },
+      {
+        "id": "apple-pie",
+        "name": "Яблочный пирог",
+        "price": "2 200",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      }
+    ]
+  },
+  {
+    "id": "2150",
+    "name": "Дополнительное меню",
+    "slug": "дополнительное-меню",
+    "items": [
+      {
+        "id": "slavic-solyanka",
+        "name": "Славянская солянка",
+        "price": "2 200",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "trout-lavash",
+        "name": "Филе форели в лаваше",
+        "price": "4 600",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "lamb-ragout",
+        "name": "Рагу из баранины с овощами",
+        "price": "4 700",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "kebab-lamb-duo",
+        "name": "Кебаб из баранины с картофелем-гриль (для двоих)",
+        "price": "7 800",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "kebab-veal-duo",
+        "name": "Кебаб из телятины с жареным картофелем (для двоих)",
+        "price": "8 700",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "beef-stroganoff-veal",
+        "name": "Бефстроганов из телятины (рис/картофель)",
+        "price": "3 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "beef-stroganoff-chicken",
+        "name": "Куриный бефстроганов (рис/картофель)",
+        "price": "3 200",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "beef-stroganoff-mushroom",
+        "name": "Бефстроганов с грибами (рис/картофель)",
+        "price": "3 000",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "gourmet-salad",
+        "name": "Салат гурман",
+        "price": "3 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "hash",
+        "name": "Хаш",
+        "price": "2 700",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "hasharisa",
+        "name": "Хашариса",
+        "price": "2 300",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
+      },
+      {
+        "id": "domina-dessert",
+        "name": "Домина десерт",
+        "price": "1 750",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false
       }
     ]
   }

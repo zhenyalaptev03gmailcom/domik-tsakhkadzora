@@ -4,8 +4,8 @@
  */
 (function () {
   const GRID_ID = "popular-dishes-grid";
-  const POOL_URL = "data/popular-pool.json";
-  const MENU_URL = "data/menu.json";
+  const POOL_URL = "data/popular-pool.json?v=2";
+  const MENU_URL = "data/menu.json?v=2";
   const PLACEHOLDER_IMG = "img/dish-khachapuri.jpg";
   const PICK_COUNT = 5;
 
@@ -98,7 +98,7 @@
       const poolData = await poolRes.json();
       const menu = await menuRes.json();
       const pool = poolData.dish_ids || poolData.ids;
-      if (!Array.isArray(pool) || pool.length !== 20) {
+      if (!Array.isArray(pool) || pool.length < PICK_COUNT) {
         throw new Error("pool size");
       }
 
