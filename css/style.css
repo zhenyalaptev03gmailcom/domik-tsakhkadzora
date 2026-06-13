@@ -2982,6 +2982,34 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .hall-legend__item[data-loc="hall"] i   { background: #9a8050; }
 .hall-legend__item[data-loc="gazebo"] i { background: #c2703f; }
 
+/* ====================================================================
+   MENU: Основное меню / Бар toggle + bar text list
+   ==================================================================== */
+.menu-switch {
+  display: flex; gap: 4px; justify-content: center;
+  width: fit-content; margin: 0.7rem auto 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 169, 98, 0.3);
+  border-radius: 999px; padding: 4px;
+  position: relative; z-index: 40;
+}
+.menu-switch__btn {
+  padding: 0.5rem 1.5rem; border: none; background: transparent;
+  color: var(--muted); font: inherit; font-weight: 600; font-size: 0.92rem;
+  border-radius: 999px; cursor: pointer; transition: background 0.2s, color 0.2s;
+}
+.menu-switch__btn:hover { color: var(--bronze-light); }
+.menu-switch__btn.is-active { background: linear-gradient(135deg, var(--bronze), #8a6a3f); color: #fff; }
+
+.bar-category { max-width: 720px; margin: 0 auto 2.6rem; }
+.bar-list { list-style: none; margin: 0; padding: 0; }
+.bar-item {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  padding: 0.6rem 0.2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+.bar-item__name small { color: var(--muted); font-size: 0.8em; margin-left: 0.35rem; }
+.bar-item__price { color: var(--bronze-light); font-weight: 600; white-space: nowrap; }
+
 .hall-caption {
   min-height: 1.4em; margin-top: 0.4rem;
   color: var(--bronze-light); font-weight: 500; font-size: 1.05rem;

@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="preload" as="image" href="img/hero-bg.webp" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="css/style.css?v=41">
+<link rel="stylesheet" href="css/style.css?v=42">
 <meta name="description" content="Меню ресторана «Домик Цахкадзора»: закуски, салаты, паста, блюда на углях, рыба и морепродукты, пицца и десерты.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0c0a09">
@@ -61,6 +61,11 @@
   </div>
 </section>
 <div id="map-rating-bar" class="map-rating-bar container" hidden aria-label="Рейтинг на картах"></div>
+<div class="menu-switch" role="tablist" aria-label="Меню или бар">
+  <button type="button" class="menu-switch__btn is-active" data-target="food" role="tab" aria-selected="true">Основное меню</button>
+  <button type="button" class="menu-switch__btn" data-target="bar" role="tab" aria-selected="false">Бар</button>
+</div>
+<div id="menu-food">
 <nav class="menu-nav container" aria-label="Разделы меню">
   <a href="#cat-0" class="menu-tab" data-category="cat-0">Завтрак</a>
   <a href="#cat-1" class="menu-tab" data-category="cat-1">Закуски</a>
@@ -1014,6 +1019,279 @@
     <p class="menu-source">Меню с <a href="https://orderin.am/ru/menu/restaurant/menu/show/domik" target="_blank" rel="noopener">orderin.am</a></p>
   </div>
 </div>
+</div>
+<div id="menu-bar" hidden>
+<nav class="menu-nav container" aria-label="Разделы бара">
+  <a href="#bcat-0" class="menu-tab" data-category="bcat-0">Пиво</a>
+  <a href="#bcat-1" class="menu-tab" data-category="bcat-1">К пиву</a>
+  <a href="#bcat-2" class="menu-tab" data-category="bcat-2">Вино — красное</a>
+  <a href="#bcat-3" class="menu-tab" data-category="bcat-3">Вино — белое</a>
+  <a href="#bcat-4" class="menu-tab" data-category="bcat-4">Вино — розовое / игристое</a>
+  <a href="#bcat-5" class="menu-tab" data-category="bcat-5">Виски</a>
+  <a href="#bcat-6" class="menu-tab" data-category="bcat-6">Водка</a>
+  <a href="#bcat-7" class="menu-tab" data-category="bcat-7">Коньяк (Арарат)</a>
+  <a href="#bcat-8" class="menu-tab" data-category="bcat-8">Ликёры</a>
+  <a href="#bcat-9" class="menu-tab" data-category="bcat-9">Текила</a>
+  <a href="#bcat-10" class="menu-tab" data-category="bcat-10">Ром / Джин</a>
+  <a href="#bcat-11" class="menu-tab" data-category="bcat-11">Коктейли</a>
+  <a href="#bcat-12" class="menu-tab" data-category="bcat-12">Шоты и горячее</a>
+  <a href="#bcat-13" class="menu-tab" data-category="bcat-13">Кофе</a>
+  <a href="#bcat-14" class="menu-tab" data-category="bcat-14">Чай</a>
+  <a href="#bcat-15" class="menu-tab" data-category="bcat-15">Фреши и лимонады</a>
+  <a href="#bcat-16" class="menu-tab" data-category="bcat-16">Молочные коктейли</a>
+  <a href="#bcat-17" class="menu-tab" data-category="bcat-17">Напитки</a>
+</nav>
+<div class="menu-page-wrap">
+  <div class="container menu-page">
+      <section class="menu-category bar-category" id="bcat-0" data-category="bcat-0">
+        <h3>Пиво</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Пауланер светлый <small>0.3 / 0.5 / 1 л</small></span><span class="bar-item__price">1 700 / 2 200 / 3 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Пауланер пшеничный <small>0.3 / 0.5 / 1 л</small></span><span class="bar-item__price">1 700 / 2 200 / 3 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Пауланер, бутылка (ориг./пшеница)</span><span class="bar-item__price">1 900 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-1" data-category="bcat-1">
+        <h3>К пиву</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Солёные орехи</span><span class="bar-item__price">1 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Сырные шарики</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Жареный сыр</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Чесночный хлеб</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Куриные крылышки острые</span><span class="bar-item__price">3 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Брецель (2 шт) со сливочным маслом</span><span class="bar-item__price">1 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Куриная темпура острая</span><span class="bar-item__price">3 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Свиные рёбрышки острые</span><span class="bar-item__price">7 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Баварские сосиски</span><span class="bar-item__price">7 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Острые колбаски</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Острые чипсы со специальным соусом</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Немецкий гуляш с пивным соусом</span><span class="bar-item__price">3 600 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-2" data-category="bcat-2">
+        <h3>Вино — красное</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Tariri</span><span class="bar-item__price">24 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Karasi</span><span class="bar-item__price">12 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ariats Semi-Kakhani</span><span class="bar-item__price">9 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Voskevaz Vintage Areni</span><span class="bar-item__price">9 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Takar</span><span class="bar-item__price">9 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Van Ardi</span><span class="bar-item__price">8 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Takar <small>187 мл</small></span><span class="bar-item__price">2 400 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Akoom (гранат)</span><span class="bar-item__price">11 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Akoom <small>0.25 л</small></span><span class="bar-item__price">4 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Meyron</span><span class="bar-item__price">9 900 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-3" data-category="bcat-3">
+        <h3>Вино — белое</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Tariri</span><span class="bar-item__price">22 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Karasi</span><span class="bar-item__price">10 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ariats Voskehat</span><span class="bar-item__price">10 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Van Ardi</span><span class="bar-item__price">8 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Takar</span><span class="bar-item__price">8 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Takar <small>187 мл</small></span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Meyron</span><span class="bar-item__price">8 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Summer Wine</span><span class="bar-item__price">9 900 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-4" data-category="bcat-4">
+        <h3>Вино — розовое / игристое</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Meyron (розе)</span><span class="bar-item__price">6 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ariats (розе)</span><span class="bar-item__price">8 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Zonin Prosecco DOC</span><span class="bar-item__price">12 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Zonin Prosecco Rosé</span><span class="bar-item__price">14 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Hay Petnat</span><span class="bar-item__price">10 000 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-5" data-category="bcat-5">
+        <h3>Виски</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Bushmills <small>50 мл</small></span><span class="bar-item__price">3 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Jameson</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Jack Daniel's</span><span class="bar-item__price">2 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Chivas Regal 12</span><span class="bar-item__price">2 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Chivas Regal 18</span><span class="bar-item__price">4 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Monkey Shoulder</span><span class="bar-item__price">3 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Glenfiddich 12</span><span class="bar-item__price">3 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Glenfiddich 18</span><span class="bar-item__price">6 600 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Black Label</span><span class="bar-item__price">3 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Akashi Red</span><span class="bar-item__price">2 000 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-6" data-category="bcat-6">
+        <h3>Водка</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Finlandia <small>50 мл</small></span><span class="bar-item__price">1 400 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Absolut</span><span class="bar-item__price">1 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Grey Goose</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ohanyan</span><span class="bar-item__price">1 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ohanyan Ice</span><span class="bar-item__price">1 600 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Chisti Rosi</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">ODEVI</span><span class="bar-item__price">1 400 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-7" data-category="bcat-7">
+        <h3>Коньяк (Арарат)</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Ararat 5 <small>50 мл</small></span><span class="bar-item__price">1 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ararat 7</span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ararat 10</span><span class="bar-item__price">3 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ararat 15</span><span class="bar-item__price">4 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ararat 20</span><span class="bar-item__price">6 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ararat Dvin</span><span class="bar-item__price">5 000 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-8" data-category="bcat-8">
+        <h3>Ликёры</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Martini Bianco <small>50 мл</small></span><span class="bar-item__price">1 300 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Martini Rosato</span><span class="bar-item__price">1 300 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Martini Extra Dry</span><span class="bar-item__price">1 300 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Martini Rosso</span><span class="bar-item__price">1 300 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Becherovka</span><span class="bar-item__price">1 400 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Absenta</span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Sambuca</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Kahlua</span><span class="bar-item__price">1 600 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Baileys</span><span class="bar-item__price">1 600 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Jägermeister</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">De Kuyper</span><span class="bar-item__price">1 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Aperol</span><span class="bar-item__price">1 500 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-9" data-category="bcat-9">
+        <h3>Текила</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Olmeca Silver <small>50 мл</small></span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Olmeca Gold</span><span class="bar-item__price">2 600 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Jose Cuervo (gold/silver)</span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Patron Silver</span><span class="bar-item__price">3 300 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Patron Añejo</span><span class="bar-item__price">5 200 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-10" data-category="bcat-10">
+        <h3>Ром / Джин</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Bacardi White <small>50 мл</small></span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Angostura Gold</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Beefeater</span><span class="bar-item__price">1 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Bombay Sapphire</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Hendrick's</span><span class="bar-item__price">2 500 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-11" data-category="bcat-11">
+        <h3>Коктейли</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Mojito</span><span class="bar-item__price">3 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Piña Colada</span><span class="bar-item__price">3 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Tequila Sunrise</span><span class="bar-item__price">3 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Margarita</span><span class="bar-item__price">3 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Old Fashioned</span><span class="bar-item__price">3 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Negroni</span><span class="bar-item__price">3 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Daiquiri</span><span class="bar-item__price">3 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Aperol Spritz</span><span class="bar-item__price">3 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Long Island</span><span class="bar-item__price">3 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Adios</span><span class="bar-item__price">3 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Gin Fizz</span><span class="bar-item__price">3 200 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-12" data-category="bcat-12">
+        <h3>Шоты и горячее</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">B-52</span><span class="bar-item__price">2 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">B-53</span><span class="bar-item__price">2 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Глинтвейн</span><span class="bar-item__price">2 800 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-13" data-category="bcat-13">
+        <h3>Кофе</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Американо</span><span class="bar-item__price">1 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Эспрессо</span><span class="bar-item__price">1 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Эспрессо ристретто</span><span class="bar-item__price">1 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Эспрессо лунго</span><span class="bar-item__price">1 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Капучино</span><span class="bar-item__price">1 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Капучино ароматный</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Латте макиато</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Латте макиато ароматный</span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Горячий шоколад</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Гляссе</span><span class="bar-item__price">2 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Кофе по-восточному</span><span class="bar-item__price">600 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Паризьен</span><span class="bar-item__price">800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Айриш кофе</span><span class="bar-item__price">3 000 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-14" data-category="bcat-14">
+        <h3>Чай</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Чёрный</span><span class="bar-item__price">1 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Травяной</span><span class="bar-item__price">1 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Сенча</span><span class="bar-item__price">1 200 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Цитрусовый</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ягодный</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Облепиховый</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Пуэр</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Имбирный</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Домашнее варенье</span><span class="bar-item__price">900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Холодный чай</span><span class="bar-item__price">1 500 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-15" data-category="bcat-15">
+        <h3>Фреши и лимонады</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Апельсин <small>фреш 250 мл</small></span><span class="bar-item__price">1 800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Банан</span><span class="bar-item__price">1 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Грейпфрут</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Киви</span><span class="bar-item__price">1 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Яблоко</span><span class="bar-item__price">1 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Морковь</span><span class="bar-item__price">1 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Клубника</span><span class="bar-item__price">2 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Лимонад (облепиха/цитрус/фалерно/мохито) <small>300 мл</small></span><span class="bar-item__price">2 000 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-16" data-category="bcat-16">
+        <h3>Молочные коктейли</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Банан-клубника <small>300 мл</small></span><span class="bar-item__price">2 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Ваниль-шоколад</span><span class="bar-item__price">2 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Oreo</span><span class="bar-item__price">2 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Snickers</span><span class="bar-item__price">2 900 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Nutella</span><span class="bar-item__price">2 900 ֏</span></li>
+        </ul>
+      </section>
+      <section class="menu-category bar-category" id="bcat-17" data-category="bcat-17">
+        <h3>Напитки</h3>
+        <ul class="bar-list">
+          <li class="bar-item"><span class="bar-item__name">Coca-Cola / Fanta / Sprite <small>0.33</small></span><span class="bar-item__price">500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Pepsi / Mirinda / 7UP <small>0.33</small></span><span class="bar-item__price">500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Газированная вода <small>0.33</small></span><span class="bar-item__price">500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Вода <small>0.33</small></span><span class="bar-item__price">500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Натуральный сок <small>0.2 л</small></span><span class="bar-item__price">800 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Компот</span><span class="bar-item__price">2 000 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Tonic Thomas Henry</span><span class="bar-item__price">1 600 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Red Bull</span><span class="bar-item__price">1 500 ֏</span></li>
+          <li class="bar-item"><span class="bar-item__name">Schweppes</span><span class="bar-item__price">800 ֏</span></li>
+        </ul>
+      </section>
+  </div>
+</div>
+</div>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.menu-switch__btn');
+  var panels={food:document.getElementById('menu-food'),bar:document.getElementById('menu-bar')};
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.dataset.target;
+      btns.forEach(function(x){var on=x===b;x.classList.toggle('is-active',on);x.setAttribute('aria-selected',on);});
+      Object.keys(panels).forEach(function(k){ if(panels[k]) panels[k].hidden=(k!==t); });
+      if(panels[t]) panels[t].querySelectorAll('.menu-category').forEach(function(c){c.classList.add('is-visible');});
+    });
+  });
+})();
+</script>
 <footer class="site-footer">
 <div class="container footer-grid">
   <div class="footer-col footer-col--brand">
