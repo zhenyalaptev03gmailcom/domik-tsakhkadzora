@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=42">
+<link rel="stylesheet" href="css/style.css?v=44">
 <meta name="description" content="Контакты и бронирование столика в ресторане «Домик Цахкадзора».">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0c0a09">
@@ -99,93 +99,105 @@
 <section class="page-section hall-section"><div class="container">
   <h2 class="hall-title">Схема зала</h2>
   <p class="hall-sub">План ресторана сверху. Наведите или нажмите на стол — покажем зону. Нужен конкретный — скажите при бронировании.</p>
-  <div class="hall-map">
-    <div class="hall-zone hall-zone--svc hall-zone--kids" style="grid-area:kids"><span class="hall-zone__name">Детская комната</span><span class="hall-ico">🧸</span></div>
-    <div class="hall-zone hall-zone--svc hall-zone--separate" style="grid-area:separate"><span class="hall-zone__name">Отдельная комната</span><span class="hall-note">для компаний · по запросу</span></div>
-    <div class="hall-zone hall-zone--svc hall-zone--bar" style="grid-area:bar"><span class="hall-zone__name">Бар</span><span class="hall-ico">🍷</span></div>
-    <div class="hall-zone hall-zone--zal2" style="grid-area:zal2">
-      <span class="hall-zone__name">Основной зал №2</span>
-      <span class="hall-edge">🍷 Бар рядом</span>
-      <div class="hall-tables">
-          <button type="button" class="hall-table" data-loc="bar" data-zone="у бара (Зал №2)" aria-label="Стол 20, у бара (Зал №2)">20</button>
-          <button type="button" class="hall-table" data-loc="bar" data-zone="у бара (Зал №2)" aria-label="Стол 21, у бара (Зал №2)">21</button>
-          <button type="button" class="hall-table" data-loc="bar" data-zone="у бара (Зал №2)" aria-label="Стол 22, у бара (Зал №2)">22</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №2" aria-label="Стол 23, Основной зал №2">23</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №2" aria-label="Стол 24, Основной зал №2">24</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (Зал №2)" aria-label="Стол 25, у окна (Зал №2)">25</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (Зал №2)" aria-label="Стол 26, у окна (Зал №2)">26</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (Зал №2)" aria-label="Стол 27, у окна (Зал №2)">27</button>
-          <button type="button" class="hall-table" data-loc="window" data-zone="у окна (Зал №2)" aria-label="Стол 28, у окна (Зал №2)">28</button>
-      </div>
-    </div>
-    <div class="hall-zone hall-zone--svc hall-zone--window" style="grid-area:window"><span class="hall-zone__name">🪟 Окно</span></div>
-    <div class="hall-zone hall-zone--terrace" style="grid-area:terrace">
-      <span class="hall-zone__name">Терраса с садом ☂️</span>
-      <div class="hall-tables">
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 30, Терраса с садом">30</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 31, Терраса с садом">31</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 32, Терраса с садом">32</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 33, Терраса с садом">33</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 34, Терраса с садом">34</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 35, Терраса с садом">35</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 36, Терраса с садом">36</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 37, Терраса с садом">37</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 38, Терраса с садом">38</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 39, Терраса с садом">39</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 40, Терраса с садом">40</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 41, Терраса с садом">41</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 42, Терраса с садом">42</button>
-          <button type="button" class="hall-table" data-loc="terrace" data-zone="Терраса с садом" aria-label="Стол 43, Терраса с садом">43</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="Сад" aria-label="Стол 50, Сад">50</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="Сад" aria-label="Стол 51, Сад">51</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="Сад" aria-label="Стол 52, Сад">52</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="Сад" aria-label="Стол 53, Сад">53</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="Сад" aria-label="Стол 54, Сад">54</button>
-          <button type="button" class="hall-table" data-loc="garden" data-zone="Сад" aria-label="Стол 55, Сад">55</button>
-      </div>
-    </div>
-    <div class="hall-zone hall-zone--svc hall-zone--corridor" style="grid-area:corridor"><span class="hall-zone__name">Коридор</span></div>
-    <div class="hall-zone hall-zone--svc hall-zone--toilet" style="grid-area:toilet"><span class="hall-zone__name">Туалет</span><span class="hall-ico">🚻</span></div>
-    <div class="hall-zone hall-zone--zal1" style="grid-area:zal1">
-      <span class="hall-zone__name">Основной зал №1</span>
-      <div class="hall-tables">
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 10, Основной зал №1">10</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 11, Основной зал №1">11</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 12, Основной зал №1">12</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 13, Основной зал №1">13</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 14, Основной зал №1">14</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 15, Основной зал №1">15</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 16, Основной зал №1">16</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 17, Основной зал №1">17</button>
-          <button type="button" class="hall-table" data-loc="hall" data-zone="Основной зал №1" aria-label="Стол 18, Основной зал №1">18</button>
-      </div>
-    </div>
-    <div class="hall-zone hall-zone--gazebo" style="grid-area:gazebo">
-      <span class="hall-zone__name">Беседка у входа</span>
-      <span class="hall-edge">↑ ВХОД</span>
-      <div class="hall-tables">
-          <button type="button" class="hall-table" data-loc="gazebo" data-zone="Беседка у входа" aria-label="Стол 44, Беседка у входа">44</button>
-          <button type="button" class="hall-table" data-loc="gazebo" data-zone="Беседка у входа" aria-label="Стол 45, Беседка у входа">45</button>
-          <button type="button" class="hall-table" data-loc="gazebo" data-zone="Беседка у входа" aria-label="Стол 46, Беседка у входа">46</button>
-          <button type="button" class="hall-table" data-loc="gazebo" data-zone="Беседка у входа" aria-label="Стол 47, Беседка у входа">47</button>
-      </div>
-    </div>
+  <div class="hall-plan">
+      <svg viewBox="0 0 1000 740" class="hall-svg" role="img" aria-label="План зала ресторана">
+      <rect x="14" y="14" width="258" height="136" rx="0" fill="rgba(160,123,191,0.06)"/>
+      <rect x="14" y="150" width="258" height="120" rx="0" fill="rgba(160,123,191,0.05)"/>
+      <rect x="14" y="270" width="258" height="60" rx="0" fill="rgba(199,154,94,0.07)"/>
+      <rect x="14" y="330" width="258" height="230" rx="0" fill="rgba(255,255,255,0.025)"/>
+      <rect x="272" y="14" width="714" height="236" rx="0" fill="rgba(106,163,122,0.08)"/>
+      <rect x="272" y="250" width="542" height="72" rx="0" fill="rgba(255,255,255,0.015)"/>
+      <rect x="814" y="250" width="172" height="72" rx="0" fill="rgba(255,255,255,0.02)"/>
+      <rect x="272" y="322" width="714" height="238" rx="0" fill="rgba(255,255,255,0.03)"/>
+      <rect x="14" y="600" width="972" height="126" rx="16" fill="rgba(194,134,79,0.07)"/>
+      <line x1="14" y1="14" x2="986" y2="14" class="wall"/>
+      <line x1="986" y1="14" x2="986" y2="560" class="wall"/>
+      <line x1="14" y1="14" x2="14" y2="560" class="wall"/>
+      <line x1="14" y1="560" x2="432" y2="560" class="wall"/>
+      <line x1="572" y1="560" x2="986" y2="560" class="wall"/>
+      <line x1="272" y1="14" x2="272" y2="560" class="wall"/>
+      <line x1="14" y1="150" x2="272" y2="150" class="wall"/>
+      <line x1="14" y1="270" x2="272" y2="270" class="wall"/>
+      <line x1="14" y1="330" x2="272" y2="330" class="wall"/>
+      <line x1="272" y1="250" x2="986" y2="250" class="wall"/>
+      <line x1="272" y1="322" x2="986" y2="322" class="wall"/>
+      <line x1="814" y1="250" x2="814" y2="322" class="wall"/>
+      <rect x="14" y="600" width="972" height="126" rx="16" class="wall" fill="none"/>
+      <line x1="14" y1="372" x2="14" y2="430" class="win"/>
+      <line x1="14" y1="452" x2="14" y2="510" class="win"/>
+      <line x1="986" y1="360" x2="986" y2="415" class="win"/>
+      <line x1="986" y1="450" x2="986" y2="505" class="win"/>
+      <line x1="360" y1="14" x2="440" y2="14" class="win"/>
+      <line x1="520" y1="14" x2="600" y2="14" class="win"/>
+      <line x1="700" y1="14" x2="780" y2="14" class="win"/>
+      <line x1="860" y1="14" x2="940" y2="14" class="win"/>
+      <path d="M 490 558 l 13 -16 l 13 16" class="door-arrow"/>
+      <text x="502.0" y="584" class="door-label" text-anchor="middle">вход</text>
+      <rect x="36" y="288" width="202" height="16" rx="5" fill="rgba(231,200,138,0.5)"/>
+      <circle cx="70" cy="316" r="6" class="stool"/>
+      <circle cx="120" cy="316" r="6" class="stool"/>
+      <circle cx="170" cy="316" r="6" class="stool"/>
+      <circle cx="220" cy="316" r="6" class="stool"/>
+      <rect x="110" y="92" width="16" height="16" rx="3" fill="rgba(160,123,191,0.5)"/>
+      <rect x="134" y="92" width="16" height="16" rx="3" fill="rgba(160,123,191,0.5)"/>
+      <rect x="158" y="92" width="16" height="16" rx="3" fill="rgba(160,123,191,0.5)"/>
+      <text x="900" y="312" class="room-ico" text-anchor="middle">WC</text>
+      <circle cx="300" cy="40" r="9" fill="rgba(106,163,122,0.5)"/>
+      <circle cx="950" cy="210" r="9" fill="rgba(106,163,122,0.5)"/>
+      <circle cx="300" cy="210" r="9" fill="rgba(106,163,122,0.5)"/>
+      <text x="143" y="78" class="room-label" style="font-size:13px" text-anchor="middle">Детская комната</text>
+      <text x="143" y="170" class="room-label" style="font-size:13px" text-anchor="middle">Отдельная комната</text>
+      <text x="143" y="272" class="room-label" style="font-size:13px" text-anchor="middle">Бар</text>
+      <text x="190" y="352" class="room-label" style="font-size:15px" text-anchor="middle">Зал № 2</text>
+      <text x="629" y="38" class="room-label" style="font-size:16px" text-anchor="middle">Терраса с садом</text>
+      <text x="540" y="292" class="room-label" style="font-size:12px" text-anchor="middle">Коридор</text>
+      <text x="360" y="352" class="room-label" style="font-size:16px" text-anchor="middle">Зал № 1</text>
+      <text x="500" y="624" class="room-label" style="font-size:14px" text-anchor="middle">Беседка у входа</text>
+      <g class="ht" data-zone="у бара" tabindex="0"><circle cx="78" cy="392" r="13" fill="#c79a5e"/><text x="78" y="392" dy="0.35em" text-anchor="middle" class="ht-num">20</text></g>
+      <g class="ht" data-zone="у бара" tabindex="0"><circle cx="206" cy="392" r="13" fill="#c79a5e"/><text x="206" y="392" dy="0.35em" text-anchor="middle" class="ht-num">21</text></g>
+      <g class="ht" data-zone="у окна" tabindex="0"><circle cx="78" cy="460" r="13" fill="#5b86b3"/><text x="78" y="460" dy="0.35em" text-anchor="middle" class="ht-num">22</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="206" cy="460" r="13" fill="#b08d5b"/><text x="206" y="460" dy="0.35em" text-anchor="middle" class="ht-num">23</text></g>
+      <g class="ht" data-zone="у окна" tabindex="0"><circle cx="78" cy="524" r="13" fill="#5b86b3"/><text x="78" y="524" dy="0.35em" text-anchor="middle" class="ht-num">24</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="206" cy="524" r="13" fill="#b08d5b"/><text x="206" y="524" dy="0.35em" text-anchor="middle" class="ht-num">25</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="360" cy="374" r="13" fill="#b08d5b"/><text x="360" y="374" dy="0.35em" text-anchor="middle" class="ht-num">10</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="490" cy="374" r="13" fill="#b08d5b"/><text x="490" y="374" dy="0.35em" text-anchor="middle" class="ht-num">11</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="620" cy="374" r="13" fill="#b08d5b"/><text x="620" y="374" dy="0.35em" text-anchor="middle" class="ht-num">12</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="750" cy="374" r="13" fill="#b08d5b"/><text x="750" y="374" dy="0.35em" text-anchor="middle" class="ht-num">13</text></g>
+      <g class="ht" data-zone="у окна (сад)" tabindex="0"><circle cx="905" cy="374" r="13" fill="#5b86b3"/><text x="905" y="374" dy="0.35em" text-anchor="middle" class="ht-num">14</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="360" cy="472" r="13" fill="#b08d5b"/><text x="360" y="472" dy="0.35em" text-anchor="middle" class="ht-num">15</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="490" cy="472" r="13" fill="#b08d5b"/><text x="490" y="472" dy="0.35em" text-anchor="middle" class="ht-num">16</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="620" cy="472" r="13" fill="#b08d5b"/><text x="620" y="472" dy="0.35em" text-anchor="middle" class="ht-num">17</text></g>
+      <g class="ht" data-zone="в зале" tabindex="0"><circle cx="750" cy="472" r="13" fill="#b08d5b"/><text x="750" y="472" dy="0.35em" text-anchor="middle" class="ht-num">18</text></g>
+      <g class="ht" data-zone="у окна (сад)" tabindex="0"><circle cx="905" cy="472" r="13" fill="#5b86b3"/><text x="905" y="472" dy="0.35em" text-anchor="middle" class="ht-num">19</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="352" cy="74" r="13" fill="#6aa37a"/><text x="352" y="74" dy="0.35em" text-anchor="middle" class="ht-num">30</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="486" cy="74" r="13" fill="#6aa37a"/><text x="486" y="74" dy="0.35em" text-anchor="middle" class="ht-num">31</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="620" cy="74" r="13" fill="#6aa37a"/><text x="620" y="74" dy="0.35em" text-anchor="middle" class="ht-num">32</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="754" cy="74" r="13" fill="#6aa37a"/><text x="754" y="74" dy="0.35em" text-anchor="middle" class="ht-num">33</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="900" cy="110" r="13" fill="#6aa37a"/><text x="900" y="110" dy="0.35em" text-anchor="middle" class="ht-num">34</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="352" cy="150" r="13" fill="#6aa37a"/><text x="352" y="150" dy="0.35em" text-anchor="middle" class="ht-num">35</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="486" cy="150" r="13" fill="#6aa37a"/><text x="486" y="150" dy="0.35em" text-anchor="middle" class="ht-num">36</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="620" cy="150" r="13" fill="#6aa37a"/><text x="620" y="150" dy="0.35em" text-anchor="middle" class="ht-num">37</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="754" cy="150" r="13" fill="#6aa37a"/><text x="754" y="150" dy="0.35em" text-anchor="middle" class="ht-num">38</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="400" cy="214" r="13" fill="#6aa37a"/><text x="400" y="214" dy="0.35em" text-anchor="middle" class="ht-num">40</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="560" cy="214" r="13" fill="#6aa37a"/><text x="560" y="214" dy="0.35em" text-anchor="middle" class="ht-num">41</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="720" cy="214" r="13" fill="#6aa37a"/><text x="720" y="214" dy="0.35em" text-anchor="middle" class="ht-num">42</text></g>
+      <g class="ht" data-zone="терраса" tabindex="0"><circle cx="880" cy="170" r="13" fill="#6aa37a"/><text x="880" y="170" dy="0.35em" text-anchor="middle" class="ht-num">43</text></g>
+      <g class="ht" data-zone="беседка" tabindex="0"><circle cx="130" cy="663" r="13" fill="#c2864f"/><text x="130" y="663" dy="0.35em" text-anchor="middle" class="ht-num">44</text></g>
+      <g class="ht" data-zone="беседка" tabindex="0"><circle cx="320" cy="663" r="13" fill="#c2864f"/><text x="320" y="663" dy="0.35em" text-anchor="middle" class="ht-num">45</text></g>
+      <g class="ht" data-zone="беседка" tabindex="0"><circle cx="500" cy="663" r="13" fill="#c2864f"/><text x="500" y="663" dy="0.35em" text-anchor="middle" class="ht-num">46</text></g>
+      <g class="ht" data-zone="беседка" tabindex="0"><circle cx="700" cy="663" r="13" fill="#c2864f"/><text x="700" y="663" dy="0.35em" text-anchor="middle" class="ht-num">47</text></g>
+      <g class="ht" data-zone="беседка" tabindex="0"><circle cx="880" cy="663" r="13" fill="#c2864f"/><text x="880" y="663" dy="0.35em" text-anchor="middle" class="ht-num">48</text></g>
+      <g class="ht" data-zone="отдельная комната" tabindex="0"><rect x="113" y="205" width="60" height="34" rx="8" fill="#a07bbf"/><text x="143" y="222" dy="0.35em" text-anchor="middle" class="ht-num">49</text></g>
+      </svg>
   </div>
-  <div class="hall-legend">
-    <span class="hall-legend__item" data-loc="window"><i></i> У окна</span>
-    <span class="hall-legend__item" data-loc="bar"><i></i> У бара</span>
-    <span class="hall-legend__item" data-loc="hall"><i></i> В зале</span>
-    <span class="hall-legend__item" data-loc="terrace"><i></i> Терраса</span>
-    <span class="hall-legend__item" data-loc="garden"><i></i> Сад</span>
-    <span class="hall-legend__item" data-loc="gazebo"><i></i> Беседка</span>
-  </div>
+  <div class="hall-legend"><span class="hall-legend__item" data-loc="window"><i></i> У окна</span><span class="hall-legend__item" data-loc="hall"><i></i> В зале</span><span class="hall-legend__item" data-loc="bar"><i></i> У бара</span><span class="hall-legend__item" data-loc="terrace"><i></i> Терраса</span><span class="hall-legend__item" data-loc="gazebo"><i></i> Беседка</span><span class="hall-legend__item" data-loc="private"><i></i> Отдельная комната</span></div>
   <p class="hall-caption" aria-live="polite">Выберите стол на схеме</p>
 </div></section>
 <script>
 (function(){
   var cap=document.querySelector('.hall-caption'); var sel=null;
-  document.querySelectorAll('.hall-table').forEach(function(t){
-    function show(){ if(cap) cap.textContent='Стол '+t.textContent.trim()+' · '+t.dataset.zone; }
+  document.querySelectorAll('.ht').forEach(function(t){
+    function show(){ var n=t.querySelector('.ht-num').textContent; if(cap) cap.textContent='Стол '+n+' · '+t.dataset.zone; }
     t.addEventListener('mouseenter',show); t.addEventListener('focus',show);
     t.addEventListener('click',function(){ if(sel)sel.classList.remove('is-active'); sel=t; t.classList.add('is-active'); show(); });
   });

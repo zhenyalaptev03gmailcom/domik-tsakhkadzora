@@ -3010,6 +3010,43 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .bar-item__name small { color: var(--muted); font-size: 0.8em; margin-left: 0.35rem; }
 .bar-item__price { color: var(--bronze-light); font-weight: 600; white-space: nowrap; }
 
+/* ====================================================================
+   CONTACTS: hall floor-plan (SVG, top-down)
+   ==================================================================== */
+.hall-plan {
+  max-width: 880px; margin: 0 auto;
+  border: 1px solid rgba(201, 169, 98, 0.2);
+  border-radius: 16px; padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.015);
+}
+.hall-svg { width: 100%; height: auto; display: block; }
+.hall-svg .wall { stroke: rgba(231, 200, 138, 0.5); stroke-width: 2.2; stroke-linecap: round; }
+.hall-svg .win { stroke: #6f9fce; stroke-width: 5; stroke-linecap: round; }
+.hall-svg .door-arrow { stroke: var(--bronze-light); stroke-width: 2.2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.hall-svg .door-label { fill: var(--muted); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; }
+.hall-svg .room-label { fill: var(--bronze-light); font-family: 'Cormorant Garamond', serif; letter-spacing: 1px; opacity: 0.92; }
+.hall-svg .room-ico { fill: var(--muted); font-size: 13px; letter-spacing: 1px; }
+.hall-svg .stool { fill: rgba(231, 200, 138, 0.4); }
+.hall-svg .ht-num { fill: #fff; font-size: 12px; font-weight: 600; pointer-events: none; }
+.hall-svg .ht { cursor: pointer; }
+.hall-svg .ht circle, .hall-svg .ht rect { stroke: rgba(0, 0, 0, 0.28); stroke-width: 1; transition: stroke 0.15s ease, filter 0.15s ease; }
+.hall-svg .ht:hover circle, .hall-svg .ht:hover rect,
+.hall-svg .ht:focus circle, .hall-svg .ht:focus rect,
+.hall-svg .ht.is-active circle, .hall-svg .ht.is-active rect {
+  stroke: #e7c88a; stroke-width: 3; filter: brightness(1.15); outline: none;
+}
+/* legend palette for the floor plan */
+.hall-legend__item[data-loc="window"] i { background: #5b86b3; }
+.hall-legend__item[data-loc="hall"] i { background: #b08d5b; }
+.hall-legend__item[data-loc="bar"] i { background: #c79a5e; }
+.hall-legend__item[data-loc="terrace"] i { background: #6aa37a; }
+.hall-legend__item[data-loc="gazebo"] i { background: #c2864f; }
+.hall-legend__item[data-loc="private"] i { background: #a07bbf; }
+@media (max-width: 640px) {
+  .hall-plan { overflow-x: auto; -webkit-overflow-scrolling: touch; padding: 0.5rem; }
+  .hall-svg { min-width: 560px; }
+}
+
 .hall-caption {
   min-height: 1.4em; margin-top: 0.4rem;
   color: var(--bronze-light); font-weight: 500; font-size: 1.05rem;
