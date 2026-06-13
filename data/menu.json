@@ -364,7 +364,7 @@
         "price": "4 000",
         "image_url": "https://orderin.am/uploads/products/16174/product-16174-2024-06-30-17-24-020.jpeg",
         "has_image": true,
-        "local_image": "img/menu/суп-из-морепродуктов.jpg?v=fit800",
+        "local_image": "img/menu/суп-из-морепродуктов.jpg?v=red1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/seafood-soup23456789101112"
       },
       {
@@ -1064,8 +1064,9 @@
         "name": "Доме",
         "price": "2 000",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/dome"
+        "has_image": true,
+        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/dome",
+        "local_image": "img/menu/dome.jpg?v=red1"
       },
       {
         "id": "apple-pie",
