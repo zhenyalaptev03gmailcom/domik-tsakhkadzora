@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=2">
+<link rel="stylesheet" href="css/print-menu.css?v=3">
 <meta name="description" content="Печатное меню ресторана «Домик Цахкадзора» — книгой, для печати и сохранения в PDF.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#f6efdd">
@@ -20,7 +20,7 @@
   <a href="menu.html">&larr;&nbsp;К меню сайта</a>
   <button type="button" onclick="window.print()">Распечатать / PDF</button>
 </div>
-<div class="book">
+<div id="book" class="book">
 <div class="book-cover">
   <div class="book-cover__frame"></div>
   <div class="book-cover__corners" aria-hidden="true">
@@ -41,9 +41,8 @@
     Цахкадзор, ул.&nbsp;Хачатура&nbsp;Кечареци&nbsp;6 &nbsp;&middot;&nbsp; <b>+374&nbsp;95&nbsp;505&nbsp;656</b> &nbsp;&middot;&nbsp; ежедневно&nbsp;11:00&ndash;23:00
   </div>
 </div>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Завтрак<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Завтрак<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Французский Завтрак</span>
     <span class="book-dish__leader"></span>
@@ -115,10 +114,8 @@
   </div>
   <p class="book-dish__desc">Слоёный масляный круассан</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Закуски<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Закуски<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Бурата</span>
     <span class="book-dish__leader"></span>
@@ -246,10 +243,8 @@
   </div>
   <p class="book-dish__desc">Итальянская лепёшка фокачча</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Салаты<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Салаты<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Салат Домик</span>
     <span class="book-dish__leader"></span>
@@ -337,10 +332,8 @@
   </div>
   <p class="book-dish__desc">Шпинат, болгарский перец, телятина, помидоры черри, острый соус</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Суп<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Суп<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Томатный крем суп</span>
     <span class="book-dish__leader"></span>
@@ -380,10 +373,8 @@
   </div>
   <p class="book-dish__desc">Мацун, пшеница, зелень</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Паста<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Паста<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Паста с морепродуктами</span>
     <span class="book-dish__leader"></span>
@@ -431,10 +422,8 @@
   </div>
   <p class="book-dish__desc">Рис, сливочный соус, пармезан</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Основные блюда приготовленные на углях<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Основные блюда приготовленные на углях<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Ассорти шашлыков</span>
     <span class="book-dish__leader"></span>
@@ -586,10 +575,8 @@
   </div>
   <p class="book-dish__desc">Виноградные листья, индейка, рис</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Блюда от шеф-повара<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Блюда от шеф-повара<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Ассорти из мяса ангуса</span>
     <span class="book-dish__leader"></span>
@@ -653,10 +640,8 @@
   </div>
   <p class="book-dish__desc">Тонко нарезанная говядина, пармезан, руккола, оливковое масло</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Пицца<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Пицца<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Прошутто</span>
     <span class="book-dish__leader"></span>
@@ -696,10 +681,8 @@
   </div>
   <p class="book-dish__desc">Моцарелла, авокадо, овощи</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Жареная рыба и морепродукты<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Жареная рыба и морепродукты<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Форель</span>
     <span class="book-dish__leader"></span>
@@ -739,10 +722,8 @@
   </div>
   <p class="book-dish__desc">Филе форели, зелёный лук</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Гарниры<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Гарниры<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Картофель по деревенски</span>
     <span class="book-dish__leader"></span>
@@ -798,10 +779,8 @@
   </div>
   <p class="book-dish__desc">Картофель с начинкой</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Детское меню<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Детское меню<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Куриный суп</span>
     <span class="book-dish__leader"></span>
@@ -857,10 +836,8 @@
   </div>
   <p class="book-dish__desc">Пельмени с мясом</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Часть любви<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Часть любви<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Кокосовый тарт</span>
     <span class="book-dish__leader"></span>
@@ -964,10 +941,8 @@
   </div>
   <p class="book-dish__desc">Медовые коржи, сливочный крем</p>
 </article>
-</section>
-<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>Дополнительное меню<span class="dia">&#9670;</span></h2>
-  <article class="book-dish">
+<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>Дополнительное меню<span class="dia">&#9670;</span></h2>
+<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">Славянская солянка</span>
     <span class="book-dish__leader"></span>
@@ -1063,8 +1038,7 @@
   </div>
   <p class="book-dish__desc"></p>
 </article>
-</section>
-<section class="bar-part">
+<section class="bar-part flow-keep">
   <div class="bar-part__frame"></div>
   <div class="bar-part__inner">
     <div class="bar-part__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>
@@ -1072,9 +1046,8 @@
     <div class="bar-part__sub">Напитки и коктейли</div>
   </div>
 </section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Пиво<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Пиво<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Пауланер светлый</span><span class="bar-row__vol">0.3 / 0.5 / 1 л</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 700 / 2 200 / 3 900 <span class="cur">֏</span></span>
@@ -1089,10 +1062,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 900 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>К пиву<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>К пиву<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Солёные орехи</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 800 <span class="cur">֏</span></span>
@@ -1152,10 +1123,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">3 600 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Вино — красное<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Вино — красное<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Tariri</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">24 000 <span class="cur">֏</span></span>
@@ -1205,10 +1174,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">9 900 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Вино — белое<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Вино — белое<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Tariri</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">22 000 <span class="cur">֏</span></span>
@@ -1248,10 +1215,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">9 900 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Вино — розовое / игристое<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Вино — розовое / игристое<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Meyron (розе)</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">6 900 <span class="cur">֏</span></span>
@@ -1276,10 +1241,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">10 000 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Виски<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Виски<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Bushmills</span><span class="bar-row__vol">50 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">3 500 <span class="cur">֏</span></span>
@@ -1329,10 +1292,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 000 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Водка<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Водка<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Finlandia</span><span class="bar-row__vol">50 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 400 <span class="cur">֏</span></span>
@@ -1367,10 +1328,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 400 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Коньяк (Арарат)<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Коньяк (Арарат)<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Ararat 5</span><span class="bar-row__vol">50 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 800 <span class="cur">֏</span></span>
@@ -1400,10 +1359,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">5 000 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Ликёры<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Ликёры<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Martini Bianco</span><span class="bar-row__vol">50 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 300 <span class="cur">֏</span></span>
@@ -1463,10 +1420,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 500 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Текила<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Текила<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Olmeca Silver</span><span class="bar-row__vol">50 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 200 <span class="cur">֏</span></span>
@@ -1491,10 +1446,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">5 200 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Ром / Джин<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Ром / Джин<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Bacardi White</span><span class="bar-row__vol">50 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 200 <span class="cur">֏</span></span>
@@ -1519,10 +1472,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 500 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Коктейли<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Коктейли<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Mojito</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">3 200 <span class="cur">֏</span></span>
@@ -1577,10 +1528,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">3 200 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Шоты и горячее<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Шоты и горячее<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">B-52</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 800 <span class="cur">֏</span></span>
@@ -1595,10 +1544,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 800 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Кофе<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Кофе<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Американо</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 000 <span class="cur">֏</span></span>
@@ -1663,10 +1610,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">3 000 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Чай<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Чай<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Чёрный</span><span class="bar-row__vol"></span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 200 <span class="cur">֏</span></span>
@@ -1716,10 +1661,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 500 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Фреши и лимонады<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Фреши и лимонады<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Апельсин</span><span class="bar-row__vol">фреш 250 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">1 800 <span class="cur">֏</span></span>
@@ -1759,10 +1702,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 000 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Молочные коктейли<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Молочные коктейли<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Банан-клубника</span><span class="bar-row__vol">300 мл</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 900 <span class="cur">֏</span></span>
@@ -1787,10 +1728,8 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">2 900 <span class="cur">֏</span></span>
 </div>
-</section>
-<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>Напитки<span class="dia">&#9670;</span></h3>
-  <div class="bar-row">
+<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>Напитки<span class="dia">&#9670;</span></h3>
+<div class="bar-row">
   <span class="bar-row__name">Coca-Cola / Fanta / Sprite</span><span class="bar-row__vol">0.33</span>
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">500 <span class="cur">֏</span></span>
@@ -1835,7 +1774,7 @@
   <span class="bar-row__leader"></span>
   <span class="bar-row__price">800 <span class="cur">֏</span></span>
 </div>
-</section>
 </div>
+<script src="js/print-paginate.js?v=1"></script>
 </body>
 </html>

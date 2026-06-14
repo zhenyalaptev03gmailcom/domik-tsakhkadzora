@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """Пересборка печатного меню-книги menu-print.html для «Домик Цахкадзора».
-Данные кухни — из data/menu.json, барная карта — из menu.html (#menu-bar).
-Стиль книги — статический css/print-menu.css (этот скрипт его НЕ трогает).
+Выдаёт ПЛОСКИЙ поток элементов в #book; постранично по A4 раскладывает
+js/print-paginate.js (экран = печать). Данные кухни — из data/menu.json,
+барная карта — из menu.html (#menu-bar). Стиль — css/print-menu.css (не трогаем).
 Запуск:  python generate_print_menu.py
 """
 import re, io, json, sys
@@ -9,7 +10,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 ROOT = r"C:\общее\domik-tsakhkadzora"
 
-# ---------- шаблоны дизайн-системы (классы фиксированы print-menu.css) ----------
+# ---------- обложка (отдельный лист, .book-cover распознаёт пагинатор) ----------
 COVER_HTML = '''<div class="book-cover">
   <div class="book-cover__frame"></div>
   <div class="book-cover__corners" aria-hidden="true">
@@ -31,10 +32,8 @@ COVER_HTML = '''<div class="book-cover">
   </div>
 </div>'''
 
-CAT_TPL = '''<section class="book-cat">
-  <h2 class="book-cat__title"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h2>
-  {{DISHES}}
-</section>'''
+# плоские «флоу»-элементы. .flow-keep = не отрывать от следующего (заголовки/баннер)
+CAT_TITLE = '<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h2>'
 
 DISH_TPL = '''<article class="book-dish">
   <div class="book-dish__head">
@@ -45,18 +44,7 @@ DISH_TPL = '''<article class="book-dish">
   <p class="book-dish__desc">{{DESC}}</p>
 </article>'''
 
-BAR_SEC_TPL = '''<section class="bar-sec">
-  <h3 class="bar-sec__title"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h3>
-  {{ROWS}}
-</section>'''
-
-BAR_ROW_TPL = '''<div class="bar-row">
-  <span class="bar-row__name">{{NAME}}</span><span class="bar-row__vol">{{VOL}}</span>
-  <span class="bar-row__leader"></span>
-  <span class="bar-row__price">{{PRICE}}</span>
-</div>'''
-
-BAR_PART = '''<section class="bar-part">
+BAR_PART = '''<section class="bar-part flow-keep">
   <div class="bar-part__frame"></div>
   <div class="bar-part__inner">
     <div class="bar-part__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>
@@ -64,6 +52,14 @@ BAR_PART = '''<section class="bar-part">
     <div class="bar-part__sub">Напитки и коктейли</div>
   </div>
 </section>'''
+
+BAR_SEC_TITLE = '<h3 class="bar-sec__title flow-keep"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h3>'
+
+BAR_ROW_TPL = '''<div class="bar-row">
+  <span class="bar-row__name">{{NAME}}</span><span class="bar-row__vol">{{VOL}}</span>
+  <span class="bar-row__leader"></span>
+  <span class="bar-row__price">{{PRICE}}</span>
+</div>'''
 
 TOOLBAR = '''<div class="book-toolbar" aria-hidden="true">
   <a href="menu.html">&larr;&nbsp;К меню сайта</a>
@@ -79,7 +75,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=2">
+<link rel="stylesheet" href="css/print-menu.css?v=3">
 <meta name="description" content="Печатное меню ресторана «Домик Цахкадзора» — книгой, для печати и сохранения в PDF.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#f6efdd">
@@ -88,6 +84,8 @@ HEAD = '''<!DOCTYPE html>
 <link rel="apple-touch-icon" href="img/favicon-180.png">
 </head>
 <body>'''
+
+SCRIPT = '<script src="js/print-paginate.js?v=1"></script>'
 
 
 def esc(t):
@@ -108,23 +106,24 @@ def fill(tpl, **kw):
     return tpl
 
 
+parts = [COVER_HTML]
+
 # ---------- кухня из menu.json ----------
 data = json.load(io.open(ROOT + r"\data\menu.json", encoding='utf-8'))
 cats = data if isinstance(data, list) else data['categories']
-kitchen_html, dish_count = [], 0
+dish_count = 0
 for c in cats:
-    rows = []
+    parts.append(fill(CAT_TITLE, TITLE=esc(c.get('name', '').strip())))
     for it in c.get('items', []):
-        rows.append(fill(DISH_TPL,
-                         NAME=esc(it.get('name', '').strip()),
-                         DESC=esc((it.get('composition') or '').strip()),
-                         PRICE=price_kitchen(it.get('price', ''))))
+        parts.append(fill(DISH_TPL,
+                          NAME=esc(it.get('name', '').strip()),
+                          DESC=esc((it.get('composition') or '').strip()),
+                          PRICE=price_kitchen(it.get('price', ''))))
         dish_count += 1
-    kitchen_html.append(fill(CAT_TPL, TITLE=esc(c.get('name', '').strip()),
-                             DISHES='\n'.join(rows)))
-print("kitchen categories:", len(kitchen_html), "| dishes:", dish_count)
+print("kitchen categories:", len(cats), "| dishes:", dish_count)
 
 # ---------- барная карта из menu.html ----------
+parts.append(BAR_PART)
 mh = io.open(ROOT + r"\menu.html", encoding='utf-8').read()
 start = mh.find('class="bar-list"')
 foot = mh.find('<footer', start)
@@ -132,31 +131,28 @@ region = mh[max(0, start - 400): foot if foot > 0 else len(mh)]
 BLOCK = {"основное меню", "меню", "бар", "барная карта", "напитки и бар"}
 heads = [(m.start(), re.sub('<.*?>', '', m.group(1)).strip())
          for m in re.finditer(r'<h[234][^>]*>(.*?)</h[234]>', region, re.S)]
-bar_html, bar_rows_total = [], 0
+bar_secs, bar_rows_total = 0, 0
 for m in re.finditer(r'<ul class="bar-list">', region):
     u = m.start()
     cand = [t for p, t in heads if p < u and t.lower() not in BLOCK]
     title = cand[-1] if cand else '—'
     ulhtml = region[u:region.find('</ul>', u)]
-    rows = []
+    parts.append(fill(BAR_SEC_TITLE, TITLE=title))
     for name_raw, price in re.findall(
             r'<span class="bar-item__name">(.*?)</span>\s*<span class="bar-item__price">(.*?)</span>',
             ulhtml, re.S):
         ms = re.search(r'<small>(.*?)</small>', name_raw, re.S)
         vol = ms.group(1).strip() if ms else ''
         name = re.sub(r'\s+', ' ', re.sub(r'<small>.*?</small>', '', name_raw, flags=re.S)).strip()
-        rows.append(fill(BAR_ROW_TPL, NAME=name, VOL=vol, PRICE=price_bar(price)))
+        parts.append(fill(BAR_ROW_TPL, NAME=name, VOL=vol, PRICE=price_bar(price)))
         bar_rows_total += 1
-    bar_html.append(fill(BAR_SEC_TPL, TITLE=title, ROWS='\n'.join(rows)))
-print("bar sections:", len(bar_html), "| bar rows:", bar_rows_total)
-assert len(bar_html) == 18 and bar_rows_total == 142, "bar parse mismatch!"
+    bar_secs += 1
+print("bar sections:", bar_secs, "| bar rows:", bar_rows_total)
+assert bar_secs == 18 and bar_rows_total == 142, "bar parse mismatch!"
 
 # ---------- сборка ----------
-out = (HEAD + "\n" + TOOLBAR + '\n<div class="book">\n'
-       + COVER_HTML + "\n"
-       + "\n".join(kitchen_html) + "\n"
-       + BAR_PART + "\n"
-       + "\n".join(bar_html) + "\n"
-       + "</div>\n</body>\n</html>\n")
+out = (HEAD + "\n" + TOOLBAR + '\n<div id="book" class="book">\n'
+       + "\n".join(parts) + "\n"
+       + "</div>\n" + SCRIPT + "\n</body>\n</html>\n")
 io.open(ROOT + r"\menu-print.html", 'w', encoding='utf-8').write(out)
 print("menu-print.html written:", len(out), "chars")
