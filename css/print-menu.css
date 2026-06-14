@@ -1,0 +1,637 @@
+/* ============================================================
+   ДОМИК ЦАХКАДЗОРА (DoMik) — ПЕЧАТНОЕ МЕНЮ-КНИГА
+   Финальная система: «Фолиант высокой кухни»
+   Самодостаточный CSS. Внешние зависимости — только шрифты,
+   подключённые в <head> страницы:
+     'Cormorant Garamond', Georgia, serif   (дисплей/цены)
+     'Outfit', sans-serif                   (служебный текст)
+   A4 портрет · контент течёт на несколько страниц · экран = книга
+   ============================================================ */
+
+/* ---------- @page: A4, поля, номера страниц ---------- */
+@page{
+  size: A4 portrait;
+  margin: 18mm 15mm;
+  @bottom-center{
+    content: counter(page);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 10pt;
+    letter-spacing: 0.18em;
+    color: #8b6342;
+  }
+}
+/* обложка (первая страница) — без номера и без полей */
+@page :first{
+  margin: 0;
+  @bottom-center{ content: ""; }
+}
+
+/* ---------- Токены ---------- */
+:root{
+  /* Бумага и чернила */
+  --paper:        #f6efdd;   /* тёплая ivory-бумага */
+  --paper-edge:   #efe6cf;   /* лёгкая тень у края листа */
+  --ink:          #2b2118;   /* глубокие коричневые чернила */
+  --ink-soft:     #6f5d49;   /* приглушённый текст / описания */
+
+  /* Бронза / золото — только акценты */
+  --bronze:       #a67c52;
+  --bronze-light: #c9a962;
+  --bronze-dark:  #8b6342;
+  --hair:         rgba(166,124,82,0.45);  /* тонкая линия */
+  --hair-soft:    rgba(166,124,82,0.26);  /* волосяная линия / текстура */
+
+  /* Экранная подложка */
+  --stage:        #1a1714;
+
+  /* Геометрия листа A4 */
+  --page-w:       210mm;
+  --page-h:       297mm;
+  --pad-y:        22mm;
+  --pad-x:        20mm;
+
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans:  'Outfit', -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* ============================================================
+   БАЗА / ЭКРАННАЯ СЦЕНА
+   ============================================================ */
+*{ box-sizing: border-box; }
+
+html,body{
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body{
+  background: var(--stage);
+  font-family: var(--serif);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: 26mm 0;            /* воздух вокруг книги на экране */
+}
+
+/* ============================================================
+   КОРЕНЬ-ОБЁРТКА: стопка «листов» книги
+   ============================================================ */
+.book{
+  width: var(--page-w);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14mm;                  /* визуальный отступ между листами на экране */
+}
+
+/* Каждый смысловой «лист» книги (общий вид бумаги) */
+.book-cover,
+.book-cat,
+.bar-part,
+.bar-sec{
+  position: relative;
+  background-color: var(--paper);
+  /* тончайшая тёплая фактура бумаги — печатается чисто */
+  background-image:
+    radial-gradient(var(--hair-soft) 0.5px, transparent 0.7px),
+    radial-gradient(var(--hair-soft) 0.5px, transparent 0.7px),
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(0,0,0,0) 14mm);
+  background-size: 16px 16px, 16px 16px, 100% 100%;
+  background-position: 0 0, 8px 8px, 0 0;
+  width: var(--page-w);
+  padding: var(--pad-y) var(--pad-x);
+  box-shadow:
+    0 1mm 2mm rgba(0,0,0,0.30),
+    0 8mm 26mm rgba(0,0,0,0.55);
+}
+
+/* тёплая «затёртость» у внутреннего поля листа (экран) */
+.book-cover::after,
+.book-cat::after,
+.bar-part::after,
+.bar-sec::after{
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  box-shadow: inset 0 0 18mm rgba(139,99,66,0.05);
+}
+
+/* Обложка и барный титул — самостоятельные полноформатные листы.
+   Разделы меню/бара текут как развороты (высота по контенту). */
+.book-cover,
+.bar-part{
+  min-height: var(--page-h);
+}
+.book-cat,
+.bar-sec{
+  padding-top: 16mm;
+  padding-bottom: 16mm;
+}
+
+/* ============================================================
+   ОБЛОЖКА
+   ============================================================ */
+.book-cover{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  break-after: page;
+}
+
+/* двойная золотая рамка обложки */
+.book-cover__frame{
+  position: absolute;
+  inset: 12mm;
+  border: 1px solid var(--hair);
+  pointer-events: none;
+}
+.book-cover__frame::before{
+  content:"";
+  position:absolute; inset: 3mm;
+  border: 1.4px solid var(--bronze);
+}
+
+/* декоративные уголки обложки */
+.book-cover__corners{
+  position: absolute; inset: 0;
+  pointer-events: none;
+}
+.book-cover__corners span{
+  position: absolute;
+  width: 15mm; height: 15mm;
+  border: 0 solid var(--bronze);
+}
+.book-cover__corners span:nth-child(1){ top:9mm;  left:9mm;  border-top-width:1.4px; border-left-width:1.4px; }
+.book-cover__corners span:nth-child(2){ top:9mm;  right:9mm; border-top-width:1.4px; border-right-width:1.4px; }
+.book-cover__corners span:nth-child(3){ bottom:9mm; left:9mm;  border-bottom-width:1.4px; border-left-width:1.4px; }
+.book-cover__corners span:nth-child(4){ bottom:9mm; right:9mm; border-bottom-width:1.4px; border-right-width:1.4px; }
+
+.book-cover__inner{
+  position: relative;
+  z-index: 1;
+  max-width: 152mm;
+}
+
+/* фирменный «домик» — inline SVG (крыша + дымоход), бронза */
+.book-cover__house{
+  width: 62mm;
+  height: auto;
+  display: block;
+  margin: 0 auto 7mm;
+}
+.book-cover__house path{
+  fill: none;
+  stroke: var(--bronze);
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.book-cover__wordmark{
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 66pt;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  margin: 0 0 4mm;
+}
+.book-cover__wordmark b{ font-weight: 600; color: var(--bronze-dark); }
+
+.book-cover__sub{
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 11pt;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 13mm;
+  padding-left: 0.42em;       /* компенсация трекинга */
+}
+
+/* орнаментальная линейка ◆ с золотыми волосяными линиями */
+.book-cover__rule{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5mm;
+  color: var(--bronze);
+  margin: 0 0 12mm;
+}
+.book-cover__rule::before,
+.book-cover__rule::after{
+  content:"";
+  width: 34mm; height: 0;
+  border-top: 1px solid var(--hair);
+}
+.book-cover__rule span{ font-size: 10pt; }
+
+.book-cover__menu{
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 40pt;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bronze-dark);
+  margin: 0 0 5mm;
+  padding-left: 0.22em;
+}
+
+.book-cover__diamonds{
+  font-size: 12pt;
+  letter-spacing: 1.1em;
+  color: var(--bronze);
+  margin: 5mm 0 0;
+  padding-left: 1.1em;
+}
+
+/* нижняя строка обложки: адрес · телефон · часы */
+.book-cover__foot{
+  position: absolute;
+  left: 20mm; right: 20mm;
+  bottom: 18mm;
+  z-index: 1;
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 9.5pt;
+  letter-spacing: 0.10em;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.book-cover__foot b{ color: var(--bronze-dark); font-weight: 500; }
+
+/* ============================================================
+   РАЗДЕЛ МЕНЮ (.book-cat) + заголовок
+   ============================================================ */
+.book-cat{ display: block; }
+
+.book-cat__title{
+  break-after: avoid;        /* заголовок не отрывается от первого блюда */
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 26pt;
+  line-height: 1.15;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-align: center;
+  margin: 0 0 11mm;
+  padding-left: 0.16em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5mm;
+}
+/* двойные золотые линейки по бокам заголовка */
+.book-cat__title::before,
+.book-cat__title::after{
+  content:"";
+  flex: 1 1 auto;
+  max-width: 36mm;
+  height: 3px;
+  border-top: 0.9px solid var(--bronze);
+  border-bottom: 0.9px solid var(--hair);
+}
+/* ромб-орнамент в самом заголовке (символ в разметке) */
+.book-cat__title .dia{
+  flex: 0 0 auto;
+  color: var(--bronze);
+  font-size: 11pt;
+  letter-spacing: 0;
+  transform: translateY(-1px);
+}
+
+/* ---------- Строка блюда ---------- */
+.book-dish{
+  break-inside: avoid;
+  margin: 0 0 6.5mm;
+}
+.book-dish:last-child{ margin-bottom: 0; }
+
+/* название + лидер + цена */
+.book-dish__head{
+  display: flex;
+  align-items: flex-end;
+  gap: 2mm;
+}
+
+.book-dish__name{
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 14.5pt;
+  line-height: 1.2;
+  color: var(--ink);
+  flex: 0 1 auto;
+}
+
+/* классический точечный лидер: растягивающаяся пунктирная линия */
+.book-dish__leader{
+  flex: 1 1 auto;
+  align-self: flex-end;
+  height: 0;
+  margin: 0 1.5mm 3pt;
+  border-bottom: 1.4pt dotted var(--hair);
+  min-width: 6mm;
+}
+
+.book-dish__price{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 14.5pt;
+  line-height: 1.2;
+  color: var(--bronze-dark);
+  white-space: nowrap;
+  flex: 0 0 auto;
+  font-variant-numeric: oldstyle-nums tabular-nums;
+}
+.book-dish__price .cur{
+  font-size: 0.86em;
+  color: var(--bronze);
+  margin-left: 0.12em;
+}
+
+/* описание / состав — мельче, курсив, приглушённый цвет, под названием */
+.book-dish__desc{
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 11pt;
+  line-height: 1.35;
+  color: var(--ink-soft);
+  margin: 1mm 0 0;
+  max-width: 80%;            /* не подлезает под цену */
+}
+/* пустое описание не оставляет дыр */
+.book-dish__desc:empty{ display: none; margin: 0; }
+
+/* ============================================================
+   БАРНАЯ КАРТА
+   ============================================================ */
+
+/* титульный лист «Барная карта» — крупный раздел с новой страницы */
+.bar-part{
+  break-before: page;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.bar-part__frame{
+  position:absolute; inset:14mm;
+  border: 1px solid var(--hair);
+  pointer-events:none;
+}
+.bar-part__frame::before{
+  content:""; position:absolute; inset:3mm;
+  border: 1.4px solid var(--bronze);
+}
+.bar-part__inner{
+  position: relative;
+  z-index: 1;
+}
+.bar-part__diamonds{
+  font-size: 12pt; letter-spacing: 1em; color: var(--bronze);
+  margin: 0 0 8mm; padding-left: 1em;
+}
+.bar-part__title{
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 46pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bronze-dark);
+  margin: 0;
+  padding-left: 0.14em;
+}
+.bar-part__sub{
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 10.5pt;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 6mm 0 0;
+  padding-left: 0.4em;
+}
+
+/* секция барной карты */
+.bar-sec{ display: block; }
+
+.bar-sec__title{
+  break-after: avoid;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 21pt;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-align: center;
+  margin: 0 0 9mm;
+  padding-left: 0.16em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5mm;
+}
+.bar-sec__title::before,
+.bar-sec__title::after{
+  content:"";
+  flex: 1 1 auto;
+  max-width: 30mm;
+  height: 3px;
+  border-top: 0.9px solid var(--bronze);
+  border-bottom: 0.9px solid var(--hair);
+}
+.bar-sec__title .dia{
+  flex: 0 0 auto;
+  color: var(--bronze);
+  font-size: 9.5pt;
+  transform: translateY(-1px);
+}
+
+/* строка напитка */
+.bar-row{
+  break-inside: avoid;
+  display: flex;
+  align-items: flex-end;
+  gap: 2mm;
+  margin: 0 0 4.5mm;
+}
+.bar-row:last-child{ margin-bottom: 0; }
+
+.bar-row__name{
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 13pt;
+  line-height: 1.2;
+  color: var(--ink);
+  flex: 0 1 auto;
+}
+
+/* мелкие объёмы — рядом с названием, приглушённо */
+.bar-row__vol{
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: 8.5pt;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+  margin-left: 2.5mm;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.bar-row__vol:empty{ display:none; margin:0; }
+
+.bar-row__leader{
+  flex: 1 1 auto;
+  align-self: flex-end;
+  height: 0;
+  margin: 0 1.5mm 3pt;
+  border-bottom: 1.4pt dotted var(--hair);
+  min-width: 6mm;
+}
+
+.bar-row__price{
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 13pt;
+  color: var(--bronze-dark);
+  white-space: nowrap;
+  flex: 0 0 auto;
+  font-variant-numeric: oldstyle-nums tabular-nums;
+}
+.bar-row__price .cur{
+  font-size: 0.86em;
+  color: var(--bronze);
+  margin-left: 0.1em;
+}
+
+/* ============================================================
+   ЭКРАННАЯ ПАНЕЛЬ (кнопка «Распечатать») — только экран
+   ============================================================ */
+.book-toolbar{
+  position: fixed;
+  top: 14px; right: 14px;
+  z-index: 50;
+  display: flex;
+  gap: 10px;
+  font-family: var(--sans);
+}
+.book-toolbar button,
+.book-toolbar a{
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: linear-gradient(180deg, var(--bronze-light), var(--bronze));
+  border: 1px solid var(--bronze-dark);
+  border-radius: 999px;
+  padding: 11px 22px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  transition: filter .2s ease, transform .12s ease;
+}
+.book-toolbar button:hover,
+.book-toolbar a:hover{ filter: brightness(1.07); }
+.book-toolbar button:active{ transform: translateY(1px); }
+
+/* ============================================================
+   ЭКРАН — адаптация узких окон (превью)
+   ============================================================ */
+@media screen and (max-width: 232mm){
+  body{ padding: 16px 0 48px; }
+  .book{ width: 100%; gap: 18px; }
+  .book-cover,
+  .book-cat,
+  .bar-part,
+  .bar-sec{ width: 100%; }
+}
+
+/* ============================================================
+   ПЕЧАТЬ / PDF — A4, контент течёт на несколько страниц
+   ============================================================ */
+@media print{
+  html,body{
+    background: var(--paper) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* убрать подложку, тени, панель */
+  .book{
+    width: auto;
+    gap: 0;
+    display: block;
+  }
+  .book-toolbar{ display: none !important; }
+
+  .book-cover,
+  .book-cat,
+  .bar-part,
+  .bar-sec{
+    width: auto;
+    min-height: 0;
+    box-shadow: none !important;
+    background-color: var(--paper) !important;
+    /* фактуру бумаги оставляем (radial-gradient), снимаем только верхний блик */
+    background-image:
+      radial-gradient(var(--hair-soft) 0.5px, transparent 0.7px),
+      radial-gradient(var(--hair-soft) 0.5px, transparent 0.7px);
+    background-size: 16px 16px, 16px 16px;
+    background-position: 0 0, 8px 8px;
+    padding: 0;               /* поля задаёт @page */
+    margin: 0;
+  }
+  .book-cover::after,
+  .book-cat::after,
+  .bar-part::after,
+  .bar-sec::after{ display: none; }
+
+  /* обложка и барный титул — на всю страницу без полей @page */
+  .book-cover,
+  .bar-part{
+    height: var(--page-h);
+    width: var(--page-w);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: none !important;  /* чистый лист под рамку */
+  }
+  .book-cover{ break-after: page; }
+  .bar-part{ break-before: page; break-after: auto; }
+
+  /* рамки обложки/титула — относительно полного листа */
+  .book-cover__frame{ inset: 14mm; }
+  .book-cover__corners span:nth-child(1){ top:11mm; left:11mm; }
+  .book-cover__corners span:nth-child(2){ top:11mm; right:11mm; }
+  .book-cover__corners span:nth-child(3){ bottom:11mm; left:11mm; }
+  .book-cover__corners span:nth-child(4){ bottom:11mm; right:11mm; }
+  .bar-part__frame{ inset: 14mm; }
+  .book-cover__foot{ bottom: 16mm; }
+
+  /* воздух между разделами в потоке печати */
+  .book-cat{ padding: 4mm 0 0; }
+  .book-cat + .book-cat{ margin-top: 7mm; }
+  .bar-sec{ padding: 0; }
+  .bar-sec + .bar-sec{ margin-top: 7mm; }
+
+  /* подстраховка правил разрывов */
+  .book-cat__title,
+  .bar-sec__title{ break-after: avoid; }
+  .book-dish,
+  .bar-row{ break-inside: avoid; }
+}
