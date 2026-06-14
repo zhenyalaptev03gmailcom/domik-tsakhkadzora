@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Floating WhatsApp button (all pages) — quick booking/question from anywhere
+  if (!document.querySelector('.wa-float')) {
+    const wa = document.createElement('a');
+    wa.className = 'wa-float';
+    wa.href = 'https://wa.me/37495505656?text=' + encodeURIComponent('Здравствуйте! Хочу забронировать столик в «Домик Цахкадзора».');
+    wa.target = '_blank'; wa.rel = 'noopener';
+    wa.setAttribute('aria-label', 'Написать в WhatsApp');
+    wa.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.7-.83-2-.93-.26-.1-.45-.15-.64.15-.19.29-.73.92-.9 1.1-.16.2-.33.22-.62.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.02-.52-.08-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38 0 1.4 1.02 2.76 1.17 2.95.14.2 2 3.05 4.85 4.28.68.29 1.2.46 1.62.59.68.21 1.3.18 1.79.11.55-.08 1.68-.69 1.92-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.34z M12 2a10 10 0 00-8.55 15.2L2 22l4.92-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-2.92.83.78-2.85-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>';
+    document.body.appendChild(wa);
+  }
+
   const header = document.querySelector('.site-header') || document.querySelector('header');
   const progress = document.createElement('div');
   progress.className = 'scroll-progress';

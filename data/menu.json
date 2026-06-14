@@ -205,13 +205,13 @@
       },
       {
         "id": "tandoor-bread2",
-        "name": "Тандырный хлеб",
+        "name": "Свежий хлеб",
         "price": "700",
         "image_url": "https://orderin.am/uploads/products/16157/product-16157-2024-06-30-16-53-520.jpg",
         "has_image": true,
         "local_image": "img/menu/тандырный-хлеб.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/tandoor-bread2",
-        "composition": "Свежий хлеб из тандыра"
+        "composition": "Свежий тёплый хлеб"
       },
       {
         "id": "matsun-expressed",

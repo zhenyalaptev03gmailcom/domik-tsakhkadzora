@@ -2875,6 +2875,19 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .contact-buttons--book .contact-btn { justify-content: center; font-size: 1.05rem; padding: 1rem 1.5rem; }
 .book-note { margin-top: 1rem; color: var(--muted); font-size: 0.9rem; }
 
+/* Floating WhatsApp button (all pages) */
+.wa-float {
+  position: fixed; right: 18px; bottom: 18px; z-index: 1500;
+  width: 56px; height: 56px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #25d366; color: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.wa-float svg { width: 30px; height: 30px; }
+.wa-float:hover { transform: scale(1.08); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); }
+@media (max-width: 600px) { .wa-float { width: 52px; height: 52px; right: 14px; bottom: 14px; } }
+
 /* ====================================================================
    CONTACTS: make the "Как нас найти" block larger / more prominent
    ==================================================================== */

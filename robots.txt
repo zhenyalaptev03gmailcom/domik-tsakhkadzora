@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# TODO: после выбора домена добавить строку:
-# Sitemap: https://ВАШ-ДОМЕН/sitemap.xml
+Sitemap: https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/sitemap.xml
