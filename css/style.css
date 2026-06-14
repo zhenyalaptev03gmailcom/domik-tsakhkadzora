@@ -3098,3 +3098,308 @@ html[lang="hy"] h3 { line-height: 1.2; }
   .hall-map { grid-template-columns: 1fr; grid-template-areas: "kids" "separate" "bar" "zal2" "window" "terrace" "corridor" "toilet" "zal1" "gazebo"; }
   .hall-table { width: 34px; height: 34px; font-size: 0.78rem; }
 }
+
+/* =========================================================================
+   DISH MODAL — финальная перерисовка «Оправа / Тарелка»
+   Разместить В КОНЦЕ css/style.css (после всех прежних .dish-modal*/.modal-close,
+   т.е. после строк 744–825, 1503, 2208, 2261, 2267). Перекрывает старые
+   правила по специфичности (.dish-modal .…) и порядку источника.
+   Старые правила можно НЕ удалять — новый блок их перекрывает.
+   Использует только токены сайта (--card #16110c, --bg #0c0a09, --text #f2ece3,
+   --bronze #b6925e, --bronze-light #d9b87a, --bronze-solid #9c7a4d, --muted,
+   --line, --gold-metal, --shadow-lg) + шрифты Cormorant Garamond / Outfit.
+   Кнопка закрытия отвязана от общего .modal-close (галерея не затронута).
+   ========================================================================= */
+
+/* — Оверлей: чуть теплее и глубже (базовый .modal даёт fixed/inset/z-index/центр) — */
+.dish-modal {
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2.25rem);
+  background:
+    radial-gradient(120% 100% at 50% 0%,
+      rgba(20, 14, 10, 0.55) 0%, rgba(0, 0, 0, 0.9) 70%);
+  -webkit-backdrop-filter: blur(3px) saturate(0.95);
+  backdrop-filter: blur(3px) saturate(0.95);
+}
+
+/* — Панель: тёмная карточка с двойным золотым контуром — */
+.dish-modal .dish-modal__panel {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: min(90vh, 760px);
+  overflow: visible;                 /* чтобы кнопка могла выступать за угол и не резать фото */
+  background:
+    linear-gradient(180deg, rgba(34, 24, 16, 0.55) 0%, transparent 38%),
+    var(--card, #16110c);
+  border: 1px solid rgba(217, 184, 122, 0.42);
+  border-radius: 16px;
+  box-shadow:
+    0 0 0 1px rgba(12, 10, 9, 0.9),                 /* отбивка от оверлея */
+    var(--shadow-lg, 0 24px 60px rgba(10, 7, 4, 0.55));
+}
+
+/* мягкое появление панели (привито из Концепции 2) */
+@media (prefers-reduced-motion: no-preference) {
+  .dish-modal.active .dish-modal__panel {
+    animation: dishModalIn 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes dishModalIn {
+    from { opacity: 0; transform: translateY(18px) scale(0.985); }
+    to   { opacity: 1; transform: none; }
+  }
+}
+
+/* внутренний скролл-контейнер (статическая обёртка вокруг media+body — см. разметку) */
+.dish-modal .dish-modal__scroll {
+  max-height: inherit;
+  overflow: auto;
+  border-radius: inherit;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bronze-solid, #9c7a4d) transparent;
+}
+.dish-modal .dish-modal__scroll::-webkit-scrollbar { width: 9px; }
+.dish-modal .dish-modal__scroll::-webkit-scrollbar-track { background: transparent; }
+.dish-modal .dish-modal__scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--bronze-light, #d9b87a), var(--bronze-solid, #9c7a4d));
+  border-radius: 9px;
+  border: 2px solid var(--card, #16110c);
+}
+
+/* — Фото в «оправе»: тонкая внутренняя золотая рамка, фото НЕ режется — */
+.dish-modal .dish-modal__media {
+  position: relative;
+  margin: 0;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0f0b08;
+}
+.dish-modal .dish-modal__media img,
+.dish-modal .dish-modal__media .menu-card__ph {
+  width: 100%;
+  aspect-ratio: 4 / 3;               /* совпадает с ассетами 800×600 */
+  object-fit: cover;
+  display: block;
+}
+.dish-modal .dish-modal__media .menu-card__ph {
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, #1a140e, #241a10);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.2rem;
+  color: var(--muted, rgba(242, 236, 227, 0.74));
+  letter-spacing: 0.04em;
+}
+/* внутренняя золотая рамка-оправа + лёгкое затемнение низа кадра */
+.dish-modal .dish-modal__media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 1px rgba(217, 184, 122, 0.55);
+  background: linear-gradient(180deg, transparent 62%, rgba(12, 10, 9, 0.55) 100%);
+}
+/* золотая hairline-линия, отделяющая снимок от текста */
+.dish-modal .dish-modal__media::before {
+  content: '';
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 0;
+  height: 1px;
+  z-index: 3;
+  background: linear-gradient(90deg, transparent, rgba(217, 184, 122, 0.7), transparent);
+}
+
+/* — Тело: воздух, центрированная шапка — */
+.dish-modal .dish-modal__body {
+  padding: clamp(1.6rem, 4vw, 2.25rem) clamp(1.5rem, 5vw, 2.5rem)
+           clamp(1.75rem, 4vw, 2.4rem);
+  text-align: center;
+}
+
+/* заголовок — Cormorant, лёгкое начертание, по-ресторанному */
+.dish-modal .dish-modal__body h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(1.85rem, 4.5vw, 2.4rem);
+  line-height: 1.12;
+  color: var(--text, #f2ece3);
+  letter-spacing: 0.01em;
+  margin: 0 0 0.85rem;
+  text-wrap: balance;
+}
+
+/* орнамент ◆ в обрамлении двух тонких золотых линий */
+.dish-modal .dish-modal__body h2::after {
+  content: '\25C6';
+  display: block;
+  margin: 0.7rem auto 0;
+  width: 12ch;
+  max-width: 70%;
+  font-size: 0.62rem;
+  line-height: 1;
+  color: var(--bronze-light, #d9b87a);
+  text-align: center;
+  background:
+    linear-gradient(90deg, transparent, rgba(217, 184, 122, 0.45)) left center / 42% 1px no-repeat,
+    linear-gradient(90deg, rgba(217, 184, 122, 0.45), transparent) right center / 42% 1px no-repeat;
+}
+
+/* цена — золотая фольга, крупно */
+.dish-modal .dish-modal__price {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.35rem, 3.5vw, 1.7rem);
+  letter-spacing: 0.01em;
+  margin: 0.9rem 0 0;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+  white-space: nowrap;
+  background: var(--gold-metal,
+    linear-gradient(135deg, #f6e7bf 0%, #d9b87a 38%, #9c7a4d 62%, #cda35f 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .dish-modal .dish-modal__price { color: var(--bronze-light, #d9b87a); }
+}
+.dish-modal .dish-modal__price .cur {
+  font-size: 0.7em;
+  margin-left: 0.12em;
+  -webkit-text-fill-color: var(--bronze, #b6925e);
+  color: var(--bronze, #b6925e);
+}
+
+/* — Блоки «Состав» / «О блюде»: крупно, читабельно, с золотыми линиями — */
+.dish-modal .dish-modal__composition-block,
+.dish-modal .dish-modal__story-block {
+  margin-top: clamp(1.5rem, 4vw, 2rem);
+  padding-top: clamp(1.5rem, 4vw, 2rem);
+  border-top: 1px solid rgba(217, 184, 122, 0.28);
+  text-align: center;
+}
+.dish-modal .dish-modal__story-block[hidden] { display: none; }
+
+/* надзаголовки — заметные: бронза, small-caps, трекинг, золотой ромб */
+.dish-modal .dish-modal__body h3 {
+  font-family: 'Outfit', sans-serif;
+  font-variant: all-small-caps;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.2em;
+  text-transform: none;              /* перебиваем uppercase из базового правила */
+  color: var(--bronze-light, #d9b87a);
+  margin: 0 0 0.7rem;
+}
+.dish-modal .dish-modal__body h3::before {
+  content: '\25C6';
+  font-size: 0.6em;
+  letter-spacing: 0;
+  vertical-align: 0.18em;
+  margin-right: 0.6em;
+  color: var(--bronze, #b6925e);
+}
+
+/* основной текст — крупный и светлый */
+.dish-modal .dish-modal__body p {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.07rem;
+  line-height: 1.62;
+  color: var(--text, #f2ece3);
+  margin: 0 auto;
+  max-width: 46ch;
+  opacity: 0.94;
+}
+/* «О блюде» — мягкий курсив для повествовательного тона */
+.dish-modal .dish-modal__story-block p {
+  font-style: italic;
+  opacity: 0.88;
+}
+
+/* ====================== КНОПКА ЗАКРЫТИЯ ======================
+   Круглый матовый кружок с золотым контуром. На десктопе вынесен ЗА верхний
+   правый угол панели — НЕ перекрывает фото. На мобиле аккуратно тулится в угол
+   со своим тёмным стеклянным скримом. Перекрывает общий .modal-close (стр.1503)
+   по специфичности; скоупнут как .dish-modal .modal-close — галерея не затронута. */
+.dish-modal .modal-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 6;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+  font-family: 'Outfit', sans-serif;
+  color: var(--bronze-light, #d9b87a);
+  background: radial-gradient(circle at 50% 38%, rgba(40, 29, 19, 0.96), #120d08 100%);
+  border: 1px solid rgba(217, 184, 122, 0.6);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(12, 10, 9, 0.6);
+  transition: color 0.22s ease, border-color 0.22s ease,
+              background 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+}
+.dish-modal .modal-close:hover,
+.dish-modal .modal-close:focus-visible {
+  color: #fff;
+  border-color: var(--bronze-light, #d9b87a);
+  background: radial-gradient(circle at 50% 38%, #3a2817, #1a120b 100%);
+  transform: rotate(90deg);
+  outline: none;
+}
+.dish-modal .modal-close:focus-visible {
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.55),
+    0 0 0 3px rgba(217, 184, 122, 0.4);
+}
+
+/* — Адаптив: телефон — панель почти на всю ширину, кнопка ВНУТРИ угла — */
+@media (max-width: 600px) {
+  .dish-modal { padding: 0.9rem; }
+  .dish-modal .dish-modal__panel {
+    width: 100%;
+    max-height: 92vh;
+    overflow: hidden;               /* кнопка не торчит за экран */
+  }
+  .dish-modal .dish-modal__scroll { max-height: 92vh; }
+  .dish-modal .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    /* плотный тёмный стеклянный кружок поверх фото — читается как кнопка, не как обрез */
+    color: var(--bronze-light, #d9b87a);
+    background: rgba(12, 10, 9, 0.78);
+    -webkit-backdrop-filter: blur(8px) saturate(1.1);
+    backdrop-filter: blur(8px) saturate(1.1);
+    border-color: rgba(217, 184, 122, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+  }
+  .dish-modal .dish-modal__body p { max-width: none; }
+
+  /* на сенсоре не оставляем «залипший» hover-поворот (привито из Концепции 2) */
+  @media (hover: none) {
+    .dish-modal .modal-close:hover { transform: none; }
+  }
+}
+
+/* — Уважение к prefers-reduced-motion — */
+@media (prefers-reduced-motion: reduce) {
+  .dish-modal .modal-close { transition: none; }
+  .dish-modal .modal-close:hover,
+  .dish-modal .modal-close:focus-visible { transform: none; }
+}

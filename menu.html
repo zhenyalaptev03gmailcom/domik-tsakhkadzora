@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="preload" as="image" href="img/hero-bg.webp" type="image/webp" fetchpriority="high">
-<link rel="stylesheet" href="css/style.css?v=49">
+<link rel="stylesheet" href="css/style.css?v=50">
 <meta name="description" content="Меню ресторана «Домик Цахкадзора»: закуски, салаты, паста, блюда на углях, рыба и морепродукты, пицца и десерты.">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0c0a09">
@@ -1299,17 +1299,19 @@
 <div class="modal dish-modal" id="dish-modal" hidden role="dialog" aria-modal="true" aria-labelledby="dish-modal-title">
   <div class="dish-modal__panel" role="document">
     <button class="modal-close" type="button" aria-label="Закрыть">&times;</button>
-    <div class="dish-modal__media"></div>
-    <div class="dish-modal__body">
-      <h2 id="dish-modal-title"></h2>
-      <p class="dish-modal__price" id="dish-modal-price"></p>
-      <div class="dish-modal__composition-block">
-        <h3>Состав</h3>
-        <p id="dish-modal-composition"></p>
-      </div>
-      <div class="dish-modal__story-block" hidden>
-        <h3>О блюде</h3>
-        <p id="dish-modal-story"></p>
+    <div class="dish-modal__scroll">
+      <div class="dish-modal__media"></div>
+      <div class="dish-modal__body">
+        <h2 id="dish-modal-title"></h2>
+        <p class="dish-modal__price" id="dish-modal-price"></p>
+        <div class="dish-modal__composition-block">
+          <h3>Состав</h3>
+          <p id="dish-modal-composition"></p>
+        </div>
+        <div class="dish-modal__story-block" hidden>
+          <h3>О блюде</h3>
+          <p id="dish-modal-story"></p>
+        </div>
       </div>
     </div>
   </div>
