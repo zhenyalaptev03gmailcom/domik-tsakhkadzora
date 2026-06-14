@@ -77,7 +77,7 @@
     if (catEl) catEl.textContent = categoryName;
 
     const priceEl = document.getElementById("dish-price");
-    if (priceEl) priceEl.textContent = `${dish.price} ֏`;
+    if (priceEl) priceEl.textContent = /\d/.test(dish.price || "") ? `${dish.price} ֏` : (dish.price || "");
 
     const compEl = document.getElementById("dish-composition");
     if (compEl) {

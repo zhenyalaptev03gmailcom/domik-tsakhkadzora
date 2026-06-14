@@ -108,7 +108,8 @@
     }
 
     modal.querySelector("#dish-modal-title").textContent = it.name;
-    modal.querySelector("#dish-modal-price").textContent = `${it.price} ֏`;
+    modal.querySelector("#dish-modal-price").textContent =
+      /\d/.test(it.price || "") ? `${it.price} ֏` : (it.price || "");
 
     const composition = (it.composition || "").trim();
     modal.querySelector("#dish-modal-composition").textContent =

@@ -888,6 +888,15 @@
         "local_image": "img/menu/филе-форели-с-зеленым.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/trout-fillet-with-green-onions",
         "composition": "Филе форели, зелёный лук"
+      },
+      {
+        "id": "mussels",
+        "name": "Мидии",
+        "price": "уточняйте",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": true,
+        "local_image": "img/menu/мидии.jpg?v=ig3",
+        "composition": "Мидии в томатном соусе, подаются с гренками"
       }
     ]
   },

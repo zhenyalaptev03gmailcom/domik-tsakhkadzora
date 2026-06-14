@@ -92,7 +92,10 @@ def esc(t):
     return t.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 def price_kitchen(p):
-    return f'{esc(p.strip())} <span class="cur">֏</span>'
+    p = p.strip()
+    if any(ch.isdigit() for ch in p):
+        return f'{esc(p)} <span class="cur">֏</span>'
+    return esc(p)  # нечисловая цена (напр. «уточняйте») — без символа ֏
 
 def price_bar(p):
     p = p.strip()
