@@ -3178,9 +3178,12 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .dish-modal .dish-modal__media img,
 .dish-modal .dish-modal__media .menu-card__ph {
   width: 100%;
+  max-width: 100%;                   /* перебиваем .modal img{max-width:90%} (галерея) */
+  max-height: none;                  /* и .modal img{max-height:85vh} */
   aspect-ratio: 4 / 3;               /* совпадает с ассетами 800×600 */
   object-fit: cover;
   display: block;
+  border-radius: 0;                  /* перебиваем .modal img{border-radius:6px} */
 }
 .dish-modal .dish-modal__media .menu-card__ph {
   min-height: 220px;
