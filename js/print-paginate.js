@@ -22,6 +22,8 @@
     book.textContent = '';
     book.classList.add('is-paginated');
 
+    var MIN_AFTER_TITLE = 2;   // минимум блюд после заголовка раздела на одном листе
+
     var sheet = null, inner = null;
     var contentSheets = [];
 
@@ -58,17 +60,34 @@
 
       if (inner.scrollHeight > inner.clientHeight + 1) {   // переполнение
         inner.removeChild(node);
-        // перенести вместе с ним хвостовые «неотрывные» элементы (заголовки/баннер)
         var carry = [];
+        // 1) перенести хвостовые «неотрывные» элементы (заголовки/баннер),
+        //    чтобы заголовок не оставался один внизу листа
         while (inner.lastElementChild &&
                inner.lastElementChild.classList.contains('flow-keep')) {
           carry.unshift(inner.lastElementChild);
           inner.removeChild(inner.lastElementChild);
         }
+        // 2) контроль «сирот»: если раздел только что начался на этом листе и
+        //    после его заголовка поместилось < MIN_AFTER_TITLE блюд — переносим
+        //    весь заголовок (и эти блюда) на следующий лист, чтобы не было
+        //    одинокого блюда нового раздела внизу страницы.
+        if (carry.length === 0 && !node.classList.contains('flow-keep')) {
+          var trailing = [], n = inner.lastElementChild;
+          while (n && !n.classList.contains('flow-keep') && trailing.length < MIN_AFTER_TITLE) {
+            trailing.unshift(n); n = n.previousElementSibling;
+          }
+          if (n && n.classList.contains('flow-keep') &&
+              trailing.length < MIN_AFTER_TITLE && n !== inner.firstElementChild) {
+            for (var k = 0; k < trailing.length; k++) inner.removeChild(trailing[k]);
+            inner.removeChild(n);
+            carry = [n].concat(trailing);
+          }
+        }
         addSheet();
         for (var c = 0; c < carry.length; c++) inner.appendChild(carry[c]);
         inner.appendChild(node);
-        // если одиночный элемент выше листа — оставляем как есть (overflow:hidden обрежет)
+        // одиночный элемент выше листа — оставляем как есть (overflow:hidden обрежет)
       }
     }
 
