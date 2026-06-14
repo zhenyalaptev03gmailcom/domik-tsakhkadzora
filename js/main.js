@@ -156,24 +156,32 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', update, { passive: true });
     update();
 
-    // drag-to-scroll on desktop (phones use native momentum swipe)
-    let down = false, startX = 0, startScroll = 0, moved = 0;
+    // drag-to-scroll on desktop (phones use native momentum swipe).
+    // ВАЖНО: захватываем указатель (setPointerCapture) ТОЛЬКО после реального
+    // движения. Если захватить на pointerdown, по спецификации Pointer Events
+    // обычный клик перенаправляется на саму строку, и карточка не открывается.
+    let down = false, startX = 0, startScroll = 0, moved = 0, captured = false;
     row.addEventListener('pointerdown', e => {
-      if (e.pointerType === 'touch') return;
-      down = true; moved = 0; startX = e.clientX; startScroll = row.scrollLeft;
-      row.classList.add('is-dragging');
-      try { row.setPointerCapture(e.pointerId); } catch (_) {}
-      e.preventDefault();
+      if (e.pointerType === 'touch' || e.button !== 0) return;
+      down = true; moved = 0; captured = false; startX = e.clientX; startScroll = row.scrollLeft;
     });
     row.addEventListener('pointermove', e => {
       if (!down) return;
-      const dx = e.clientX - startX; moved += Math.abs(dx);
-      row.scrollLeft = startScroll - dx;
+      const dx = e.clientX - startX;
+      moved = Math.abs(dx);
+      if (!captured && moved > 6) {          // началось настоящее перетаскивание
+        captured = true;
+        row.classList.add('is-dragging');
+        try { row.setPointerCapture(e.pointerId); } catch (_) {}
+      }
+      if (captured) { row.scrollLeft = startScroll - dx; if (e.cancelable) e.preventDefault(); }
     });
-    const release = () => { if (down) { down = false; row.classList.remove('is-dragging'); } };
+    const release = () => { if (down) { down = false; captured = false; row.classList.remove('is-dragging'); } };
     row.addEventListener('pointerup', release);
     row.addEventListener('pointercancel', release);
-    // if the pointer actually dragged, swallow the card click so it doesn't open the dish
+    // не давать нативному перетаскиванию картинки/текста перехватывать скролл-драг
+    row.addEventListener('dragstart', e => { if (down) e.preventDefault(); });
+    // если реально тащили — гасим клик по карточке, чтобы не открыть блюдо
     row.addEventListener('click', e => { if (moved > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
   });
 });
