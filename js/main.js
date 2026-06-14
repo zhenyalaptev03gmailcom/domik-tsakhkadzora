@@ -33,8 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('nav');
   if (burger && nav) {
-    burger.addEventListener('click', () => nav.classList.toggle('open'));
-    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      if (header) header.classList.toggle('nav-open', open);
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      if (header) header.classList.remove('nav-open');
+    }));
   }
 
   const currentPage = location.pathname.split('/').pop() || 'index.html';
