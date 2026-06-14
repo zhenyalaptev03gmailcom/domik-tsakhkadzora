@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css?v=46">
+<link rel="stylesheet" href="css/style.css?v=47">
 <meta name="description" content="Контакты и бронирование столика в ресторане «Домик Цахкадзора».">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#0c0a09">
@@ -41,7 +41,7 @@
   <button type="button" data-lang="en">EN</button>
   <button type="button" data-lang="hy">HY</button>
 </div>
-    <a href="contacts.html" class="btn-book-outline" data-i18n="hero.btn2">Забронировать столик</a>
+    <a href="contacts.html#book" class="btn-book-outline" data-i18n="hero.btn2">Забронировать столик</a>
     <a class="ya-rating" href="https://yandex.com/maps/org/domik/241007402187/" target="_blank" rel="noopener" title="Рейтинг 5,0 в Яндексе">
       <iframe src="https://yandex.ru/sprav/widget/rating-badge/241007402187?type=rating&theme=dark" width="180" height="64" frameborder="0" scrolling="no" loading="lazy" title="Рейтинг в Яндексе"></iframe>
     </a>
@@ -72,29 +72,21 @@
         title="Карта — Домик Цахкадзора" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
-  <form class="booking-form" id="book" action="https://api.web3forms.com/submit" method="POST">
-    <!-- TODO: вставьте бесплатный ключ Web3Forms. Получить за минуту на https://web3forms.com (укажите почту ресторана — заявки будут приходить туда). Пока ключ не вставлен, форма работает в демо-режиме (показывает «спасибо», но не отправляет). -->
-    <input type="hidden" name="access_key" value="ВАШ-КЛЮЧ-WEB3FORMS">
-    <input type="hidden" name="subject" value="Бронь столика — Домик Цахкадзора">
-    <input type="hidden" name="from_name" value="Сайт «Домик Цахкадзора»">
-    <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-    <input type="text" name="Имя" placeholder="Ваше имя" required>
-    <input type="tel" name="Телефон" placeholder="Телефон" required>
-    <div class="form-row">
-      <input type="date" name="Дата" aria-label="Дата">
-      <input type="time" name="Время" aria-label="Время">
+  <div class="book-cta" id="book">
+    <h3 data-i18n="book.h">Забронировать столик</h3>
+    <p data-i18n="book.p">Бронируем по телефону и в WhatsApp — отвечаем быстро.</p>
+    <div class="contact-buttons contact-buttons--book">
+      <a class="contact-btn contact-btn--whatsapp" href="https://wa.me/37495505656?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%20%D0%B2%20%C2%AB%D0%94%D0%BE%D0%BC%D0%B8%D0%BA%20%D0%A6%D0%B0%D1%85%D0%BA%D0%B0%D0%B4%D0%B7%D0%BE%D1%80%D0%B0%C2%BB" target="_blank" rel="noopener" aria-label="Забронировать в WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.7-.83-2-.93-.26-.1-.45-.15-.64.15-.19.29-.73.92-.9 1.1-.16.2-.33.22-.62.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.51.15-.17.2-.3.3-.49.1-.2.05-.37-.02-.52-.08-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 .98-1 2.38 0 1.4 1.02 2.76 1.17 2.95.14.2 2 3.05 4.85 4.28.68.29 1.2.46 1.62.59.68.21 1.3.18 1.79.11.55-.08 1.68-.69 1.92-1.35.24-.66.24-1.23.17-1.35-.07-.12-.26-.19-.55-.34z M12 2a10 10 0 00-8.55 15.2L2 22l4.92-1.4A10 10 0 1012 2zm0 18.2a8.2 8.2 0 01-4.18-1.14l-.3-.18-2.92.83.78-2.85-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+        <span data-i18n="book.wa">Бронь в WhatsApp</span>
+      </a>
+      <a class="contact-btn contact-btn--phone" href="tel:+37495505656" aria-label="Позвонить для брони">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 4h4l2 5-2 1a11 11 0 005 5l1-2 5 2v4c0 1-8 2-15-5S5 5 6 4z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        <span>+374 95 505 656</span>
+      </a>
     </div>
-    <select name="Гостей">
-      <option value="" disabled selected>Количество гостей</option>
-      <option>2 человека</option>
-      <option>3–4 человека</option>
-      <option>5–8 человек</option>
-      <option>Банкет (от 10)</option>
-    </select>
-    <textarea name="Пожелания" rows="3" placeholder="Пожелания (у окна, детское кресло…)"></textarea>
-    <button type="submit" class="btn-book-solid">Забронировать</button>
-    <p class="form-note">Нажимая «Забронировать», вы соглашаетесь на обработку контактных данных для подтверждения брони.</p>
-  </form>
+    <p class="book-note" data-i18n="book.hours">Ежедневно 10:00 — 23:00</p>
+  </div>
 </div></section>
 <section class="page-section hall-section"><div class="container">
   <h2 class="hall-title">Схема зала</h2>
@@ -251,7 +243,7 @@
   </div>
 </div>
 </footer>
-<script src="js/i18n.js?v=12"></script>
+<script src="js/i18n.js?v=13"></script>
 <script src="js/main.js?v=7"></script>
 <script src="js/enhance.js?v=4"></script>
 </body>
