@@ -1113,16 +1113,6 @@
         "composition": "Шоколадный пирог"
       },
       {
-        "id": "carrot-tart",
-        "name": "Морковный тарт",
-        "price": "2 000",
-        "image_url": "https://orderin.am/uploads/products/16242/product-16242-2024-07-01-15-40-450.jpg",
-        "has_image": true,
-        "local_image": "img/menu/морковный-тарт.jpg?v=fit800",
-        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/carrot-tart",
-        "composition": "Морковный тарт"
-      },
-      {
         "id": "ice-cream234567891011",
         "name": "Мороженое",
         "price": "700",
