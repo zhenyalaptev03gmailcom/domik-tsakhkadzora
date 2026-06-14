@@ -119,10 +119,9 @@ body{
   box-shadow: inset 0 0 18mm rgba(139,99,66,0.05);
 }
 
-/* Обложка и барный титул — самостоятельные полноформатные листы.
-   Разделы меню/бара текут как развороты (высота по контенту). */
-.book-cover,
-.bar-part{
+/* Обложка — самостоятельный полноформатный лист.
+   Разделы кухни/бара и титул бара текут по высоте контента. */
+.book-cover{
   min-height: var(--page-h);
 }
 .book-cat,
@@ -375,17 +374,20 @@ body{
    БАРНАЯ КАРТА
    ============================================================ */
 
-/* титульный лист «Барная карта» — крупный раздел с новой страницы */
+/* «Барная карта» — встроенный разделитель (НЕ отдельная страница),
+   чтобы бар тёк сразу за кухней и страницы заполнялись ровно */
 .bar-part{
-  break-before: page;
+  break-inside: avoid;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin: 16mm 0 11mm;
+  padding: 16mm var(--pad-x);
 }
 .bar-part__frame{
-  position:absolute; inset:14mm;
+  position:absolute; inset:0;
   border: 1px solid var(--hair);
   pointer-events:none;
 }
@@ -600,9 +602,8 @@ body{
   .bar-part::after,
   .bar-sec::after{ display: none; }
 
-  /* обложка и барный титул — на всю страницу без полей @page */
-  .book-cover,
-  .bar-part{
+  /* обложка — на всю страницу без полей @page */
+  .book-cover{
     height: var(--page-h);
     width: var(--page-w);
     margin: 0;
@@ -610,9 +611,14 @@ body{
     align-items: center;
     justify-content: center;
     background-image: none !important;  /* чистый лист под рамку */
+    break-after: page;
   }
-  .book-cover{ break-after: page; }
-  .bar-part{ break-before: page; break-after: auto; }
+  /* «Барная карта» — встроенный разделитель в потоке печати */
+  .bar-part{
+    break-inside: avoid;
+    margin: 12mm 0 9mm;
+    padding: 12mm var(--pad-x);
+  }
 
   /* рамки обложки/титула — относительно полного листа */
   .book-cover__frame{ inset: 14mm; }
@@ -620,7 +626,7 @@ body{
   .book-cover__corners span:nth-child(2){ top:11mm; right:11mm; }
   .book-cover__corners span:nth-child(3){ bottom:11mm; left:11mm; }
   .book-cover__corners span:nth-child(4){ bottom:11mm; right:11mm; }
-  .bar-part__frame{ inset: 14mm; }
+  .bar-part__frame{ inset: 0; }
   .book-cover__foot{ bottom: 16mm; }
 
   /* воздух между разделами в потоке печати */
