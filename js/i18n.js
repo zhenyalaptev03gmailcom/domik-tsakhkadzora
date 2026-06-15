@@ -517,6 +517,9 @@ window.SITE_I18N = {
     if (window.onLangChange) window.onLangChange(lang, dict);
   }
 
+  // Позволяет динамически отрисованным блокам (популярные блюда) применить язык.
+  window.applyI18n = apply;
+
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-switch button').forEach((btn) => {
       btn.addEventListener('click', () => setLang(btn.dataset.lang));

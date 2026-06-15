@@ -66,6 +66,11 @@
       .replace(/"/g, "&quot;");
   }
 
+  function trAttrs(it) {
+    if (!it.name_en && !it.name_hy) return "";
+    return ` data-tr-en="${escapeHtml(it.name_en || it.name)}" data-tr-hy="${escapeHtml(it.name_hy || it.name)}"`;
+  }
+
   function renderCard(it) {
     const img =
       it.has_image && it.local_image ? it.local_image : PLACEHOLDER_IMG;
@@ -77,7 +82,7 @@
       `<a href="${href}" class="dish-card">` +
       `<picture><source srcset="${escapeHtml(webp)}" type="image/webp">` +
       `<img src="${escapeHtml(img)}" alt="${name}" loading="lazy" decoding="async"></picture>` +
-      `<h4>${name}</h4>` +
+      `<h4${trAttrs(it)}>${name}</h4>` +
       `<span class="price">${price} &#1423;</span>` +
       `</a>`
     );
@@ -114,6 +119,8 @@
       }
       grid.innerHTML = cards.join("\n");
       grid.dataset.popularWeek = weekKey;
+      // карточки отрисованы после старта i18n — применим текущий язык к новым узлам
+      if (window.applyI18n) window.applyI18n(localStorage.getItem("siteLang") || "ru");
     } catch (err) {
       console.error("popular-weekly:", err);
       grid.innerHTML =
