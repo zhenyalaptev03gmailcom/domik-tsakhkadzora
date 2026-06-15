@@ -369,6 +369,15 @@
         "local_image": "img/menu/тай-салат.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/thai-salad",
         "composition": "Шпинат, болгарский перец, телятина, помидоры черри, острый соус"
+      },
+      {
+        "id": "gourmet-salad",
+        "local_image": "img/menu/салат-гурман.jpg?v=st4",
+        "name": "Салат гурман",
+        "price": "3 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Хрустящие баклажаны, телятина, фирменный соус"
       }
     ]
   },
@@ -426,6 +435,24 @@
         "local_image": "img/menu/спас.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/spas23456789101112131415161718192021222324252627282930",
         "composition": "Мацун, пшеница, зелень"
+      },
+      {
+        "id": "slavic-solyanka",
+        "local_image": "img/menu/славянская-солянка.jpg?v=ig3",
+        "name": "Славянская солянка",
+        "price": "2 200",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Ассорти мяса, соленья, оливки, лимон, наваристый бульон"
+      },
+      {
+        "id": "hash",
+        "local_image": "img/menu/хаш.jpg?v=ig3",
+        "name": "Хаш",
+        "price": "2 700",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Наваристый говяжий бульон, чеснок, лаваш"
       }
     ]
   },
@@ -689,6 +716,24 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
         "composition": "Виноградные листья, индейка, рис"
+      },
+      {
+        "id": "kebab-lamb-duo",
+        "local_image": "img/menu/кебаб-из-баранины.jpg?v=st4",
+        "name": "Кебаб из баранины с картофелем-гриль (для двоих)",
+        "price": "7 800",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Кебаб/шашлык из баранины, картофель-гриль (на двоих)"
+      },
+      {
+        "id": "kebab-veal-duo",
+        "local_image": "img/menu/кебаб-из-телятины.jpg?v=st4",
+        "name": "Кебаб из телятины с жареным картофелем (для двоих)",
+        "price": "8 700",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Кебаб/шашлык из телятины, жареный картофель (на двоих)"
       }
     ]
   },
@@ -774,6 +819,51 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
         "composition": "Тонко нарезанная говядина, пармезан, руккола, оливковое масло"
+      },
+      {
+        "id": "lamb-ragout",
+        "local_image": "img/menu/рагу-из-баранины.jpg?v=st4",
+        "name": "Рагу из баранины с овощами",
+        "price": "4 700",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Баранина, овощи, соус"
+      },
+      {
+        "id": "beef-stroganoff-veal",
+        "local_image": "img/menu/бефстроганов.jpg?v=ig3",
+        "name": "Бефстроганов из телятины (рис/картофель)",
+        "price": "3 500",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Телятина в сливочном соусе, рис или картофель"
+      },
+      {
+        "id": "beef-stroganoff-chicken",
+        "local_image": "img/menu/бефстроганов.jpg?v=ig3",
+        "name": "Куриный бефстроганов (рис/картофель)",
+        "price": "3 200",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Курица в сливочном соусе, рис или картофель"
+      },
+      {
+        "id": "beef-stroganoff-mushroom",
+        "local_image": "img/menu/бефстроганов.jpg?v=ig3",
+        "name": "Бефстроганов с грибами (рис/картофель)",
+        "price": "3 000",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Говядина, грибы, сливочный соус, рис или картофель"
+      },
+      {
+        "id": "hasharisa",
+        "local_image": "img/menu/хашариса.jpg?v=ig3",
+        "name": "Хашариса",
+        "price": "2 300",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Традиционное блюдо из пшеницы и мяса"
       }
     ]
   },
@@ -897,6 +987,15 @@
         "has_image": true,
         "local_image": "img/menu/мидии.jpg?v=ig3",
         "composition": "Мидии в томатном соусе, подаются с гренками"
+      },
+      {
+        "id": "trout-lavash",
+        "local_image": "img/menu/филе-форели-в-лаваше.jpg?v=ig3",
+        "name": "Филе форели в лаваше",
+        "price": "4 600",
+        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
+        "has_image": false,
+        "composition": "Филе форели, запечённое в лаваше"
       }
     ]
   },
@@ -1185,112 +1284,6 @@
         "has_image": true,
         "local_image": "img/menu/доме.jpg?v=ig1",
         "composition": "Медовые коржи, сливочный крем"
-      }
-    ]
-  },
-  {
-    "id": "2150",
-    "name": "Дополнительное меню",
-    "slug": "дополнительное-меню",
-    "items": [
-      {
-        "id": "slavic-solyanka",
-        "local_image": "img/menu/славянская-солянка.jpg?v=ig3",
-        "name": "Славянская солянка",
-        "price": "2 200",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Ассорти мяса, соленья, оливки, лимон, наваристый бульон"
-      },
-      {
-        "id": "trout-lavash",
-        "local_image": "img/menu/филе-форели-в-лаваше.jpg?v=ig3",
-        "name": "Филе форели в лаваше",
-        "price": "4 600",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Филе форели, запечённое в лаваше"
-      },
-      {
-        "id": "lamb-ragout",
-        "local_image": "img/menu/рагу-из-баранины.jpg?v=st4",
-        "name": "Рагу из баранины с овощами",
-        "price": "4 700",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Баранина, овощи, соус"
-      },
-      {
-        "id": "kebab-lamb-duo",
-        "local_image": "img/menu/кебаб-из-баранины.jpg?v=st4",
-        "name": "Кебаб из баранины с картофелем-гриль (для двоих)",
-        "price": "7 800",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Кебаб/шашлык из баранины, картофель-гриль (на двоих)"
-      },
-      {
-        "id": "kebab-veal-duo",
-        "local_image": "img/menu/кебаб-из-телятины.jpg?v=st4",
-        "name": "Кебаб из телятины с жареным картофелем (для двоих)",
-        "price": "8 700",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Кебаб/шашлык из телятины, жареный картофель (на двоих)"
-      },
-      {
-        "id": "beef-stroganoff-veal",
-        "local_image": "img/menu/бефстроганов.jpg?v=ig3",
-        "name": "Бефстроганов из телятины (рис/картофель)",
-        "price": "3 500",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Телятина в сливочном соусе, рис или картофель"
-      },
-      {
-        "id": "beef-stroganoff-chicken",
-        "local_image": "img/menu/бефстроганов.jpg?v=ig3",
-        "name": "Куриный бефстроганов (рис/картофель)",
-        "price": "3 200",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Курица в сливочном соусе, рис или картофель"
-      },
-      {
-        "id": "beef-stroganoff-mushroom",
-        "local_image": "img/menu/бефстроганов.jpg?v=ig3",
-        "name": "Бефстроганов с грибами (рис/картофель)",
-        "price": "3 000",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Говядина, грибы, сливочный соус, рис или картофель"
-      },
-      {
-        "id": "gourmet-salad",
-        "local_image": "img/menu/салат-гурман.jpg?v=st4",
-        "name": "Салат гурман",
-        "price": "3 500",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Хрустящие баклажаны, телятина, фирменный соус"
-      },
-      {
-        "id": "hash",
-        "local_image": "img/menu/хаш.jpg?v=ig3",
-        "name": "Хаш",
-        "price": "2 700",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Наваристый говяжий бульон, чеснок, лаваш"
-      },
-      {
-        "id": "hasharisa",
-        "local_image": "img/menu/хашариса.jpg?v=ig3",
-        "name": "Хашариса",
-        "price": "2 300",
-        "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "composition": "Традиционное блюдо из пшеницы и мяса"
       },
       {
         "id": "domina-dessert",
