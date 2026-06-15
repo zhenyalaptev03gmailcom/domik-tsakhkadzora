@@ -3183,7 +3183,7 @@ html[lang="hy"] h3 { line-height: 1.2; }
   aspect-ratio: 4 / 3;               /* совпадает с ассетами 800×600 */
   object-fit: cover;
   display: block;
-  border-radius: 0;                  /* перебиваем .modal img{border-radius:6px} */
+  border-radius: 15px 15px 0 0;      /* скругляем верхние углы под рамку (перебивает .modal img{border-radius:6px}) */
 }
 .dish-modal .dish-modal__media .menu-card__ph {
   min-height: 220px;
