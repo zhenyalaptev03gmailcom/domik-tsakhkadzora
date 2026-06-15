@@ -120,7 +120,8 @@
     modal.querySelector(".dish-modal__composition-block h3").textContent =
       t("composition");
 
-    const storyText = (stories[dishId] || it.story || "").trim();
+    const st = stories[dishId];
+    const storyText = ((st && typeof st === "object" ? (st[lng] || st.ru) : st) || it.story || "").trim();
     const storyBlock = modal.querySelector(".dish-modal__story-block");
     if (storyText) {
       modal.querySelector("#dish-modal-story").textContent = storyText;

@@ -92,7 +92,8 @@
 
     const storySection = document.getElementById("dish-story-section");
     const storyEl = document.getElementById("dish-story");
-    const storyText = (stories[dishId] || dish.story || "").trim();
+    const st = stories[dishId];
+    const storyText = ((st && typeof st === "object" ? (st[lng] || st.ru) : st) || dish.story || "").trim();
     if (storySection && storyEl) {
       if (storyText) {
         storyEl.textContent = storyText;
