@@ -44,6 +44,9 @@
       .replace(/"/g, "&quot;");
   }
 
+  var RU_MONTH={"Январь":["January","Հունվար"],"Февраль":["February","Փետրվար"],"Март":["March","Մարտ"],"Апрель":["April","Ապրիլ"],"Май":["May","Մայիս"],"Июнь":["June","Հունիս"],"Июль":["July","Հուլիս"],"Август":["August","Օգոստոս"],"Сентябрь":["September","Սեպտեմբեր"],"Октябрь":["October","Հոկտեմբեր"],"Ноябрь":["November","Նոյեմբեր"],"Декабрь":["December","Դեկտեմբեր"]};
+  function locDate(x){ var l=lang(); if(l==="ru"||!x) return x; var i=l==="en"?0:1; return x.replace(/Январь|Февраль|Март|Апрель|Май|Июнь|Июль|Август|Сентябрь|Октябрь|Ноябрь|Декабрь/, function(m){ return RU_MONTH[m]?RU_MONTH[m][i]:m; }); }
+
   function buildChip(id, meta) {
     const rating = fmtRating(meta.rating);
     if (!rating) return "";
@@ -118,7 +121,7 @@
       html += '<div class="reviews-list">';
       reviews.forEach((rv) => {
         const src = labelForSource(rv.source || "");
-        const date = rv.date ? '<span class="review-card__date">' + escapeHtml(rv.date) + "</span>" : "";
+        const date = rv.date ? '<span class="review-card__date">' + escapeHtml(locDate(rv.date)) + "</span>" : "";
         html +=
           '<article class="review-card review-card--' +
           escapeHtml(rv.source || "") +
@@ -170,8 +173,10 @@
 
     load().then((data) => {
       if (!data) return;
-      if (bar) renderBar(bar, data);
-      if (list) renderReviewsList(list, data);
+      var draw = function () { if (bar) renderBar(bar, data); if (list) renderReviewsList(list, data); };
+      draw();
+      var prev = window.onLangChange;
+      window.onLangChange = function () { if (prev) prev.apply(null, arguments); draw(); };
     });
   });
 })();

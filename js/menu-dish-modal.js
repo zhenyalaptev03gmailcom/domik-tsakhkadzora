@@ -12,6 +12,7 @@
       noComposition: "Состав уточняйте у официанта — скоро добавим на сайт.",
       loading: "Загрузка…",
       error: "Не удалось открыть блюдо. Обновите страницу.",
+      photoSoon: "Фото скоро",
     },
     en: {
       composition: "Ingredients",
@@ -19,6 +20,7 @@
       noComposition: "Ask your server for ingredients — we will add details soon.",
       loading: "Loading…",
       error: "Could not open this dish. Please refresh the page.",
+      photoSoon: "Photo coming soon",
     },
     hy: {
       composition: "Բաղադրություն",
@@ -26,6 +28,7 @@
       noComposition: "Հարցրեք մատուցողին — շուտով կհրապարակենք կայքում։",
       loading: "Բեռնում…",
       error: "Չհաջողվեց բացել։ Թարմացրեք էջը։",
+      photoSoon: "Ֆոտո շուտով",
     },
   };
 
@@ -136,7 +139,7 @@
       media.innerHTML = `<img src="${it.local_image}" alt="">`;
     } else {
       media.innerHTML =
-        '<div class="menu-card__ph"><span>Фото скоро</span></div>';
+        `<div class="menu-card__ph"><span>${t("photoSoon")}</span></div>`;
     }
   }
 
