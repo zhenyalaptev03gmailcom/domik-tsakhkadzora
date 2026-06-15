@@ -11,7 +11,9 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": true,
         "local_image": "img/menu/французский-завтрак.jpg?v=ctr1",
-        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/french-breakfast2345"
+        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/french-breakfast2345",
+        "name_en": "French Breakfast",
+        "name_hy": "Ֆրանսիական նախաճաշ"
       },
       {
         "id": "fried-eggs",
@@ -21,7 +23,11 @@
         "has_image": true,
         "local_image": "img/menu/яичница.jpg?v=eg2",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/fried-eggs",
-        "composition": "Яйца (2–3 шт), по желанию с овощами"
+        "composition": "Яйца (2–3 шт), по желанию с овощами",
+        "name_en": "Fried eggs",
+        "name_hy": "Տապակած ձու",
+        "composition_en": "Eggs (2–3 pcs), with vegetables if desired",
+        "composition_hy": "Ձու (2–3 հատ), ցանկության դեպքում՝ բանջարեղենով"
       },
       {
         "id": "pancake-with-nutella-and-poppy-seeds",
@@ -31,7 +37,11 @@
         "has_image": true,
         "local_image": "img/menu/панкейк-с-нутеллой.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pancake-with-nutella-and-poppy-seeds",
-        "composition": "Панкейки, нутелла, мак"
+        "composition": "Панкейки, нутелла, мак",
+        "name_en": "Pancakes with Nutella and poppy seeds",
+        "name_hy": "Փենքեյք Նուտելլայով և կակաչով",
+        "composition_en": "Pancakes, Nutella, poppy seeds",
+        "composition_hy": "Բլիթներ, Nutella, կakач"
       },
       {
         "id": "chocolate-syrniki",
@@ -41,7 +51,11 @@
         "has_image": true,
         "local_image": "img/menu/сырники-шоколадные.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chocolate-syrniki",
-        "composition": "Творог, шоколад, сметана"
+        "composition": "Творог, шоколад, сметана",
+        "name_en": "Chocolate syrniki",
+        "name_hy": "Շոկոլադե սըրնիկի",
+        "composition_en": "Cottage cheese, chocolate, sour cream",
+        "composition_hy": "Կաթնաշոռ, շոկոլադ, թթվասեր"
       },
       {
         "id": "pancakes-with-cottage-cheese23",
@@ -51,7 +65,11 @@
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pancakes-with-cottage-cheese23",
         "local_image": "img/menu/блины-с-творогом.jpg?v=st3",
-        "composition": "Блины, творог"
+        "composition": "Блины, творог",
+        "name_en": "Crepes with cottage cheese",
+        "name_hy": "Նրբաբլիթ կաթնաշոռով",
+        "composition_en": "Crêpes, cottage cheese",
+        "composition_hy": "Նրբաբլիթներ, կաթնաշոռ"
       },
       {
         "id": "chia-pudding234",
@@ -61,7 +79,11 @@
         "has_image": true,
         "local_image": "img/menu/чиа-пудинг.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chia-pudding234",
-        "composition": "Семена чиа, молоко, ягоды"
+        "composition": "Семена чиа, молоко, ягоды",
+        "name_en": "Chia pudding",
+        "name_hy": "Չիա պուդինգ",
+        "composition_en": "Chia seeds, milk, berries",
+        "composition_hy": "Չիա սերմեր, կաթ, հատապտուղներ"
       },
       {
         "id": "italian-breakfast",
@@ -70,7 +92,11 @@
         "price": "4 500",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Яйца, прошутто, сыр, томаты, чиабатта, кофе"
+        "composition": "Яйца, прошутто, сыр, томаты, чиабатта, кофе",
+        "name_en": "Italian breakfast",
+        "name_hy": "Իտալական նախաճաշ",
+        "composition_en": "Eggs, prosciutto, cheese, tomatoes, ciabatta, coffee",
+        "composition_hy": "Ձու, պրոշուտո, պանիր, լոլիկ, չիաբատա, սուրճ"
       },
       {
         "id": "english-breakfast",
@@ -79,7 +105,11 @@
         "price": "4 500",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Яичница, сосиски, бекон, фасоль, томаты, тосты"
+        "composition": "Яичница, сосиски, бекон, фасоль, томаты, тосты",
+        "name_en": "English breakfast",
+        "name_hy": "Անգլիական նախաճաշ",
+        "composition_en": "Fried eggs, sausages, bacon, beans, tomatoes, toast",
+        "composition_hy": "Տապակած ձու, նրբերշիկ, բեկոն, լոբի, լոլիկ, տոստ"
       },
       {
         "id": "croissant",
@@ -88,9 +118,15 @@
         "price": "2 200",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Слоёный масляный круассан"
+        "composition": "Слоёный масляный круассан",
+        "name_en": "Croissant",
+        "name_hy": "Կրուասան",
+        "composition_en": "Flaky butter croissant",
+        "composition_hy": "Շերտավոր կարագով կրուասան"
       }
-    ]
+    ],
+    "name_en": "Breakfast",
+    "name_hy": "Նախաճաշ"
   },
   {
     "id": "2139",
@@ -105,7 +141,11 @@
         "has_image": true,
         "local_image": "img/menu/бурата.jpg?v=ctr3",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/burata",
-        "composition": "Сыр бурата, помидоры, оливковое масло"
+        "composition": "Сыр бурата, помидоры, оливковое масло",
+        "name_en": "Burrata",
+        "name_hy": "Բուրատա",
+        "composition_en": "Burrata, tomatoes, olive oil",
+        "composition_hy": "Բուրատա պանիր, լոլիկ, ձիթապտղի յուղ"
       },
       {
         "id": "baked-meat-and-vegetables-in-dough",
@@ -115,7 +155,11 @@
         "has_image": true,
         "local_image": "img/menu/запеченное-мясо.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/baked-meat-and-vegetables-in-dough",
-        "composition": "Мясо и овощи, запечённые в тесте"
+        "composition": "Мясо и овощи, запечённые в тесте",
+        "name_en": "Baked meat and vegetables in dough",
+        "name_hy": "Թխվածքով եփած միս և բանջարեղեն",
+        "composition_en": "Meat and vegetables baked in dough",
+        "composition_hy": "Միս և բանջարեղեն՝ թխված խմորի մեջ"
       },
       {
         "id": "bruschetta2345678910",
@@ -125,7 +169,11 @@
         "has_image": true,
         "local_image": "img/menu/брускетта.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/bruschetta2345678910",
-        "composition": "Чиабатта, помидоры, базилик, оливковое масло"
+        "composition": "Чиабатта, помидоры, базилик, оливковое масло",
+        "name_en": "Bruschetta",
+        "name_hy": "Բրուսկետա",
+        "composition_en": "Ciabatta, tomatoes, basil, olive oil",
+        "composition_hy": "Չիաբատա, լոլիկ, ռեհան, ձիթապտղի յուղ"
       },
       {
         "id": "wine-plate2345",
@@ -135,7 +183,11 @@
         "has_image": true,
         "local_image": "img/menu/винная-тарелка.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/wine-plate2345",
-        "composition": "Сырное и мясное ассорти к вину"
+        "composition": "Сырное и мясное ассорти к вину",
+        "name_en": "Wine platter",
+        "name_hy": "Գինու ափսե",
+        "composition_en": "Cheese & charcuterie board for wine",
+        "composition_hy": "Պանրի և մսի տեսականի գինու հետ"
       },
       {
         "id": "armenian-cheese-plate",
@@ -146,7 +198,11 @@
         "has_image": true,
         "local_image": "img/menu/армянская-сырная-тарел.jpg?v=fit800",
         "orderin_error": 500,
-        "composition": "Ассорти армянских сыров"
+        "composition": "Ассорти армянских сыров",
+        "name_en": "Armenian cheese platter",
+        "name_hy": "Հայկական պանրի ափսե",
+        "composition_en": "Armenian cheese platter",
+        "composition_hy": "Հայկական պանիրների տեսականի"
       },
       {
         "id": "armenian-greens234",
@@ -156,7 +212,11 @@
         "has_image": true,
         "local_image": "img/menu/армянская-зелень.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/armenian-greens234",
-        "composition": "Свежая армянская зелень"
+        "composition": "Свежая армянская зелень",
+        "name_en": "Armenian greens",
+        "name_hy": "Հայկական կանաչի",
+        "composition_en": "Fresh Armenian herbs",
+        "composition_hy": "Թարմ հայկական կանաչի"
       },
       {
         "id": "armenian-snack",
@@ -165,7 +225,9 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/armenian-snack",
-        "local_image": "img/menu/армянская-закуска.jpg?v=ig1"
+        "local_image": "img/menu/армянская-закуска.jpg?v=ig1",
+        "name_en": "Armenian appetizer",
+        "name_hy": "Հայկական նախուտեստ"
       },
       {
         "id": "armenian-meat-plate2",
@@ -175,7 +237,11 @@
         "has_image": true,
         "local_image": "img/menu/армянская-мясная-тарел.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/armenian-meat-plate2",
-        "composition": "Ассорти мясных деликатесов"
+        "composition": "Ассорти мясных деликатесов",
+        "name_en": "Armenian meat platter",
+        "name_hy": "Հայկական մսային ափսե",
+        "composition_en": "Assorted meat delicacies",
+        "composition_hy": "Մսային նրբերշիկների տեսականի"
       },
       {
         "id": "german-snack",
@@ -185,7 +251,11 @@
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/german-snack",
         "local_image": "img/menu/немецкая-закуска.jpg?v=ig2",
-        "composition": "Колбаски и закуски к пиву"
+        "composition": "Колбаски и закуски к пиву",
+        "name_en": "German appetizer",
+        "name_hy": "Գերմանական նախուտեստ",
+        "composition_en": "Sausages and beer snacks",
+        "composition_hy": "Երշիկներ և գարեջրի խորտիկներ"
       },
       {
         "id": "grilled-cheese2",
@@ -195,7 +265,11 @@
         "has_image": true,
         "local_image": "img/menu/жареный-сыр.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/grilled-cheese2",
-        "composition": "Сыр в панировке, соус"
+        "composition": "Сыр в панировке, соус",
+        "name_en": "Fried cheese",
+        "name_hy": "Տապակած պանիր",
+        "composition_en": "Breaded cheese, sauce",
+        "composition_hy": "Պանրապատ պանիր, սոուս"
       },
       {
         "id": "pickling",
@@ -204,7 +278,9 @@
         "image_url": "https://orderin.am/uploads/products/16156/product-16156-2024-06-30-16-52-110.jpeg",
         "has_image": true,
         "local_image": "img/menu/соления.jpg?v=fit800",
-        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pickling"
+        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pickling",
+        "name_en": "Pickles",
+        "name_hy": "Թթուներ"
       },
       {
         "id": "tandoor-bread2",
@@ -214,7 +290,11 @@
         "has_image": true,
         "local_image": "img/menu/тандырный-хлеб.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/tandoor-bread2",
-        "composition": "Свежий тёплый хлеб"
+        "composition": "Свежий тёплый хлеб",
+        "name_en": "Fresh bread",
+        "name_hy": "Թարմ հաց",
+        "composition_en": "Fresh warm bread",
+        "composition_hy": "Թարմ տաք հաց"
       },
       {
         "id": "matsun-expressed",
@@ -223,7 +303,9 @@
         "image_url": "https://orderin.am/uploads/products/16158/product-16158-2024-06-30-16-55-530.jpg",
         "has_image": true,
         "local_image": "img/menu/мацун-сцеженый.jpg?v=fit800",
-        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/matsun-expressed"
+        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/matsun-expressed",
+        "name_en": "Strained matsoni",
+        "name_hy": "Քամած մածուն"
       },
       {
         "id": "rezhan234567891011",
@@ -232,7 +314,9 @@
         "image_url": "https://orderin.am/uploads/products/16159/product-16159-2024-06-30-16-56-530.jpg",
         "has_image": true,
         "local_image": "img/menu/режан.jpg?v=fit800",
-        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/rezhan234567891011"
+        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/rezhan234567891011",
+        "name_en": "Olivier salad",
+        "name_hy": "Ռեժան աղցան"
       },
       {
         "id": "hummus23456789101112131415161718",
@@ -242,7 +326,11 @@
         "has_image": true,
         "local_image": "img/menu/хумус.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/hummus23456789101112131415161718",
-        "composition": "Нутовый хумус, оливковое масло, лаваш"
+        "composition": "Нутовый хумус, оливковое масло, лаваш",
+        "name_en": "Hummus",
+        "name_hy": "Հումուս",
+        "composition_en": "Chickpea hummus, olive oil, lavash",
+        "composition_hy": "Սիսեռի հումուս, ձիթապտղի յուղ, լավաշ"
       },
       {
         "id": "focaccia2345",
@@ -252,9 +340,15 @@
         "has_image": true,
         "local_image": "img/menu/фокачча.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/focaccia2345",
-        "composition": "Итальянская лепёшка фокачча"
+        "composition": "Итальянская лепёшка фокачча",
+        "name_en": "Focaccia",
+        "name_hy": "Ֆոկաչչա",
+        "composition_en": "Italian focaccia flatbread",
+        "composition_hy": "Իտալական ֆոկաչա բլիթ"
       }
-    ]
+    ],
+    "name_en": "Appetizers",
+    "name_hy": "Նախուտեստներ"
   },
   {
     "id": "2140",
@@ -269,7 +363,11 @@
         "has_image": true,
         "local_image": "img/menu/салат-домик.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/salad-domik",
-        "composition": "Филе утки на гриле, шпинат, помидоры черри, гранатовый соус"
+        "composition": "Филе утки на гриле, шпинат, помидоры черри, гранатовый соус",
+        "name_en": "DoMik salad",
+        "name_hy": "DoMik աղցան",
+        "composition_en": "Grilled duck breast, spinach, cherry tomatoes, pomegranate sauce",
+        "composition_hy": "Գրիլի վրա բադի ֆիլե, սպանախ, չերի լոլիկ, նռան սոուս"
       },
       {
         "id": "salad-with-shrimp2345",
@@ -279,7 +377,11 @@
         "has_image": true,
         "local_image": "img/menu/салат-с-креветками.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/salad-with-shrimp2345",
-        "composition": "Креветки, авокадо, микс зелени, огурец, киноа, цитрусовый соус"
+        "composition": "Креветки, авокадо, микс зелени, огурец, киноа, цитрусовый соус",
+        "name_en": "Shrimp salad",
+        "name_hy": "Աղցան ծովախեցգետինով",
+        "composition_en": "Shrimp, avocado, mixed greens, cucumber, quinoa, citrus sauce",
+        "composition_hy": "Մածկ, ավոկադո, խառը կանաչի, վարունգ, կինոա, ցիտրուսային սոուս"
       },
       {
         "id": "armenian-salad23",
@@ -289,7 +391,11 @@
         "has_image": true,
         "local_image": "img/menu/армянский-салат.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/armenian-salad23",
-        "composition": "Телятина на гриле, баклажаны, слива, грецкий орех, горчичный соус"
+        "composition": "Телятина на гриле, баклажаны, слива, грецкий орех, горчичный соус",
+        "name_en": "Armenian salad",
+        "name_hy": "Հայկական աղցան",
+        "composition_en": "Grilled veal, eggplant, plum, walnut, mustard sauce",
+        "composition_hy": "Գրիլի վրա հորթի միս, սմբուկ, սալոր, ընկույզ, մանանեխի սոուս"
       },
       {
         "id": "salad-with-tuna23",
@@ -299,7 +405,11 @@
         "has_image": true,
         "local_image": "img/menu/салат-с-тунцом.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/salad-with-tuna23",
-        "composition": "Тунец, микс зелени, помидоры черри, оливки"
+        "composition": "Тунец, микс зелени, помидоры черри, оливки",
+        "name_en": "Tuna salad",
+        "name_hy": "Աղցան թունայով",
+        "composition_en": "Tuna, mixed greens, cherry tomatoes, olives",
+        "composition_hy": "Թունա, խառը կանաչի, չերի լոլիկ, ձիթապտուղ"
       },
       {
         "id": "caesar-salad2345678910111213141516171819202122232425262728293031",
@@ -309,7 +419,11 @@
         "has_image": true,
         "local_image": "img/menu/салат-цезарь.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/caesar-salad2345678910111213141516171819202122232425262728293031",
-        "composition": "Куриное филе, листья романо, пармезан, гренки, соус цезарь"
+        "composition": "Куриное филе, листья романо, пармезан, гренки, соус цезарь",
+        "name_en": "Caesar salad",
+        "name_hy": "Կեսար աղցան",
+        "composition_en": "Chicken fillet, romaine, parmesan, croutons, Caesar dressing",
+        "composition_hy": "Հավի ֆիլե, ռոմանո, պարմեզան, գրենկի, կեսար սոուս"
       },
       {
         "id": "greek-salad23456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657",
@@ -319,7 +433,11 @@
         "has_image": true,
         "local_image": "img/menu/греческий-салат.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/greek-salad23456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657",
-        "composition": "Помидоры, огурцы, болгарский перец, фета, оливки, красный лук, оливковое масло"
+        "composition": "Помидоры, огурцы, болгарский перец, фета, оливки, красный лук, оливковое масло",
+        "name_en": "Greek salad",
+        "name_hy": "Հունական աղցան",
+        "composition_en": "Tomatoes, cucumbers, bell pepper, feta, olives, red onion, olive oil",
+        "composition_hy": "Լոլիկ, վարունգ, պղպեղ, ֆետա, ձիթապտուղ, կարմիր սոխ, ձիթապտղի յուղ"
       },
       {
         "id": "summer-salad2345678910111213141516171819202122232425262728293031323334",
@@ -328,7 +446,9 @@
         "image_url": "https://orderin.am/uploads/products/16168/product-16168-2024-06-30-17-12-150.jpg",
         "has_image": true,
         "local_image": "img/menu/летный-салат.jpg?v=fit800",
-        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/summer-salad2345678910111213141516171819202122232425262728293031323334"
+        "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/summer-salad2345678910111213141516171819202122232425262728293031323334",
+        "name_en": "Summer salad",
+        "name_hy": "Ամառային աղցան"
       },
       {
         "id": "caprese-salad2345",
@@ -338,7 +458,11 @@
         "has_image": true,
         "local_image": "img/menu/салат-капрезе.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/caprese-salad2345",
-        "composition": "Моцарелла, помидоры, базилик, оливковое масло"
+        "composition": "Моцарелла, помидоры, базилик, оливковое масло",
+        "name_en": "Caprese salad",
+        "name_hy": "Կապրեզե աղցան",
+        "composition_en": "Mozzarella, tomatoes, basil, olive oil",
+        "composition_hy": "Մոցարելլա, լոլիկ, ռեհան, ձիթապտղի յուղ"
       },
       {
         "id": "grilled-salad",
@@ -348,7 +472,11 @@
         "has_image": true,
         "local_image": "img/menu/салат-гриль.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/grilled-salad",
-        "composition": "Шпинат, болгарский перец, свинина гриль, нут"
+        "composition": "Шпинат, болгарский перец, свинина гриль, нут",
+        "name_en": "Grilled salad",
+        "name_hy": "Գրիլ աղցան",
+        "composition_en": "Spinach, bell pepper, grilled pork, chickpeas",
+        "composition_hy": "Սպանախ, բուլղարական պղպեղ, գրիլի վրա խոզի միս, սիսեռ"
       },
       {
         "id": "angus-steak-salad",
@@ -358,7 +486,11 @@
         "has_image": true,
         "local_image": "img/menu/салат-из-стейка-ангус.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/angus-steak-salad",
-        "composition": "Стейк ангус, микс зелени, овощи, соус"
+        "composition": "Стейк ангус, микс зелени, овощи, соус",
+        "name_en": "Angus steak salad",
+        "name_hy": "Անգուս սթեյք աղցան",
+        "composition_en": "Angus steak, mixed greens, vegetables, sauce",
+        "composition_hy": "Անգուս սթեյք, խառը կանաչի, բանջարեղեն, սոուս"
       },
       {
         "id": "thai-salad",
@@ -368,7 +500,11 @@
         "has_image": true,
         "local_image": "img/menu/тай-салат.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/thai-salad",
-        "composition": "Шпинат, болгарский перец, телятина, помидоры черри, острый соус"
+        "composition": "Шпинат, болгарский перец, телятина, помидоры черри, острый соус",
+        "name_en": "Thai salad",
+        "name_hy": "Թայ աղցան",
+        "composition_en": "Spinach, bell pepper, veal, cherry tomatoes, spicy sauce",
+        "composition_hy": "Սպանախ, բուլղարական պղպեղ, հորթի միս, չերի լոլիկ, կծու սոուս"
       },
       {
         "id": "gourmet-salad",
@@ -377,9 +513,15 @@
         "price": "3 500",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Хрустящие баклажаны, телятина, фирменный соус"
+        "composition": "Хрустящие баклажаны, телятина, фирменный соус",
+        "name_en": "Gourmet salad",
+        "name_hy": "Գուրման աղցան",
+        "composition_en": "Crispy eggplant, veal, house sauce",
+        "composition_hy": "Խրթխրթան սմբուկ, հորթի միս, ֆիրմային սոուս"
       }
-    ]
+    ],
+    "name_en": "Salads",
+    "name_hy": "Աղցաններ"
   },
   {
     "id": "2141",
@@ -394,7 +536,11 @@
         "has_image": true,
         "local_image": "img/menu/томатный-крем-суп.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/tomato-cream-soup234567",
-        "composition": "Томаты, сливки, специи"
+        "composition": "Томаты, сливки, специи",
+        "name_en": "Tomato cream soup",
+        "name_hy": "Լոլիկի կրեմ ապուր",
+        "composition_en": "Tomatoes, cream, spices",
+        "composition_hy": "Լոլիկ, սերուցք, համեմունքներ"
       },
       {
         "id": "seafood-soup23456789101112",
@@ -404,7 +550,11 @@
         "has_image": true,
         "local_image": "img/menu/суп-из-морепродуктов.jpg?v=red1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/seafood-soup23456789101112",
-        "composition": "Морепродукты в красном (томатном) бульоне, овощи"
+        "composition": "Морепродукты в красном (томатном) бульоне, овощи",
+        "name_en": "Seafood soup",
+        "name_hy": "Ծովամթերքի ապուր",
+        "composition_en": "Seafood in red (tomato) broth, vegetables",
+        "composition_hy": "Ծովամթերք կարմիր (լոլիկի) արգանակում, բանջարեղեն"
       },
       {
         "id": "mexican-soup23",
@@ -414,7 +564,11 @@
         "has_image": true,
         "local_image": "img/menu/суп-мексиканский.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/mexican-soup23",
-        "composition": "Фасоль, овощи, специи, острый бульон"
+        "composition": "Фасоль, овощи, специи, острый бульон",
+        "name_en": "Mexican soup",
+        "name_hy": "Մեքսիկական ապուր",
+        "composition_en": "Beans, vegetables, spices, spicy broth",
+        "composition_hy": "Լոբի, բանջարեղեն, համեմունքներ, կծու արգանակ"
       },
       {
         "id": "cream-soup2",
@@ -424,7 +578,11 @@
         "has_image": true,
         "local_image": "img/menu/крем-суп.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/cream-soup2",
-        "composition": "Шпинат, брокколи, сливки"
+        "composition": "Шпинат, брокколи, сливки",
+        "name_en": "Cream soup",
+        "name_hy": "Կրեմ ապուր",
+        "composition_en": "Spinach, broccoli, cream",
+        "composition_hy": "Սպանախ, բրոկկոլի, սերուցք"
       },
       {
         "id": "spas23456789101112131415161718192021222324252627282930",
@@ -434,7 +592,11 @@
         "has_image": true,
         "local_image": "img/menu/спас.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/spas23456789101112131415161718192021222324252627282930",
-        "composition": "Мацун, пшеница, зелень"
+        "composition": "Мацун, пшеница, зелень",
+        "name_en": "Spas",
+        "name_hy": "Սպաս",
+        "composition_en": "Matsoni, wheat, herbs",
+        "composition_hy": "Մածուն, ցորեն, կանաչի"
       },
       {
         "id": "slavic-solyanka",
@@ -443,7 +605,11 @@
         "price": "2 200",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Ассорти мяса, соленья, оливки, лимон, наваристый бульон"
+        "composition": "Ассорти мяса, соленья, оливки, лимон, наваристый бульон",
+        "name_en": "Slavic solyanka",
+        "name_hy": "Սլավոնական սոլյանկա",
+        "composition_en": "Assorted meats, pickles, olives, lemon, rich broth",
+        "composition_hy": "Մսի տեսականի, թթուներ, ձիթապտուղ, կիտրոն, հարուստ արգանակ"
       },
       {
         "id": "hash",
@@ -452,9 +618,15 @@
         "price": "2 700",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Наваристый говяжий бульон, чеснок, лаваш"
+        "composition": "Наваристый говяжий бульон, чеснок, лаваш",
+        "name_en": "Khash",
+        "name_hy": "Խաշ",
+        "composition_en": "Rich beef broth, garlic, lavash",
+        "composition_hy": "Հարուստ տավարի արգանակ, սխտոր, լավաշ"
       }
-    ]
+    ],
+    "name_en": "Soup",
+    "name_hy": "Ապուր"
   },
   {
     "id": "2142",
@@ -469,7 +641,11 @@
         "has_image": true,
         "local_image": "img/menu/паста-с-морепродуктами.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pasta-with-seafood2345",
-        "composition": "Паста, морепродукты, соус"
+        "composition": "Паста, морепродукты, соус",
+        "name_en": "Seafood pasta",
+        "name_hy": "Մակարոնեղեն ծովամթերքով",
+        "composition_en": "Pasta, seafood, sauce",
+        "composition_hy": "Մակարոն, ծովամթերք, սոուս"
       },
       {
         "id": "pasta-with-beef",
@@ -479,7 +655,11 @@
         "has_image": true,
         "local_image": "img/menu/паста-с-говядиной.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pasta-with-beef",
-        "composition": "Паста, говядина, соус"
+        "composition": "Паста, говядина, соус",
+        "name_en": "Beef pasta",
+        "name_hy": "Մակարոնեղեն տավարի մսով",
+        "composition_en": "Pasta, beef, sauce",
+        "composition_hy": "Մակարոն, տավարի միս, սոուս"
       },
       {
         "id": "pancetta-pasta",
@@ -489,7 +669,11 @@
         "has_image": true,
         "local_image": "img/menu/паста-панчетта.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pancetta-pasta",
-        "composition": "Паста, панчетта, сливочный соус"
+        "composition": "Паста, панчетта, сливочный соус",
+        "name_en": "Pancetta pasta",
+        "name_hy": "Պանչետա մակարոնեղեն",
+        "composition_en": "Pasta, pancetta, cream sauce",
+        "composition_hy": "Մակարոն, պանչետա, սերուցքային սոուս"
       },
       {
         "id": "four-cheese-pasta",
@@ -499,7 +683,11 @@
         "has_image": true,
         "local_image": "img/menu/паста-четыре-сыра.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/four-cheese-pasta",
-        "composition": "Паста, четыре вида сыра, сливочный соус"
+        "composition": "Паста, четыре вида сыра, сливочный соус",
+        "name_en": "Four cheese pasta",
+        "name_hy": "Չորս պանրով մակարոնեղեն",
+        "composition_en": "Pasta, four cheeses, cream sauce",
+        "composition_hy": "Մակարոն, չորս տեսակի պանիր, սերուցքային սոուս"
       },
       {
         "id": "pasta-pelati",
@@ -509,7 +697,11 @@
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pasta-pelati",
         "local_image": "img/menu/паста-пелати.jpg?v=ig1",
-        "composition": "Паста, томаты пелати, базилик"
+        "composition": "Паста, томаты пелати, базилик",
+        "name_en": "Pelati pasta",
+        "name_hy": "Պելատի մակարոնեղեն",
+        "composition_en": "Pasta, pelati tomatoes, basil",
+        "composition_hy": "Մակարոն, պելատի լոլիկ, ռեհան"
       },
       {
         "id": "risotto-pasta",
@@ -519,9 +711,15 @@
         "has_image": true,
         "local_image": "img/menu/паста-ризотто.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/risotto-pasta",
-        "composition": "Рис, сливочный соус, пармезан"
+        "composition": "Рис, сливочный соус, пармезан",
+        "name_en": "Risotto pasta",
+        "name_hy": "Ռիզոտո մակարոնեղեն",
+        "composition_en": "Rice, cream sauce, parmesan",
+        "composition_hy": "Բրինձ, սերուցքային սոուս, պարմեզան"
       }
-    ]
+    ],
+    "name_en": "Pasta",
+    "name_hy": "Մակարոնեղեն"
   },
   {
     "id": "2143",
@@ -536,7 +734,11 @@
         "has_image": true,
         "local_image": "img/menu/ассорти-шашлыков.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/assortment-of-barbecue",
-        "composition": "Большое ассорти шашлыков на углях"
+        "composition": "Большое ассорти шашлыков на углях",
+        "name_en": "Mixed grill skewers",
+        "name_hy": "Խորովածի տեսականի",
+        "composition_en": "Large charcoal-grilled kebab platter",
+        "composition_hy": "Ածխի վրա խորովածի մեծ տեսականի"
       },
       {
         "id": "assorted-pork",
@@ -546,7 +748,11 @@
         "has_image": true,
         "local_image": "img/menu/свиная-ассорти.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/assorted-pork",
-        "composition": "Ассорти свинины на углях"
+        "composition": "Ассорти свинины на углях",
+        "name_en": "Pork platter",
+        "name_hy": "Խոզի մսի տեսականի",
+        "composition_en": "Charcoal-grilled pork platter",
+        "composition_hy": "Ածխի վրա խոզի մսի տեսականի"
       },
       {
         "id": "assorted-lamb",
@@ -556,7 +762,11 @@
         "has_image": true,
         "local_image": "img/menu/баранина-ассорти.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/assorted-lamb",
-        "composition": "Ассорти баранины на углях"
+        "composition": "Ассорти баранины на углях",
+        "name_en": "Lamb assortment",
+        "name_hy": "Գառան մսի տեսականի",
+        "composition_en": "Charcoal-grilled lamb platter",
+        "composition_hy": "Ածխի վրա գառան տեսականի"
       },
       {
         "id": "veal-bbq23",
@@ -566,7 +776,11 @@
         "has_image": true,
         "local_image": "img/menu/шашлык-из-телятины.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/veal-bbq23",
-        "composition": "Телятина на углях"
+        "composition": "Телятина на углях",
+        "name_en": "Veal shashlik",
+        "name_hy": "Հորթի շաշլիկ",
+        "composition_en": "Charcoal-grilled veal",
+        "composition_hy": "Ածխի վրա հորթի միս"
       },
       {
         "id": "signature-kebab2",
@@ -576,7 +790,11 @@
         "has_image": true,
         "local_image": "img/menu/фирменный-кебаб.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/signature-kebab2",
-        "composition": "Рубленое мясо на углях, специи"
+        "composition": "Рубленое мясо на углях, специи",
+        "name_en": "Signature kebab",
+        "name_hy": "Ֆիրմային քյաբաբ",
+        "composition_en": "Charcoal-grilled minced meat, spices",
+        "composition_hy": "Ածխի վրա աղացած միս, համեմունքներ"
       },
       {
         "id": "pork-knuckle234",
@@ -586,7 +804,11 @@
         "has_image": true,
         "local_image": "img/menu/свиная-рулька.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pork-knuckle234",
-        "composition": "Запечённая свиная рулька"
+        "composition": "Запечённая свиная рулька",
+        "name_en": "Pork knuckle",
+        "name_hy": "Խոզի կճղակ",
+        "composition_en": "Roasted pork knuckle",
+        "composition_hy": "Թխած խոզի կոճ"
       },
       {
         "id": "pork-ribs23456789101112131415161718192021222324252627282930",
@@ -596,7 +818,11 @@
         "has_image": true,
         "local_image": "img/menu/свиные-ребрышки.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pork-ribs23456789101112131415161718192021222324252627282930",
-        "composition": "Свиные рёбрышки на углях"
+        "composition": "Свиные рёбрышки на углях",
+        "name_en": "Pork ribs",
+        "name_hy": "Խոզի կողիկներ",
+        "composition_en": "Charcoal-grilled pork ribs",
+        "composition_hy": "Ածխի վրա խոզի կողիկներ"
       },
       {
         "id": "assorted-german-sausages",
@@ -606,7 +832,11 @@
         "has_image": true,
         "local_image": "img/menu/ассорти-немецких-сосис.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/assorted-german-sausages",
-        "composition": "Ассорти немецких сосисок"
+        "composition": "Ассорти немецких сосисок",
+        "name_en": "Assorted German sausages",
+        "name_hy": "Գերմանական երշիկների տեսականի",
+        "composition_en": "Assorted German sausages",
+        "composition_hy": "Գերմանական երշիկների տեսականի"
       },
       {
         "id": "spicy-chicken-wings234",
@@ -616,7 +846,11 @@
         "has_image": true,
         "local_image": "img/menu/острые-куриные-крылышки.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/spicy-chicken-wings234",
-        "composition": "Куриные крылышки в остром соусе"
+        "composition": "Куриные крылышки в остром соусе",
+        "name_en": "Spicy chicken wings",
+        "name_hy": "Կծու հավի թևիկներ",
+        "composition_en": "Chicken wings in spicy sauce",
+        "composition_hy": "Հավի թևիկներ կծու սոուսով"
       },
       {
         "id": "burger-grill",
@@ -626,7 +860,11 @@
         "has_image": true,
         "local_image": "img/menu/бургер-гриль.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/burger-grill",
-        "composition": "Котлета на углях, булочка, овощи, соус"
+        "composition": "Котлета на углях, булочка, овощи, соус",
+        "name_en": "Grilled burger",
+        "name_hy": "Գրիլ բուրգեր",
+        "composition_en": "Charcoal-grilled patty, bun, vegetables, sauce",
+        "composition_hy": "Ածխի վրա կոտլետ, բուլկի, բանջարեղեն, սոուս"
       },
       {
         "id": "sandwich-grill",
@@ -636,7 +874,11 @@
         "has_image": true,
         "local_image": "img/menu/сэндвич-гриль.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/sandwich-grill",
-        "composition": "Сэндвич на гриле"
+        "composition": "Сэндвич на гриле",
+        "name_en": "Grilled sandwich",
+        "name_hy": "Գրիլ սենդվիչ",
+        "composition_en": "Grilled sandwich",
+        "composition_hy": "Գրիլի վրա սենդվիչ"
       },
       {
         "id": "dolma-combined",
@@ -646,7 +888,11 @@
         "has_image": true,
         "local_image": "img/menu/долма-с-индейкой.jpg?v=fit800",
         "orderin_error": 500,
-        "composition": "Виноградные листья, рубленое мясо, рис"
+        "composition": "Виноградные листья, рубленое мясо, рис",
+        "name_en": "Dolma",
+        "name_hy": "Տոլմա",
+        "composition_en": "Grape leaves, minced meat, rice",
+        "composition_hy": "Խաղողի տերև, աղացած միս, բրինձ"
       },
       {
         "id": "stuffed-eggplants2",
@@ -656,7 +902,11 @@
         "has_image": true,
         "local_image": "img/menu/баклажаны-фаршированны.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/stuffed-eggplants2",
-        "composition": "Баклажаны с начинкой"
+        "composition": "Баклажаны с начинкой",
+        "name_en": "Stuffed eggplants",
+        "name_hy": "Լցոնված սմբուկ",
+        "composition_en": "Stuffed eggplant",
+        "composition_hy": "Լցոնած սմբուկ"
       },
       {
         "id": "teppanyaki-with-grilled-pork",
@@ -666,7 +916,11 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/teppanyaki-with-grilled-pork",
-        "composition": "Свинина и овощи на гриле тепаньяки"
+        "composition": "Свинина и овощи на гриле тепаньяки",
+        "name_en": "Grilled pork teppanyaki",
+        "name_hy": "Գրիլի վրա խոզի թեփանյակի",
+        "composition_en": "Teppanyaki-grilled pork and vegetables",
+        "composition_hy": "Թեփանյակի գրիլի վրա խոզի միս և բանջարեղեն"
       },
       {
         "id": "chicken-with-vegetables234",
@@ -676,7 +930,11 @@
         "has_image": true,
         "local_image": "img/menu/курица-с-овощами.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chicken-with-vegetables234",
-        "composition": "Куриное филе с овощами на гриле"
+        "composition": "Куриное филе с овощами на гриле",
+        "name_en": "Chicken with vegetables",
+        "name_hy": "Հավ բանջարեղենով",
+        "composition_en": "Grilled chicken fillet with vegetables",
+        "composition_hy": "Գրիլի վրա հավի ֆիլե բանջարեղենով"
       },
       {
         "id": "signature-goulash-with-pork",
@@ -686,7 +944,11 @@
         "has_image": true,
         "local_image": "img/menu/фирменный-гуляш-со-сви.png?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/signature-goulash-with-pork",
-        "composition": "Свинина, овощи, насыщенный соус"
+        "composition": "Свинина, овощи, насыщенный соус",
+        "name_en": "Signature pork goulash",
+        "name_hy": "Ֆիրմային խոզի գուլյաշ",
+        "composition_en": "Pork, vegetables, rich sauce",
+        "composition_hy": "Խոզի միս, բանջարեղեն, հարուստ սոուս"
       },
       {
         "id": "grilled-turkey-with-citrus-sauce-and-quinoa",
@@ -696,7 +958,11 @@
         "has_image": true,
         "local_image": "img/menu/индейка-на-гриле-с-цит.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/grilled-turkey-with-citrus-sauce-and-quinoa",
-        "composition": "Индейка на гриле, цитрусовый соус, киноа"
+        "composition": "Индейка на гриле, цитрусовый соус, киноа",
+        "name_en": "Grilled turkey with citrus sauce and quinoa",
+        "name_hy": "Գրիլ հնդկահավ ցիտրուսային սոուսով և կինոայով",
+        "composition_en": "Grilled turkey, citrus sauce, quinoa",
+        "composition_hy": "Գրիլի վրա հնդկահավ, ցիտրուսային սոուս, կինոա"
       },
       {
         "id": "chicken-fillet-with-rice",
@@ -706,7 +972,11 @@
         "has_image": true,
         "local_image": "img/menu/куриное-филе-с-рисом.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chicken-fillet-with-rice",
-        "composition": "Куриное филе, рис"
+        "composition": "Куриное филе, рис",
+        "name_en": "Chicken fillet with rice",
+        "name_hy": "Հավի ֆիլե բրնձով",
+        "composition_en": "Chicken fillet, rice",
+        "composition_hy": "Հավի ֆիլե, բրինձ"
       },
       {
         "id": "dolma-turkey",
@@ -715,7 +985,11 @@
         "price": "3 700",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Виноградные листья, индейка, рис"
+        "composition": "Виноградные листья, индейка, рис",
+        "name_en": "Turkey dolma",
+        "name_hy": "Տոլմա հնդկահավով",
+        "composition_en": "Grape leaves, turkey, rice",
+        "composition_hy": "Խաղողի տերև, հնդկահավ, բրինձ"
       },
       {
         "id": "kebab-lamb-duo",
@@ -724,7 +998,11 @@
         "price": "7 800",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Кебаб/шашлык из баранины, картофель-гриль (на двоих)"
+        "composition": "Кебаб/шашлык из баранины, картофель-гриль (на двоих)",
+        "name_en": "Lamb kebab with grilled potatoes (for two)",
+        "name_hy": "Գառան քյաբաբ գրիլ կարտոֆիլով (երկուսի համար)",
+        "composition_en": "Lamb kebab, grilled potatoes (for two)",
+        "composition_hy": "Գառան քյաբաբ/խորոված, գրիլի կարտոֆիլ (երկուսի համար)"
       },
       {
         "id": "kebab-veal-duo",
@@ -733,9 +1011,15 @@
         "price": "8 700",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Кебаб/шашлык из телятины, жареный картофель (на двоих)"
+        "composition": "Кебаб/шашлык из телятины, жареный картофель (на двоих)",
+        "name_en": "Veal kebab with fried potatoes (for two)",
+        "name_hy": "Հորթի քյաբաբ տապակած կարտոֆիլով (երկուսի համար)",
+        "composition_en": "Veal kebab, fried potatoes (for two)",
+        "composition_hy": "Հորթի քյաբաբ/խորոված, տապակած կարտոֆիլ (երկուսի համար)"
       }
-    ]
+    ],
+    "name_en": "Charcoal-grilled mains",
+    "name_hy": "Ածխի վրա պատրաստված հիմնական ուտեստներ"
   },
   {
     "id": "2144",
@@ -750,7 +1034,11 @@
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/assorted-angus-meat",
         "local_image": "img/menu/ассорти-из-мяса-ангуса.jpg?v=st1",
-        "composition": "Большое ассорти из говядины ангус"
+        "composition": "Большое ассорти из говядины ангус",
+        "name_en": "Angus beef assortment",
+        "name_hy": "Անգուս տեսակի մսի տեսականի",
+        "composition_en": "Large Angus beef platter",
+        "composition_hy": "Անգուս տավարի մսի մեծ տեսականի"
       },
       {
         "id": "german-set",
@@ -760,7 +1048,11 @@
         "has_image": true,
         "local_image": "img/menu/немецкий-сет.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/german-set",
-        "composition": "Большой сет немецких блюд и колбасок"
+        "composition": "Большой сет немецких блюд и колбасок",
+        "name_en": "German set",
+        "name_hy": "Գերմանական սեթ",
+        "composition_en": "Large set of German dishes and sausages",
+        "composition_hy": "Գերմանական ուտեստների և երշիկների մեծ հավաքածու"
       },
       {
         "id": "flamingo2",
@@ -769,7 +1061,9 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/flamingo2",
-        "local_image": "img/menu/фламинго.jpg?v=st2"
+        "local_image": "img/menu/фламинго.jpg?v=st2",
+        "name_en": "Flamingo",
+        "name_hy": "Ֆլամինգո"
       },
       {
         "id": "jellyfish",
@@ -779,7 +1073,11 @@
         "has_image": true,
         "local_image": "img/menu/медуза.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/jellyfish",
-        "composition": "Большое ассорти рыбы и морепродуктов"
+        "composition": "Большое ассорти рыбы и морепродуктов",
+        "name_en": "Jellyfish salad",
+        "name_hy": "Մեդուզա աղցան",
+        "composition_en": "Large fish and seafood platter",
+        "composition_hy": "Ձկան և ծովամթերքի մեծ տեսականի"
       },
       {
         "id": "viking2",
@@ -789,7 +1087,11 @@
         "has_image": true,
         "local_image": "img/menu/викинг.jpg?v=ctr1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/viking2",
-        "composition": "Плечо бедро ягненка на гриле"
+        "composition": "Плечо бедро ягненка на гриле",
+        "name_en": "Viking",
+        "name_hy": "Վիկինգ",
+        "composition_en": "Grilled lamb shoulder and leg",
+        "composition_hy": "Գրիլի վրա գառան թիակ և ազդր"
       },
       {
         "id": "strip-steak",
@@ -799,7 +1101,11 @@
         "has_image": true,
         "local_image": "img/menu/стейк-стрипто.jpg?v=st1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/strip-steak",
-        "composition": "Стейк стриплойн"
+        "composition": "Стейк стриплойн",
+        "name_en": "Striploin steak",
+        "name_hy": "Սթրիփլոյն սթեյք",
+        "composition_en": "Striploin steak",
+        "composition_hy": "Սթրիփլոյն ստեյք"
       },
       {
         "id": "ribeye-steak2345678910111213",
@@ -809,7 +1115,11 @@
         "has_image": true,
         "local_image": "img/menu/стейк-рибай.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/ribeye-steak2345678910111213",
-        "composition": "Выдержанный стейк рибай"
+        "composition": "Выдержанный стейк рибай",
+        "name_en": "Ribeye steak",
+        "name_hy": "Ռիբայ սթեյք",
+        "composition_en": "Aged ribeye steak",
+        "composition_hy": "Հնեցված ռիբայ սթեյք"
       },
       {
         "id": "carpaccio",
@@ -818,7 +1128,11 @@
         "price": "4 500",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Тонко нарезанная говядина, пармезан, руккола, оливковое масло"
+        "composition": "Тонко нарезанная говядина, пармезан, руккола, оливковое масло",
+        "name_en": "Carpaccio",
+        "name_hy": "Կարպաչո",
+        "composition_en": "Thinly sliced beef, parmesan, arugula, olive oil",
+        "composition_hy": "Բարակ կտրատած տավարի միս, պարմեզան, ռուկոլա, ձիթապտղի յուղ"
       },
       {
         "id": "lamb-ragout",
@@ -827,7 +1141,11 @@
         "price": "4 700",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Баранина, овощи, соус"
+        "composition": "Баранина, овощи, соус",
+        "name_en": "Lamb stew with vegetables",
+        "name_hy": "Գառան ռագու բանջարեղենով",
+        "composition_en": "Lamb, vegetables, sauce",
+        "composition_hy": "Գառան միս, բանջարեղեն, սոուս"
       },
       {
         "id": "beef-stroganoff-veal",
@@ -836,7 +1154,11 @@
         "price": "3 500",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Телятина в сливочном соусе, рис или картофель"
+        "composition": "Телятина в сливочном соусе, рис или картофель",
+        "name_en": "Veal Stroganoff (rice / potato)",
+        "name_hy": "Հորթի բեֆստրոգանով (բրինձ / կարտոֆիլ)",
+        "composition_en": "Veal in creamy sauce, rice or potatoes",
+        "composition_hy": "Հորթի միս սերուցքային սոուսով, բրինձ կամ կարտոֆիլ"
       },
       {
         "id": "beef-stroganoff-chicken",
@@ -845,7 +1167,11 @@
         "price": "3 200",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Курица в сливочном соусе, рис или картофель"
+        "composition": "Курица в сливочном соусе, рис или картофель",
+        "name_en": "Chicken Stroganoff (rice/potato)",
+        "name_hy": "Հավի բեֆստրոգանով (բրինձ/կարտոֆիլ)",
+        "composition_en": "Chicken in cream sauce, rice or potatoes",
+        "composition_hy": "Հավ սերուցքային սոուսով, բրինձ կամ կարտոֆիլ"
       },
       {
         "id": "beef-stroganoff-mushroom",
@@ -854,7 +1180,11 @@
         "price": "3 000",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Говядина, грибы, сливочный соус, рис или картофель"
+        "composition": "Говядина, грибы, сливочный соус, рис или картофель",
+        "name_en": "Stroganoff with mushrooms (rice / potato)",
+        "name_hy": "Բեֆստրոգանով սնկով (բրինձ / կարտոֆիլ)",
+        "composition_en": "Beef, mushrooms, cream sauce, rice or potatoes",
+        "composition_hy": "Տավարի միս, սունկ, սերուցքային սոուս, բրինձ կամ կարտոֆիլ"
       },
       {
         "id": "hasharisa",
@@ -863,9 +1193,15 @@
         "price": "2 300",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Традиционное блюдо из пшеницы и мяса"
+        "composition": "Традиционное блюдо из пшеницы и мяса",
+        "name_en": "Harissa",
+        "name_hy": "Հարիսա",
+        "composition_en": "Traditional wheat and meat dish",
+        "composition_hy": "Ցորենից և մսից ավանդական ուտեստ"
       }
-    ]
+    ],
+    "name_en": "Chef's specials",
+    "name_hy": "Շեֆ-խոհարարի ուտեստներ"
   },
   {
     "id": "2145",
@@ -880,7 +1216,11 @@
         "has_image": true,
         "local_image": "img/menu/прошутто.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/prosciutto234567",
-        "composition": "Томатный соус, моцарелла, прошутто, руккола"
+        "composition": "Томатный соус, моцарелла, прошутто, руккола",
+        "name_en": "Prosciutto",
+        "name_hy": "Պրոշուտո",
+        "composition_en": "Tomato sauce, mozzarella, prosciutto, arugula",
+        "composition_hy": "Լոլիկի սոուս, մոցարելլա, պրոշուտո, ռուկոլա"
       },
       {
         "id": "pepperoni2345678910111213141516171819",
@@ -890,7 +1230,11 @@
         "has_image": true,
         "local_image": "img/menu/пеперони.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/pepperoni2345678910111213141516171819",
-        "composition": "Томатный соус, моцарелла, пепперони"
+        "composition": "Томатный соус, моцарелла, пепперони",
+        "name_en": "Pepperoni",
+        "name_hy": "Պեպերոնի",
+        "composition_en": "Tomato sauce, mozzarella, pepperoni",
+        "composition_hy": "Լոլիկի սոուս, մոցարելլա, պեպերոնի"
       },
       {
         "id": "four-cheeses23456",
@@ -900,7 +1244,11 @@
         "has_image": true,
         "local_image": "img/menu/четыре-сыра.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/four-cheeses23456",
-        "composition": "Моцарелла и три вида сыра, сливочная основа"
+        "composition": "Моцарелла и три вида сыра, сливочная основа",
+        "name_en": "Four cheeses",
+        "name_hy": "Չորս պանիր",
+        "composition_en": "Mozzarella and three cheeses, cream base",
+        "composition_hy": "Մոցարելլա և երեք տեսակի պանիր, սերուցքային հիմք"
       },
       {
         "id": "margarita234567891011121314151617181920212223",
@@ -910,7 +1258,11 @@
         "has_image": true,
         "local_image": "img/menu/маргарита.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/margarita234567891011121314151617181920212223",
-        "composition": "Томатный соус, моцарелла, базилик"
+        "composition": "Томатный соус, моцарелла, базилик",
+        "name_en": "Margherita",
+        "name_hy": "Մարգարիտա",
+        "composition_en": "Tomato sauce, mozzarella, basil",
+        "composition_hy": "Լոլիկի սոուս, մոցարելլա, ռեհան"
       },
       {
         "id": "avocado234",
@@ -920,9 +1272,15 @@
         "has_image": true,
         "local_image": "img/menu/авокадо.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/avocado234",
-        "composition": "Моцарелла, авокадо, овощи"
+        "composition": "Моцарелла, авокадо, овощи",
+        "name_en": "Avocado",
+        "name_hy": "Ավոկադո",
+        "composition_en": "Mozzarella, avocado, vegetables",
+        "composition_hy": "Մոցարելլա, ավոկադո, բանջարեղեն"
       }
-    ]
+    ],
+    "name_en": "Pizza",
+    "name_hy": "Պիցցա"
   },
   {
     "id": "2146",
@@ -937,7 +1295,11 @@
         "has_image": true,
         "local_image": "img/menu/форель.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/trout234567",
-        "composition": "Радужная форель на гриле"
+        "composition": "Радужная форель на гриле",
+        "name_en": "Trout",
+        "name_hy": "Իշխան",
+        "composition_en": "Grilled rainbow trout",
+        "composition_hy": "Գրիլի վրա ծիածանափայլ իշխան"
       },
       {
         "id": "tarap",
@@ -947,7 +1309,11 @@
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/tarap",
         "local_image": "img/menu/тарап.jpg?v=st1",
-        "composition": "Цельная стерлядь"
+        "composition": "Цельная стерлядь",
+        "name_en": "Whole sterlet",
+        "name_hy": "Ամբողջական ստերլյադ",
+        "composition_en": "Whole sterlet",
+        "composition_hy": "Ամբողջական ստերլյադ"
       },
       {
         "id": "salmon23456789101112",
@@ -957,7 +1323,11 @@
         "has_image": true,
         "local_image": "img/menu/лосось.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/salmon23456789101112",
-        "composition": "Филе лосося на гриле"
+        "composition": "Филе лосося на гриле",
+        "name_en": "Salmon",
+        "name_hy": "Սաղմոն",
+        "composition_en": "Grilled salmon fillet",
+        "composition_hy": "Գրիլի վրա սաղմոնի ֆիլե"
       },
       {
         "id": "shrimps2",
@@ -967,7 +1337,11 @@
         "has_image": true,
         "local_image": "img/menu/креветки.jpg?v=ig3",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/shrimps2",
-        "composition": "Креветки на гриле"
+        "composition": "Креветки на гриле",
+        "name_en": "Shrimp",
+        "name_hy": "Ծովախեցգետին",
+        "composition_en": "Grilled shrimp",
+        "composition_hy": "Գրիլի վրա մածկacc"
       },
       {
         "id": "trout-fillet-with-green-onions",
@@ -977,7 +1351,11 @@
         "has_image": true,
         "local_image": "img/menu/филе-форели-с-зеленым.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/trout-fillet-with-green-onions",
-        "composition": "Филе форели, зелёный лук"
+        "composition": "Филе форели, зелёный лук",
+        "name_en": "Trout fillet with green onion",
+        "name_hy": "Իշխանի ֆիլե կանաչ սոխով",
+        "composition_en": "Trout fillet, green onion",
+        "composition_hy": "Իշխանի ֆիլե, կանաչ սոխ"
       },
       {
         "id": "mussels",
@@ -986,7 +1364,11 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": true,
         "local_image": "img/menu/мидии.jpg?v=ig3",
-        "composition": "Мидии в томатном соусе, подаются с гренками"
+        "composition": "Мидии в томатном соусе, подаются с гренками",
+        "name_en": "Mussels",
+        "name_hy": "Միդիա",
+        "composition_en": "Mussels in tomato sauce, served with croutons",
+        "composition_hy": "Միդիա լոլիկի սոուսով, մատուցվում է կռուտոններով"
       },
       {
         "id": "trout-lavash",
@@ -995,9 +1377,15 @@
         "price": "4 600",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Филе форели, запечённое в лаваше"
+        "composition": "Филе форели, запечённое в лаваше",
+        "name_en": "Trout fillet in lavash",
+        "name_hy": "Իշխանի ֆիլե լավաշում",
+        "composition_en": "Trout fillet baked in lavash",
+        "composition_hy": "Իշխանի ֆիլե՝ թխած լավաշում"
       }
-    ]
+    ],
+    "name_en": "Fried fish & seafood",
+    "name_hy": "Տապակած ձուկ և ծովամթերք"
   },
   {
     "id": "2147",
@@ -1012,7 +1400,11 @@
         "has_image": true,
         "local_image": "img/menu/картофель-по-деревенск.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/country-style-potatoes2345",
-        "composition": "Картофель по-деревенски"
+        "composition": "Картофель по-деревенски",
+        "name_en": "Country-style potatoes",
+        "name_hy": "Գյուղական ոճի կարտոֆիլ",
+        "composition_en": "Country-style potatoes",
+        "composition_hy": "Գյուղական ոճով կարտոֆիլ"
       },
       {
         "id": "rice23456789101112131415161718192021222324252627282930",
@@ -1022,7 +1414,11 @@
         "has_image": true,
         "local_image": "img/menu/рис.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/rice23456789101112131415161718192021222324252627282930",
-        "composition": "Отварной рис"
+        "composition": "Отварной рис",
+        "name_en": "Rice",
+        "name_hy": "Բրինձ",
+        "composition_en": "Boiled rice",
+        "composition_hy": "Եփած բրինձ"
       },
       {
         "id": "grilled-vegetables234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950",
@@ -1032,7 +1428,11 @@
         "has_image": true,
         "local_image": "img/menu/овощи-гриль.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/grilled-vegetables234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950",
-        "composition": "Овощи на гриле"
+        "composition": "Овощи на гриле",
+        "name_en": "Grilled vegetables",
+        "name_hy": "Գրիլ բանջարեղեն",
+        "composition_en": "Grilled vegetables",
+        "composition_hy": "Գրիլի վրա բանջարեղեն"
       },
       {
         "id": "grilled-potatoes23456",
@@ -1042,7 +1442,11 @@
         "has_image": true,
         "local_image": "img/menu/картофель-гриль.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/grilled-potatoes23456",
-        "composition": "Картофель на гриле"
+        "composition": "Картофель на гриле",
+        "name_en": "Grilled potatoes",
+        "name_hy": "Գրիլ կարտոֆիլ",
+        "composition_en": "Grilled potatoes",
+        "composition_hy": "Գրիլի վրա կարտոֆիլ"
       },
       {
         "id": "arishta2345678910",
@@ -1052,7 +1456,11 @@
         "has_image": true,
         "local_image": "img/menu/аришта.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/arishta2345678910",
-        "composition": "Домашняя армянская лапша аришта"
+        "composition": "Домашняя армянская лапша аришта",
+        "name_en": "Arishta",
+        "name_hy": "Արիշտա",
+        "composition_en": "Homemade Armenian arishta noodles",
+        "composition_hy": "Տնական հայկական արիշտա"
       },
       {
         "id": "stuffed-mushrooms23",
@@ -1062,7 +1470,11 @@
         "has_image": true,
         "local_image": "img/menu/фаршированные-грибы.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/stuffed-mushrooms23",
-        "composition": "Шампиньоны с начинкой"
+        "composition": "Шампиньоны с начинкой",
+        "name_en": "Stuffed mushrooms",
+        "name_hy": "Խորոված սնկով լցոնած սունկ",
+        "composition_en": "Stuffed champignons",
+        "composition_hy": "Լցոնած շամպինիոն"
       },
       {
         "id": "stuffed-potatoes",
@@ -1072,9 +1484,15 @@
         "has_image": true,
         "local_image": "img/menu/фаршированный-картофел.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/stuffed-potatoes",
-        "composition": "Картофель с начинкой"
+        "composition": "Картофель с начинкой",
+        "name_en": "Stuffed potatoes",
+        "name_hy": "Լցոնած կարտոֆիլ",
+        "composition_en": "Stuffed potatoes",
+        "composition_hy": "Լցոնած կարտոֆիլ"
       }
-    ]
+    ],
+    "name_en": "Sides",
+    "name_hy": "Կողմնակի ուտեստներ"
   },
   {
     "id": "2148",
@@ -1089,7 +1507,11 @@
         "has_image": true,
         "local_image": "img/menu/куриный-суп.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chicken-soup2345678910111213141516171819202122232425262728293031",
-        "composition": "Курица, овощи, лапша"
+        "composition": "Курица, овощи, лапша",
+        "name_en": "Chicken soup",
+        "name_hy": "Հավի ապուր",
+        "composition_en": "Chicken, vegetables, noodles",
+        "composition_hy": "Հավ, բանջարեղեն, լապշա"
       },
       {
         "id": "rice-porrige2",
@@ -1099,7 +1521,11 @@
         "has_image": true,
         "local_image": "img/menu/рисовая-каша.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/rice-porrige2",
-        "composition": "Рис, молоко"
+        "composition": "Рис, молоко",
+        "name_en": "Rice porridge",
+        "name_hy": "Բրնձով շիլա",
+        "composition_en": "Rice, milk",
+        "composition_hy": "Բրինձ, կաթ"
       },
       {
         "id": "mashed-potatoes2345678910111213141516171819202122232425262728293031323334",
@@ -1109,7 +1535,11 @@
         "has_image": true,
         "local_image": "img/menu/картофель-пюре.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/mashed-potatoes2345678910111213141516171819202122232425262728293031323334",
-        "composition": "Картофельное пюре"
+        "composition": "Картофельное пюре",
+        "name_en": "Mashed potatoes",
+        "name_hy": "Կարտոֆիլի պյուրե",
+        "composition_en": "Mashed potatoes",
+        "composition_hy": "Կարտոֆիլի պյուրե"
       },
       {
         "id": "french-fries23456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960",
@@ -1119,7 +1549,11 @@
         "has_image": true,
         "local_image": "img/menu/картофель-фри.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/french-fries23456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960",
-        "composition": "Картофель фри"
+        "composition": "Картофель фри",
+        "name_en": "French fries",
+        "name_hy": "Ֆրի կարտոֆիլ",
+        "composition_en": "French fries",
+        "composition_hy": "Ֆրի կարտոֆիլ"
       },
       {
         "id": "spaghetti-mac-and-cheese",
@@ -1129,7 +1563,11 @@
         "has_image": true,
         "local_image": "img/menu/спагетти-мак-энд-чиз.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/spaghetti-mac-and-cheese",
-        "composition": "Спагетти с сырным соусом"
+        "composition": "Спагетти с сырным соусом",
+        "name_en": "Spaghetti mac and cheese",
+        "name_hy": "Սպագետի մակ էնդ չիզ",
+        "composition_en": "Spaghetti with cheese sauce",
+        "composition_hy": "Սպագետի պանրի սոուսով"
       },
       {
         "id": "mini-burger-with-chicken-breast-and-fries",
@@ -1139,7 +1577,11 @@
         "has_image": true,
         "local_image": "img/menu/мини-бургер-с-куриной.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/mini-burger-with-chicken-breast-and-fries",
-        "composition": "Мини-бургер с куриной грудкой, картофель фри"
+        "composition": "Мини-бургер с куриной грудкой, картофель фри",
+        "name_en": "Mini chicken breast burger with fries",
+        "name_hy": "Մինի բուրգեր հավի կրծքով և ֆրիով",
+        "composition_en": "Mini burger with chicken breast, French fries",
+        "composition_hy": "Մինի բուրգեր հավի կրծքամսով, ֆրի կարտոֆիլ"
       },
       {
         "id": "pelmeni",
@@ -1148,9 +1590,15 @@
         "price": "1 500",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Пельмени с мясом"
+        "composition": "Пельмени с мясом",
+        "name_en": "Pelmeni",
+        "name_hy": "Պելմենի",
+        "composition_en": "Meat dumplings",
+        "composition_hy": "Մսով պելմեններ"
       }
-    ]
+    ],
+    "name_en": "Kids' menu",
+    "name_hy": "Մանկական մենյու"
   },
   {
     "id": "2149",
@@ -1165,7 +1613,11 @@
         "has_image": true,
         "local_image": "img/menu/кокосовый-тарт.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/coconut-tart",
-        "composition": "Кокосовый тарт"
+        "composition": "Кокосовый тарт",
+        "name_en": "Coconut tart",
+        "name_hy": "Կոկոսի տարտ",
+        "composition_en": "Coconut tart",
+        "composition_hy": "Կոկոսի տարտ"
       },
       {
         "id": "brownie2345678910111213141516171819",
@@ -1175,7 +1627,11 @@
         "has_image": true,
         "local_image": "img/menu/брауни.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/brownie2345678910111213141516171819",
-        "composition": "Шоколадный брауни"
+        "composition": "Шоколадный брауни",
+        "name_en": "Brownie",
+        "name_hy": "Բրաունի",
+        "composition_en": "Chocolate brownie",
+        "composition_hy": "Շոկոլադե բրաունի"
       },
       {
         "id": "chocolate-volcano",
@@ -1185,7 +1641,11 @@
         "has_image": true,
         "local_image": "img/menu/шоколадный-вулкан.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chocolate-volcano",
-        "composition": "Шоколадный фондан с жидким центром"
+        "composition": "Шоколадный фондан с жидким центром",
+        "name_en": "Chocolate fondant",
+        "name_hy": "Շոկոլադե հրաբուխ",
+        "composition_en": "Chocolate fondant with molten center",
+        "composition_hy": "Շոկոլադե ֆոնդան հեղուկ միջուկով"
       },
       {
         "id": "cheesecake-san-sebastian",
@@ -1195,7 +1655,11 @@
         "has_image": true,
         "local_image": "img/menu/чизкейк-сан-себастьян.jpg?v=ig1",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/cheesecake-san-sebastian",
-        "composition": "Баскский чизкейк сан-себастьян"
+        "composition": "Баскский чизкейк сан-себастьян",
+        "name_en": "San Sebastián cheesecake",
+        "name_hy": "Սան Սեբաստիան չիզքեյք",
+        "composition_en": "Basque San Sebastián cheesecake",
+        "composition_hy": "Բասկական Սան Սեբաստիան չիզքեյք"
       },
       {
         "id": "classic-cheesecake-with-berries",
@@ -1205,7 +1669,11 @@
         "has_image": true,
         "local_image": "img/menu/чизкейк-классический-с.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/classic-cheesecake-with-berries",
-        "composition": "Классический чизкейк с ягодами"
+        "composition": "Классический чизкейк с ягодами",
+        "name_en": "Classic cheesecake with berries",
+        "name_hy": "Դասական չիզքեյք հատապտուղներով",
+        "composition_en": "Classic cheesecake with berries",
+        "composition_hy": "Դասական չիզքեյք հատապտուղներով"
       },
       {
         "id": "tiramisu234567891011121314151617",
@@ -1215,7 +1683,11 @@
         "has_image": true,
         "local_image": "img/menu/тирамису.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/tiramisu234567891011121314151617",
-        "composition": "Тирамису с маскарпоне и кофе"
+        "composition": "Тирамису с маскарпоне и кофе",
+        "name_en": "Tiramisu",
+        "name_hy": "Տիրամիսու",
+        "composition_en": "Tiramisu with mascarpone and coffee",
+        "composition_hy": "Տիրամիսու մասկարպոնեով և սուրճով"
       },
       {
         "id": "chocolate-pie",
@@ -1225,7 +1697,11 @@
         "has_image": true,
         "local_image": "img/menu/шоколадный-пирог.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/chocolate-pie",
-        "composition": "Шоколадный пирог"
+        "composition": "Шоколадный пирог",
+        "name_en": "Chocolate cake",
+        "name_hy": "Շոկոլադե կարկանդակ",
+        "composition_en": "Chocolate cake",
+        "composition_hy": "Շոկոլադե կարկանդակ"
       },
       {
         "id": "ice-cream234567891011",
@@ -1235,7 +1711,11 @@
         "has_image": true,
         "local_image": "img/menu/мороженое.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/ice-cream234567891011",
-        "composition": "Пломбир"
+        "composition": "Пломбир",
+        "name_en": "Ice cream",
+        "name_hy": "Պաղպաղակ",
+        "composition_en": "Plombir ice cream",
+        "composition_hy": "Պլոմբիր պաղպաղակ"
       },
       {
         "id": "fruit-icecream",
@@ -1245,7 +1725,11 @@
         "has_image": true,
         "local_image": "img/menu/фруктовое-мороженое.jpg?v=fit800",
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/fruit-icecream",
-        "composition": "Фруктовый сорбет"
+        "composition": "Фруктовый сорбет",
+        "name_en": "Fruit sorbet",
+        "name_hy": "Մրգային պաղպաղակ",
+        "composition_en": "Fruit sorbet",
+        "composition_hy": "Մրգային սորբեթ"
       },
       {
         "id": "fruit-assortment-seasonal",
@@ -1256,7 +1740,11 @@
         "has_image": true,
         "local_image": "img/menu/фруктовый-ассорти.jpg?v=fit800",
         "orderin_error": 500,
-        "composition": "Ассорти свежих фруктов"
+        "composition": "Ассорти свежих фруктов",
+        "name_en": "Fruit platter",
+        "name_hy": "Մրգային ասորտի",
+        "composition_en": "Fresh fruit platter",
+        "composition_hy": "Թարմ մրգերի տեսականի"
       },
       {
         "id": "dome",
@@ -1265,7 +1753,9 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": true,
         "orderin_url": "https://orderin.am/ru/menu/restaurant/domik/product/show/dome",
-        "local_image": "img/menu/dome.jpg?v=red1"
+        "local_image": "img/menu/dome.jpg?v=red1",
+        "name_en": "Dome",
+        "name_hy": "Դոմե"
       },
       {
         "id": "apple-pie",
@@ -1274,7 +1764,11 @@
         "price": "2 200",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": false,
-        "composition": "Яблочный пирог"
+        "composition": "Яблочный пирог",
+        "name_en": "Apple pie",
+        "name_hy": "Խնձորով կարկանդակ",
+        "composition_en": "Apple pie",
+        "composition_hy": "Խնձորով կարկանդակ"
       },
       {
         "id": "medovik",
@@ -1283,15 +1777,23 @@
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
         "has_image": true,
         "local_image": "img/menu/доме.jpg?v=ig1",
-        "composition": "Медовые коржи, сливочный крем"
+        "composition": "Медовые коржи, сливочный крем",
+        "name_en": "Honey cake",
+        "name_hy": "Մեղրով տորթ",
+        "composition_en": "Honey cake layers, cream filling",
+        "composition_hy": "Մեղրով խմորաշերտեր, սերուցքային կրեմ"
       },
       {
         "id": "domina-dessert",
         "name": "Домина десерт",
         "price": "1 750",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false
+        "has_image": false,
+        "name_en": "Domina dessert",
+        "name_hy": "Դոմինա աղանդեր"
       }
-    ]
+    ],
+    "name_en": "Sweet part",
+    "name_hy": "Քաղցր մաս"
   }
 ]

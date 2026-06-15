@@ -107,11 +107,14 @@
       return;
     }
 
-    modal.querySelector("#dish-modal-title").textContent = it.name;
+    const lng = lang();
+    modal.querySelector("#dish-modal-title").textContent =
+      (lng === "en" ? it.name_en : lng === "hy" ? it.name_hy : null) || it.name;
+    const askMap = { ru: "Уточняйте", en: "On request", hy: "ճշտել" };
     modal.querySelector("#dish-modal-price").textContent =
-      /\d/.test(it.price || "") ? `${it.price} ֏` : (it.price || "");
+      /\d/.test(it.price || "") ? `${it.price} ֏` : (it.price ? (askMap[lng] || it.price) : "");
 
-    const composition = (it.composition || "").trim();
+    const composition = ((lng === "en" ? it.composition_en : lng === "hy" ? it.composition_hy : null) || it.composition || "").trim();
     modal.querySelector("#dish-modal-composition").textContent =
       composition || t("noComposition");
     modal.querySelector(".dish-modal__composition-block h3").textContent =

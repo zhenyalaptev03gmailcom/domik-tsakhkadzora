@@ -499,6 +499,14 @@ window.SITE_I18N = {
       const key = el.getAttribute('data-i18n-placeholder');
       if (dict[key]) el.placeholder = dict[key];
     });
+    // Данные-переводы для меню/бара: RU — это исходный textContent элемента.
+    // Элемент НЕ должен иметь дочерних узлов (текст оборачивается в свой span).
+    document.querySelectorAll('[data-tr-en]').forEach((el) => {
+      if (el.__ru === undefined) el.__ru = el.textContent;
+      const tr = lang === 'en' ? el.getAttribute('data-tr-en')
+               : lang === 'hy' ? el.getAttribute('data-tr-hy') : null;
+      el.textContent = (lang === 'ru' || !tr) ? el.__ru : tr;
+    });
     const titleKey = document.querySelector('title[data-i18n]');
     if (titleKey) {
       const k = titleKey.getAttribute('data-i18n');

@@ -48,16 +48,16 @@
 
   function findDish(bundle, dishId) {
     let found = null;
-    let categoryName = "";
+    let foundCat = null;
     (bundle.categories || []).forEach((cat) => {
       (cat.items || []).forEach((it) => {
         if (it.id === dishId) {
           found = it;
-          categoryName = cat.name || "";
+          foundCat = cat;
         }
       });
     });
-    return { dish: found, categoryName, stories: bundle.stories || {} };
+    return { dish: found, category: foundCat, stories: bundle.stories || {} };
   }
 
   function showError() {
@@ -67,21 +67,26 @@
     document.title = t("notFound");
   }
 
-  function render(dish, categoryName, stories) {
+  function render(dish, category, stories) {
     const dishId = dish.id;
-    document.title = `${dish.name} — DoMik`;
+    const lng = localStorage.getItem("siteLang") || "ru";
+    const name = (lng === "en" ? dish.name_en : lng === "hy" ? dish.name_hy : null) || dish.name;
+    document.title = `${name} — DoMik`;
     const titleEl = document.getElementById("dish-title");
-    if (titleEl) titleEl.textContent = dish.name;
+    if (titleEl) titleEl.textContent = name;
 
     const catEl = document.getElementById("dish-category");
-    if (catEl) catEl.textContent = categoryName;
+    if (catEl && category) catEl.textContent =
+      (lng === "en" ? category.name_en : lng === "hy" ? category.name_hy : null) || category.name || "";
 
+    const askMap = { ru: "Уточняйте", en: "On request", hy: "ճշտել" };
     const priceEl = document.getElementById("dish-price");
-    if (priceEl) priceEl.textContent = /\d/.test(dish.price || "") ? `${dish.price} ֏` : (dish.price || "");
+    if (priceEl) priceEl.textContent =
+      /\d/.test(dish.price || "") ? `${dish.price} ֏` : (dish.price ? (askMap[lng] || dish.price) : "");
 
     const compEl = document.getElementById("dish-composition");
     if (compEl) {
-      const composition = (dish.composition || "").trim();
+      const composition = ((lng === "en" ? dish.composition_en : lng === "hy" ? dish.composition_hy : null) || dish.composition || "").trim();
       compEl.textContent = composition || t("noComposition");
     }
 
@@ -128,12 +133,13 @@
     }
     try {
       const bundle = loadBundle();
-      const { dish, categoryName, stories } = findDish(bundle, dishId);
+      const { dish, category, stories } = findDish(bundle, dishId);
       if (!dish) {
         showError();
         return;
       }
-      render(dish, categoryName, stories);
+      render(dish, category, stories);
+      window.onLangChange = () => render(dish, category, stories);
     } catch (e) {
       console.error("dish-page:", e);
       showError();
