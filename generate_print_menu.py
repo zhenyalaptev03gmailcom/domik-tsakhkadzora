@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """Пересборка печатного меню-книги menu-print.html для «Домик Цахкадзора».
 Выдаёт ПЛОСКИЙ поток элементов в #book; постранично по A4 раскладывает
-js/print-paginate.js (экран = печать). Данные кухни — из data/menu.json,
-барная карта — из menu.html (#menu-bar). Стиль — css/print-menu.css (не трогаем).
+js/print-paginate.js (экран = печать).
+Кухня — из data/print-menu.json (curated, ОТВЯЗАНА от сайта; правится напрямую).
+Барная карта — из menu.html (#menu-bar): раздел «К пиву» вынесен в кухню,
+безалкогольные напитки идут первыми, карта начинается с нового листа.
 Запуск:  python generate_print_menu.py
 """
 import re, io, json, sys
@@ -44,7 +46,8 @@ DISH_TPL = '''<article class="book-dish">
   <p class="book-dish__desc">{{DESC}}</p>
 </article>'''
 
-BAR_PART = '''<section class="bar-part flow-keep">
+# Барная карта начинается с нового листа: .book-break
+BAR_PART = '''<section class="bar-part flow-keep book-break">
   <div class="bar-part__frame"></div>
   <div class="bar-part__inner">
     <div class="bar-part__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>
@@ -76,6 +79,9 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/print-menu.css?v=3">
+<style>
+  .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
+</style>
 <meta name="description" content="Печатное меню ресторана «Домик Цахкадзора» — книгой, для печати и сохранения в PDF.">
 <meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#f6efdd">
@@ -85,14 +91,14 @@ HEAD = '''<!DOCTYPE html>
 </head>
 <body>'''
 
-SCRIPT = '<script src="js/print-paginate.js?v=2"></script>'
+SCRIPT = '<script src="js/print-paginate.js?v=3"></script>'
 
 
 def esc(t):
     return t.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
 
 def price_kitchen(p):
-    p = p.strip()
+    p = (p or '').strip()
     if any(ch.isdigit() for ch in p):
         return f'{esc(p)} <span class="cur">֏</span>'
     return esc(p)  # нечисловая цена (напр. «уточняйте») — без символа ֏
@@ -111,21 +117,23 @@ def fill(tpl, **kw):
 
 parts = [COVER_HTML]
 
-# ---------- кухня из menu.json ----------
-data = json.load(io.open(ROOT + r"\data\menu.json", encoding='utf-8'))
-cats = data if isinstance(data, list) else data['categories']
+# ---------- кухня из curated data/print-menu.json ----------
+pm = json.load(io.open(ROOT + r"\data\print-menu.json", encoding='utf-8'))
 dish_count = 0
-for c in cats:
-    parts.append(fill(CAT_TITLE, TITLE=esc(c.get('name', '').strip())))
-    for it in c.get('items', []):
+for sec in pm:
+    parts.append(fill(CAT_TITLE, TITLE=esc(sec['name'].strip())))
+    for it in sec['items']:
+        name_html = esc(it['name'].strip())
+        if it.get('sizes'):
+            name_html += f' <span class="dish-size">{esc(it["sizes"].strip())}</span>'
         parts.append(fill(DISH_TPL,
-                          NAME=esc(it.get('name', '').strip()),
-                          DESC=esc((it.get('composition') or '').strip()),
+                          NAME=name_html,
+                          DESC=esc((it.get('desc') or '').strip()),
                           PRICE=price_kitchen(it.get('price', ''))))
         dish_count += 1
-print("kitchen categories:", len(cats), "| dishes:", dish_count)
+print("kitchen sections:", len(pm), "| dishes:", dish_count)
 
-# ---------- барная карта из menu.html ----------
+# ---------- барная карта из menu.html (перестроенная) ----------
 parts.append(BAR_PART)
 mh = io.open(ROOT + r"\menu.html", encoding='utf-8').read()
 start = mh.find('class="bar-list"')
@@ -134,24 +142,52 @@ region = mh[max(0, start - 400): foot if foot > 0 else len(mh)]
 BLOCK = {"основное меню", "меню", "бар", "барная карта", "напитки и бар"}
 heads = [(m.start(), re.sub('<.*?>', '', m.group(1)).strip())
          for m in re.finditer(r'<h[234][^>]*>(.*?)</h[234]>', region, re.S)]
-bar_secs, bar_rows_total = 0, 0
+
+bar_sections = {}   # title -> [row html]
+order_seen = []
 for m in re.finditer(r'<ul class="bar-list">', region):
     u = m.start()
     cand = [t for p, t in heads if p < u and t.lower() not in BLOCK]
     title = cand[-1] if cand else '—'
     ulhtml = region[u:region.find('</ul>', u)]
-    parts.append(fill(BAR_SEC_TITLE, TITLE=title))
+    rows = []
     for name_raw, price in re.findall(
             r'<span class="bar-item__name">(.*?)</span>\s*<span class="bar-item__price">(.*?)</span>',
             ulhtml, re.S):
         ms = re.search(r'<small>(.*?)</small>', name_raw, re.S)
         vol = ms.group(1).strip() if ms else ''
         name = re.sub(r'\s+', ' ', re.sub(r'<small>.*?</small>', '', name_raw, flags=re.S)).strip()
-        parts.append(fill(BAR_ROW_TPL, NAME=name, VOL=vol, PRICE=price_bar(price)))
-        bar_rows_total += 1
-    bar_secs += 1
-print("bar sections:", bar_secs, "| bar rows:", bar_rows_total)
-assert bar_secs == 18 and bar_rows_total == 142, "bar parse mismatch!"
+        rows.append(fill(BAR_ROW_TPL, NAME=name, VOL=vol, PRICE=price_bar(price)))
+    bar_sections[title] = rows
+    order_seen.append(title)
+
+# «К пиву» вынесено в кухню; безалкогольные — вперёд
+SKIP = {'К пиву'}
+NONALC = ['Напитки', 'Фреши и лимонады', 'Молочные коктейли', 'Кофе', 'Чай']
+ALC = ['Пиво', 'Вино — красное', 'Вино — белое', 'Вино — розовое / игристое',
+       'Виски', 'Водка', 'Коньяк (Арарат)', 'Ликёры', 'Текила', 'Ром / Джин',
+       'Коктейли', 'Шоты и горячее']
+final_order = NONALC + ALC
+
+emitted, bar_rows_total = set(), 0
+def emit_bar(title):
+    global bar_rows_total
+    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(title)))
+    parts.extend(bar_sections[title])
+    bar_rows_total += len(bar_sections[title])
+    emitted.add(title)
+
+for title in final_order:
+    if title in bar_sections:
+        emit_bar(title)
+# страховка: любые незаявленные разделы (кроме вынесенных) — в конец, с предупреждением
+for title in order_seen:
+    if title not in emitted and title not in SKIP:
+        print("  WARN: unplaced bar section ->", repr(title))
+        emit_bar(title)
+
+print("bar sections:", len(emitted), "| bar rows:", bar_rows_total,
+      "| skipped:", sorted(SKIP & set(order_seen)))
 
 # ---------- сборка ----------
 out = (HEAD + "\n" + TOOLBAR + '\n<div id="book" class="book">\n'

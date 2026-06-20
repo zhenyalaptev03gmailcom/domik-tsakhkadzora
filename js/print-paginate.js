@@ -56,6 +56,12 @@
         continue;
       }
 
+      // Принудительный новый лист перед элементом .book-break (барная карта)
+      if (node.classList && node.classList.contains('book-break') &&
+          inner.childNodes.length > 0) {
+        addSheet();
+      }
+
       inner.appendChild(node);
 
       if (inner.scrollHeight > inner.clientHeight + 1) {   // переполнение
