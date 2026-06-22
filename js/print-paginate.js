@@ -83,11 +83,17 @@
           while (n && !n.classList.contains('flow-keep') && trailing.length < MIN_AFTER_TITLE) {
             trailing.unshift(n); n = n.previousElementSibling;
           }
-          if (n && n.classList.contains('flow-keep') &&
-              trailing.length < MIN_AFTER_TITLE && n !== inner.firstElementChild) {
+          // собираем всю «шапку» раздела: подряд идущие flow-keep (заголовок + опц. подпись),
+          // чтобы заголовок и подпись не отрывались друг от друга и от первых блюд
+          var head = [];
+          while (n && n.classList.contains('flow-keep')) {
+            head.unshift(n); n = n.previousElementSibling;
+          }
+          if (head.length && trailing.length < MIN_AFTER_TITLE &&
+              head[0] !== inner.firstElementChild) {
             for (var k = 0; k < trailing.length; k++) inner.removeChild(trailing[k]);
-            inner.removeChild(n);
-            carry = [n].concat(trailing);
+            for (var hh = 0; hh < head.length; hh++) inner.removeChild(head[hh]);
+            carry = head.concat(trailing);
           }
         }
         addSheet();

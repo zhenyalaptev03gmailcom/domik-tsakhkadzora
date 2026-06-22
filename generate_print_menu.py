@@ -92,7 +92,7 @@ HEAD = '''<!DOCTYPE html>
 </head>
 <body>'''
 
-SCRIPT = '<script src="js/print-paginate.js?v=3"></script>'
+SCRIPT = '<script src="js/print-paginate.js?v=4"></script>'
 
 
 def esc(t):
