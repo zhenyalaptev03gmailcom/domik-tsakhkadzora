@@ -1785,12 +1785,16 @@
       },
       {
         "id": "domina-dessert",
-        "name": "Домина десерт",
-        "price": "1 750",
+        "name": "Гата армянская",
+        "price": "2 000",
         "image_url": "https://orderin.am/assets/img/no_img_product.jpeg",
-        "has_image": false,
-        "name_en": "Domina dessert",
-        "name_hy": "Դոմինա աղանդեր"
+        "has_image": true,
+        "name_en": "Armenian gata",
+        "name_hy": "Հայկական գաթա",
+        "local_image": "img/menu/гата.jpg?v=1",
+        "composition": "Традиционная армянская выпечка",
+        "composition_en": "Traditional Armenian pastry",
+        "composition_hy": "Ավանդական հայկական թխվածք"
       }
     ],
     "name_en": "Desserts",
