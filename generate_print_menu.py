@@ -37,6 +37,9 @@ COVER_HTML = '''<div class="book-cover">
 # плоские «флоу»-элементы. .flow-keep = не отрывать от следующего (заголовки/баннер)
 CAT_TITLE = '<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h2>'
 
+# подзаголовок-подраздел внутри раздела (напр. «Пицца», «Бургеры») — мельче заголовка
+SUBCAT_TITLE = '<h3 class="book-subcat flow-keep"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h3>'
+
 DISH_TPL = '''<article class="book-dish">
   <div class="book-dish__head">
     <span class="book-dish__name">{{NAME}}</span>
@@ -82,6 +85,9 @@ HEAD = '''<!DOCTYPE html>
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
+  .book-subcat{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:14pt;letter-spacing:.14em;text-transform:uppercase;color:#8f6f3e;text-align:center;margin:7mm 0 4.5mm;display:flex;align-items:center;justify-content:center;gap:4mm}
+  .book-subcat .dia{flex:0 0 auto;color:#b08d4e;font-size:7pt}
+  .book-subcat::before,.book-subcat::after{content:"";flex:0 0 12mm;height:0;border-top:.8px solid #cdb88e}
 </style>
 <meta name="description" content="Печатное меню ресторана «Домик Цахкадзора» — книгой, для печати и сохранения в PDF.">
 <meta name="robots" content="noindex, follow">
@@ -126,6 +132,9 @@ for sec in pm:
     if sec.get('note'):
         parts.append('<p class="book-cat__note flow-keep">' + esc(sec['note'].strip()) + '</p>')
     for it in sec['items']:
+        if it.get('sub'):                       # подзаголовок-подраздел
+            parts.append(fill(SUBCAT_TITLE, TITLE=esc(it['sub'].strip())))
+            continue
         name_html = esc(it['name'].strip())
         if it.get('sizes'):
             name_html += f' <span class="dish-size">{esc(it["sizes"].strip())}</span>'
