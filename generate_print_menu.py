@@ -127,7 +127,11 @@ parts = [COVER_HTML]
 # ---------- кухня из curated data/print-menu.json ----------
 pm = json.load(io.open(ROOT + r"\data\print-menu.json", encoding='utf-8'))
 dish_count = 0
+bar_placed = {}   # секции с "bar_after" рендерятся не в кухне, а в баре после указанного раздела
 for sec in pm:
+    if sec.get('bar_after'):
+        bar_placed[sec['bar_after']] = sec
+        continue
     parts.append(fill(CAT_TITLE, TITLE=esc(sec['name'].strip())))
     if sec.get('note'):
         parts.append('<p class="book-cat__note flow-keep">' + esc(sec['note'].strip()) + '</p>')
@@ -182,12 +186,26 @@ ALC = ['Пиво', 'Вино — красное', 'Вино — белое', 'В
 final_order = NONALC + ALC
 
 emitted, bar_rows_total = set(), 0
+
+def emit_curated_bar(sec):
+    """Кухонная (curated) секция, отрисованная как раздел барной карты (name … price)."""
+    global bar_rows_total
+    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(sec['name'].strip())))
+    for it in sec['items']:
+        p = (it.get('price') or '').strip()
+        if any(ch.isdigit() for ch in p):
+            p = p + ' ֏'
+        parts.append(fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()), VOL='', PRICE=price_bar(p)))
+        bar_rows_total += 1
+
 def emit_bar(title):
     global bar_rows_total
     parts.append(fill(BAR_SEC_TITLE, TITLE=esc(title)))
     parts.extend(bar_sections[title])
     bar_rows_total += len(bar_sections[title])
     emitted.add(title)
+    if title in bar_placed:                 # вставить curated-раздел сразу после этого
+        emit_curated_bar(bar_placed[title])
 
 for title in final_order:
     if title in bar_sections:
