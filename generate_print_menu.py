@@ -81,6 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="stylesheet" href="css/print-menu.css?v=3">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
+  .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
 </style>
 <meta name="description" content="Печатное меню ресторана «Домик Цахкадзора» — книгой, для печати и сохранения в PDF.">
 <meta name="robots" content="noindex, follow">
@@ -122,6 +123,8 @@ pm = json.load(io.open(ROOT + r"\data\print-menu.json", encoding='utf-8'))
 dish_count = 0
 for sec in pm:
     parts.append(fill(CAT_TITLE, TITLE=esc(sec['name'].strip())))
+    if sec.get('note'):
+        parts.append('<p class="book-cat__note flow-keep">' + esc(sec['note'].strip()) + '</p>')
     for it in sec['items']:
         name_html = esc(it['name'].strip())
         if it.get('sizes'):
