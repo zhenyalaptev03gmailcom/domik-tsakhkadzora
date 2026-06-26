@@ -51,44 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', async e => {
-      e.preventDefault();
-      const lang = localStorage.getItem('siteLang') || 'ru';
-      const okMsg = window.SITE_I18N?.[lang]?.['toast.form'] || 'Спасибо! Мы свяжемся с вами в ближайшее время.';
-      const action = form.getAttribute('action');
-      const key = form.querySelector('[name="access_key"]')?.value || '';
-
-      // Демо-режим: пока приём не настроен (нет action или ключ-заглушка) — просто благодарим.
-      if (!action || !key || key.indexOf('ВАШ-КЛЮЧ') !== -1) {
-        showToast(okMsg);
-        form.reset();
-        return;
-      }
-
-      const btn = form.querySelector('button[type="submit"]');
-      const orig = btn ? btn.textContent : '';
-      if (btn) { btn.disabled = true; btn.textContent = '…'; }
-      try {
-        const res = await fetch(action, {
-          method: 'POST',
-          headers: { Accept: 'application/json' },
-          body: new FormData(form),
-        });
-        if (res.ok) {
-          showToast(okMsg);
-          form.reset();
-        } else {
-          showToast('Не удалось отправить заявку. Позвоните нам, пожалуйста.');
-        }
-      } catch (_) {
-        showToast('Нет связи с сервером. Проверьте интернет или позвоните нам.');
-      } finally {
-        if (btn) { btn.disabled = false; btn.textContent = orig; }
-      }
-    });
-  });
-
   document.querySelectorAll('.menu-tab').forEach(tab => {
     tab.addEventListener('click', e => {
       const id = tab.getAttribute('href');
@@ -185,18 +147,6 @@ document.addEventListener('DOMContentLoaded', () => {
     row.addEventListener('click', e => { if (moved > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
   });
 });
-
-function showToast(msg) {
-  let toastEl = document.querySelector('.toast');
-  if (!toastEl) {
-    toastEl = document.createElement('div');
-    toastEl.className = 'toast';
-    document.body.appendChild(toastEl);
-  }
-  toastEl.textContent = msg;
-  toastEl.classList.add('show');
-  setTimeout(() => toastEl.classList.remove('show'), 4000);
-}
 
 function formatPrices(root) {
   (root || document).querySelectorAll('.price, .dish-detail__price, .dish-modal__price').forEach(el => {

@@ -2670,8 +2670,13 @@ html[lang="hy"] h3 { line-height: 1.2; }
   z-index: 1;
   pointer-events: none;
   background:
+    /* лёгкая вуаль сверху — гасит яркий «просвет» фото у верхнего края */
+    linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 24%),
+    /* боковое затемнение для читаемости */
     linear-gradient(90deg, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.42) 45%, rgba(0,0,0,0.22) 100%),
-    linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 38%);
+    /* нижний край растворяем ТОЧНО в цвет секции (--bg #0c0a09), чтобы убрать шов с «Популярными блюдами».
+       Короткая зона (28px) держится ниже стеклянной плашки фич, не затемняя её. */
+    linear-gradient(to top, var(--bg) 0%, rgba(12,10,9,0) 28px);
 }
 /* respect reduced-motion: show the still poster image instead of the moving video */
 @media (prefers-reduced-motion: reduce) {
