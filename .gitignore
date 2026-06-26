@@ -28,3 +28,12 @@ data/menu.json.staged
 
 # Build / deploy artifacts
 *.zip
+
+# Menu rebuild one-off scripts
+fetch_candidates.py
+fetch_round2.py
+fetch_wiki.py
+process_menu_photos.py
+finalize_menu_json.py
+generate_menu_html.py
+menu_photos.json

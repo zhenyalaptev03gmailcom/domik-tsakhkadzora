@@ -3468,3 +3468,46 @@ img { max-width: 100%; height: auto; }                 /* страховка о�
 @media (hover: hover) and (pointer: fine) {     /* стрелки карусели только при настоящем hover */
   .menu-row:hover .menu-arrow { opacity: 1; }
 }
+
+/* ===== Меню «как печатное»: подзаголовки, note, метка порции, плейсхолдер (2026-06-26) ===== */
+.menu-category .menu-subcat {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  color: var(--bronze-light, #d9b87a);
+  letter-spacing: .04em;
+  margin: 1.6rem 0 .85rem;
+  display: flex; align-items: center; gap: .7rem;
+}
+.menu-category .menu-subcat::after {
+  content: ""; flex: 1 1 auto; height: 1px;
+  background: linear-gradient(90deg, rgba(201,169,98,.45), transparent);
+}
+.menu-cat-note {
+  margin: -.35rem 0 1.1rem;
+  color: var(--muted, #b9ad99);
+  font-style: italic;
+  font-size: .96rem;
+  letter-spacing: .01em;
+}
+.menu-card__body .menu-card__size {
+  display: block;
+  font-size: .78rem;
+  font-style: italic;
+  color: var(--muted, #b9ad99);
+  margin-top: .12rem;
+}
+/* карточка без фото (запас, если у блюда нет картинки) */
+.menu-card--noimg .menu-card__ph {
+  aspect-ratio: 4 / 3;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(201,169,98,.12), transparent 70%),
+    linear-gradient(160deg, #1b1712, #141210);
+  border-bottom: 1px solid rgba(201,169,98,.18);
+}
+.menu-card--noimg .menu-card__ph span {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem; letter-spacing: .12em;
+  color: rgba(201,169,98,.55);
+}

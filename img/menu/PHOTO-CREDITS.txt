@@ -1,0 +1,24 @@
+Стоковые фото-плейсхолдеры для новых блюд (заменить на свои при возможности).
+Источники и лицензии (CC — указывайте автора при использовании):
+
+омлет-классический: https://live.staticflickr.com/2635/3701728342_36c3d0a779_b.jpg | CC BY 2.0 | codepo8 | https://www.flickr.com/photos/11414938@N00/3701728342
+омлет-с-грибами: https://live.staticflickr.com/3477/3802859017_4a4e90b145_b.jpg | CC BY-SA 2.0 | Mr Michael Phams | https://www.flickr.com/photos/32003811@N04/3802859017
+фирменная-бурата: https://live.staticflickr.com/3012/2648693308_efcab17087_b.jpg | CC BY-SA 2.0 | stu_spivack | https://www.flickr.com/photos/35034346243@N01/2648693308
+тако-с-курицей: https://live.staticflickr.com/6212/6332996010_0b0d40bf09_b.jpg | CC BY 2.0 | jeffreyw | https://www.flickr.com/photos/7927684@N03/6332996010
+тако-с-креветками: https://live.staticflickr.com/37/149082537_f4715d04cc_b.jpg | CC BY 2.0 | Noonch | https://www.flickr.com/photos/23686250@N00/149082537
+цезарь-с-креветками: https://live.staticflickr.com/3887/14952702825_7111e9f74b_b.jpg | CC BY 2.0 | Tim Rodenberg | https://www.flickr.com/photos/24556804@N04/14952702825
+домашний-куриный-суп: https://live.staticflickr.com/3382/3196431958_dbc02056d2_b.jpg | CC BY 2.0 | Debs (ò‿ó)♪ | https://www.flickr.com/photos/30223382@N06/3196431958
+паста-песто: https://live.staticflickr.com/6081/6113031911_00eb79d8c4_b.jpg | CC BY 2.0 | emmadiscovery | https://www.flickr.com/photos/8174757@N02/6113031911
+немецкий-гуляш: https://live.staticflickr.com/1962/44301070064_53077ecf7e_b.jpg | CC BY 2.0 | Prayitno / Thank you for (12 millions +) view | https://www.flickr.com/photos/34128007@N04/44301070064
+пеппер-стейк: https://live.staticflickr.com/2239/2599538034_91c95d7ef4_b.jpg | CC BY 2.0 | joshmadison | https://www.flickr.com/photos/25465562@N00/2599538034
+чесночный-хлеб: https://live.staticflickr.com/3028/3008052276_9766b4e180_b.jpg | CC BY 2.0 | mdid | https://www.flickr.com/photos/58246614@N00/3008052276
+домик-сет: https://live.staticflickr.com/4060/4484976271_d4f8b81b0d_b.jpg | CC BY-ND 2.0 | TMAB2003 | https://www.flickr.com/photos/7617731@N02/4484976271
+арбуз-и-дыня: https://live.staticflickr.com/3503/4008879153_47f86ec495_b.jpg | CC BY 2.0 | khm492 | https://www.flickr.com/photos/23952407@N07/4008879153
+блинчики-с-мясом: https://live.staticflickr.com/2879/13266461364_b4943e4369_b.jpg | CC BY 2.0 | erecepti.com | https://www.flickr.com/photos/105392694@N02/13266461364
+тако-с-овощами: https://live.staticflickr.com/2944/33679969673_1c78b2fcba_b.jpg | CC BY 2.0 | YellowGreenFarmersMarket | https://www.flickr.com/photos/82179181@N04/33679969673
+брецель: https://live.staticflickr.com/8429/7720927610_e57a58444d_b.jpg | CC BY-SA 2.0 | bochalla | https://www.flickr.com/photos/98627683@N00/7720927610
+куриное-филе-по-французски: https://upload.wikimedia.org/wikipedia/commons/7/7f/%D0%A4%D0%BE%D1%82%D0%BE_%D0%BC%D1%8F%D1%81%D0%B0_%D0%BF%D0%BE-%D1%84%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B8.jpg | CC NONE | File:Фото мяса по-французски.jpg
+солёные-орехи: https://upload.wikimedia.org/wikipedia/commons/f/f5/Mixed_nuts_small_white1.jpg | CC NONE | File:Mixed nuts small white1.jpg
+сырные-шарики: https://upload.wikimedia.org/wikipedia/commons/d/da/Malakoff.jpeg | CC NONE | File:Malakoff.jpeg
+хачапури-имеретинский: https://upload.wikimedia.org/wikipedia/commons/0/08/Old_Tbilisi%2C_Georgian_khachapuri%2C_Georgia.jpg | CC NONE | File:Old Tbilisi, Georgian khachapuri, Georgia.jpg
+хачапури-мегрельский: https://upload.wikimedia.org/wikipedia/commons/2/2e/Georgian_Cuisine_Collage.png | CC NONE | File:Georgian Cuisine Collage.png
