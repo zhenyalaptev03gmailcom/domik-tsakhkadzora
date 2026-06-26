@@ -19,5 +19,12 @@ img/menu/_orderin-sebastian.jpg
 MISSING-IMAGES.txt
 data/maps-config.example.json
 
+# One-off build/reconcile scripts + staging (kept locally, not part of the live site)
+reconcile_menu.py
+process_photos.py
+update_html.py
+selection.json
+data/menu.json.staged
+
 # Build / deploy artifacts
 *.zip

@@ -233,7 +233,7 @@ nav a.active { color: var(--bronze-light); }
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../img/hero-bg.jpg') center/cover no-repeat;
+  background: url('../img/hero-bg.jpg?v=2') center/cover no-repeat;
 }
 
 .hero-bg::after {
@@ -1115,7 +1115,7 @@ body.page-menu .site-header {
 .page-hero--menu .page-hero__bg {
   position: absolute;
   inset: 0;
-  background: url('../img/hero-bg.jpg') center/cover no-repeat;
+  background: url('../img/hero-bg.jpg?v=2') center/cover no-repeat;
   animation: menuHeroZoom 20s ease-in-out infinite alternate;
   -webkit-mask-image: linear-gradient(180deg, #000 58%, transparent 100%);
   mask-image: linear-gradient(180deg, #000 58%, transparent 100%);
@@ -2504,12 +2504,12 @@ html[lang="hy"] h3 { line-height: 1.2; }
 .dish-detail__media picture { display: block; }
 
 .hero-bg {
-  background-image: url('../img/hero-bg.jpg');
-  background-image: image-set(url('../img/hero-bg.webp') type('image/webp'), url('../img/hero-bg.jpg') type('image/jpeg'));
+  background-image: url('../img/hero-bg.jpg?v=2');
+  background-image: image-set(url('../img/hero-bg.webp?v=2') type('image/webp'), url('../img/hero-bg.jpg?v=2') type('image/jpeg'));
 }
 .page-hero--menu .page-hero__bg {
-  background-image: url('../img/hero-bg.jpg');
-  background-image: image-set(url('../img/hero-bg.webp') type('image/webp'), url('../img/hero-bg.jpg') type('image/jpeg'));
+  background-image: url('../img/hero-bg.jpg?v=2');
+  background-image: image-set(url('../img/hero-bg.webp?v=2') type('image/webp'), url('../img/hero-bg.jpg?v=2') type('image/jpeg'));
 }
 .menu-page-wrap::before,
 .dish-page-wrap::before {
