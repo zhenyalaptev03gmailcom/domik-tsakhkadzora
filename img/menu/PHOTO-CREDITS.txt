@@ -22,3 +22,4 @@
 сырные-шарики: https://upload.wikimedia.org/wikipedia/commons/d/da/Malakoff.jpeg | CC NONE | File:Malakoff.jpeg
 хачапури-имеретинский: https://upload.wikimedia.org/wikipedia/commons/0/08/Old_Tbilisi%2C_Georgian_khachapuri%2C_Georgia.jpg | CC NONE | File:Old Tbilisi, Georgian khachapuri, Georgia.jpg
 хачапури-мегрельский: https://upload.wikimedia.org/wikipedia/commons/2/2e/Georgian_Cuisine_Collage.png | CC NONE | File:Georgian Cuisine Collage.png
+классическая-бурата: https://live.staticflickr.com/7305/8755463931_55e1a3c444_b.jpg | CC | burrata salad
