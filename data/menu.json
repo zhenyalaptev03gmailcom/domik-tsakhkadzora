@@ -652,7 +652,7 @@
         "price": "3 500",
         "composition": "Виноградные листья, рубленое мясо, рис",
         "id": "dolma-combined",
-        "local_image": "img/menu/долма.jpg?v=web2",
+        "local_image": "img/menu/долма.jpg?v=web3",
         "has_image": true,
         "name_en": "Dolma",
         "name_hy": "Տոլմա",
@@ -802,7 +802,7 @@
         "price": "2 000",
         "id": "syrnye-shariki",
         "has_image": true,
-        "local_image": "img/menu/сырные-шарики.jpg?v=web2"
+        "local_image": "img/menu/сырные-шарики.jpg?v=web3"
       },
       {
         "name": "Жареный сыр",
@@ -1105,7 +1105,7 @@
         "price": "8 600",
         "composition": "Цельная стерлядь",
         "id": "tarap",
-        "local_image": "img/menu/тарап.jpg?v=st1",
+        "local_image": "img/menu/стерлядь.jpg?v=web2",
         "has_image": true,
         "name_en": "Whole sterlet",
         "name_hy": "Ամբողջական ստերլյադ",
