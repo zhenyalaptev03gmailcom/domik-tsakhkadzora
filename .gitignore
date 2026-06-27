@@ -38,3 +38,4 @@ finalize_menu_json.py
 generate_menu_html.py
 menu_photos.json
 fetch_fix.py
+fetch_fix2.py

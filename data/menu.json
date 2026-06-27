@@ -1050,7 +1050,7 @@
         "composition": "С сыром внутри и сверху",
         "id": "hachapuri-megrelskii",
         "has_image": true,
-        "local_image": "img/menu/хачапури-мегрельский.jpg?v=web1"
+        "local_image": "img/menu/хачапури-мегрельский.jpg?v=web2"
       },
       {
         "sub": "Бургеры и сэндвичи",
@@ -1074,7 +1074,7 @@
         "price": "2 500",
         "composition": "Сэндвич на гриле",
         "id": "sandwich-grill",
-        "local_image": "img/menu/сэндвич-гриль.jpg?v=fit800",
+        "local_image": "img/menu/сэндвич-гриль.jpg?v=web2",
         "has_image": true,
         "name_en": "Grilled sandwich",
         "name_hy": "Գրիլ սենդվիչ",
@@ -1095,7 +1095,7 @@
         "price": "6 000",
         "composition": "Цельная радужная форель на гриле",
         "id": "trout234567",
-        "local_image": "img/menu/форель.jpg?v=fit800",
+        "local_image": "img/menu/форель.jpg?v=web2",
         "has_image": true,
         "name_en": "Trout",
         "name_hy": "Իշխան"
@@ -1117,7 +1117,7 @@
         "price": "7 000",
         "composition": "Филе лосося на гриле",
         "id": "salmon23456789101112",
-        "local_image": "img/menu/лосось.jpg?v=fit800",
+        "local_image": "img/menu/лосось.jpg?v=web2",
         "has_image": true,
         "name_en": "Salmon",
         "name_hy": "Սաղմոն",
