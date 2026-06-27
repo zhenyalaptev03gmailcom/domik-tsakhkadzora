@@ -64,7 +64,7 @@
         return;
       }
       const root = window.location.pathname.replace(/[^/]+$/, "");
-      const menuUrl = new URL("data/menu.json?v=13", window.location.origin + root).href;
+      const menuUrl = new URL("data/menu.json?v=14", window.location.origin + root).href;
       const storiesUrl = new URL("data/dish-stories.json", window.location.origin + root).href;
       const [menuRes, storiesRes] = await Promise.all([
         fetch(menuUrl, { cache: "no-cache" }),
