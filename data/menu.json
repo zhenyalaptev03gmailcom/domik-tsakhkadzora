@@ -105,7 +105,7 @@
         "price": "2 200",
         "composition": "По выбору: лосось, креветки, авокадо, пастрами или нутелла",
         "id": "croissant",
-        "local_image": "img/menu/круассан.jpg?v=st4",
+        "local_image": "img/menu/круассан.jpg?v=web2",
         "has_image": true,
         "name_en": "Croissant",
         "name_hy": "Կրուասան"
@@ -589,7 +589,7 @@
         "composition": "Соус песто, пармезан",
         "id": "pasta-pesto",
         "has_image": true,
-        "local_image": "img/menu/паста-песто.jpg?v=web1"
+        "local_image": "img/menu/паста-песто.jpg?v=web2"
       }
     ],
     "note": "На выбор вид пасты: феттучини, спагетти, пенне"
@@ -652,7 +652,7 @@
         "price": "3 500",
         "composition": "Виноградные листья, рубленое мясо, рис",
         "id": "dolma-combined",
-        "local_image": "img/menu/долма-с-индейкой.jpg?v=fit800",
+        "local_image": "img/menu/долма.jpg?v=web2",
         "has_image": true,
         "name_en": "Dolma",
         "name_hy": "Տոլմա",
@@ -769,7 +769,7 @@
         "composition": "Стейк с перечным соусом",
         "id": "pepper-steik",
         "has_image": true,
-        "local_image": "img/menu/пеппер-стейк.jpg?v=web1"
+        "local_image": "img/menu/пеппер-стейк.jpg?v=web2"
       }
     ]
   },
@@ -802,7 +802,7 @@
         "price": "2 000",
         "id": "syrnye-shariki",
         "has_image": true,
-        "local_image": "img/menu/сырные-шарики.jpg?v=web1"
+        "local_image": "img/menu/сырные-шарики.jpg?v=web2"
       },
       {
         "name": "Жареный сыр",
@@ -818,7 +818,7 @@
         "price": "2 000",
         "id": "chesnochnyi-hleb",
         "has_image": true,
-        "local_image": "img/menu/чесночный-хлеб.jpg?v=web1"
+        "local_image": "img/menu/чесночный-хлеб.jpg?v=web2"
       },
       {
         "name": "Брецель (2 шт) со сливочным маслом",

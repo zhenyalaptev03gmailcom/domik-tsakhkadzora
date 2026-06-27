@@ -23,3 +23,9 @@
 хачапури-имеретинский: https://upload.wikimedia.org/wikipedia/commons/0/08/Old_Tbilisi%2C_Georgian_khachapuri%2C_Georgia.jpg | CC NONE | File:Old Tbilisi, Georgian khachapuri, Georgia.jpg
 хачапури-мегрельский: https://upload.wikimedia.org/wikipedia/commons/2/2e/Georgian_Cuisine_Collage.png | CC NONE | File:Georgian Cuisine Collage.png
 классическая-бурата: https://live.staticflickr.com/7305/8755463931_55e1a3c444_b.jpg | CC | burrata salad
+долма: https://live.staticflickr.com/7281/8743893817_8b7bcd38bc_b.jpg | CC BY | Monica Arellano-Ongpin
+круассан: https://live.staticflickr.com/3162/2570402918_37443dc2c1_b.jpg | CC BY-SA | avlxyz
+пеппер-стейк: https://upload.wikimedia.org/wikipedia/commons/2/29/Steak_au_poivre_%282010%29.jpg | CC BY | jeffreyw
+паста-песто: https://live.staticflickr.com/1162/533063854_efdcb34d85_b.jpg | CC BY-SA | matsuyuki
+сырные-шарики: https://live.staticflickr.com/5288/30011413395_f442cf2d3b_b.jpg | CC BY | goblinbox_(queen_of_ad_hoc_bento)
+чесночный-хлеб: https://live.staticflickr.com/4145/4997131008_e7221a068b_b.jpg | CC BY | jeffreyw
