@@ -542,7 +542,7 @@
         "price": "3 600",
         "composition": "Паста, панчетта, сливки, яйцо, пармезан, чёрный перец",
         "id": "pancetta-pasta",
-        "local_image": "img/menu/паста-панчетта.jpg?v=ctr1",
+        "local_image": "img/menu/паста-карбонара.jpg?v=web2",
         "has_image": true,
         "name_en": "Pancetta pasta",
         "name_hy": "Պանչետա մակարոնեղեն"
@@ -802,7 +802,7 @@
         "price": "2 000",
         "id": "syrnye-shariki",
         "has_image": true,
-        "local_image": "img/menu/сырные-шарики.jpg?v=web3"
+        "local_image": "img/menu/сырные-шарики.jpg?v=web4"
       },
       {
         "name": "Жареный сыр",

@@ -5,7 +5,7 @@
 (function () {
   const GRID_ID = "popular-dishes-grid";
   const POOL_URL = "data/popular-pool.json?v=2";
-  const MENU_URL = "data/menu.json?v=8";
+  const MENU_URL = "data/menu.json?v=9";
   const PLACEHOLDER_IMG = "img/dish-khachapuri.jpg";
   const PICK_COUNT = 5;
 
