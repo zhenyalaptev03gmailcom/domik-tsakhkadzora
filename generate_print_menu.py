@@ -171,6 +171,9 @@ for sec in bar:
     title = sec['section'].strip()
     parts.append(fill(BAR_SEC_TITLE, TITLE=esc(title)))
     for it in sec['items']:
+        if it.get('sub'):                   # подзаголовок-подраздел внутри раздела бара
+            parts.append(fill(SUBCAT_TITLE, TITLE=esc(it['sub'].strip())))
+            continue
         p = (it.get('price') or '').strip()
         if any(ch.isdigit() for ch in p):
             p = p + ' ֏'
