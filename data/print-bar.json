@@ -339,24 +339,24 @@
         "price": "2 400"
       },
       {
-        "name": "Akoom",
-        "vol": "0.25 л",
-        "price": "4 500"
-      },
-      {
         "name": "Takar",
         "vol": "",
         "price": "9 500"
       },
       {
-        "name": "Meyron",
-        "vol": "",
-        "price": "9 900"
+        "name": "Akoom",
+        "vol": "0.25 л",
+        "price": "4 500"
       },
       {
         "name": "Akoom (гранат)",
         "vol": "",
         "price": "11 000"
+      },
+      {
+        "name": "Meyron",
+        "vol": "",
+        "price": "9 900"
       },
       {
         "name": "Tariri",
@@ -444,6 +444,11 @@
         "price": "2 800"
       },
       {
+        "name": "Chivas Regal 18",
+        "vol": "",
+        "price": "4 800"
+      },
+      {
         "name": "Monkey Shoulder",
         "vol": "",
         "price": "3 000"
@@ -464,11 +469,6 @@
         "price": "3 800"
       },
       {
-        "name": "Chivas Regal 18",
-        "vol": "",
-        "price": "4 800"
-      },
-      {
         "name": "Glenfiddich 18",
         "vol": "",
         "price": "6 600"
@@ -484,6 +484,11 @@
         "price": "1 200"
       },
       {
+        "name": "Ohanyan Ice",
+        "vol": "",
+        "price": "1 600"
+      },
+      {
         "name": "Finlandia",
         "vol": "",
         "price": "1 400"
@@ -497,11 +502,6 @@
         "name": "Absolut",
         "vol": "",
         "price": "1 500"
-      },
-      {
-        "name": "Ohanyan Ice",
-        "vol": "",
-        "price": "1 600"
       },
       {
         "name": "Grey Goose",
