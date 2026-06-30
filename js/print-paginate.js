@@ -42,14 +42,14 @@
     for (var i = 0; i < items.length; i++) {
       var node = items[i];
 
-      // Обложка — отдельный полноформатный лист
-      if (node.classList && node.classList.contains('book-cover')) {
-        if (inner.childNodes.length === 0) {        // текущий пустой лист отдаём под обложку
+      // Обложка и титул барной карты — отдельный полноформатный лист
+      if (node.classList && (node.classList.contains('book-cover') || node.classList.contains('bar-part'))) {
+        if (inner.childNodes.length === 0) {        // текущий пустой лист отдаём под лист-разделитель
           book.removeChild(sheet);
           contentSheets.pop();
         }
         var cs = document.createElement('div');
-        cs.className = 'sheet sheet--cover';
+        cs.className = 'sheet ' + (node.classList.contains('bar-part') ? 'sheet--divider' : 'sheet--cover');
         cs.appendChild(node);
         book.appendChild(cs);
         addSheet();                                  // свежий лист под следующий контент

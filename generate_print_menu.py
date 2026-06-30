@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=3">
+<link rel="stylesheet" href="css/print-menu.css?v=4">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -98,7 +98,7 @@ HEAD = '''<!DOCTYPE html>
 </head>
 <body>'''
 
-SCRIPT = '<script src="js/print-paginate.js?v=4"></script>'
+SCRIPT = '<script src="js/print-paginate.js?v=5"></script>'
 
 
 def esc(t):

@@ -151,6 +151,12 @@ body{
 .bar-part__title{ font-family:var(--serif); font-weight:400; font-style:italic; font-size:46pt; letter-spacing:0.14em; text-transform:uppercase; color:var(--bronze-dark); margin:0; padding-left:0.14em; }
 .bar-part__sub{ font-family:var(--sans); font-weight:400; font-size:10.5pt; letter-spacing:0.4em; text-transform:uppercase; color:var(--ink-soft); margin:6mm 0 0; padding-left:0.4em; }
 
+/* «Барная карта» — отдельный лист на всю страницу (как обложка основного меню) */
+.sheet--divider{ padding:0; }
+.sheet--divider .bar-part{ width:100%; height:100%; margin:0; padding:0; }
+.sheet--divider .bar-part__frame{ inset:12mm; }
+.sheet--divider .bar-part__title{ font-size:54pt; }
+
 .bar-sec__title{
   font-family:var(--serif); font-weight:500; font-size:21pt; letter-spacing:0.16em;
   text-transform:uppercase; color:var(--ink); text-align:center;
