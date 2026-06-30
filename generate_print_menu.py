@@ -7,10 +7,10 @@ js/print-paginate.js (экран = печать).
 безалкогольные напитки идут первыми, карта начинается с нового листа.
 Запуск:  python generate_print_menu.py
 """
-import re, io, json, sys
+import re, io, json, sys, os
 sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT = r"C:\общее\domik-tsakhkadzora"
+ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # ---------- обложка (отдельный лист, .book-cover распознаёт пагинатор) ----------
 COVER_HTML = '''<div class="book-cover">
@@ -125,7 +125,7 @@ def fill(tpl, **kw):
 parts = [COVER_HTML]
 
 # ---------- кухня из curated data/print-menu.json ----------
-pm = json.load(io.open(ROOT + r"\data\print-menu.json", encoding='utf-8'))
+pm = json.load(io.open(os.path.join(ROOT, "data", "print-menu.json"), encoding='utf-8'))
 dish_count = 0
 bar_placed = {}   # секции с "bar_after" рендерятся не в кухне, а в баре после указанного раздела
 for sec in pm:
@@ -149,46 +149,15 @@ for sec in pm:
         dish_count += 1
 print("kitchen sections:", len(pm), "| dishes:", dish_count)
 
-# ---------- барная карта из menu.html (перестроенная) ----------
+# ---------- барная карта из data/print-bar.json (ОТВЯЗАНА от сайта) ----------
+# Порядок разделов задаётся самим print-bar.json (безалкогольное идёт первым).
+# «К пиву» остаётся curated-разделом из print-menu.json и вставляется после «Пиво».
 parts.append(BAR_PART)
-mh = io.open(ROOT + r"\menu.html", encoding='utf-8').read()
-start = mh.find('class="bar-list"')
-foot = mh.find('<footer', start)
-region = mh[max(0, start - 400): foot if foot > 0 else len(mh)]
-BLOCK = {"основное меню", "меню", "бар", "барная карта", "напитки и бар"}
-heads = [(m.start(), re.sub('<.*?>', '', m.group(1)).strip())
-         for m in re.finditer(r'<h[234][^>]*>(.*?)</h[234]>', region, re.S)]
-
-bar_sections = {}   # title -> [row html]
-order_seen = []
-for m in re.finditer(r'<ul class="bar-list">', region):
-    u = m.start()
-    cand = [t for p, t in heads if p < u and t.lower() not in BLOCK]
-    title = cand[-1] if cand else '—'
-    ulhtml = region[u:region.find('</ul>', u)]
-    rows = []
-    for name_raw, price in re.findall(
-            r'<span class="bar-item__name">(.*?)</span>\s*<span class="bar-item__price">(.*?)</span>',
-            ulhtml, re.S):
-        ms = re.search(r'<small>(.*?)</small>', name_raw, re.S)
-        vol = ms.group(1).strip() if ms else ''
-        name = re.sub(r'\s+', ' ', re.sub(r'<small>.*?</small>', '', name_raw, flags=re.S)).strip()
-        rows.append(fill(BAR_ROW_TPL, NAME=name, VOL=vol, PRICE=price_bar(price)))
-    bar_sections[title] = rows
-    order_seen.append(title)
-
-# «К пиву» вынесено в кухню; безалкогольные — вперёд
-SKIP = {'К пиву'}
-NONALC = ['Напитки', 'Фреши и лимонады', 'Молочные коктейли', 'Кофе', 'Чай']
-ALC = ['Пиво', 'Вино по бокалам', 'Вино — красное', 'Вино — белое', 'Вино — розовое / игристое',
-       'Виски', 'Водка', 'Коньяк (Арарат)', 'Ликёры', 'Текила', 'Ром / Джин',
-       'Коктейли', 'Шоты и горячее']
-final_order = NONALC + ALC
-
-emitted, bar_rows_total = set(), 0
+bar = json.load(io.open(os.path.join(ROOT, "data", "print-bar.json"), encoding='utf-8'))
+bar_rows_total = 0
 
 def emit_curated_bar(sec):
-    """Кухонная (curated) секция, отрисованная как раздел барной карты (name … price)."""
+    """Кухонная (curated) секция print-menu.json как раздел бара (К пиву)."""
     global bar_rows_total
     parts.append(fill(BAR_SEC_TITLE, TITLE=esc(sec['name'].strip())))
     for it in sec['items']:
@@ -198,30 +167,24 @@ def emit_curated_bar(sec):
         parts.append(fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()), VOL='', PRICE=price_bar(p)))
         bar_rows_total += 1
 
-def emit_bar(title):
-    global bar_rows_total
+for sec in bar:
+    title = sec['section'].strip()
     parts.append(fill(BAR_SEC_TITLE, TITLE=esc(title)))
-    parts.extend(bar_sections[title])
-    bar_rows_total += len(bar_sections[title])
-    emitted.add(title)
-    if title in bar_placed:                 # вставить curated-раздел сразу после этого
+    for it in sec['items']:
+        p = (it.get('price') or '').strip()
+        if any(ch.isdigit() for ch in p):
+            p = p + ' ֏'
+        parts.append(fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()),
+                          VOL=esc((it.get('vol') or '').strip()), PRICE=price_bar(p)))
+        bar_rows_total += 1
+    if title in bar_placed:                 # curated-раздел «К пиву» сразу после «Пиво»
         emit_curated_bar(bar_placed[title])
 
-for title in final_order:
-    if title in bar_sections:
-        emit_bar(title)
-# страховка: любые незаявленные разделы (кроме вынесенных) — в конец, с предупреждением
-for title in order_seen:
-    if title not in emitted and title not in SKIP:
-        print("  WARN: unplaced bar section ->", repr(title))
-        emit_bar(title)
-
-print("bar sections:", len(emitted), "| bar rows:", bar_rows_total,
-      "| skipped:", sorted(SKIP & set(order_seen)))
+print("bar sections:", len(bar), "| bar rows:", bar_rows_total)
 
 # ---------- сборка ----------
 out = (HEAD + "\n" + TOOLBAR + '\n<div id="book" class="book">\n'
        + "\n".join(parts) + "\n"
        + "</div>\n" + SCRIPT + "\n</body>\n</html>\n")
-io.open(ROOT + r"\menu-print.html", 'w', encoding='utf-8').write(out)
+io.open(os.path.join(ROOT, "menu-print.html"), 'w', encoding='utf-8').write(out)
 print("menu-print.html written:", len(out), "chars")

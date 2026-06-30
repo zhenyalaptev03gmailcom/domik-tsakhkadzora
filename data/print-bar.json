@@ -1,0 +1,233 @@
+[
+  {
+    "section": "Напитки",
+    "items": [
+      {"name": "Coca-Cola / Fanta / Sprite", "vol": "0.33", "price": "500"},
+      {"name": "Pepsi / Mirinda / 7UP", "vol": "0.33", "price": "500"},
+      {"name": "Газированная вода", "vol": "0.33", "price": "500"},
+      {"name": "Вода", "vol": "0.33", "price": "500"},
+      {"name": "Натуральный сок", "vol": "0.2 л", "price": "800"},
+      {"name": "Компот", "vol": "", "price": "2 000"},
+      {"name": "Tonic Thomas Henry", "vol": "", "price": "1 600"},
+      {"name": "Red Bull", "vol": "", "price": "1 500"},
+      {"name": "Schweppes", "vol": "", "price": "800"}
+    ]
+  },
+  {
+    "section": "Фреши и лимонады",
+    "items": [
+      {"name": "Апельсин", "vol": "фреш 250 мл", "price": "1 800"},
+      {"name": "Банан", "vol": "", "price": "1 500"},
+      {"name": "Грейпфрут", "vol": "", "price": "2 000"},
+      {"name": "Киви", "vol": "", "price": "1 500"},
+      {"name": "Яблоко", "vol": "", "price": "1 500"},
+      {"name": "Морковь", "vol": "", "price": "1 500"},
+      {"name": "Клубника", "vol": "", "price": "2 500"},
+      {"name": "Лимонад (облепиха/цитрус/фалерно/мохито)", "vol": "300 мл", "price": "2 000"}
+    ]
+  },
+  {
+    "section": "Домашние лимонады",
+    "items": [
+      {"name": "Мандарин-мята", "vol": "0,3 / 1 л", "price": "800 / 1 700"},
+      {"name": "Лайм-мята", "vol": "0,3 / 1 л", "price": "800 / 1 800"},
+      {"name": "Клубника-базилик", "vol": "0,3 / 1 л", "price": "900 / 2 000"},
+      {"name": "Грейпфрут-базилик", "vol": "0,3 / 1 л", "price": "800 / 1 700"},
+      {"name": "Арбузный лимонад", "vol": "0,3 / 1 л", "price": "800 / 1 700"}
+    ]
+  },
+  {
+    "section": "Молочные коктейли",
+    "items": [
+      {"name": "Банан-клубника", "vol": "300 мл", "price": "2 300"},
+      {"name": "Ваниль-шоколад", "vol": "", "price": "2 300"},
+      {"name": "Oreo", "vol": "", "price": "2 700"},
+      {"name": "Snickers", "vol": "", "price": "2 700"},
+      {"name": "Nutella", "vol": "", "price": "2 700"}
+    ]
+  },
+  {
+    "section": "Горячий кофе",
+    "items": [
+      {"name": "Американо", "vol": "", "price": "1 000"},
+      {"name": "Эспрессо", "vol": "", "price": "1 000"},
+      {"name": "Капучино", "vol": "", "price": "1 800"},
+      {"name": "Латте макиато", "vol": "", "price": "2 000"},
+      {"name": "Раф", "vol": "", "price": "2 200"},
+      {"name": "Кофе по-восточному", "vol": "", "price": "600"},
+      {"name": "Паризьен", "vol": "", "price": "800"},
+      {"name": "Горячий шоколад", "vol": "", "price": "2 000"},
+      {"name": "Айриш кофе", "vol": "", "price": "2 800"},
+      {"name": "Сироп (кокосовый, ванильный, апельсиновый, шоколадный, ореховый)", "vol": "", "price": "200"}
+    ]
+  },
+  {
+    "section": "Холодный кофе",
+    "items": [
+      {"name": "Гляссе", "vol": "", "price": "1 800"},
+      {"name": "Айс латте", "vol": "", "price": "2 000"},
+      {"name": "Бамбл", "vol": "", "price": "2 000"},
+      {"name": "Эспрессо тоник", "vol": "", "price": "2 000"}
+    ]
+  },
+  {
+    "section": "Чай",
+    "items": [
+      {"name": "Чёрный", "vol": "", "price": "1 200"},
+      {"name": "Травяной", "vol": "", "price": "1 200"},
+      {"name": "Сенча", "vol": "", "price": "1 200"},
+      {"name": "Цитрусовый", "vol": "", "price": "2 000"},
+      {"name": "Ягодный", "vol": "", "price": "2 000"},
+      {"name": "Облепиховый", "vol": "", "price": "2 200"},
+      {"name": "Имбирный", "vol": "", "price": "2 200"},
+      {"name": "Пуэр", "vol": "", "price": "2 200"},
+      {"name": "Домашнее варенье", "vol": "", "price": "900"},
+      {"name": "Холодный чай", "vol": "", "price": "1 500"}
+    ]
+  },
+  {
+    "section": "Пиво",
+    "items": [
+      {"name": "Пауланер светлый", "vol": "0.3 / 0.5 / 1 л", "price": "1 700 / 2 200 / 3 900"},
+      {"name": "Пауланер пшеничный", "vol": "0.3 / 0.5 / 1 л", "price": "1 700 / 2 200 / 3 900"},
+      {"name": "Пауланер, бутылка (ориг./пшеница)", "vol": "", "price": "1 900"}
+    ]
+  },
+  {
+    "section": "Вино по бокалам",
+    "items": [
+      {"name": "Домашнее вино белое", "vol": "150 мл", "price": "1 500"},
+      {"name": "Домашнее вино красное", "vol": "150 мл", "price": "1 500"},
+      {"name": "Просекко extra dry", "vol": "150 мл", "price": "1 500"}
+    ]
+  },
+  {
+    "section": "Вино — красное",
+    "items": [
+      {"name": "Tariri", "vol": "", "price": "24 000"},
+      {"name": "Takar", "vol": "", "price": "9 500"},
+      {"name": "Takar", "vol": "187 мл", "price": "2 400"},
+      {"name": "Akoom (гранат)", "vol": "", "price": "11 000"},
+      {"name": "Akoom", "vol": "0.25 л", "price": "4 500"},
+      {"name": "Meyron", "vol": "", "price": "9 900"}
+    ]
+  },
+  {
+    "section": "Вино — белое",
+    "items": [
+      {"name": "Tariri", "vol": "", "price": "22 000"},
+      {"name": "Takar", "vol": "", "price": "8 000"},
+      {"name": "Takar", "vol": "187 мл", "price": "2 200"},
+      {"name": "Meyron", "vol": "", "price": "8 900"},
+      {"name": "Summer Wine", "vol": "", "price": "9 900"}
+    ]
+  },
+  {
+    "section": "Вино — розовое / игристое",
+    "items": [
+      {"name": "Meyron (розе)", "vol": "", "price": "6 900"},
+      {"name": "Ariats (розе)", "vol": "", "price": "8 500"},
+      {"name": "Zonin Prosecco DOC", "vol": "", "price": "12 000"},
+      {"name": "Zonin Prosecco Rosé", "vol": "", "price": "14 000"},
+      {"name": "Hay Petnat", "vol": "", "price": "10 000"}
+    ]
+  },
+  {
+    "section": "Виски",
+    "items": [
+      {"name": "Bushmills", "vol": "50 мл", "price": "3 500"},
+      {"name": "Jameson", "vol": "", "price": "2 500"},
+      {"name": "Jack Daniel's", "vol": "", "price": "2 800"},
+      {"name": "Chivas Regal 12", "vol": "", "price": "2 800"},
+      {"name": "Chivas Regal 18", "vol": "", "price": "4 800"},
+      {"name": "Monkey Shoulder", "vol": "", "price": "3 000"},
+      {"name": "Glenfiddich 12", "vol": "", "price": "3 800"},
+      {"name": "Glenfiddich 18", "vol": "", "price": "6 600"},
+      {"name": "Black Label", "vol": "", "price": "3 000"}
+    ]
+  },
+  {
+    "section": "Водка",
+    "items": [
+      {"name": "Finlandia", "vol": "50 мл", "price": "1 400"},
+      {"name": "Absolut", "vol": "", "price": "1 500"},
+      {"name": "Grey Goose", "vol": "", "price": "2 500"},
+      {"name": "Ohanyan", "vol": "", "price": "1 200"},
+      {"name": "Ohanyan Ice", "vol": "", "price": "1 600"},
+      {"name": "Chisti Rosi", "vol": "", "price": "2 500"},
+      {"name": "ODEVI", "vol": "", "price": "1 400"}
+    ]
+  },
+  {
+    "section": "Коньяк (Арарат)",
+    "items": [
+      {"name": "Ararat 5", "vol": "50 мл", "price": "1 800"},
+      {"name": "Ararat 7", "vol": "", "price": "2 200"},
+      {"name": "Ararat 10", "vol": "", "price": "3 000"},
+      {"name": "Ararat 15", "vol": "", "price": "4 500"},
+      {"name": "Ararat 20", "vol": "", "price": "6 200"},
+      {"name": "Ararat Dvin", "vol": "", "price": "5 000"}
+    ]
+  },
+  {
+    "section": "Ликёры",
+    "items": [
+      {"name": "Martini Bianco", "vol": "50 мл", "price": "1 300"},
+      {"name": "Martini Rosso", "vol": "", "price": "1 300"},
+      {"name": "Becherovka", "vol": "", "price": "1 400"},
+      {"name": "Absenta", "vol": "", "price": "2 200"},
+      {"name": "Sambuca", "vol": "", "price": "2 000"},
+      {"name": "Kahlua", "vol": "", "price": "1 600"},
+      {"name": "Baileys", "vol": "", "price": "1 600"},
+      {"name": "Jägermeister", "vol": "", "price": "2 000"},
+      {"name": "De Kuyper", "vol": "", "price": "1 500"},
+      {"name": "Aperol", "vol": "", "price": "1 500"}
+    ]
+  },
+  {
+    "section": "Текила",
+    "items": [
+      {"name": "Olmeca Silver", "vol": "50 мл", "price": "2 200"},
+      {"name": "Olmeca Gold", "vol": "", "price": "2 600"},
+      {"name": "Patron Silver", "vol": "", "price": "3 300"},
+      {"name": "Patron Añejo", "vol": "", "price": "5 200"}
+    ]
+  },
+  {
+    "section": "Ром",
+    "items": [
+      {"name": "Bacardi White", "vol": "50 мл", "price": "2 200"},
+      {"name": "Bacardi Black", "vol": "", "price": "2 200"},
+      {"name": "Angostura Gold", "vol": "", "price": "2 500"}
+    ]
+  },
+  {
+    "section": "Джин",
+    "items": [
+      {"name": "Beefeater", "vol": "50 мл", "price": "1 800"},
+      {"name": "Bombay Sapphire", "vol": "", "price": "2 000"},
+      {"name": "Hendrick's", "vol": "", "price": "2 500"}
+    ]
+  },
+  {
+    "section": "Коктейли",
+    "items": [
+      {"name": "Mojito", "vol": "", "price": "3 200"},
+      {"name": "Piña Colada", "vol": "", "price": "3 200"},
+      {"name": "Tequila Sunrise", "vol": "", "price": "3 200"},
+      {"name": "Margarita", "vol": "", "price": "3 500"},
+      {"name": "Negroni", "vol": "", "price": "3 200"},
+      {"name": "Aperol Spritz", "vol": "", "price": "3 500"},
+      {"name": "Long Island", "vol": "", "price": "3 800"}
+    ]
+  },
+  {
+    "section": "Шоты и горячее",
+    "items": [
+      {"name": "B-52", "vol": "", "price": "2 800"},
+      {"name": "B-53", "vol": "", "price": "2 800"},
+      {"name": "Глинтвейн белый", "vol": "", "price": "2 800"},
+      {"name": "Глинтвейн красный", "vol": "", "price": "2 800"}
+    ]
+  }
+]
