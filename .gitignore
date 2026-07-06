@@ -39,3 +39,5 @@ generate_menu_html.py
 menu_photos.json
 fetch_fix.py
 fetch_fix2.py
+
+generate_bar_html.py

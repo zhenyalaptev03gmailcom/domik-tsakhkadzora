@@ -3045,6 +3045,15 @@ html[lang="hy"] h3 { line-height: 1.2; }
 }
 .bar-item__name small { color: var(--muted); font-size: 0.8em; margin-left: 0.35rem; }
 .bar-item__price { color: var(--bronze-light); font-weight: 600; white-space: nowrap; }
+.bar-subhead {
+  list-style: none;
+  margin: 1.35rem 0 .35rem; padding: 0 0 .4rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600; font-size: 1.08rem; letter-spacing: .06em;
+  color: var(--bronze-light, #d9b87a);
+  border-bottom: 1px solid rgba(201, 169, 98, 0.28);
+}
+.bar-subhead:first-child { margin-top: 0; }
 
 /* ====================================================================
    CONTACTS: hall floor-plan (SVG, top-down)
