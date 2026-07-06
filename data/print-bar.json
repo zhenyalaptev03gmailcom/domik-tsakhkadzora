@@ -414,14 +414,9 @@
         "price": "6 900"
       },
       {
-        "name": "Ariats (розе)",
+        "name": "Takar (розе)",
         "vol": "",
-        "price": "8 500"
-      },
-      {
-        "name": "Hay Petnat",
-        "vol": "",
-        "price": "10 000"
+        "price": "уточняйте"
       }
     ]
   },
@@ -459,11 +454,6 @@
         "price": "3 000"
       },
       {
-        "name": "Bushmills",
-        "vol": "",
-        "price": "3 500"
-      },
-      {
         "name": "Glenfiddich 12",
         "vol": "",
         "price": "3 800"
@@ -494,11 +484,6 @@
         "price": "1 400"
       },
       {
-        "name": "ODEVI (фруктовая водка)",
-        "vol": "",
-        "price": "1 400"
-      },
-      {
         "name": "Absolut",
         "vol": "",
         "price": "1 500"
@@ -512,6 +497,11 @@
         "name": "Chisti Rosi",
         "vol": "",
         "price": "2 500"
+      },
+      {
+        "name": "ODEVI (фруктовая водка)",
+        "vol": "",
+        "price": "2 600 – 4 200"
       }
     ]
   },
