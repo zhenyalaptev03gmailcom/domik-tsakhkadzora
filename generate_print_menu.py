@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=6">
+<link rel="stylesheet" href="css/print-menu.css?v=7">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -141,22 +141,30 @@ CATALOGS = [
     {"before": "Завтрак", "bg": "img/print/catalog-1.jpg",
      "title": "Начало трапезы",
      "cats": ["Завтрак", "Закуски", "Салаты", "Суп"],
-     "dishes": ["Французский завтрак", "Фирменная бурата", "Греческий салат"],
+     "dishes": ["Французский завтрак", "Итальянский завтрак", "Панкейк с нутеллой",
+                "Фирменная бурата", "Карпаччо", "Брускетта с томатами",
+                "Греческий салат", "Салат капрезе", "Томатный крем суп"],
      "note": "Утро, лёгкие закуски и салаты"},
     {"before": "Паста", "bg": "img/print/catalog-2.jpg",
      "title": "Главные блюда",
      "cats": ["Паста", "Основные блюда", "От шеф-повара"],
-     "dishes": ["Паста карбонара", "Пеппер стейк", "Стейк рибай"],
+     "dishes": ["Паста карбонара", "Паста четыре сыра", "Фирменный кебаб",
+                "Пеппер стейк", "Долма", "Куриное филе по-французски",
+                "Стейк рибай", "Домик", "Медуза"],
      "note": "Паста, мясо на углях и авторские сеты"},
     {"before": "Печь и гриль", "bg": "img/print/catalog-3.jpg",
      "title": "Огонь и море",
      "cats": ["Печь и гриль", "Рыба и морепродукты", "Армянские традиции"],
-     "dishes": ["Пеперони", "Форель цельная", "Хачапури аджарский"],
+     "dishes": ["Пеперони", "Маргарита", "Прошутто",
+                "Хачапури аджарский", "Хачапури мегрельский", "Бургер гриль",
+                "Форель цельная", "Стейк лосося", "Хаш"],
      "note": "С открытого огня, печи и тандыра"},
     {"before": "Гарниры", "bg": "img/print/catalog-4.jpg",
      "title": "Сладкая часть",
      "cats": ["Гарниры", "Детское меню", "Десерты", "Хлеб"],
-     "dishes": ["Тирамису", "Чизкейк сан-себастьян", "Шоколадный вулкан"],
+     "dishes": ["Тирамису", "Чизкейк сан-себастьян", "Шоколадный вулкан",
+                "Брауни", "Кокосовый тарт", "Яблочный пирог",
+                "Гата армянская", "Фруктовый ассорти", "Мороженое"],
      "note": "Десерты, детям и к столу"},
 ]
 CATALOG_BEFORE = {c["before"]: c for c in CATALOGS}
