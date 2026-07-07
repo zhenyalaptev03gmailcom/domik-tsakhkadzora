@@ -41,19 +41,13 @@ CAT_TITLE = '<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</sp
 SUBCAT_TITLE = '<h3 class="book-subcat flow-keep"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h3>'
 
 DISH_TPL = '''<article class="book-dish">
-  <div class="book-dish__thumb">{{THUMB}}</div>
-  <div class="book-dish__body">
-    <div class="book-dish__head">
-      <span class="book-dish__name">{{NAME}}</span>
-      <span class="book-dish__leader"></span>
-      <span class="book-dish__price">{{PRICE}}</span>
-    </div>
-    <p class="book-dish__desc">{{DESC}}</p>
+  <div class="book-dish__head">
+    <span class="book-dish__name">{{NAME}}</span>
+    <span class="book-dish__leader"></span>
+    <span class="book-dish__price">{{PRICE}}</span>
   </div>
+  <p class="book-dish__desc">{{DESC}}</p>
 </article>'''
-
-THUMB_IMG = '<img src="{SRC}" alt="" loading="lazy">'
-THUMB_PH = '<span class="book-dish__ph">DoMik</span>'
 
 # Барная карта начинается с нового листа: .book-break
 BAR_PART = '''<section class="bar-part flow-keep book-break">
@@ -167,14 +161,14 @@ CATALOGS = [
 ]
 CATALOG_BEFORE = {c["before"]: c for c in CATALOGS}
 
-# Приветственный разворот (сразу после обложки) и барный (вместо кремового bar-part).
-WELCOME = {
+# Прощальный разворот (в КОНЦЕ книги) и барный (вместо кремового bar-part).
+FAREWELL = {
     "bg": "img/print/catalog-welcome.jpg",
     "kicker": "Ресторан «Домик» · Цахкадзор",
-    "title": "Добро пожаловать",
-    "subtitle": "Кухня Кавказа и Европы у подножия гор",
+    "title": "Ждём вас снова",
+    "subtitle": "Спасибо, что были с нами",
     "dishes": ["Домик", "Стейк рибай", "Долма"],
-    "note": "Очаг, гостеприимство и вкус гор",
+    "note": "Цахкадзор, ул. Хачатура Кечареци 6 · +374 95 505 656",
 }
 BAR_SPREAD = {
     "bg": "img/print/catalog-bar.jpg",
@@ -215,7 +209,7 @@ def render_catalog(cat):
             '</div></section>')
 
 
-parts = [COVER_HTML, render_catalog(WELCOME)]   # обложка + приветственный разворот
+parts = [COVER_HTML]   # обложка; первый разворот — «Начало трапезы» перед «Завтрак»
 
 # ---------- кухня из curated data/print-menu.json ----------
 pm = json.load(io.open(os.path.join(ROOT, "data", "print-menu.json"), encoding='utf-8'))
@@ -237,10 +231,7 @@ for sec in pm:
         name_html = esc(it['name'].strip())
         if it.get('sizes'):
             name_html += f' <span class="dish-size">{esc(it["sizes"].strip())}</span>'
-        img = DISH_PHOTO.get(it['name'].strip())
-        thumb = THUMB_IMG.replace('{SRC}', img) if img else THUMB_PH
         parts.append(fill(DISH_TPL,
-                          THUMB=thumb,
                           NAME=name_html,
                           DESC=esc((it.get('desc') or '').strip()),
                           PRICE=price_kitchen(it.get('price', ''))))
@@ -282,6 +273,9 @@ for sec in bar:
         emit_curated_bar(bar_placed[title])
 
 print("bar sections:", len(bar), "| bar rows:", bar_rows_total)
+
+# ---------- прощальный разворот в самом конце книги ----------
+parts.append(render_catalog(FAREWELL))
 
 # ---------- сборка ----------
 out = (HEAD + "\n" + TOOLBAR + '\n<div id="book" class="book">\n'
