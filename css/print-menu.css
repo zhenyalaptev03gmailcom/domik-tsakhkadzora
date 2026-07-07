@@ -126,13 +126,24 @@ body{
 }
 .book-cat__title .dia{ flex:0 0 auto; color:var(--bronze); font-size:11pt; letter-spacing:0; transform:translateY(-1px); }
 
-.book-dish{ margin:0 0 6.5mm; }
+.book-dish{ display:flex; gap:4.5mm; align-items:flex-start; margin:0 0 5mm; }
+.book-dish__thumb{
+  flex:0 0 auto; width:23mm; height:17mm; overflow:hidden;
+  border:1px solid var(--bronze); background:#efe6d2;
+  box-shadow:0 0.5mm 1.6mm rgba(43,33,24,0.18);
+}
+.book-dish__thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+.book-dish__ph{
+  display:flex; align-items:center; justify-content:center; width:100%; height:100%;
+  font-family:var(--serif); font-style:italic; font-size:8.5pt; letter-spacing:0.08em; color:var(--bronze-dark);
+}
+.book-dish__body{ flex:1 1 auto; min-width:0; padding-top:0.4mm; }
 .book-dish__head{ display:flex; align-items:flex-end; gap:2mm; }
 .book-dish__name{ font-family:var(--serif); font-weight:500; font-size:14.5pt; line-height:1.2; color:var(--ink); flex:0 1 auto; }
 .book-dish__leader{ flex:1 1 auto; align-self:flex-end; height:0; margin:0 1.5mm 3pt; border-bottom:1.4pt dotted var(--hair); min-width:6mm; }
 .book-dish__price{ font-family:var(--serif); font-weight:600; font-size:14.5pt; line-height:1.2; color:var(--bronze-dark); white-space:nowrap; flex:0 0 auto; font-variant-numeric:oldstyle-nums tabular-nums; }
 .book-dish__price .cur{ font-size:0.86em; color:var(--bronze); margin-left:0.12em; }
-.book-dish__desc{ font-family:var(--serif); font-style:italic; font-weight:400; font-size:11pt; line-height:1.35; color:var(--ink-soft); margin:1mm 0 0; max-width:80%; }
+.book-dish__desc{ font-family:var(--serif); font-style:italic; font-weight:400; font-size:11pt; line-height:1.35; color:var(--ink-soft); margin:1mm 0 0; }
 .book-dish__desc:empty{ display:none; margin:0; }
 
 /* ============================================================
@@ -250,6 +261,10 @@ body{
   font-family:var(--serif); font-style:italic; font-size:12pt; letter-spacing:0.02em;
   color:rgba(246,239,221,0.85); margin:2mm 0 0;
 }
+/* разворот-разделитель без коллажа (напр. барный) — контент по центру */
+.catalog-spread--divider .catalog__inner{ justify-content:center; }
+.catalog-spread--divider .catalog__title{ font-size:52pt; }
+.catalog-spread--divider .catalog__note{ margin-top:12mm; }
 
 /* ============================================================
    ЭКРАННАЯ ПАНЕЛЬ (кнопка печати) — только экран

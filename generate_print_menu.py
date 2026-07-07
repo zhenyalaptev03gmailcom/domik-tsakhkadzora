@@ -41,13 +41,19 @@ CAT_TITLE = '<h2 class="book-cat__title flow-keep"><span class="dia">&#9670;</sp
 SUBCAT_TITLE = '<h3 class="book-subcat flow-keep"><span class="dia">&#9670;</span>{{TITLE}}<span class="dia">&#9670;</span></h3>'
 
 DISH_TPL = '''<article class="book-dish">
-  <div class="book-dish__head">
-    <span class="book-dish__name">{{NAME}}</span>
-    <span class="book-dish__leader"></span>
-    <span class="book-dish__price">{{PRICE}}</span>
+  <div class="book-dish__thumb">{{THUMB}}</div>
+  <div class="book-dish__body">
+    <div class="book-dish__head">
+      <span class="book-dish__name">{{NAME}}</span>
+      <span class="book-dish__leader"></span>
+      <span class="book-dish__price">{{PRICE}}</span>
+    </div>
+    <p class="book-dish__desc">{{DESC}}</p>
   </div>
-  <p class="book-dish__desc">{{DESC}}</p>
 </article>'''
+
+THUMB_IMG = '<img src="{SRC}" alt="" loading="lazy">'
+THUMB_PH = '<span class="book-dish__ph">DoMik</span>'
 
 # Барная карта начинается с нового листа: .book-break
 BAR_PART = '''<section class="bar-part flow-keep book-break">
@@ -81,7 +87,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=5">
+<link rel="stylesheet" href="css/print-menu.css?v=6">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -161,16 +167,39 @@ CATALOGS = [
 ]
 CATALOG_BEFORE = {c["before"]: c for c in CATALOGS}
 
+# Приветственный разворот (сразу после обложки) и барный (вместо кремового bar-part).
+WELCOME = {
+    "bg": "img/print/catalog-welcome.jpg",
+    "kicker": "Ресторан «Домик» · Цахкадзор",
+    "title": "Добро пожаловать",
+    "subtitle": "Кухня Кавказа и Европы у подножия гор",
+    "dishes": ["Домик", "Стейк рибай", "Долма"],
+    "note": "Очаг, гостеприимство и вкус гор",
+}
+BAR_SPREAD = {
+    "bg": "img/print/catalog-bar.jpg",
+    "kicker": "DoMik",
+    "title": "Барная карта",
+    "subtitle": "Вино · Коктейли · Кофе · Чай",
+    "dishes": [],
+    "note": "Напитки и авторские коктейли",
+}
+
 def render_catalog(cat):
     photos = []
-    for dn in cat["dishes"]:
+    for dn in cat.get("dishes", []):
         img = DISH_PHOTO.get(dn)
         if not img:
             continue
         photos.append(f'<figure class="catalog__photo"><img src="{img}" alt="{esc(dn)}" '
                       f'loading="lazy"><figcaption>{esc(dn)}</figcaption></figure>')
-    cats_line = ' &#183; '.join(esc(c) for c in cat["cats"])
-    return ('<section class="catalog-spread">'
+    if cat.get("cats"):
+        line = ' &#183; '.join(esc(c) for c in cat["cats"])
+    else:
+        line = esc(cat.get("subtitle", ""))
+    cls = "catalog-spread" + ("" if photos else " catalog-spread--divider")
+    photos_html = ('<div class="catalog__photos">' + ''.join(photos) + '</div>') if photos else ''
+    return (f'<section class="{cls}">'
             f'<img class="catalog__bg" src="{cat["bg"]}" alt="" aria-hidden="true">'
             '<div class="catalog__overlay" aria-hidden="true"></div>'
             '<div class="catalog__frame" aria-hidden="true"></div>'
@@ -179,14 +208,14 @@ def render_catalog(cat):
             f'<div class="catalog__kicker">{esc(cat.get("kicker", "Меню · DoMik"))}</div>'
             f'<h2 class="catalog__title">{esc(cat["title"])}</h2>'
             '<div class="catalog__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>'
-            f'<div class="catalog__cats">{cats_line}</div>'
+            f'<div class="catalog__cats">{line}</div>'
             '</div>'
-            '<div class="catalog__photos">' + ''.join(photos) + '</div>'
+            + photos_html +
             f'<div class="catalog__note">{esc(cat.get("note", ""))}</div>'
             '</div></section>')
 
 
-parts = [COVER_HTML]
+parts = [COVER_HTML, render_catalog(WELCOME)]   # обложка + приветственный разворот
 
 # ---------- кухня из curated data/print-menu.json ----------
 pm = json.load(io.open(os.path.join(ROOT, "data", "print-menu.json"), encoding='utf-8'))
@@ -208,7 +237,10 @@ for sec in pm:
         name_html = esc(it['name'].strip())
         if it.get('sizes'):
             name_html += f' <span class="dish-size">{esc(it["sizes"].strip())}</span>'
+        img = DISH_PHOTO.get(it['name'].strip())
+        thumb = THUMB_IMG.replace('{SRC}', img) if img else THUMB_PH
         parts.append(fill(DISH_TPL,
+                          THUMB=thumb,
                           NAME=name_html,
                           DESC=esc((it.get('desc') or '').strip()),
                           PRICE=price_kitchen(it.get('price', ''))))
@@ -218,7 +250,7 @@ print("kitchen sections:", len(pm), "| dishes:", dish_count)
 # ---------- барная карта из data/print-bar.json (ОТВЯЗАНА от сайта) ----------
 # Порядок разделов задаётся самим print-bar.json (безалкогольное идёт первым).
 # «К пиву» остаётся curated-разделом из print-menu.json и вставляется после «Пиво».
-parts.append(BAR_PART)
+parts.append(render_catalog(BAR_SPREAD))   # фотографический барный разворот (вместо кремового)
 bar = json.load(io.open(os.path.join(ROOT, "data", "print-bar.json"), encoding='utf-8'))
 bar_rows_total = 0
 
