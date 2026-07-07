@@ -128,7 +128,7 @@ def fill(tpl, **kw):
 # Карта «имя блюда -> фото» из сайтового menu.json (там реальные фото).
 try:
     _site = json.load(io.open(os.path.join(ROOT, "data", "menu.json"), encoding='utf-8'))
-    DISH_PHOTO = {it["name"].strip(): it["local_image"].split("?")[0]
+    DISH_PHOTO = {it["name"].strip(): it["local_image"]   # с ?v — кэш-бастинг и в книге
                   for c in _site for it in c.get("items", [])
                   if it.get("local_image")}
 except Exception:
