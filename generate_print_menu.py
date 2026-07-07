@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=4">
+<link rel="stylesheet" href="css/print-menu.css?v=5">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -98,7 +98,7 @@ HEAD = '''<!DOCTYPE html>
 </head>
 <body>'''
 
-SCRIPT = '<script src="js/print-paginate.js?v=5"></script>'
+SCRIPT = '<script src="js/print-paginate.js?v=6"></script>'
 
 
 def esc(t):
@@ -122,6 +122,70 @@ def fill(tpl, **kw):
     return tpl
 
 
+# ============================================================
+#  КАТАЛОГ-РАЗВОРОТЫ — журнальные фото-страницы между группами
+# ============================================================
+# Карта «имя блюда -> фото» из сайтового menu.json (там реальные фото).
+try:
+    _site = json.load(io.open(os.path.join(ROOT, "data", "menu.json"), encoding='utf-8'))
+    DISH_PHOTO = {it["name"].strip(): it["local_image"].split("?")[0]
+                  for c in _site for it in c.get("items", [])
+                  if it.get("local_image")}
+except Exception:
+    DISH_PHOTO = {}
+
+# before — раздел, ПЕРЕД которым вставляется разворот (открывает главу).
+# bg — полностраничный атмосферный фон (img/print/catalog-N.jpg).
+# dishes — блюда для коллажа (фото тянутся из menu.json по имени).
+CATALOGS = [
+    {"before": "Завтрак", "bg": "img/print/catalog-1.jpg",
+     "title": "Начало трапезы",
+     "cats": ["Завтрак", "Закуски", "Салаты", "Суп"],
+     "dishes": ["Французский завтрак", "Фирменная бурата", "Греческий салат"],
+     "note": "Утро, лёгкие закуски и салаты"},
+    {"before": "Паста", "bg": "img/print/catalog-2.jpg",
+     "title": "Главные блюда",
+     "cats": ["Паста", "Основные блюда", "От шеф-повара"],
+     "dishes": ["Паста карбонара", "Пеппер стейк", "Стейк рибай"],
+     "note": "Паста, мясо на углях и авторские сеты"},
+    {"before": "Печь и гриль", "bg": "img/print/catalog-3.jpg",
+     "title": "Огонь и море",
+     "cats": ["Печь и гриль", "Рыба и морепродукты", "Армянские традиции"],
+     "dishes": ["Пеперони", "Форель цельная", "Хачапури аджарский"],
+     "note": "С открытого огня, печи и тандыра"},
+    {"before": "Гарниры", "bg": "img/print/catalog-4.jpg",
+     "title": "Сладкая часть",
+     "cats": ["Гарниры", "Детское меню", "Десерты", "Хлеб"],
+     "dishes": ["Тирамису", "Чизкейк сан-себастьян", "Шоколадный вулкан"],
+     "note": "Десерты, детям и к столу"},
+]
+CATALOG_BEFORE = {c["before"]: c for c in CATALOGS}
+
+def render_catalog(cat):
+    photos = []
+    for dn in cat["dishes"]:
+        img = DISH_PHOTO.get(dn)
+        if not img:
+            continue
+        photos.append(f'<figure class="catalog__photo"><img src="{img}" alt="{esc(dn)}" '
+                      f'loading="lazy"><figcaption>{esc(dn)}</figcaption></figure>')
+    cats_line = ' &#183; '.join(esc(c) for c in cat["cats"])
+    return ('<section class="catalog-spread">'
+            f'<img class="catalog__bg" src="{cat["bg"]}" alt="" aria-hidden="true">'
+            '<div class="catalog__overlay" aria-hidden="true"></div>'
+            '<div class="catalog__frame" aria-hidden="true"></div>'
+            '<div class="catalog__inner">'
+            '<div class="catalog__top">'
+            f'<div class="catalog__kicker">{esc(cat.get("kicker", "Меню · DoMik"))}</div>'
+            f'<h2 class="catalog__title">{esc(cat["title"])}</h2>'
+            '<div class="catalog__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>'
+            f'<div class="catalog__cats">{cats_line}</div>'
+            '</div>'
+            '<div class="catalog__photos">' + ''.join(photos) + '</div>'
+            f'<div class="catalog__note">{esc(cat.get("note", ""))}</div>'
+            '</div></section>')
+
+
 parts = [COVER_HTML]
 
 # ---------- кухня из curated data/print-menu.json ----------
@@ -132,6 +196,8 @@ for sec in pm:
     if sec.get('bar_after'):
         bar_placed[sec['bar_after']] = sec
         continue
+    if sec['name'] in CATALOG_BEFORE:            # журнальный разворот открывает главу
+        parts.append(render_catalog(CATALOG_BEFORE[sec['name']]))
     parts.append(fill(CAT_TITLE, TITLE=esc(sec['name'].strip())))
     if sec.get('note'):
         parts.append('<p class="book-cat__note flow-keep">' + esc(sec['note'].strip()) + '</p>')

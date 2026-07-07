@@ -178,6 +178,80 @@ body{
 .bar-row__price .cur{ font-size:0.86em; color:var(--bronze); margin-left:0.1em; }
 
 /* ============================================================
+   КАТАЛОГ-РАЗВОРОТ — журнальная фото-страница (отдельный лист)
+   ============================================================ */
+.sheet--catalog{ padding:0; }
+.sheet--catalog .catalog-spread{ width:100%; height:100%; }
+.catalog-spread{
+  position:relative; overflow:hidden;
+  display:flex; flex-direction:column;
+  background:var(--stage); color:var(--paper);
+}
+.catalog__bg{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:cover; object-position:center;
+}
+.catalog__overlay{
+  position:absolute; inset:0; pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(17,12,7,0.56) 0%, rgba(22,16,10,0.44) 30%, rgba(16,11,7,0.60) 60%, rgba(10,7,4,0.93) 100%),
+    radial-gradient(130% 85% at 50% 22%, rgba(20,14,9,0) 40%, rgba(10,6,3,0.55) 100%);
+}
+.catalog__frame{
+  position:absolute; inset:9mm; pointer-events:none;
+  border:1px solid rgba(201,169,98,0.55);
+}
+.catalog__frame::before{
+  content:""; position:absolute; inset:2.4mm;
+  border:0.8px solid rgba(201,169,98,0.32);
+}
+.catalog__inner{
+  position:relative; z-index:1; height:100%;
+  padding:23mm 20mm 20mm;
+  display:flex; flex-direction:column; justify-content:space-between; align-items:center;
+  text-align:center;
+}
+.catalog__kicker{
+  font-family:var(--sans); font-weight:500; font-size:9.5pt; letter-spacing:0.42em;
+  text-transform:uppercase; color:var(--bronze-light); padding-left:0.42em; margin:0 0 9mm;
+}
+.catalog__title{
+  font-family:var(--serif); font-weight:500; font-style:italic; font-size:44pt; line-height:1.02;
+  letter-spacing:0.03em; color:var(--paper); margin:0;
+  text-shadow:0 2mm 9mm rgba(0,0,0,0.55);
+}
+.catalog__diamonds{
+  font-size:11pt; letter-spacing:0.9em; color:var(--bronze-light);
+  margin:7mm 0 5mm; padding-left:0.9em;
+}
+.catalog__cats{
+  font-family:var(--sans); font-weight:400; font-size:10pt; letter-spacing:0.26em;
+  text-transform:uppercase; color:rgba(246,239,221,0.92); padding-left:0.26em; max-width:150mm;
+  line-height:1.7;
+}
+.catalog__photos{
+  display:flex; justify-content:center; align-items:flex-end; gap:5mm;
+  padding:0 2mm;
+}
+.catalog__photo{
+  margin:0; width:47mm; flex:0 0 auto;
+  background:var(--paper); padding:2.4mm 2.4mm 0;
+  border:1px solid var(--bronze); box-shadow:0 4mm 13mm rgba(0,0,0,0.55);
+}
+.catalog__photo img{ display:block; width:100%; height:35mm; object-fit:cover; }
+.catalog__photo figcaption{
+  font-family:var(--serif); font-style:italic; font-size:9.5pt; line-height:1.2; color:var(--ink);
+  padding:2mm 1mm 3mm;
+}
+.catalog__photo:nth-child(1){ transform:rotate(-3deg) translateY(3mm); }
+.catalog__photo:nth-child(2){ transform:translateY(-4mm) scale(1.07); z-index:2; }
+.catalog__photo:nth-child(3){ transform:rotate(3deg) translateY(3mm); }
+.catalog__note{
+  font-family:var(--serif); font-style:italic; font-size:12pt; letter-spacing:0.02em;
+  color:rgba(246,239,221,0.85); margin:2mm 0 0;
+}
+
+/* ============================================================
    ЭКРАННАЯ ПАНЕЛЬ (кнопка печати) — только экран
    ============================================================ */
 .book-toolbar{ position:fixed; top:14px; right:14px; z-index:50; display:flex; gap:10px; font-family:var(--sans); }
