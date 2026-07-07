@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=8">
+<link rel="stylesheet" href="css/print-menu.css?v=9">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -187,38 +187,22 @@ BAR_SPREAD = {
     "note": "Напитки и авторские коктейли",
 }
 
-# Хаотичный «разброс» фото по листу (без рамок). Каждый пресет:
-# (left %, top %, ширина мм, поворот °, z-index). Высота = ширина * 0.7.
-SCATTER9 = [
-    (2, 2, 52, -9, 3), (34, 6, 46, 7, 5), (60, 0, 50, -6, 4),
-    (13, 30, 56, 10, 7), (44, 23, 50, -8, 9), (66, 31, 44, 12, 6),
-    (0, 58, 50, 5, 2), (30, 62, 54, -11, 8), (57, 53, 52, 8, 1),
-]
-SCATTER3 = [
-    (5, 30, 56, -8, 2), (35, 20, 58, 6, 3), (63, 32, 54, -7, 1),
-]
-
 def render_catalog(cat):
     srcs = []
     for dn in cat.get("dishes", []):
         img = DISH_PHOTO.get(dn)
         if img:
             srcs.append((img, dn))
-    preset = SCATTER9 if len(srcs) > 3 else SCATTER3
-    photos = []
-    for i, (img, dn) in enumerate(srcs):
-        left, top, w, rot, z = preset[i % len(preset)]
-        h = round(w * 0.7)
-        style = (f'left:{left}%;top:{top}%;width:{w}mm;height:{h}mm;'
-                 f'transform:rotate({rot}deg);z-index:{z};')
-        photos.append(f'<figure class="catalog__photo" style="{style}">'
-                      f'<img src="{img}" alt="{esc(dn)}" loading="lazy"></figure>')
+    photos = [f'<figure class="catalog__photo"><img src="{img}" alt="{esc(dn)}" loading="lazy"></figure>'
+              for img, dn in srcs]
+    # раскладка: >3 фото — редакционная мозаика (герой+лента+блок), 3 — аккуратный ряд
+    photos_cls = "catalog__photos catalog__photos--" + ("mosaic" if len(srcs) > 3 else "trio")
     if cat.get("cats"):
         line = ' &#183; '.join(esc(c) for c in cat["cats"])
     else:
         line = esc(cat.get("subtitle", ""))
     cls = "catalog-spread" + ("" if photos else " catalog-spread--divider")
-    photos_html = ('<div class="catalog__photos">' + ''.join(photos) + '</div>') if photos else ''
+    photos_html = (f'<div class="{photos_cls}">' + ''.join(photos) + '</div>') if photos else ''
     return (f'<section class="{cls}">'
             f'<img class="catalog__bg" src="{cat["bg"]}" alt="" aria-hidden="true">'
             '<div class="catalog__overlay" aria-hidden="true"></div>'
