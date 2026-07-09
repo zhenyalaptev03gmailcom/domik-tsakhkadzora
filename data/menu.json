@@ -1097,11 +1097,12 @@
         "price": "2 500",
         "composition": "Тортилья, курица, сыр",
         "id": "kesadilya-s-kuritsei",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Chicken quesadilla",
         "name_hy": "Կեսադիլյա հավով",
         "composition_en": "Tortilla, chicken, cheese",
-        "composition_hy": "Տորտիլյա, հավ, պանիր"
+        "composition_hy": "Տորտիլյա, հավ, պանիր",
+        "local_image": "img/menu/кесадилья-с-курицей.jpg?v=web1"
       },
       {
         "name": "Кесадилья с говядиной",
@@ -1372,7 +1373,7 @@
       },
       {
         "name": "Пельмени",
-        "price": "1 500",
+        "price": "1 600",
         "composition": "Пельмени с мясом",
         "id": "pelmeni",
         "local_image": "img/menu/пельмени.jpg?v=st4",
@@ -1396,7 +1397,7 @@
       },
       {
         "name": "Наггетсы",
-        "price": "1 500",
+        "price": "1 600",
         "composition": "Куриные наггетсы с картофелем фри",
         "id": "naggetsy",
         "has_image": false,
@@ -1407,7 +1408,7 @@
       },
       {
         "name": "Котлеты по-домашнему с картофельным пюре",
-        "price": "1 500",
+        "price": "1 600",
         "id": "kotlety-po-domashnemu-s-kartofelnym-pyure",
         "has_image": false,
         "name_en": "Homestyle cutlets with mashed potatoes",
