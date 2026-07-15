@@ -1553,26 +1553,26 @@
       {
         "name": "Мороженое",
         "price": "700",
-        "composition": "Пломбир",
+        "composition": "На выбор: ванильное, шоколадное, клубничное",
         "id": "ice-cream234567891011",
         "local_image": "img/menu/мороженое.jpg?v=fit800",
         "has_image": true,
         "name_en": "Ice cream",
         "name_hy": "Պաղպաղակ",
-        "composition_en": "Plombir ice cream",
-        "composition_hy": "Պլոմբիր պաղպաղակ"
+        "composition_en": "Choice of: vanilla, chocolate, strawberry",
+        "composition_hy": "Ընտրությամբ՝ վանիլ, շոկոլադ, ելակ"
       },
       {
         "name": "Фруктовое мороженое",
         "price": "1 500",
-        "composition": "Фруктовый сорбет",
+        "composition": "Ассорти фруктов и мороженое на выбор: ванильное, клубничное, шоколадное",
         "id": "fruit-icecream",
         "local_image": "img/menu/фруктовое-мороженое.jpg?v=fit800",
         "has_image": true,
         "name_en": "Fruit sorbet",
         "name_hy": "Մրգային պաղպաղակ",
-        "composition_en": "Fruit sorbet",
-        "composition_hy": "Մրգային սորբեթ"
+        "composition_en": "Fruit assortment and ice cream of choice: vanilla, strawberry, chocolate",
+        "composition_hy": "Մրգային ասորտի և պաղպաղակ ընտրությամբ՝ վանիլ, ելակ, շոկոլադ"
       },
       {
         "name": "Фруктовый ассорти",
