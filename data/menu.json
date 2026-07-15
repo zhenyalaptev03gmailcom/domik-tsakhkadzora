@@ -608,16 +608,16 @@
         "composition_hy": "Ածխի վրա խոզի մսի տեսականի"
       },
       {
-        "name": "Шпик свиной",
+        "name": "Антрекот на гриле",
         "price": "4 800",
-        "composition": "Свинина: антрекот и рёбра",
+        "composition": "Свиной антрекот на гриле",
         "sizes": "0,5 кг",
         "id": "shpik-svinoi",
         "has_image": false,
-        "name_en": "Pork entrecôte & ribs",
-        "name_hy": "Խոզի անտրեկոտ և կողիկ",
-        "composition_en": "Pork: entrecôte and ribs",
-        "composition_hy": "Խոզի միս՝ անտրեկոտ և կողիկներ"
+        "name_en": "Grilled entrecôte",
+        "name_hy": "Անտրեկոտ գրիլի վրա",
+        "composition_en": "Grilled pork entrecôte",
+        "composition_hy": "Խոզի անտրեկոտ գրիլի վրա"
       },
       {
         "name": "Баранина ассорти",
@@ -644,6 +644,28 @@
         "composition_hy": "Ածխի վրա հորթի միս"
       },
       {
+        "name": "Викинг свиной",
+        "price": "7 500",
+        "composition": "Свиная рулька · 3–4 человека",
+        "id": "viking-svinoy",
+        "has_image": false,
+        "name_en": "Pork Viking (knuckle)",
+        "name_hy": "Խոզի «Վիկինգ» (խոզի սրունք)",
+        "composition_en": "Pork knuckle · serves 3–4",
+        "composition_hy": "Խոզի սրունք · 3–4 հոգու"
+      },
+      {
+        "name": "Викинг бараний",
+        "price": "9 500",
+        "composition": "Нога баранины · 3–4 человека",
+        "id": "viking-baraniy",
+        "has_image": false,
+        "name_en": "Lamb Viking (leg)",
+        "name_hy": "Գառան «Վիկինգ» (բուդ)",
+        "composition_en": "Lamb leg · serves 3–4",
+        "composition_hy": "Գառան բուդ · 3–4 հոգու"
+      },
+      {
         "name": "Куриное филе с рисом",
         "price": "3 200",
         "composition": "Куриное филе, рис",
@@ -668,7 +690,7 @@
       {
         "name": "Куриное филе по-французски",
         "price": "3 700",
-        "composition": "Куриное филе с сырным и грибным соусом, картофель",
+        "composition": "Куриное филе, шпинат, сырный и грибной соус, картофель",
         "id": "kurinoe-file-po-frantsuzski",
         "local_image": "img/menu/куриное-филе-по-французски.jpg?v=web1",
         "has_image": true
@@ -708,16 +730,6 @@
         "name_hy": "Ֆիրմային խոզի գուլյաշ",
         "composition_en": "Pork, vegetables, rich sauce",
         "composition_hy": "Խոզի միս, բանջարեղեն, հարուստ սոուս"
-      },
-      {
-        "name": "Тайландский с рисом",
-        "price": "3 500",
-        "composition": "Говядина, ассорти перцев, рис, острый соус",
-        "id": "thai-salad",
-        "local_image": "img/menu/тай-салат.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Thai salad",
-        "name_hy": "Թայ աղցան"
       },
       {
         "name": "Немецкий гуляш с пивным соусом",
@@ -953,62 +965,62 @@
         "composition_hy": "Բանջարեղեն՝ թխված խմորի մեջ"
       },
       {
-        "name": "Маргарита",
+        "name": "Пицца Маргарита",
         "price": "2 800",
         "composition": "Томатный соус, моцарелла, базилик",
         "id": "margarita234567891011121314151617181920212223",
         "local_image": "img/menu/маргарита.jpg?v=fit800",
         "has_image": true,
-        "name_en": "Margherita",
-        "name_hy": "Մարգարիտա",
+        "name_en": "Pizza Margherita",
+        "name_hy": "Պիցցա Մարգարիտա",
         "composition_en": "Tomato sauce, mozzarella, basil",
         "composition_hy": "Լոլիկի սոուս, մոցարելլա, ռեհան"
       },
       {
-        "name": "Авокадо",
+        "name": "Пицца Авокадо",
         "price": "3 300",
         "composition": "Моцарелла, авокадо, овощи",
         "id": "avocado234",
         "local_image": "img/menu/авокадо.jpg?v=fit800",
         "has_image": true,
-        "name_en": "Avocado",
-        "name_hy": "Ավոկադո",
+        "name_en": "Pizza Avocado",
+        "name_hy": "Պիցցա Ավոկադո",
         "composition_en": "Mozzarella, avocado, vegetables",
         "composition_hy": "Մոցարելլա, ավոկադո, բանջարեղեն"
       },
       {
-        "name": "Четыре сыра",
+        "name": "Пицца Четыре сыра",
         "price": "3 900",
         "composition": "Моцарелла и три вида сыра, сливочная основа",
         "id": "four-cheeses23456",
         "local_image": "img/menu/четыре-сыра.jpg?v=fit800",
         "has_image": true,
-        "name_en": "Four cheeses",
-        "name_hy": "Չորս պանիր",
+        "name_en": "Pizza Four cheeses",
+        "name_hy": "Պիցցա Չորս պանիր",
         "composition_en": "Mozzarella and three cheeses, cream base",
         "composition_hy": "Մոցարելլա և երեք տեսակի պանիր, սերուցքային հիմք"
       },
       {
-        "name": "Прошутто",
+        "name": "Пицца Прошутто",
         "price": "4 500",
         "composition": "Томатный соус, моцарелла, прошутто, руккола",
         "id": "prosciutto234567",
         "local_image": "img/menu/прошутто.jpg?v=fit800",
         "has_image": true,
-        "name_en": "Prosciutto",
-        "name_hy": "Պրոշուտո",
+        "name_en": "Pizza Prosciutto",
+        "name_hy": "Պիցցա Պրոշուտո",
         "composition_en": "Tomato sauce, mozzarella, prosciutto, arugula",
         "composition_hy": "Լոլիկի սոուս, մոցարելլա, պրոշուտո, ռուկոլա"
       },
       {
-        "name": "Пеперони",
+        "name": "Пицца Пеперони",
         "price": "4 500",
         "composition": "Томатный соус, моцарелла, пепперони",
         "id": "pepperoni2345678910111213141516171819",
         "local_image": "img/menu/пеперони.jpg?v=fit800",
         "has_image": true,
-        "name_en": "Pepperoni",
-        "name_hy": "Պեպերոնի",
+        "name_en": "Pizza Pepperoni",
+        "name_hy": "Պիցցա Պեպերոնի",
         "composition_en": "Tomato sauce, mozzarella, pepperoni",
         "composition_hy": "Լոլիկի սոուս, մոցարելլա, պեպերոնի"
       },
