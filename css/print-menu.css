@@ -9,7 +9,7 @@
 @page { size: A4 portrait; margin: 0; }
 
 :root{
-  --paper:        #f6efdd;
+  --paper:        #f0e3c6;   /* заметный бежевый «книжный» тон — виден и на бумаге */
   --ink:          #2b2118;
   --ink-soft:     #6f5d49;
   --bronze:       #a67c52;
@@ -26,7 +26,7 @@
   --sans:  'Outfit', -apple-system, 'Segoe UI', sans-serif;
 }
 
-*{ box-sizing: border-box; }
+*{ box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 html,body{ margin:0; padding:0; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
 body{
   background: var(--stage);

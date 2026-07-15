@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=9">
+<link rel="stylesheet" href="css/print-menu.css?v=10">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -91,7 +91,7 @@ HEAD = '''<!DOCTYPE html>
 </style>
 <meta name="description" content="Печатное меню ресторана «Домик Цахкадзора» — книгой, для печати и сохранения в PDF.">
 <meta name="robots" content="noindex, follow">
-<meta name="theme-color" content="#f6efdd">
+<meta name="theme-color" content="#f0e3c6">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="img/favicon-32.png">
 <link rel="apple-touch-icon" href="img/favicon-180.png">
