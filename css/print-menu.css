@@ -280,9 +280,11 @@ body{
 @media print{
   html,body{ background:#fff !important; margin:0; padding:0; }
   body{ padding:0; }
-  .book{ width:auto; gap:0; zoom:1 !important; }
+  /* ВАЖНО: block, не flex — Chrome игнорирует break-after у flex-детей,
+     из-за чего листы склеивались и разрывы страниц падали мимо границ */
+  .book{ display:block; width:auto; gap:0; zoom:1 !important; }
   .book-toolbar{ display:none !important; }
-  .sheet{ box-shadow:none; margin:0; break-after:page; }
+  .sheet{ box-shadow:none; margin:0 auto; break-after:page; break-inside:avoid; }
   .sheet:last-child{ break-after:auto; }
 }
 
