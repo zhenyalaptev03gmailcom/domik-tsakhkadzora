@@ -87,29 +87,29 @@ body{
   position:relative;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
-  background-color: var(--paper);
+  background: radial-gradient(120% 90% at 50% 30%, #2e2419 0%, #1d1712 55%, #120d09 100%);
 }
-.book-cover__frame{ position:absolute; inset:12mm; border:1px solid var(--hair); pointer-events:none; }
-.book-cover__frame::before{ content:""; position:absolute; inset:3mm; border:1.4px solid var(--bronze); }
+.book-cover__frame{ position:absolute; inset:12mm; border:1px solid rgba(201,169,98,0.5); pointer-events:none; }
+.book-cover__frame::before{ content:""; position:absolute; inset:3mm; border:1.4px solid var(--bronze-light); }
 .book-cover__corners{ position:absolute; inset:0; pointer-events:none; }
-.book-cover__corners span{ position:absolute; width:15mm; height:15mm; border:0 solid var(--bronze); }
+.book-cover__corners span{ position:absolute; width:15mm; height:15mm; border:0 solid var(--bronze-light); }
 .book-cover__corners span:nth-child(1){ top:9mm; left:9mm; border-top-width:1.4px; border-left-width:1.4px; }
 .book-cover__corners span:nth-child(2){ top:9mm; right:9mm; border-top-width:1.4px; border-right-width:1.4px; }
 .book-cover__corners span:nth-child(3){ bottom:9mm; left:9mm; border-bottom-width:1.4px; border-left-width:1.4px; }
 .book-cover__corners span:nth-child(4){ bottom:9mm; right:9mm; border-bottom-width:1.4px; border-right-width:1.4px; }
 .book-cover__inner{ position:relative; z-index:1; max-width:152mm; }
 .book-cover__house{ width:62mm; height:auto; display:block; margin:0 auto 7mm; }
-.book-cover__house path{ fill:none; stroke:var(--bronze); stroke-width:6; stroke-linecap:round; stroke-linejoin:round; }
-.book-cover__wordmark{ font-family:var(--serif); font-weight:500; font-size:66pt; line-height:0.95; letter-spacing:0.01em; color:var(--ink); margin:0 0 4mm; }
-.book-cover__wordmark b{ font-weight:600; color:var(--bronze-dark); }
-.book-cover__sub{ font-family:var(--sans); font-weight:400; font-size:11pt; letter-spacing:0.42em; text-transform:uppercase; color:var(--ink-soft); margin:0 0 13mm; padding-left:0.42em; }
-.book-cover__rule{ display:flex; align-items:center; justify-content:center; gap:5mm; color:var(--bronze); margin:0 0 12mm; }
-.book-cover__rule::before,.book-cover__rule::after{ content:""; width:34mm; height:0; border-top:1px solid var(--hair); }
+.book-cover__house path{ fill:none; stroke:var(--bronze-light); stroke-width:6; stroke-linecap:round; stroke-linejoin:round; }
+.book-cover__wordmark{ font-family:var(--serif); font-weight:500; font-size:66pt; line-height:0.95; letter-spacing:0.01em; color:var(--paper); margin:0 0 4mm; }
+.book-cover__wordmark b{ font-weight:600; color:var(--bronze-light); }
+.book-cover__sub{ font-family:var(--sans); font-weight:400; font-size:11pt; letter-spacing:0.42em; text-transform:uppercase; color:rgba(246,239,221,0.72); margin:0 0 13mm; padding-left:0.42em; }
+.book-cover__rule{ display:flex; align-items:center; justify-content:center; gap:5mm; color:var(--bronze-light); margin:0 0 12mm; }
+.book-cover__rule::before,.book-cover__rule::after{ content:""; width:34mm; height:0; border-top:1px solid rgba(201,169,98,0.45); }
 .book-cover__rule span{ font-size:10pt; }
-.book-cover__menu{ font-family:var(--serif); font-weight:400; font-style:italic; font-size:40pt; letter-spacing:0.22em; text-transform:uppercase; color:var(--bronze-dark); margin:0 0 5mm; padding-left:0.22em; }
+.book-cover__menu{ font-family:var(--serif); font-weight:400; font-style:italic; font-size:40pt; letter-spacing:0.22em; text-transform:uppercase; color:var(--bronze-light); margin:0 0 5mm; padding-left:0.22em; }
 .book-cover__diamonds{ font-size:12pt; letter-spacing:1.1em; color:var(--bronze); margin:5mm 0 0; padding-left:1.1em; }
-.book-cover__foot{ position:absolute; left:20mm; right:20mm; bottom:18mm; z-index:1; font-family:var(--sans); font-weight:400; font-size:9.5pt; letter-spacing:0.10em; line-height:1.7; color:var(--ink-soft); text-align:center; }
-.book-cover__foot b{ color:var(--bronze-dark); font-weight:500; }
+.book-cover__foot{ position:absolute; left:20mm; right:20mm; bottom:18mm; z-index:1; font-family:var(--sans); font-weight:400; font-size:9.5pt; letter-spacing:0.10em; line-height:1.7; color:rgba(246,239,221,0.65); text-align:center; }
+.book-cover__foot b{ color:var(--bronze-light); font-weight:500; }
 
 /* ============================================================
    ЗАГОЛОВОК РАЗДЕЛА + СТРОКА БЛЮДА
@@ -260,6 +260,12 @@ body{
 .catalog-spread--divider .catalog__inner{ justify-content:center; }
 .catalog-spread--divider .catalog__title{ font-size:52pt; }
 .catalog-spread--divider .catalog__note{ margin-top:12mm; }
+
+/* форзац: почти пустой лист с ромбом по центру (для кратности 4 страниц) */
+.flyleaf{
+  height:98%; display:flex; align-items:center; justify-content:center;
+  color:var(--bronze); font-size:12pt; letter-spacing:0;
+}
 
 /* ============================================================
    ЭКРАННАЯ ПАНЕЛЬ (кнопка печати) — только экран

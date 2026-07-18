@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=10">
+<link rel="stylesheet" href="css/print-menu.css?v=11">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -289,7 +289,12 @@ for sec in bar:
 
 print("bar sections:", len(bar), "| bar rows:", bar_rows_total)
 
-# ---------- прощальный разворот в самом конце книги ----------
+# ---------- форзацы + прощальный разворот в самом конце книги ----------
+# Два «пустых» листа-форзаца доводят книгу до 32 страниц (кратно 4 для
+# двусторонней печати/брошюровки) — финальная страница ложится на заднюю обложку.
+FLYLEAF = '<div class="flyleaf">&#9670;</div>'
+parts += ['<div class="book-break"></div>', FLYLEAF,
+          '<div class="book-break"></div>', FLYLEAF]
 parts.append(render_catalog(FAREWELL))
 
 # ---------- сборка ----------
