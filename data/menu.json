@@ -158,16 +158,14 @@
         "composition_hy": "Հայկական պանիրների տեսականի"
       },
       {
-        "name": "Карпаччо",
-        "price": "4 500",
-        "composition": "Тонко нарезанная говядина, пармезан, руккола, оливковое масло",
-        "id": "carpaccio",
-        "local_image": "img/menu/карпаччо.jpg?v=st4",
+        "name": "Немецкая закуска",
+        "price": "4 600",
+        "composition": "Картофель айдахо, сырные шарики, чесночный хлеб",
+        "id": "german-snack",
+        "local_image": "img/menu/немецкая-закуска.jpg?v=ig2",
         "has_image": true,
-        "name_en": "Carpaccio",
-        "name_hy": "Կարպաչո",
-        "composition_en": "Thinly sliced beef, parmesan, arugula, olive oil",
-        "composition_hy": "Բարակ կտրատած տավարի միս, պարմեզան, ռուկոլա, ձիթապտղի յուղ"
+        "name_en": "German appetizer",
+        "name_hy": "Գերմանական նախուտեստ"
       },
       {
         "name": "Фирменная бурата",
@@ -261,6 +259,14 @@
         "has_image": true,
         "name_en": "Fried cheese",
         "name_hy": "Տապակած պանիր"
+      },
+      {
+        "name": "Куриная темпура с соусом",
+        "price": "3 200",
+        "id": "kurinaya-tempura-s-sousom",
+        "has_image": false,
+        "name_en": "Chicken tempura with sauce",
+        "name_hy": "Հավի տեմպուրա սոուսով"
       },
       {
         "name": "Блинчики с мясом",
@@ -679,7 +685,7 @@
       },
       {
         "name": "Цыплёнок с овощами",
-        "price": "3 600",
+        "price": "3 400",
         "composition": "Цыплёнок на гриле с овощами",
         "id": "chicken-with-vegetables234",
         "local_image": "img/menu/курица-с-овощами.jpg?v=fit800",
@@ -690,14 +696,16 @@
       {
         "name": "Куриное филе по-французски",
         "price": "3 700",
-        "composition": "Куриное филе, шпинат, сырный и грибной соус, картофель",
+        "composition": "Куриное филе, шпинат, сырный и грибной соус",
         "id": "kurinoe-file-po-frantsuzski",
         "local_image": "img/menu/куриное-филе-по-французски.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "composition_en": "Chicken fillet, spinach, cheese and mushroom sauce",
+        "composition_hy": "Հավի ֆիլե, սպանախ, պանրի և սնկով սոուս"
       },
       {
         "name": "Индейка на гриле с цитрусовым соусом и киноа",
-        "price": "5 300",
+        "price": "5 200",
         "composition": "Индейка на гриле, цитрусовый соус, киноа",
         "id": "grilled-turkey-with-citrus-sauce-and-quinoa",
         "local_image": "img/menu/индейка-на-гриле-с-цит.jpg?v=fit800",
@@ -831,14 +839,15 @@
         "composition_hy": "Հավի թևիկներ կծու սոուսով"
       },
       {
-        "name": "Немецкая закуска",
-        "price": "4 600",
-        "composition": "Картофель айдахо, сырные шарики, чесночный хлеб",
-        "id": "german-snack",
-        "local_image": "img/menu/немецкая-закуска.jpg?v=ig2",
-        "has_image": true,
-        "name_en": "German appetizer",
-        "name_hy": "Գերմանական նախուտեստ"
+        "name": "Домашняя закуска",
+        "price": "3 000",
+        "composition": "Сельдь, картофель, домашние соленья",
+        "id": "domashnyaya-zakuska-k-pivu",
+        "has_image": false,
+        "name_en": "Home-style appetizer",
+        "name_hy": "Տնական նախուտեստ",
+        "composition_en": "Herring, potatoes, house pickles",
+        "composition_hy": "Ծովատառեխ, կարտոֆիլ, տնական թթուներ"
       },
       {
         "name": "Свиные рёбрышки острые",
@@ -877,7 +886,7 @@
       },
       {
         "name": "Семейный домик",
-        "price": "27 000",
+        "price": "28 500",
         "composition": "Большое ассорти шашлыков на углях · На 3–5 человек",
         "id": "assortment-of-barbecue",
         "local_image": "img/menu/ассорти-шашлыков.jpg?v=fit800",
@@ -897,7 +906,7 @@
       },
       {
         "name": "Стейк рибай",
-        "price": "16 000",
+        "price": "14 500",
         "composition": "Выдержанный стейк рибай",
         "id": "ribeye-steak2345678910111213",
         "local_image": "img/menu/стейк-рибай.jpg?v=fit800",
@@ -1150,7 +1159,7 @@
       },
       {
         "name": "Мидии",
-        "price": "4 500",
+        "price": "4 200",
         "composition": "Мидии в томатном соусе, подаются с гренками",
         "id": "mussels",
         "local_image": "img/menu/мидии.jpg?v=ig3",
@@ -1542,13 +1551,40 @@
         "composition_hy": "Ավանդական հայկական թխվածք"
       },
       {
+        "name": "Морковное пирожное",
+        "price": "2 000",
+        "id": "morkovnoe-pirozhnoe",
+        "has_image": false,
+        "name_en": "Carrot cake",
+        "name_hy": "Գազարի կեքս"
+      },
+      {
         "name": "Доме",
         "price": "2 000",
         "id": "dome",
         "local_image": "img/menu/dome.jpg?v=red1",
         "has_image": true,
         "name_en": "Dome",
-        "name_hy": "Դոմե"
+        "name_hy": "Դոմե",
+        "composition": "Десерт дня",
+        "composition_en": "Dessert of the day",
+        "composition_hy": "Օրվա աղանդեր"
+      },
+      {
+        "name": "Фирменное мороженое брауни",
+        "price": "1 700",
+        "id": "firm-morozhenoe-brauni",
+        "has_image": false,
+        "name_en": "Signature brownie ice cream",
+        "name_hy": "Ֆիրմային պաղպաղակ բրաունի"
+      },
+      {
+        "name": "Фирменное мороженое рафаэлло",
+        "price": "1 700",
+        "id": "firm-morozhenoe-rafaello",
+        "has_image": false,
+        "name_en": "Signature Raffaello ice cream",
+        "name_hy": "Ֆիրմային պաղպաղակ Ռաֆաելլո"
       },
       {
         "name": "Мороженое",

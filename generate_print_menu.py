@@ -142,7 +142,7 @@ CATALOGS = [
      "title": "Начало трапезы",
      "cats": ["Завтрак", "Закуски", "Салаты", "Суп"],
      "dishes": ["Французский завтрак", "Итальянский завтрак", "Панкейк с нутеллой",
-                "Фирменная бурата", "Карпаччо", "Брускетта с томатами",
+                "Фирменная бурата", "Салат Домик", "Брускетта с томатами",
                 "Греческий салат", "Салат капрезе", "Томатный крем суп"],
      "note": "Утро, лёгкие закуски и салаты"},
     {"before": "Паста", "bg": "img/print/catalog-2.jpg",
@@ -231,10 +231,15 @@ for sec in pm:
         continue
     if sec['name'] in CATALOG_BEFORE:            # журнальный разворот открывает главу
         parts.append(render_catalog(CATALOG_BEFORE[sec['name']]))
+    if sec.get('page_break'):                    # раздел начинается с нового листа
+        parts.append('<div class="book-break"></div>')
     parts.append(fill(CAT_TITLE, TITLE=esc(sec['name'].strip())))
     if sec.get('note'):
         parts.append('<p class="book-cat__note flow-keep">' + esc(sec['note'].strip()) + '</p>')
     for it in sec['items']:
+        if it.get('break'):                     # принудительный разрыв листа
+            parts.append('<div class="book-break"></div>')
+            continue
         if it.get('sub'):                       # подзаголовок-подраздел
             parts.append(fill(SUBCAT_TITLE, TITLE=esc(it['sub'].strip())))
             continue
