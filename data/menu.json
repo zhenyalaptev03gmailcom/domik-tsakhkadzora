@@ -1438,6 +1438,37 @@
     ]
   },
   {
+    "id": "2152",
+    "name": "Хлеб",
+    "name_en": "Bread",
+    "name_hy": "Հաց",
+    "slug": "hleb",
+    "items": [
+      {
+        "name": "Домашний хлеб",
+        "price": "700",
+        "composition": "Свежий тёплый домашний хлеб",
+        "id": "tandoor-bread2",
+        "local_image": "img/menu/тандырный-хлеб.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Fresh bread",
+        "name_hy": "Թարմ հաց"
+      },
+      {
+        "name": "Фокачча",
+        "price": "1 200",
+        "composition": "Итальянская лепёшка фокачча",
+        "id": "focaccia2345",
+        "local_image": "img/menu/фокачча.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Focaccia",
+        "name_hy": "Ֆոկաչչա",
+        "composition_en": "Italian focaccia flatbread",
+        "composition_hy": "Իտալական ֆոկաչա բլիթ"
+      }
+    ]
+  },
+  {
     "id": "2151",
     "name": "Часть любви",
     "name_en": "Desserts",
@@ -1626,37 +1657,6 @@
         "id": "arbuz-i-dynya",
         "local_image": "img/menu/арбуз-и-дыня.jpg?v=web1",
         "has_image": true
-      }
-    ]
-  },
-  {
-    "id": "2152",
-    "name": "Хлеб",
-    "name_en": "Bread",
-    "name_hy": "Հաց",
-    "slug": "hleb",
-    "items": [
-      {
-        "name": "Домашний хлеб",
-        "price": "700",
-        "composition": "Свежий тёплый домашний хлеб",
-        "id": "tandoor-bread2",
-        "local_image": "img/menu/тандырный-хлеб.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Fresh bread",
-        "name_hy": "Թարմ հաց"
-      },
-      {
-        "name": "Фокачча",
-        "price": "1 200",
-        "composition": "Итальянская лепёшка фокачча",
-        "id": "focaccia2345",
-        "local_image": "img/menu/фокачча.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Focaccia",
-        "name_hy": "Ֆոկաչչա",
-        "composition_en": "Italian focaccia flatbread",
-        "composition_hy": "Իտալական ֆոկաչա բլիթ"
       }
     ]
   }
