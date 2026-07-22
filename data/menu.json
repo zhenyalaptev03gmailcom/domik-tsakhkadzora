@@ -438,14 +438,14 @@
       {
         "name": "Томатный крем суп",
         "price": "2 000",
-        "composition": "Томаты, сливки, специи",
+        "composition": "Томаты, специи",
         "id": "tomato-cream-soup234567",
         "local_image": "img/menu/томатный-крем-суп.jpg?v=fit800",
         "has_image": true,
         "name_en": "Tomato cream soup",
         "name_hy": "Լոլիկի կրեմ ապուր",
-        "composition_en": "Tomatoes, cream, spices",
-        "composition_hy": "Լոլիկ, սերուցք, համեմունքներ"
+        "composition_en": "Tomatoes, spices",
+        "composition_hy": "Լոլիկ, համեմունքներ"
       },
       {
         "name": "Овощной крем-суп",
