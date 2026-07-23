@@ -154,16 +154,6 @@
         "composition_hy": "Հայկական պանիրների տեսականի"
       },
       {
-        "name": "Немецкая закуска",
-        "price": "4 600",
-        "composition": "Картофель айдахо, сырные шарики, чесночный хлеб",
-        "id": "german-snack",
-        "local_image": "img/menu/немецкая-закуска.jpg?v=ig2",
-        "has_image": true,
-        "name_en": "German appetizer",
-        "name_hy": "Գերմանական նախուտեստ"
-      },
-      {
         "name": "Фирменная бурата",
         "price": "3 800",
         "composition": "Фокачча, помидор, буррата, микс зелени",
@@ -851,14 +841,14 @@
         "has_image": true
       },
       {
-        "name": "Немецкий сет",
-        "price": "24 000",
-        "composition": "Ассорти сосисок, сырные шарики, чесночный хлеб, овощи · На 3–5 человек",
-        "id": "german-set",
-        "local_image": "img/menu/немецкий-сет.jpg?v=ctr1",
+        "name": "Немецкая закуска",
+        "price": "4 600",
+        "composition": "Картофель айдахо, сырные шарики, чесночный хлеб",
+        "id": "german-snack",
+        "local_image": "img/menu/немецкая-закуска.jpg?v=ig2",
         "has_image": true,
-        "name_en": "German set",
-        "name_hy": "Գերմանական սեթ"
+        "name_en": "German appetizer",
+        "name_hy": "Գերմանական նախուտեստ"
       },
       {
         "name": "Острые куриные крылышки",
@@ -932,6 +922,16 @@
         "name_hy": "Ռիբայ սթեյք",
         "composition_en": "Aged ribeye steak",
         "composition_hy": "Հնեցված ռիբայ սթեյք"
+      },
+      {
+        "name": "Немецкий сет",
+        "price": "24 000",
+        "composition": "Ассорти сосисок, сырные шарики, чесночный хлеб, овощи · На 3–5 человек",
+        "id": "german-set",
+        "local_image": "img/menu/немецкий-сет.jpg?v=ctr1",
+        "has_image": true,
+        "name_en": "German set",
+        "name_hy": "Գերմանական սեթ"
       },
       {
         "name": "Медуза",
