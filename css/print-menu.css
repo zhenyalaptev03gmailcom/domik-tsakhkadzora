@@ -176,6 +176,10 @@ body{
 .bar-row__leader{ flex:1 1 auto; align-self:flex-end; height:0; margin:0 1.5mm 3pt; border-bottom:1.4pt dotted var(--hair); min-width:6mm; }
 .bar-row__price{ font-family:var(--serif); font-weight:600; font-size:13pt; color:var(--bronze-dark); white-space:nowrap; flex:0 0 auto; font-variant-numeric:oldstyle-nums tabular-nums; }
 .bar-row__price .cur{ font-size:0.86em; color:var(--bronze); margin-left:0.1em; }
+.bar-row__note{
+  font-family:var(--serif); font-style:italic; font-weight:400; font-size:10.5pt; line-height:1.3;
+  color:var(--ink-soft); margin:-3mm 0 4.5mm; max-width:80%;
+}
 
 /* ============================================================
    КАТАЛОГ-РАЗВОРОТ — журнальная фото-страница (отдельный лист)

@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=11">
+<link rel="stylesheet" href="css/print-menu.css?v=12">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -281,8 +281,12 @@ for sec in bar:
         p = (it.get('price') or '').strip()
         if any(ch.isdigit() for ch in p):
             p = p + ' ֏'
-        parts.append(fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()),
-                          VOL=esc((it.get('vol') or '').strip()), PRICE=price_bar(p)))
+        row = fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()),
+                   VOL=esc((it.get('vol') or '').strip()), PRICE=price_bar(p))
+        if it.get('note'):                      # подпись-состав под строкой
+            row = row.replace('class="bar-row"', 'class="bar-row flow-keep"', 1)
+            row += '\n<p class="bar-row__note">' + esc(it['note'].strip()) + '</p>'
+        parts.append(row)
         bar_rows_total += 1
     if title in bar_placed:                 # curated-раздел «К пиву» сразу после «Пиво»
         emit_curated_bar(bar_placed[title])
