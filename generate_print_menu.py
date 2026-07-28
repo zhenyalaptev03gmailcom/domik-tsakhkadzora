@@ -12,6 +12,15 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
+# --no-bar: собрать книгу БЕЗ барной карты (пока бар не готов к печати).
+# «К пиву» тогда рендерится обычным разделом кухни на своём месте.
+NO_BAR = '--no-bar' in sys.argv
+LANG = 'ru'
+for _a in sys.argv:
+    if _a.startswith('--lang='):
+        LANG = _a.split('=',1)[1].strip().lower()
+assert LANG in ('ru','en','hy'), 'lang must be ru|en|hy'
+
 # ---------- обложка (отдельный лист, .book-cover распознаёт пагинатор) ----------
 COVER_HTML = '''<div class="book-cover">
   <div class="book-cover__frame"></div>
@@ -134,6 +143,153 @@ try:
 except Exception:
     DISH_PHOTO = {}
 
+# ============================================================
+#  ПЕРЕВОДЫ (для --lang=en|hy): имена/составы из menu.json сайта,
+#  пропуски — из SUPPLEMENT_*; разделы/UI — словари ниже.
+# ============================================================
+SITE_ITEM = {}
+try:
+    for _c in _site:
+        for _it in _c.get("items", []):
+            if _it.get("name"):
+                SITE_ITEM[_it["name"].strip()] = _it
+except Exception:
+    pass
+
+SUPPLEMENT_NAME = {
+ "Фирменная бурата": ("Signature Burrata", "Ֆիրմային բուռատա"),
+ "Блинчики с мясом": ("Crepes with Meat", "Բլիթներ մսով"),
+ "Тако с курицей": ("Chicken Tacos", "Տակո հավով"),
+ "Тако с креветками": ("Shrimp Tacos", "Տակո ծովախեցգետնով"),
+ "Цезарь с креветками": ("Caesar with Shrimp", "Ցեզար ծովախեցգետնով"),
+ "Домашний куриный суп": ("Homemade Chicken Soup", "Տնական հավի ապուր"),
+ "Паста песто": ("Pasta Pesto", "Պաստա պեստո"),
+ "Куриное филе по-французски": ("Chicken Fillet French-Style", "Հավի ֆիլե ֆրանսիական ձևով"),
+ "Пеппер стейк": ("Pepper Steak", "Պեպպեր սթեյք"),
+ "Солёные орехи": ("Salted Nuts", "Աղի ընկույզ"),
+ "Домик": ("Domik", "Դոմիկ"),
+ "Хачапури аджарский": ("Adjarian Khachapuri", "Աջարական խաչապուրի"),
+ "Хачапури имеретинский": ("Imeretian Khachapuri", "Իմերեթական խաչապուրի"),
+ "Хачапури мегрельский": ("Megrelian Khachapuri", "Մեգրելական խաչապուրի"),
+ "Арбуз и дыня": ("Watermelon & Melon", "Ձմերուկ և սեխ"),
+}
+SUPPLEMENT_DESC = {
+ "Французский завтрак": ("Croissants, jam, Nutella, European cheese", "Կրուասաններ, ջեմ, նուտելլա, եվրոպական պանիր"),
+ "Английский завтрак": ("Sausages, fried eggs, bacon, beans, mushrooms", "Նրբերշիկ, տապակած ձու, բեկոն, լոբի, սունկ"),
+ "Панкейк с нутеллой": ("Pancakes, Nutella", "Փանքեյքեր, նուտելլա"),
+ "Круассан": ("Your choice: salmon, shrimp, avocado, pastrami or Nutella", "Ընտրությամբ՝ սաղմոն, ծովախեցգետին, ավոկադո, պաստրամի կամ նուտելլա"),
+ "Фирменная бурата": ("Focaccia, tomato, burrata, greens mix", "Ֆոկաչա, լոլիկ, բուռատա, կանաչիների խառնուրդ"),
+ "Мацун сцеженный": ("Strained matsun", "Քամած մածուն"),
+ "Жареный сыр": ("Breaded fried cheese, sauce", "Պանիր պաքսիմատով, սոուս"),
+ "Блинчики с мясом": ("Thin crepes with meat filling", "Բարակ բլիթներ մսի միջուկով"),
+ "Тако с курицей": ("Tortillas, chicken, vegetables, sauce", "Տորտիլյա, հավ, բանջարեղեն, սոուս"),
+ "Тако с креветками": ("Tortillas, shrimp, vegetables, sauce", "Տորտիլյա, ծովախեցգետին, բանջարեղեն, սոուս"),
+ "Классическая бурата": ("Burrata, tomatoes, olive oil, greens mix", "Բուռատա, լոլիկ, ձիթապտղի յուղ, կանաչիներ"),
+ "Цезарь с креветками": ("Shrimp, romaine, Parmesan, croutons, Caesar dressing", "Ծովախեցգետին, ռոմեն, պարմեզան, կրուտոններ, Ցեզար սոուս"),
+ "Армянский салат с гранатовым соусом": ("Grilled veal, eggplant, plum, walnut, pomegranate sauce", "Գրիլի հորթի միս, սմբուկ, սալոր, ընկույզ, նռան սոուս"),
+ "Домашний куриный суп": ("Chicken, noodles, vegetables", "Հավ, արիշտա, բանջարեղեն"),
+ "Паста песто": ("Pesto sauce, Parmesan", "Պեստո սոուս, պարմեզան"),
+ "Паста карбонара": ("Pasta, pancetta, cream, egg, Parmesan, black pepper", "Մակարոն, պանչետտա, սերուցք, ձու, պարմեզան, սև պղպեղ"),
+ "Цыплёнок с овощами": ("Grilled chicken with vegetables", "Գրիլի ճուտ բանջարեղենով"),
+ "Бефстроганов (курица / телятина)": ("Chicken or veal in cream sauce, rice or potatoes", "Հավ կամ հորթի միս սերուցքային սոուսում, բրինձ կամ կարտոֆիլ"),
+ "Пеппер стейк": ("Steak with pepper sauce", "Սթեյք պղպեղի սոուսով"),
+ "Баклажан фаршированный": ("With meat or vegetables", "Մսով կամ բանջարեղենով"),
+ "Домик": ("Chicken and beef kebab, signature barbecue, vegetables · For 3–5 people", "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն · 3–5 հոգու համար"),
+ "Семейный домик": ("Large charcoal barbecue platter with vegetables · For 3–5 people", "Խորովածի մեծ տեսականի ածուխի վրա, բանջարեղեն · 3–5 հոգու համար"),
+ "Фламинго": ("Chicken, chicken fillet, turkey, chicken wings, vegetables · For 3–5 people", "Ճուտ, հավի ֆիլե, հնդկահավ, հավի թևիկներ, բանջարեղեն · 3–5 հոգու համար"),
+ "Немецкий сет": ("Assorted sausages, cheese balls, garlic bread, vegetables · For 3–5 people", "Նրբերշիկների տեսականի, պանրի գնդիկներ, սխտորով հաց, բանջարեղեն · 3–5 հոգու համար"),
+ "Медуза": ("Trout, seafood, mussels, squid · For 3–5 people", "Իշխան, ծովամթերք, միդիա, կաղամար · 3–5 հոգու համար"),
+ "Хачапури аджарский": ("Boat-shaped bread with cheese, egg and butter", "Նավակաձև խաչապուրի պանրով, ձվով և կարագով"),
+ "Хачапури имеретинский": ("Closed, with cheese", "Փակ, պանրով"),
+ "Хачапури мегрельский": ("Cheese inside and on top", "Պանիր՝ ներսում և վրան"),
+ "Креветки": ("Regular shrimp 250 g or king prawns 200 g", "Սովորական ծովախեցգետին 250 գ կամ արքայական՝ 200 գ"),
+ "Форель": ("Grilled rainbow trout", "Ծիածանագույն իշխան գրիլի վրա"),
+ "Стейк лосося": ("Grilled salmon steak", "Սաղմոնի սթեյք գրիլի վրա"),
+ "Овощи гриль": ("Mushrooms, eggplant, zucchini, pepper", "Սունկ, սմբուկ, դդմիկ, պղպեղ"),
+ "Домашний хлеб": ("Fresh warm homemade bread", "Թարմ տաք տնական հաց"),
+ "Шоколадный тарт": ("Chocolate tart", "Շոկոլադե տարտ"),
+ "Фруктовый ассорти": ("Seasonal fresh fruit platter", "Սեզոնային թարմ մրգերի տեսականի"),
+ "Немецкая закуска": ("Idaho potatoes, cheese balls, garlic bread", "Այդահո կարտոֆիլ, պանրի գնդիկներ, սխտորով հաց"),
+}
+SEC_TR = {
+ "Завтрак": ("Breakfast", "Նախաճաշ"),
+ "Закуски": ("Appetizers", "Նախուտեստներ"),
+ "Горячие закуски": ("Hot Appetizers", "Տաք նախուտեստներ"),
+ "Салаты": ("Salads", "Աղցաններ"),
+ "Суп": ("Soup", "Ապուր"),
+ "Паста": ("Pasta", "Մակարոնեղեն"),
+ "Основные блюда": ("Main Dishes", "Հիմնական ուտեստներ"),
+ "К пиву": ("Beer Snacks", "Գարեջրի խորտիկներ"),
+ "Блюда от шеф-повара": ("Chef's Specials", "Շեֆ-խոհարարի ուտեստներ"),
+ "Печь и гриль": ("Oven & Grill", "Փուռ և գրիլ"),
+ "Жареная рыба и морепродукты": ("Fried Fish & Seafood", "Տապակած ձուկ և ծովամթերք"),
+ "Армянские традиции": ("Armenian Traditions", "Հայկական ավանդույթներ"),
+ "Гарниры": ("Sides", "Կողմնակի ուտեստներ"),
+ "Детское меню": ("Kids' Menu", "Մանկական մենյու"),
+ "Часть любви": ("Part of Love", "Սիրո մասը"),
+ "Хлеб": ("Bread", "Հաց"),
+}
+SUB_TR = {
+ "Пицца": ("Pizza", "Պիցցա"),
+ "Хачапури": ("Khachapuri", "Խաչապուրի"),
+ "Бургеры и сэндвичи": ("Burgers & Sandwiches", "Բուրգերներ և սենդվիչներ"),
+ "Горячий кофе": ("Hot Coffee", "Տաք սուրճ"),
+ "Холодный кофе": ("Cold Coffee", "Սառը սուրճ"),
+}
+SIZES_TR = {
+ "1 кг": ("1 kg", "1 կգ"),
+ "куриный / говяжий": ("chicken / beef", "հավի / տավարի"),
+ "обычный / с бастурмой": ("regular / with basturma", "սովորական / բաստուրմայով"),
+}
+UI_TR = {
+ "На выбор вид пасты: феттучини, спагетти, пенне": ("Choice of pasta: fettuccine, spaghetti, penne", "Ընտրությամբ մակարոն՝ ֆետուչինի, սպագետտի, պեննե"),
+ "Начало трапезы": ("To Start", "Ճաշի սկիզբ"),
+ "Главные блюда": ("Main Courses", "Հիմնական ուտեստներ"),
+ "Огонь и море": ("Fire & Sea", "Կրակ և ծով"),
+ "Сладкая часть": ("Sweet Part", "Քաղցր մաս"),
+ "От шеф-повара": ("Chef's Specials", "Շեֆ-խոհարարից"),
+ "Рыба и морепродукты": ("Fish & Seafood", "Ձուկ և ծովամթերք"),
+ "Десерты": ("Desserts", "Աղանդեր"),
+ "Утро, лёгкие закуски и салаты": ("Morning, light bites and salads", "Առավոտ, թեթև նախուտեստներ և աղցաններ"),
+ "Паста, мясо на углях и авторские сеты": ("Pasta, charcoal-grilled meat and signature sets", "Մակարոնեղեն, ածխի վրա միս և հեղինակային սեթեր"),
+ "С открытого огня, печи и тандыра": ("From open fire, oven and tandoor", "Բաց կրակից, փռից և թոնիրից"),
+ "Десерты, детям и к столу": ("Desserts, for kids and for the table", "Աղանդեր, երեխաներին և սեղանին"),
+ "Меню · DoMik": ("Menu · DoMik", "Մենյու · DoMik"),
+ "Ресторан «Домик» · Цахкадзор": ("Domik Restaurant · Tsaghkadzor", "Ռեստորան «Դոմիկ» · Ծաղկաձոր"),
+ "Ждём вас снова": ("See You Again", "Սպասում ենք կրկին"),
+ "Спасибо, что были с нами": ("Thank you for dining with us", "Շնորհակալություն, որ մեզ հետ էիք"),
+ "Цахкадзор, ул. Хачатура Кечареци 6 · +374 95 505 656": ("Tsaghkadzor, 6 Khachatur Kecharetsi St · +374 95 505 656", "Ծաղկաձոր, Խաչատուր Կեչառեցու փ. 6 · +374 95 505 656"),
+}
+def _pick(pair):
+    return pair[0] if LANG == 'en' else pair[1]
+def T_ui(s):
+    if LANG == 'ru' or not s: return s
+    return _pick(UI_TR[s]) if s in UI_TR else s
+def T_sec(s):
+    if LANG == 'ru': return s
+    if s in SEC_TR: return _pick(SEC_TR[s])
+    return T_ui(s)
+def T_sub(s):
+    if LANG == 'ru': return s
+    return _pick(SUB_TR[s]) if s in SUB_TR else s
+def T_sizes(s):
+    if LANG == 'ru' or not s: return s
+    return _pick(SIZES_TR[s]) if s in SIZES_TR else s
+def T_name(nm):
+    if LANG == 'ru': return nm
+    it = SITE_ITEM.get(nm.strip())
+    key = 'name_en' if LANG == 'en' else 'name_hy'
+    if it and it.get(key): return it[key]
+    if nm.strip() in SUPPLEMENT_NAME: return _pick(SUPPLEMENT_NAME[nm.strip()])
+    return nm
+def T_desc(nm, desc):
+    if LANG == 'ru' or not desc: return desc
+    it = SITE_ITEM.get(nm.strip())
+    key = 'composition_en' if LANG == 'en' else 'composition_hy'
+    if it and it.get(key): return it[key]
+    if nm.strip() in SUPPLEMENT_DESC: return _pick(SUPPLEMENT_DESC[nm.strip()])
+    return desc
+
 # before — раздел, ПЕРЕД которым вставляется разворот (открывает главу).
 # bg — полностраничный атмосферный фон (img/print/catalog-N.jpg).
 # dishes — блюда для коллажа (фото тянутся из menu.json по имени).
@@ -198,9 +354,9 @@ def render_catalog(cat):
     # раскладка: >3 фото — редакционная мозаика (герой+лента+блок), 3 — аккуратный ряд
     photos_cls = "catalog__photos catalog__photos--" + ("mosaic" if len(srcs) > 3 else "trio")
     if cat.get("cats"):
-        line = ' &#183; '.join(esc(c) for c in cat["cats"])
+        line = ' &#183; '.join(esc(T_sec(c)) for c in cat["cats"])
     else:
-        line = esc(cat.get("subtitle", ""))
+        line = esc(T_ui(cat.get("subtitle", "")))
     cls = "catalog-spread" + ("" if photos else " catalog-spread--divider")
     photos_html = (f'<div class="{photos_cls}">' + ''.join(photos) + '</div>') if photos else ''
     return (f'<section class="{cls}">'
@@ -209,17 +365,28 @@ def render_catalog(cat):
             '<div class="catalog__frame" aria-hidden="true"></div>'
             '<div class="catalog__inner">'
             '<div class="catalog__top">'
-            f'<div class="catalog__kicker">{esc(cat.get("kicker", "Меню · DoMik"))}</div>'
-            f'<h2 class="catalog__title">{esc(cat["title"])}</h2>'
+            f'<div class="catalog__kicker">{esc(T_ui(cat.get("kicker", "Меню · DoMik")))}</div>'
+            f'<h2 class="catalog__title">{esc(T_ui(cat["title"]))}</h2>'
             '<div class="catalog__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>'
             f'<div class="catalog__cats">{line}</div>'
             '</div>'
             + photos_html +
-            f'<div class="catalog__note">{esc(cat.get("note", ""))}</div>'
+            f'<div class="catalog__note">{esc(T_ui(cat.get("note", "")))}</div>'
             '</div></section>')
 
 
-parts = [COVER_HTML]   # обложка; первый разворот — «Начало трапезы» перед «Завтрак»
+cover = COVER_HTML
+if LANG == 'en':
+    cover = cover.replace('Ресторан Цахкадзора', 'Restaurant of Tsaghkadzor') \
+                 .replace('>Меню<', '>Menu<') \
+                 .replace('Цахкадзор, ул.&nbsp;Хачатура&nbsp;Кечареци&nbsp;6', 'Tsaghkadzor, 6&nbsp;Khachatur&nbsp;Kecharetsi&nbsp;St') \
+                 .replace('ежедневно&nbsp;11:00&ndash;23:00', 'daily&nbsp;11:00&ndash;23:00')
+elif LANG == 'hy':
+    cover = cover.replace('Ресторан Цахкадзора', 'Ծաղկաձորի ռեստորան') \
+                 .replace('>Меню<', '>Մենյու<') \
+                 .replace('Цахкадзор, ул.&nbsp;Хачатура&nbsp;Кечареци&nbsp;6', 'Ծաղկաձոր, Խաչատուր&nbsp;Կեչառեցու&nbsp;փ.&nbsp;6') \
+                 .replace('ежедневно&nbsp;11:00&ndash;23:00', 'ամեն&nbsp;օր&nbsp;11:00&ndash;23:00')
+parts = [cover]   # обложка; первый разворот — «Начало трапезы» перед «Завтрак»
 
 # ---------- кухня из curated data/print-menu.json ----------
 pm = json.load(io.open(os.path.join(ROOT, "data", "print-menu.json"), encoding='utf-8'))
@@ -233,25 +400,26 @@ for sec in pm:
         parts.append(render_catalog(CATALOG_BEFORE[sec['name']]))
     if sec.get('page_break'):                    # раздел начинается с нового листа
         parts.append('<div class="book-break"></div>')
-    cat_title = fill(CAT_TITLE, TITLE=esc(sec['name'].strip()))
-    if len(sec['name'].strip()) > 20:            # длинный заголовок — мельче, в одну строку
+    sec_title = T_sec(sec['name'].strip())
+    cat_title = fill(CAT_TITLE, TITLE=esc(sec_title))
+    if len(sec_title) > 20:                      # длинный заголовок — мельче, в одну строку
         cat_title = cat_title.replace('book-cat__title', 'book-cat__title book-cat__title--long', 1)
     parts.append(cat_title)
     if sec.get('note'):
-        parts.append('<p class="book-cat__note flow-keep">' + esc(sec['note'].strip()) + '</p>')
+        parts.append('<p class="book-cat__note flow-keep">' + esc(T_ui(sec['note'].strip())) + '</p>')
     for it in sec['items']:
         if it.get('break'):                     # принудительный разрыв листа
             parts.append('<div class="book-break"></div>')
             continue
         if it.get('sub'):                       # подзаголовок-подраздел
-            parts.append(fill(SUBCAT_TITLE, TITLE=esc(it['sub'].strip())))
+            parts.append(fill(SUBCAT_TITLE, TITLE=esc(T_sub(it['sub'].strip()))))
             continue
-        name_html = esc(it['name'].strip())
+        name_html = esc(T_name(it['name'].strip()))
         if it.get('sizes'):
-            name_html += f' <span class="dish-size">{esc(it["sizes"].strip())}</span>'
+            name_html += f' <span class="dish-size">{esc(T_sizes(it["sizes"].strip()))}</span>'
         parts.append(fill(DISH_TPL,
                           NAME=name_html,
-                          DESC=esc((it.get('desc') or '').strip()),
+                          DESC=esc(T_desc(it['name'], (it.get('desc') or '').strip())),
                           PRICE=price_kitchen(it.get('price', ''))))
         dish_count += 1
 print("kitchen sections:", len(pm), "| dishes:", dish_count)
@@ -259,9 +427,10 @@ print("kitchen sections:", len(pm), "| dishes:", dish_count)
 # ---------- барная карта из data/print-bar.json (ОТВЯЗАНА от сайта) ----------
 # Порядок разделов задаётся самим print-bar.json (безалкогольное идёт первым).
 # «К пиву» остаётся curated-разделом из print-menu.json и вставляется после «Пиво».
-parts.append(render_catalog(BAR_SPREAD))   # фотографический барный разворот (вместо кремового)
 bar = json.load(io.open(os.path.join(ROOT, "data", "print-bar.json"), encoding='utf-8'))
 bar_rows_total = 0
+if not NO_BAR:
+    parts.append(render_catalog(BAR_SPREAD))   # фотографический барный разворот (вместо кремового)
 
 def emit_curated_bar(sec):
     """Кухонная (curated) секция print-menu.json как раздел бара (К пиву)."""
@@ -274,7 +443,7 @@ def emit_curated_bar(sec):
         parts.append(fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()), VOL='', PRICE=price_bar(p)))
         bar_rows_total += 1
 
-for sec in bar:
+for sec in (bar if not NO_BAR else []):
     title = sec['section'].strip()
     parts.append(fill(BAR_SEC_TITLE, TITLE=esc(title)))
     for it in sec['items']:
@@ -302,7 +471,14 @@ print("bar sections:", len(bar), "| bar rows:", bar_rows_total)
 parts.append(render_catalog(FAREWELL))
 
 # ---------- сборка ----------
-out = (HEAD + "\n" + TOOLBAR + '\n<div id="book" class="book">\n'
+head_out = HEAD
+if LANG == 'hy':
+    head_out = head_out.replace(
+        '<link rel="stylesheet" href="css/print-menu.css',
+        '<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;500;600&display=swap" rel="stylesheet">\n'
+        '<style>:root{--serif:\'Cormorant Garamond\',\'Noto Serif Armenian\',Georgia,serif !important}</style>\n'
+        '<link rel="stylesheet" href="css/print-menu.css')
+out = (head_out + "\n" + TOOLBAR + '\n<div id="book" class="book">\n'
        + "\n".join(parts) + "\n"
        + "</div>\n" + SCRIPT + "\n</body>\n</html>\n")
 io.open(os.path.join(ROOT, "menu-print.html"), 'w', encoding='utf-8').write(out)
