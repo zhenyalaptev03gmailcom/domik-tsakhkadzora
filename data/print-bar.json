@@ -423,27 +423,27 @@
       {
         "name": "Jack Daniel's",
         "vol": "",
-        "price": "3 800"
+        "price": "2 900"
       },
       {
         "name": "Jack Daniel's Honey",
         "vol": "",
-        "price": "3 800"
+        "price": "2 900"
       },
       {
         "name": "Chivas Regal 12",
         "vol": "",
-        "price": "4 600"
+        "price": "3 500"
       },
       {
         "name": "Chivas Regal 18",
         "vol": "",
-        "price": "9 800"
+        "price": "6 400"
       },
       {
         "name": "Monkey Shoulder",
         "vol": "",
-        "price": "5 800"
+        "price": "3 800"
       },
       {
         "name": "Black Label",
@@ -453,12 +453,12 @@
       {
         "name": "Glenfiddich 12",
         "vol": "",
-        "price": "5 400"
+        "price": "4 200"
       },
       {
         "name": "Glenfiddich 18",
         "vol": "",
-        "price": "6 600"
+        "price": "7 200"
       }
     ]
   },
@@ -468,12 +468,12 @@
       {
         "name": "Ohanyan",
         "vol": "50 мл",
-        "price": "1 200"
+        "price": "1 050"
       },
       {
         "name": "Ohanyan Ice",
         "vol": "",
-        "price": "1 600"
+        "price": "1 200"
       },
       {
         "name": "Finlandia",
@@ -483,12 +483,12 @@
       {
         "name": "Absolut",
         "vol": "",
-        "price": "1 500"
+        "price": "1 300"
       },
       {
         "name": "Grey Goose",
         "vol": "",
-        "price": "2 500"
+        "price": "3 100"
       },
       {
         "name": "Chisti Rosi",
@@ -523,17 +523,17 @@
       {
         "name": "Ararat Васпуракан (15 лет)",
         "vol": "",
-        "price": "4 500"
+        "price": "4 800"
       },
       {
         "name": "Ararat Двин (10 лет)",
         "vol": "",
-        "price": "5 000"
+        "price": "4 700"
       },
       {
         "name": "Ararat Наири (20 лет)",
         "vol": "",
-        "price": "6 200"
+        "price": "6 500"
       }
     ]
   },
@@ -563,7 +563,7 @@
       {
         "name": "Aperol",
         "vol": "",
-        "price": "1 500"
+        "price": "1 800"
       },
       {
         "name": "Kahlua",
@@ -573,12 +573,12 @@
       {
         "name": "Baileys",
         "vol": "",
-        "price": "1 600"
+        "price": "2 000"
       },
       {
         "name": "Sambuca",
         "vol": "",
-        "price": "2 000"
+        "price": "1 800"
       },
       {
         "name": "Jägermeister",
@@ -588,7 +588,7 @@
       {
         "name": "Absenta",
         "vol": "",
-        "price": "2 200"
+        "price": "3 100"
       }
     ]
   },
@@ -606,9 +606,14 @@
         "price": "2 600"
       },
       {
+        "name": "Jose Cuervo (silver/gold)",
+        "vol": "",
+        "price": "2 200"
+      },
+      {
         "name": "Patron Silver",
         "vol": "",
-        "price": "3 300"
+        "price": "4 200"
       },
       {
         "name": "Patron Añejo",
@@ -628,12 +633,12 @@
       {
         "name": "Bacardi Black",
         "vol": "",
-        "price": "2 200"
+        "price": "2 900"
       },
       {
         "name": "Angostura Gold",
         "vol": "",
-        "price": "2 500"
+        "price": "3 800"
       }
     ]
   },
@@ -653,7 +658,7 @@
       {
         "name": "Hendrick's",
         "vol": "",
-        "price": "2 500"
+        "price": "3 500"
       }
     ]
   },
