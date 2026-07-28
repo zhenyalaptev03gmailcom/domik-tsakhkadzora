@@ -415,15 +415,15 @@
       },
       {
         "name": "Салат гурман",
-        "price": "3 600",
-        "composition": "Хрустящие баклажаны, телятина, фирменный соус",
+        "price": "3 800",
+        "composition": "Хрустящие баклажаны, бастурма, фирменный соус",
         "id": "gourmet-salad",
         "local_image": "img/menu/салат-гурман.jpg?v=st4",
         "has_image": true,
         "name_en": "Gourmet salad",
         "name_hy": "Գուրման աղցան",
-        "composition_en": "Crispy eggplant, veal, house sauce",
-        "composition_hy": "Խրթխրթան սմբուկ, հորթի միս, ֆիրմային սոուս"
+        "composition_en": "Crispy eggplants, basturma, signature sauce",
+        "composition_hy": "Խրթխրթան սմբուկ, բաստուրմա, ֆիրմային սոուս"
       },
       {
         "name": "Салат с креветками",
