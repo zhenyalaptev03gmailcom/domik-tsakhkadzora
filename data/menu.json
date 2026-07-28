@@ -1616,7 +1616,7 @@
       },
       {
         "name": "Фирменное мороженое брауни",
-        "price": "1 700",
+        "price": "2 000",
         "id": "firm-morozhenoe-brauni",
         "has_image": false,
         "name_en": "Signature brownie ice cream",
@@ -1624,7 +1624,7 @@
       },
       {
         "name": "Фирменное мороженое рафаэлло",
-        "price": "1 700",
+        "price": "2 000",
         "id": "firm-morozhenoe-rafaello",
         "has_image": false,
         "name_en": "Signature Raffaello ice cream",
