@@ -232,26 +232,16 @@
         "has_image": true,
         "name_en": "Strained matsoni",
         "name_hy": "Քամած մածուն"
-      },
-      {
-        "name": "Жареный сыр",
-        "price": "2 500",
-        "composition": "Сыр в панировке, соус",
-        "id": "grilled-cheese2",
-        "local_image": "img/menu/жареный-сыр.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Fried cheese",
-        "name_hy": "Տապակած պանիր"
-      },
-      {
-        "name": "Сырные шарики",
-        "price": "2 000",
-        "id": "syrnye-shariki",
-        "has_image": true,
-        "local_image": "img/menu/сырные-шарики.jpg?v=r1",
-        "name_en": "Cheese balls",
-        "name_hy": "Պանրի գնդիկներ"
-      },
+      }
+    ]
+  },
+  {
+    "id": "9001",
+    "name": "Горячие закуски",
+    "name_en": "Hot appetizers",
+    "name_hy": "Տաք նախուտեստներ",
+    "slug": "goryachie-zakuski",
+    "items": [
       {
         "name": "Чесночный хлеб",
         "price": "2 000",
@@ -263,16 +253,26 @@
         "name_hy": "Սխտորով հաց",
         "composition_en": "Garlic bread croutons",
         "composition_hy": "Սխտորով հացի կրուտոններ"
-      }
-    ]
-  },
-  {
-    "id": "9001",
-    "name": "Горячие закуски",
-    "name_en": "Hot appetizers",
-    "name_hy": "Տաք նախուտեստներ",
-    "slug": "goryachie-zakuski",
-    "items": [
+      },
+      {
+        "name": "Сырные шарики",
+        "price": "2 000",
+        "id": "syrnye-shariki",
+        "has_image": true,
+        "local_image": "img/menu/сырные-шарики.jpg?v=r1",
+        "name_en": "Cheese balls",
+        "name_hy": "Պանրի գնդիկներ"
+      },
+      {
+        "name": "Жареный сыр",
+        "price": "2 500",
+        "composition": "Сыр в панировке, соус",
+        "id": "grilled-cheese2",
+        "local_image": "img/menu/жареный-сыр.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Fried cheese",
+        "name_hy": "Տապակած պանիր"
+      },
       {
         "name": "Куриная темпура с соусом",
         "price": "3 200",
