@@ -418,37 +418,42 @@
       {
         "name": "Jameson",
         "vol": "50 мл",
-        "price": "2 500"
+        "price": "1 100"
       },
       {
         "name": "Jack Daniel's",
         "vol": "",
-        "price": "2 800"
+        "price": "1 300"
+      },
+      {
+        "name": "Jack Daniel's Honey",
+        "vol": "",
+        "price": "1 300"
       },
       {
         "name": "Chivas Regal 12",
         "vol": "",
-        "price": "2 800"
+        "price": "1 600"
       },
       {
         "name": "Chivas Regal 18",
         "vol": "",
-        "price": "4 800"
+        "price": "3 300"
       },
       {
         "name": "Monkey Shoulder",
         "vol": "",
-        "price": "3 000"
+        "price": "2 000"
       },
       {
         "name": "Black Label",
         "vol": "",
-        "price": "3 000"
+        "price": "1 500"
       },
       {
         "name": "Glenfiddich 12",
         "vol": "",
-        "price": "3 800"
+        "price": "1 900"
       },
       {
         "name": "Glenfiddich 18",
