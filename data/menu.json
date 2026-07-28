@@ -1207,6 +1207,18 @@
         "name_hy": "Խաշ",
         "composition_en": "Rich beef broth, garlic, lavash",
         "composition_hy": "Հարուստ տավարի արգանակ, սխտոր, լավաշ"
+      },
+      {
+        "name": "Хашлама",
+        "price": "4 800",
+        "composition": "Тушёная баранина с овощами",
+        "id": "hashlama",
+        "has_image": true,
+        "local_image": "img/menu/рагу-из-баранины.jpg?v=hb1",
+        "name_en": "Khashlama",
+        "name_hy": "Խաշլամա",
+        "composition_en": "Braised lamb with vegetables",
+        "composition_hy": "Շոգեխաշած գառան միս բանջարեղենով"
       }
     ]
   },
