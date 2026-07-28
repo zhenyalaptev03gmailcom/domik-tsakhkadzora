@@ -242,6 +242,27 @@
         "has_image": true,
         "name_en": "Fried cheese",
         "name_hy": "Տապակած պանիր"
+      },
+      {
+        "name": "Сырные шарики",
+        "price": "2 000",
+        "id": "syrnye-shariki",
+        "has_image": true,
+        "local_image": "img/menu/сырные-шарики.jpg?v=r1",
+        "name_en": "Cheese balls",
+        "name_hy": "Պանրի գնդիկներ"
+      },
+      {
+        "name": "Чесночный хлеб",
+        "price": "2 000",
+        "composition": "Гренки на чесночном хлебе",
+        "id": "chesnochnyi-hleb",
+        "has_image": true,
+        "local_image": "img/menu/чесночный-хлеб.jpg?v=r1",
+        "name_en": "Garlic bread",
+        "name_hy": "Սխտորով հաց",
+        "composition_en": "Garlic bread croutons",
+        "composition_hy": "Սխտորով հացի կրուտոններ"
       }
     ]
   },
