@@ -130,7 +130,7 @@ body{
 
 .book-dish{ margin:0 0 6.5mm; }
 .book-dish__head{ display:flex; align-items:flex-end; gap:2mm; }
-.book-dish__name{ font-family:var(--serif); font-weight:500; font-size:14.5pt; line-height:1.2; color:var(--ink); flex:0 1 auto; }
+.book-dish__name{ font-family:var(--serif); font-weight:500; font-size:14.5pt; line-height:1.2; color:var(--ink); flex:0 1 auto; font-variant-numeric:lining-nums; }
 .book-dish__leader{ flex:1 1 auto; align-self:flex-end; height:0; margin:0 1.5mm 3pt; border-bottom:1.4pt dotted var(--hair); min-width:6mm; }
 .book-dish__price{ font-family:var(--serif); font-weight:600; font-size:14.5pt; line-height:1.2; color:var(--bronze-dark); white-space:nowrap; flex:0 0 auto; font-variant-numeric:oldstyle-nums tabular-nums; }
 .book-dish__price .cur{ font-size:0.86em; color:var(--bronze); margin-left:0.12em; }
@@ -172,7 +172,7 @@ body{
 .bar-sec__title .dia{ flex:0 0 auto; color:var(--bronze); font-size:9.5pt; transform:translateY(-1px); }
 
 .bar-row{ display:flex; align-items:flex-end; gap:2mm; margin:0 0 4.5mm; }
-.bar-row__name{ font-family:var(--serif); font-weight:500; font-size:13pt; line-height:1.2; color:var(--ink); flex:0 1 auto; }
+.bar-row__name{ font-family:var(--serif); font-weight:500; font-size:13pt; line-height:1.2; color:var(--ink); flex:0 1 auto; font-variant-numeric:lining-nums; }
 .bar-row__vol{ font-family:var(--sans); font-weight:400; font-size:8.5pt; letter-spacing:0.05em; color:var(--ink-soft); margin-left:2.5mm; white-space:nowrap; font-variant-numeric:tabular-nums; }
 .bar-row__vol:empty{ display:none; margin:0; }
 .bar-row__leader{ flex:1 1 auto; align-self:flex-end; height:0; margin:0 1.5mm 3pt; border-bottom:1.4pt dotted var(--hair); min-width:6mm; }
