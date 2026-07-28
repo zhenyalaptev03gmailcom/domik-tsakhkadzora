@@ -81,7 +81,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=12">
+<link rel="stylesheet" href="css/print-menu.css?v=13">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -233,7 +233,10 @@ for sec in pm:
         parts.append(render_catalog(CATALOG_BEFORE[sec['name']]))
     if sec.get('page_break'):                    # раздел начинается с нового листа
         parts.append('<div class="book-break"></div>')
-    parts.append(fill(CAT_TITLE, TITLE=esc(sec['name'].strip())))
+    cat_title = fill(CAT_TITLE, TITLE=esc(sec['name'].strip()))
+    if len(sec['name'].strip()) > 20:            # длинный заголовок — мельче, в одну строку
+        cat_title = cat_title.replace('book-cat__title', 'book-cat__title book-cat__title--long', 1)
+    parts.append(cat_title)
     if sec.get('note'):
         parts.append('<p class="book-cat__note flow-keep">' + esc(sec['note'].strip()) + '</p>')
     for it in sec['items']:

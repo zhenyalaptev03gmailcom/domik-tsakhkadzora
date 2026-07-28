@@ -125,6 +125,8 @@ body{
   border-top:0.9px solid var(--bronze); border-bottom:0.9px solid var(--hair);
 }
 .book-cat__title .dia{ flex:0 0 auto; color:var(--bronze); font-size:11pt; letter-spacing:0; transform:translateY(-1px); }
+/* длинные названия разделов — мельче и плотнее, чтобы не переносились на 2 строки */
+.book-cat__title--long{ font-size:20pt; letter-spacing:0.12em; white-space:nowrap; }
 
 .book-dish{ margin:0 0 6.5mm; }
 .book-dish__head{ display:flex; align-items:flex-end; gap:2mm; }
