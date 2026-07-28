@@ -318,7 +318,7 @@
       {
         "name": "Takar",
         "vol": "187 мл",
-        "price": "2 600"
+        "price": "2 500"
       },
       {
         "name": "Takar",
@@ -334,6 +334,11 @@
         "name": "Akoom (гранат)",
         "vol": "",
         "price": "11 000"
+      },
+      {
+        "name": "Meyron Areni",
+        "vol": "187 мл",
+        "price": "2 700"
       },
       {
         "name": "Meyron",
@@ -359,6 +364,11 @@
         "name": "Takar",
         "vol": "",
         "price": "8 000"
+      },
+      {
+        "name": "Meyron Areni",
+        "vol": "187 мл",
+        "price": "2 700"
       },
       {
         "name": "Meyron",
