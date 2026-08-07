@@ -242,6 +242,10 @@ SIZES_TR = {
  "обычный / с бастурмой": ("regular / with basturma", "սովորական / բաստուրմայով"),
 }
 UI_TR = {
+ "Барная карта": ("Bar List", "Բարային քարտ"),
+ "Вино · Коктейли · Кофе · Чай": ("Wine · Cocktails · Coffee · Tea", "Գինի · Կոկտեյլներ · Սուրճ · Թեյ"),
+ "Напитки и авторские коктейли": ("Drinks and signature cocktails", "Ըմպելիքներ և հեղինակային կոկտեյլներ"),
+ "DoMik": ("DoMik", "DoMik"),
  "На выбор вид пасты: феттучини, спагетти, пенне": ("Choice of pasta: fettuccine, spaghetti, penne", "Ընտրությամբ մակարոն՝ ֆետուչինի, սպագետտի, պեննե"),
  "Начало трапезы": ("To Start", "Ճաշի սկիզբ"),
  "Главные блюда": ("Main Courses", "Հիմնական ուտեստներ"),
@@ -260,6 +264,28 @@ UI_TR = {
  "Спасибо, что были с нами": ("Thank you for dining with us", "Շնորհակալություն, որ մեզ հետ էիք"),
  "Цахкадзор, ул. Хачатура Кечареци 6 · +374 95 505 656": ("Tsaghkadzor, 6 Khachatur Kecharetsi St · +374 95 505 656", "Ծաղկաձոր, Խաչատուր Կեչառեցու փ. 6 · +374 95 505 656"),
 }
+# ── переводы барной карты: из сгенерированного #menu-bar в menu.html ──
+BAR_NAME_TR, BAR_VOL_TR, BAR_SEC_TR, BAR_NOTE_TR = {}, {}, {}, {}
+try:
+    import html as _html
+    _mh = io.open(os.path.join(ROOT, "menu.html"), encoding="utf-8").read()
+    _seg = _mh[_mh.index('<div id="menu-bar"'):]
+    _seg = _seg[:_seg.index('<script>')]
+    for _en, _hy, _ru in re.findall(
+            r'<span class="bar-name-t" data-tr-en="([^"]*)" data-tr-hy="([^"]*)">(.*?)</span>', _seg):
+        BAR_NAME_TR[_html.unescape(_ru)] = (_html.unescape(_en), _html.unescape(_hy))
+    for _en, _hy, _ru in re.findall(
+            r'<small data-tr-en="([^"]*)" data-tr-hy="([^"]*)">(.*?)</small>', _seg):
+        BAR_VOL_TR[_html.unescape(_ru)] = (_html.unescape(_en), _html.unescape(_hy))
+    for _en, _hy, _ru in re.findall(
+            r'<h3 data-tr-en="([^"]*)" data-tr-hy="([^"]*)">(.*?)</h3>', _seg):
+        BAR_SEC_TR[_html.unescape(_ru)] = (_html.unescape(_en), _html.unescape(_hy))
+    for _en, _hy, _ru in re.findall(
+            r'<span class="bar-item__note" data-tr-en="([^"]*)" data-tr-hy="([^"]*)">(.*?)</span>', _seg):
+        BAR_NOTE_TR[_html.unescape(_ru)] = (_html.unescape(_en), _html.unescape(_hy))
+except Exception:
+    pass
+
 def _pick(pair):
     return pair[0] if LANG == 'en' else pair[1]
 def T_ui(s):
@@ -289,6 +315,22 @@ def T_desc(nm, desc):
     if it and it.get(key): return it[key]
     if nm.strip() in SUPPLEMENT_DESC: return _pick(SUPPLEMENT_DESC[nm.strip()])
     return desc
+def T_bar_sec(ru):
+    if LANG == 'ru': return ru
+    if ru in BAR_SEC_TR: return _pick(BAR_SEC_TR[ru])
+    return T_sec(ru)
+def T_bar_name(ru):
+    if LANG == 'ru': return ru
+    if ru in BAR_NAME_TR: return _pick(BAR_NAME_TR[ru])
+    return T_name(ru)
+def T_bar_vol(ru):
+    if LANG == 'ru' or not ru: return ru
+    if ru in BAR_VOL_TR: return _pick(BAR_VOL_TR[ru])
+    if LANG == 'en': return ru.replace("мл","ml").replace("л","l").replace("фреш","fresh")
+    return ru.replace("мл","մլ").replace("л","լ").replace("фреш","թարմ հյութ")
+def T_bar_note(ru):
+    if LANG == 'ru' or not ru: return ru
+    return _pick(BAR_NOTE_TR[ru]) if ru in BAR_NOTE_TR else ru
 
 # before — раздел, ПЕРЕД которым вставляется разворот (открывает главу).
 # bg — полностраничный атмосферный фон (img/print/catalog-N.jpg).
@@ -435,29 +477,29 @@ if not NO_BAR:
 def emit_curated_bar(sec):
     """Кухонная (curated) секция print-menu.json как раздел бара (К пиву)."""
     global bar_rows_total
-    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(sec['name'].strip())))
+    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(T_bar_sec(sec['name'].strip()))))
     for it in sec['items']:
         p = (it.get('price') or '').strip()
         if any(ch.isdigit() for ch in p):
             p = p + ' ֏'
-        parts.append(fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()), VOL='', PRICE=price_bar(p)))
+        parts.append(fill(BAR_ROW_TPL, NAME=esc(T_bar_name(it['name'].strip())), VOL='', PRICE=price_bar(p)))
         bar_rows_total += 1
 
 for sec in (bar if not NO_BAR else []):
     title = sec['section'].strip()
-    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(title)))
+    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(T_bar_sec(title))))
     for it in sec['items']:
         if it.get('sub'):                   # подзаголовок-подраздел внутри раздела бара
-            parts.append(fill(SUBCAT_TITLE, TITLE=esc(it['sub'].strip())))
+            parts.append(fill(SUBCAT_TITLE, TITLE=esc(T_sub(it['sub'].strip()))))
             continue
         p = (it.get('price') or '').strip()
         if any(ch.isdigit() for ch in p):
             p = p + ' ֏'
-        row = fill(BAR_ROW_TPL, NAME=esc(it['name'].strip()),
-                   VOL=esc((it.get('vol') or '').strip()), PRICE=price_bar(p))
+        row = fill(BAR_ROW_TPL, NAME=esc(T_bar_name(it['name'].strip())),
+                   VOL=esc(T_bar_vol((it.get('vol') or '').strip())), PRICE=price_bar(p))
         if it.get('note'):                      # подпись-состав под строкой
             row = row.replace('class="bar-row"', 'class="bar-row flow-keep"', 1)
-            row += '\n<p class="bar-row__note">' + esc(it['note'].strip()) + '</p>'
+            row += '\n<p class="bar-row__note">' + esc(T_bar_note(it['note'].strip())) + '</p>'
         parts.append(row)
         bar_rows_total += 1
     if title in bar_placed:                 # curated-раздел «К пиву» сразу после «Пиво»
