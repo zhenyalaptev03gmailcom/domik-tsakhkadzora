@@ -189,9 +189,10 @@
         "name": "Брускетта с тунцом",
         "price": "2 700",
         "id": "brusketta-s-tuntsom",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Tuna bruschetta",
-        "name_hy": "Բրուսկետտա թյունոսով"
+        "name_hy": "Բրուսկետտա թյունոսով",
+        "local_image": "img/menu/брускетта-с-тунцом.jpg?v=cl1"
       },
       {
         "name": "Хумус",
@@ -293,9 +294,10 @@
         "name": "Куриная темпура с соусом",
         "price": "3 200",
         "id": "kurinaya-tempura-s-sousom",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Chicken tempura with sauce",
-        "name_hy": "Հավի տեմպուրա սոուսով"
+        "name_hy": "Հավի տեմպուրա սոուսով",
+        "local_image": "img/menu/куриная-темпура.jpg?v=cl1"
       },
       {
         "name": "Блинчики с мясом",
@@ -350,11 +352,12 @@
         "price": "2 500",
         "composition": "Тортилья, говядина, сыр",
         "id": "kesadilya-s-govyadinoi",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Beef quesadilla",
         "name_hy": "Կեսադիլյա տավարով",
         "composition_en": "Tortilla, beef, cheese",
-        "composition_hy": "Տորտիլյա, տավար, պանիր"
+        "composition_hy": "Տորտիլյա, տավար, պանիր",
+        "local_image": "img/menu/кесадилья-с-говядиной.jpg?v=cl1"
       }
     ]
   },
@@ -498,9 +501,10 @@
         "name": "Салат с тунцом",
         "price": "4 500",
         "id": "salat-s-tuntsom",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Tuna salad",
-        "name_hy": "Աղցան թյունոսով"
+        "name_hy": "Աղցան թյունոսով",
+        "local_image": "img/menu/салат-с-тунцом.jpg?v=cl1"
       }
     ]
   },
@@ -645,11 +649,12 @@
         "price": "2 700",
         "composition": "Классический рецепт: равиоли с курицей и пармезаном в сливочном соусе",
         "id": "kurinoe-ravioli-v-belom-souse",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Chicken ravioli in white sauce",
         "name_hy": "Հավի ռավիոլի սպիտակ սոուսով",
         "composition_en": "Classic recipe: ravioli with chicken and parmesan in cream sauce",
-        "composition_hy": "Դասական բաղադրատոմս՝ ռավիոլի հավով և պարմեզանով սերուցքային սոուսում"
+        "composition_hy": "Դասական բաղադրատոմս՝ ռավիոլի հավով և պարմեզանով սերուցքային սոուսում",
+        "local_image": "img/menu/куриное-равиоли.jpg?v=cl1"
       },
       {
         "name": "Паста карбонара",
@@ -728,11 +733,12 @@
         "composition": "Свиной антрекот на гриле",
         "sizes": "0,5 кг",
         "id": "shpik-svinoi",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Grilled entrecôte",
         "name_hy": "Անտրեկոտ գրիլի վրա",
         "composition_en": "Grilled pork entrecôte",
-        "composition_hy": "Խոզի անտրեկոտ գրիլի վրա"
+        "composition_hy": "Խոզի անտրեկոտ գրիլի վրա",
+        "local_image": "img/menu/антрекот-на-гриле.jpg?v=cl1"
       },
       {
         "name": "Баранина ассорти",
@@ -763,11 +769,12 @@
         "price": "9 500",
         "composition": "Нога баранины, аришта · 3–4 человека",
         "id": "viking-baraniy",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Lamb Viking (leg)",
         "name_hy": "Գառան «Վիկինգ» (բուդ)",
         "composition_en": "Lamb leg, arishta noodles · serves 3–4",
-        "composition_hy": "Գառան բուդ · 3–4 հոգու"
+        "composition_hy": "Գառան բուդ · 3–4 հոգու",
+        "local_image": "img/menu/викинг-бараний.jpg?v=cl1"
       },
       {
         "name": "Куриное филе с рисом",
@@ -903,11 +910,12 @@
         "price": "4 000",
         "composition": "Сельдь, картофель, домашние соленья",
         "id": "domashnyaya-zakuska-k-pivu",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Home-style fish appetizer",
         "name_hy": "Տնական ձկան նախուտեստ",
         "composition_en": "Herring, potatoes, house pickles",
-        "composition_hy": "Ծովատառեխ, կարտոֆիլ, տնական թթուներ"
+        "composition_hy": "Ծովատառեխ, կարտոֆիլ, տնական թթուներ",
+        "local_image": "img/menu/домашняя-рыбная-закуска.jpg?v=cl1"
       },
       {
         "name": "Свиные рёбрышки острые",
@@ -965,11 +973,12 @@
         "price": "7 500",
         "composition": "На 3–4 человека",
         "id": "viking-svinoy",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Pork knuckle",
         "name_hy": "Խոզի սրունք",
         "composition_en": "Serves 3–4",
-        "composition_hy": "3–4 հոգու համար"
+        "composition_hy": "3–4 հոգու համար",
+        "local_image": "img/menu/свиная-рулька.jpg?v=cl1"
       }
     ]
   },
@@ -1067,27 +1076,17 @@
         "sub_hy": "Պիցցա"
       },
       {
-        "name": "Паде мясной",
-        "price": "2 700",
-        "composition": "Мясо и овощи, запечённые в тесте",
+        "name": "Паде",
+        "price": "2 700 / 2 500",
+        "composition": "Мясо или овощи, запечённые в тесте",
         "id": "baked-meat-and-vegetables-in-dough",
         "local_image": "img/menu/запеченное-мясо.jpg?v=ctr1",
         "has_image": true,
-        "name_en": "Baked meat and vegetables in dough",
-        "name_hy": "Թխվածքով եփած միս և բանջարեղեն",
-        "composition_en": "Meat and vegetables baked in dough",
-        "composition_hy": "Միս և բանջարեղեն՝ թխված խմորի մեջ"
-      },
-      {
-        "name": "Паде с овощами",
-        "price": "2 500",
-        "composition": "Овощи, запечённые в тесте",
-        "id": "pade-s-ovoschami",
-        "has_image": false,
-        "name_en": "Pide with vegetables",
-        "name_hy": "Փիդե բանջարեղենով",
-        "composition_en": "Vegetables baked in dough",
-        "composition_hy": "Բանջարեղեն՝ թխված խմորի մեջ"
+        "name_en": "Pide",
+        "name_hy": "Փիդե",
+        "composition_en": "Meat or vegetables baked in dough",
+        "composition_hy": "Միս կամ բանջարեղեն՝ թխված խմորի մեջ",
+        "sizes": "мясной / с овощами"
       },
       {
         "name": "Пицца Маргарита",
@@ -1525,19 +1524,21 @@
         "price": "1 700",
         "composition": "Куриные наггетсы с картофелем фри",
         "id": "naggetsy",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Chicken nuggets",
         "name_hy": "Հավի նագետս",
         "composition_en": "Chicken nuggets with french fries",
-        "composition_hy": "Հավի նագետս ֆրի կարտոֆիլով"
+        "composition_hy": "Հավի նագետս ֆրի կարտոֆիլով",
+        "local_image": "img/menu/наггетсы.jpg?v=cl1"
       },
       {
         "name": "Котлеты по-домашнему с картофельным пюре",
         "price": "1 700",
         "id": "kotlety-po-domashnemu-s-kartofelnym-pyure",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Homestyle cutlets with mashed potatoes",
-        "name_hy": "Տնական կոտլետներ կարտոֆիլի պյուրեով"
+        "name_hy": "Տնական կոտլետներ կարտոֆիլի պյուրեով",
+        "local_image": "img/menu/котлеты-по-домашнему.jpg?v=cl1"
       }
     ]
   },
@@ -1622,7 +1623,7 @@
         "price": "2 100",
         "composition": "Медовые коржи, сливочный крем",
         "id": "medovik",
-        "local_image": "img/menu/доме.jpg?v=ig1",
+        "local_image": "img/menu/медовик.jpg?v=cl1",
         "has_image": true,
         "name_en": "Honey cake",
         "name_hy": "Մեղրով տորթ",
@@ -1693,37 +1694,28 @@
         "name": "Морковное пирожное",
         "price": "2 000",
         "id": "morkovnoe-pirozhnoe",
-        "has_image": false,
-        "name_en": "Carrot cake",
-        "name_hy": "Գազարի կեքս"
-      },
-      {
-        "name": "Доме",
-        "price": "2 000",
-        "id": "dome",
-        "local_image": "img/menu/dome.jpg?v=red1",
         "has_image": true,
-        "name_en": "Dome",
-        "name_hy": "Դոմե",
-        "composition": "Десерт дня",
-        "composition_en": "Dessert of the day",
-        "composition_hy": "Օրվա աղանդեր"
+        "name_en": "Carrot cake",
+        "name_hy": "Գազարի կեքս",
+        "local_image": "img/menu/морковное-пирожное.jpg?v=cl1"
       },
       {
         "name": "Фирменное мороженое брауни",
         "price": "2 000",
         "id": "firm-morozhenoe-brauni",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Signature brownie ice cream",
-        "name_hy": "Ֆիրմային պաղպաղակ բրաունի"
+        "name_hy": "Ֆիրմային պաղպաղակ բրաունի",
+        "local_image": "img/menu/фирменное-мороженое-брауни.jpg?v=cl1"
       },
       {
         "name": "Фирменное мороженое рафаэлло",
         "price": "2 000",
         "id": "firm-morozhenoe-rafaello",
-        "has_image": false,
+        "has_image": true,
         "name_en": "Signature Raffaello ice cream",
-        "name_hy": "Ֆիրմային պաղպաղակ Ռաֆաելլո"
+        "name_hy": "Ֆիրմային պաղպաղակ Ռաֆաելլո",
+        "local_image": "img/menu/фирменное-мороженое-рафаэлло.jpg?v=cl1"
       },
       {
         "name": "Мороженое",
