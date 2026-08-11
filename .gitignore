@@ -19,25 +19,19 @@ img/menu/_orderin-sebastian.jpg
 MISSING-IMAGES.txt
 data/maps-config.example.json
 
-# One-off build/reconcile scripts + staging (kept locally, not part of the live site)
-reconcile_menu.py
-process_photos.py
-update_html.py
+# Рабочие черновики (не нужны на живом сайте)
 selection.json
 data/menu.json.staged
 
 # Build / deploy artifacts
 *.zip
 
-# Menu rebuild one-off scripts
+# Одноразовые скрейперы фото (не рабочие: источники закрылись). Генераторы — в репозитории.
 fetch_candidates.py
 fetch_round2.py
 fetch_wiki.py
 process_menu_photos.py
-finalize_menu_json.py
-generate_menu_html.py
 menu_photos.json
 fetch_fix.py
 fetch_fix2.py
 
-generate_bar_html.py

@@ -1,0 +1,89 @@
+name: Пересборка сайта
+
+# Сайт собирается на серверах GitHub — компьютер разработчика не нужен.
+# Запускается: при правке данных, по кнопке, и раз в час (подтягивает Google-таблицу).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'generate_menu_html.py'
+      - 'generate_bar_html.py'
+      - 'generate_print_menu.py'
+      - 'sync_from_sheet.py'
+  workflow_dispatch:        # кнопка «Run workflow» во вкладке Actions
+    inputs:
+      sync_sheet:
+        description: 'Подтянуть цены из Google-таблицы'
+        type: boolean
+        default: true
+  schedule:
+    - cron: '0 * * * *'     # каждый час
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 1. Google-таблица → цены и стоп-лист (если настроена).
+      #    Если таблица повреждена — шаг падает и сайт НЕ пересобирается.
+      - name: Синхронизация с Google-таблицей
+        if: github.event_name == 'schedule' || inputs.sync_sheet
+        env:
+          SHEET_CSV_URL: ${{ vars.SHEET_CSV_URL }}
+        run: |
+          if [ -n "$SHEET_CSV_URL" ] || grep -q '"csv_url": *"http' data/sheet-config.json 2>/dev/null; then
+            python3 sync_from_sheet.py
+          else
+            echo "Google-таблица не настроена — пропускаю (это нормально)."
+          fi
+
+      # 2. Пересборка страниц из данных
+      - name: Сборка меню сайта
+        run: |
+          python3 generate_menu_html.py
+          python3 generate_bar_html.py
+          python3 generate_print_menu.py
+
+      # 3. Проверки: пустое меню или потерянные фото не должны попасть на сайт
+      - name: Проверка результата
+        run: |
+          python3 - <<'PY'
+          import json, os, re, sys
+          site = json.load(open("data/menu.json", encoding="utf-8"))
+          dishes = [it for c in site for it in c.get("items", []) if it.get("name")]
+          visible = [it for it in dishes if not it.get("hidden")]
+          assert len(visible) >= 50, f"на сайте осталось всего {len(visible)} блюд — похоже на ошибку"
+          missing = [it["name"] for it in visible
+                     if it.get("local_image") and not os.path.exists(it["local_image"].split("?")[0])]
+          assert not missing, f"фото не найдены: {missing}"
+          html = open("menu.html", encoding="utf-8").read()
+          assert html.count('class="menu-card') >= 50, "в menu.html подозрительно мало карточек"
+          print(f"OK: блюд {len(dishes)}, показываем {len(visible)}, фото на месте")
+          PY
+
+      - name: Публикация
+        run: |
+          git config user.name  "domik-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "Изменений нет."
+          else
+            git commit -m "Автосборка: обновление меню [skip ci]"
+            git push
+            echo "Сайт обновлён."
+          fi

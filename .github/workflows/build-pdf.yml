@@ -1,0 +1,75 @@
+name: Сборка PDF для типографии
+
+# Собирает печатное меню в PDF на трёх языках (RU / EN / HY).
+# Запуск: вкладка Actions → «Сборка PDF для типографии» → Run workflow.
+# Готовые файлы скачиваются внизу страницы запуска, в разделе Artifacts.
+
+on:
+  workflow_dispatch:
+    inputs:
+      with_bar:
+        description: 'Включить барную карту'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: browser-actions/setup-chrome@v1
+        id: chrome
+        with:
+          chrome-version: stable
+
+      - name: Сборка страниц книги
+        run: |
+          FLAG=""
+          if [ "${{ inputs.with_bar }}" != "true" ]; then FLAG="--no-bar"; fi
+          python3 generate_print_menu.py $FLAG            && cp menu-print.html book-ru.html
+          python3 generate_print_menu.py $FLAG --lang=en  && cp menu-print.html book-en.html
+          python3 generate_print_menu.py $FLAG --lang=hy  && cp menu-print.html book-hy.html
+          python3 generate_print_menu.py $FLAG            # вернуть RU-версию в menu-print.html
+
+      - name: Печать в PDF
+        run: |
+          python3 -m http.server 8899 --bind 127.0.0.1 &
+          sleep 3
+          for L in ru en hy; do
+            "${{ steps.chrome.outputs.chrome-path }}" \
+              --headless=new --disable-gpu --no-sandbox --no-first-run \
+              --virtual-time-budget=30000 --no-pdf-header-footer \
+              --print-to-pdf="domik-menu-$L.pdf" \
+              "http://127.0.0.1:8899/book-$L.html"
+            ls -la "domik-menu-$L.pdf"
+          done
+
+      - name: Проверка PDF
+        run: |
+          pip install --quiet pymupdf
+          python3 - <<'PY'
+          import glob, sys
+          try: import fitz
+          except ModuleNotFoundError: import pymupdf as fitz
+          for f in sorted(glob.glob("domik-menu-*.pdf")):
+              d = fitz.open(f)
+              n = len(d)
+              t = "\n".join(p.get_text() for p in d)
+              assert n >= 10, f"{f}: всего {n} страниц — сборка сломалась"
+              assert "Цахкадзор" in t or "Tsaghkadzor" in t or "Ծաղկաձոր" in t, f"{f}: нет контактов"
+              print(f"{f}: {n} страниц — OK")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: menu-pdf
+          path: domik-menu-*.pdf
+          retention-days: 90
