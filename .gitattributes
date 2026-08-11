@@ -1,0 +1,14 @@
+# Переводы строк не должны зависеть от машины разработчика:
+# без этого сборка на другом компьютере или в GitHub Actions даёт «изменения»
+# в файлах, которых на самом деле нет.
+* text=auto eol=lf
+
+# Бинарники не трогать
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.webp binary
+*.ico  binary
+*.pdf  binary
+*.mp4  binary
+*.RW2  binary

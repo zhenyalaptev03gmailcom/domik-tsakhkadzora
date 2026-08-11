@@ -66,7 +66,7 @@ def grid(items):
     for i, it in enumerate(items):
         out.append("        " + card(it, min(0.25, i * 0.05)))
     out.append("        </div>")
-    return "\r\n".join(out)
+    return "\n".join(out)
 
 # ── nav ──
 nav = ['<nav class="menu-nav container" aria-label="Разделы меню">']
@@ -76,7 +76,7 @@ for i, c in enumerate(MENU):
     if c.get("name_hy"): tr += f' data-tr-hy="{esc(c["name_hy"])}"'
     nav.append(f'  <a href="#cat-{i}" class="menu-tab" data-category="cat-{i}"{tr}>{esc(c["name"])}</a>')
 nav.append('</nav>')
-nav_html = "\r\n".join(nav)
+nav_html = "\n".join(nav)
 
 # ── категории ──
 secs = []
@@ -114,11 +114,11 @@ for i, c in enumerate(MENU):
         if items:
             s.append("        " + grid(items))
     s.append('      </section>')
-    secs.append("\r\n".join(s))
+    secs.append("\n".join(s))
 
-food_inner = (nav_html + "\r\n<div class=\"menu-page-wrap\">\r\n  <div class=\"container menu-page\">\r\n"
-              + "\r\n".join(secs) + "\r\n  </div>\r\n</div>")
-food_block = '<div id="menu-food">\r\n' + food_inner + "\r\n</div>\r\n"
+food_inner = (nav_html + "\n<div class=\"menu-page-wrap\">\n  <div class=\"container menu-page\">\n"
+              + "\n".join(secs) + "\r\n  </div>\n</div>")
+food_block = '<div id="menu-food">\n' + food_inner + "\n</div>\n"
 
 # ── вставка в menu.html ──
 mh = open(P("menu.html"), "r", encoding="utf-8", newline="").read()

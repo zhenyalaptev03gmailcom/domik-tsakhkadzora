@@ -194,7 +194,7 @@ def emit_section(bid, title, rows):
            '        <ul class="bar-list">']
     out += rows
     out += ['        </ul>', '      </section>']
-    return "\r\n".join(out), (bid, title, en, hy)
+    return "\n".join(out), (bid, title, en, hy)
 
 sections, navmeta = [], []
 bid = 0
@@ -222,11 +222,11 @@ for b, title, en, hy in navmeta:
                f'data-tr-en="{esc(en)}" data-tr-hy="{esc(hy)}">{esc(title)}</a>')
 nav.append('</nav>')
 
-bar_block = ('<div id="menu-bar" hidden>\r\n'
-             + "\r\n".join(nav) + '\r\n'
-             + '<div class="menu-page-wrap">\r\n  <div class="container menu-page">\r\n'
-             + "\r\n".join(sections) + '\r\n'
-             + '  </div>\r\n</div>\r\n</div>\r\n')
+bar_block = ('<div id="menu-bar" hidden>\n'
+             + "\n".join(nav) + '\n'
+             + '<div class="menu-page-wrap">\n  <div class="container menu-page">\n'
+             + "\n".join(sections) + '\n'
+             + '  </div>\n</div>\n</div>\n')
 
 mh2 = mh[:start] + bar_block + mh[script_idx:]
 open(P("menu.html"), "w", encoding="utf-8", newline="").write(mh2)
