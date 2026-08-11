@@ -117,7 +117,7 @@ for i, c in enumerate(MENU):
     secs.append("\n".join(s))
 
 food_inner = (nav_html + "\n<div class=\"menu-page-wrap\">\n  <div class=\"container menu-page\">\n"
-              + "\n".join(secs) + "\r\n  </div>\n</div>")
+              + "\n".join(secs) + "\n  </div>\n</div>")
 food_block = '<div id="menu-food">\n' + food_inner + "\n</div>\n"
 
 # ── вставка в menu.html ──
