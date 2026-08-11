@@ -805,7 +805,7 @@
         "price": "3 700",
         "composition": "Куриное филе, шпинат, сырный и грибной соус",
         "id": "kurinoe-file-po-frantsuzski",
-        "local_image": "img/menu/куриное-филе-по-французски.jpg?v=web1",
+        "local_image": "img/menu/куриное-филе-по-французски.jpg?v=cl3",
         "has_image": true,
         "composition_en": "Chicken fillet, spinach, cheese and mushroom sauce",
         "composition_hy": "Հավի ֆիլե, սպանախ, պանրի և սնկով սոուս",
@@ -1757,7 +1757,7 @@
         "name": "Арбуз и дыня",
         "price": "1 500",
         "id": "arbuz-i-dynya",
-        "local_image": "img/menu/арбуз-и-дыня.jpg?v=web1",
+        "local_image": "img/menu/арбуз-и-дыня.jpg?v=cl3",
         "has_image": true,
         "name_en": "Watermelon & Melon",
         "name_hy": "Ձմերուկ և սեխ"
