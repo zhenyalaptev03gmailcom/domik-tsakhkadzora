@@ -14,7 +14,9 @@
         "local_image": "img/menu/французский-завтрак.jpg?v=ctr1",
         "has_image": true,
         "name_en": "French Breakfast",
-        "name_hy": "Ֆրանսիական նախաճաշ"
+        "name_hy": "Ֆրանսիական նախաճաշ",
+        "composition_en": "Croissants, jam, Nutella, European cheese",
+        "composition_hy": "Կրուասաններ, ջեմ, նուտելլա, եվրոպական պանիր"
       },
       {
         "name": "Итальянский завтрак",
@@ -36,7 +38,9 @@
         "local_image": "img/menu/английский-завтрак.jpg?v=st4",
         "has_image": true,
         "name_en": "English breakfast",
-        "name_hy": "Անգլիական նախաճաշ"
+        "name_hy": "Անգլիական նախաճաշ",
+        "composition_en": "Sausages, fried eggs, bacon, beans, mushrooms",
+        "composition_hy": "Նրբերշիկ, տապակած ձու, բեկոն, լոբի, սունկ"
       },
       {
         "name": "Омлет",
@@ -82,7 +86,9 @@
         "local_image": "img/menu/панкейк-с-нутеллой.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Pancakes with Nutella and poppy seeds",
-        "name_hy": "Փենքեյք Նուտելլայով և կակաչով"
+        "name_hy": "Փենքեյք Նուտելլայով և կակաչով",
+        "composition_en": "Pancakes, Nutella",
+        "composition_hy": "Փանքեյքեր, նուտելլա"
       },
       {
         "name": "Чиа пудинг",
@@ -104,7 +110,9 @@
         "local_image": "img/menu/круассан.jpg?v=web4",
         "has_image": true,
         "name_en": "Croissant",
-        "name_hy": "Կրուասան"
+        "name_hy": "Կրուասան",
+        "composition_en": "Your choice: salmon, shrimp, avocado, pastrami or Nutella",
+        "composition_hy": "Ընտրությամբ՝ սաղմոն, ծովախեցգետին, ավոկադո, պաստրամի կամ նուտելլա"
       }
     ]
   },
@@ -159,7 +167,11 @@
         "composition": "Фокачча, помидор, буррата, микс зелени",
         "id": "firmennaya-burata",
         "local_image": "img/menu/фирменная-бурата.jpg?v=ig1268",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Signature Burrata",
+        "name_hy": "Ֆիրմային բուռատա",
+        "composition_en": "Focaccia, tomato, burrata, greens mix",
+        "composition_hy": "Ֆոկաչա, լոլիկ, բուռատա, կանաչիների խառնուրդ"
       },
       {
         "name": "Брускетта с томатами",
@@ -231,7 +243,9 @@
         "local_image": "img/menu/мацун-сцеженый.jpg?v=fit800",
         "has_image": true,
         "name_en": "Strained matsoni",
-        "name_hy": "Քամած մածուն"
+        "name_hy": "Քամած մածուն",
+        "composition_en": "Strained matsun",
+        "composition_hy": "Քամած մածուն"
       }
     ]
   },
@@ -271,7 +285,9 @@
         "local_image": "img/menu/жареный-сыр.jpg?v=fit800",
         "has_image": true,
         "name_en": "Fried cheese",
-        "name_hy": "Տապակած պանիր"
+        "name_hy": "Տապակած պանիր",
+        "composition_en": "Breaded fried cheese, sauce",
+        "composition_hy": "Պանիր պաքսիմատով, սոուս"
       },
       {
         "name": "Куриная темпура с соусом",
@@ -287,7 +303,11 @@
         "composition": "Тонкие блинчики с мясной начинкой",
         "id": "blinchiki-s-myasom",
         "local_image": "img/menu/блинчики-с-мясом.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Crepes with Meat",
+        "name_hy": "Բլիթներ մսով",
+        "composition_en": "Thin crepes with meat filling",
+        "composition_hy": "Բարակ բլիթներ մսի միջուկով"
       },
       {
         "name": "Тако с курицей",
@@ -295,7 +315,11 @@
         "composition": "Тортильи, курица, овощи, соус",
         "id": "tako-s-kuritsei",
         "local_image": "img/menu/тако-с-курицей.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Chicken Tacos",
+        "name_hy": "Տակո հավով",
+        "composition_en": "Tortillas, chicken, vegetables, sauce",
+        "composition_hy": "Տորտիլյա, հավ, բանջարեղեն, սոուս"
       },
       {
         "name": "Тако с креветками",
@@ -303,7 +327,11 @@
         "composition": "Тортильи, креветки, овощи, соус",
         "id": "tako-s-krevetkami",
         "local_image": "img/menu/тако-с-креветками.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Shrimp Tacos",
+        "name_hy": "Տակո ծովախեցգետնով",
+        "composition_en": "Tortillas, shrimp, vegetables, sauce",
+        "composition_hy": "Տորտիլյա, ծովախեցգետին, բանջարեղեն, սոուս"
       },
       {
         "name": "Кесадилья с курицей",
@@ -390,7 +418,9 @@
         "local_image": "img/menu/классическая-бурата.jpg?v=web2",
         "has_image": true,
         "name_en": "Burrata",
-        "name_hy": "Բուրատա"
+        "name_hy": "Բուրատա",
+        "composition_en": "Burrata, tomatoes, olive oil, greens mix",
+        "composition_hy": "Բուռատա, լոլիկ, ձիթապտղի յուղ, կանաչիներ"
       },
       {
         "name": "Салат цезарь",
@@ -410,7 +440,11 @@
         "composition": "Креветки, листья романо, пармезан, гренки, соус цезарь",
         "id": "tsezar-s-krevetkami",
         "local_image": "img/menu/цезарь-с-креветками.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Caesar with Shrimp",
+        "name_hy": "Ցեզար ծովախեցգետնով",
+        "composition_en": "Shrimp, romaine, Parmesan, croutons, Caesar dressing",
+        "composition_hy": "Ծովախեցգետին, ռոմեն, պարմեզան, կրուտոններ, Ցեզար սոուս"
       },
       {
         "name": "Салат из стейка ангус",
@@ -432,7 +466,9 @@
         "local_image": "img/menu/армянский-салат.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Armenian salad",
-        "name_hy": "Հայկական աղցան"
+        "name_hy": "Հայկական աղցան",
+        "composition_en": "Grilled veal, eggplant, plum, walnut, pomegranate sauce",
+        "composition_hy": "Գրիլի հորթի միս, սմբուկ, սալոր, ընկույզ, նռան սոուս"
       },
       {
         "name": "Салат гурман",
@@ -493,7 +529,11 @@
         "composition": "Курица, лапша, овощи",
         "id": "domashnii-kurinyi-sup",
         "local_image": "img/menu/домашний-куриный-суп.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Homemade Chicken Soup",
+        "name_hy": "Տնական հավի ապուր",
+        "composition_en": "Chicken, noodles, vegetables",
+        "composition_hy": "Հավ, արիշտա, բանջարեղեն"
       },
       {
         "name": "Томатный крем суп",
@@ -570,7 +610,11 @@
         "composition": "Соус песто, пармезан",
         "id": "pasta-pesto",
         "local_image": "img/menu/паста-песто.jpg?v=web2",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Pasta Pesto",
+        "name_hy": "Պաստա պեստո",
+        "composition_en": "Pesto sauce, Parmesan",
+        "composition_hy": "Պեստո սոուս, պարմեզան"
       },
       {
         "name": "Паста пелати",
@@ -615,7 +659,9 @@
         "local_image": "img/menu/паста-карбонара.jpg?v=web2",
         "has_image": true,
         "name_en": "Pancetta pasta",
-        "name_hy": "Պանչետա մակարոնեղեն"
+        "name_hy": "Պանչետա մակարոնեղեն",
+        "composition_en": "Pasta, pancetta, cream, egg, Parmesan, black pepper",
+        "composition_hy": "Մակարոն, պանչետտա, սերուցք, ձու, պարմեզան, սև պղպեղ"
       },
       {
         "name": "Паста с говядиной",
@@ -743,7 +789,9 @@
         "local_image": "img/menu/курица-с-овощами.jpg?v=fit800",
         "has_image": true,
         "name_en": "Chicken with vegetables",
-        "name_hy": "Հավ բանջարեղենով"
+        "name_hy": "Հավ բանջարեղենով",
+        "composition_en": "Grilled chicken with vegetables",
+        "composition_hy": "Գրիլի ճուտ բանջարեղենով"
       },
       {
         "name": "Куриное филе по-французски",
@@ -753,7 +801,9 @@
         "local_image": "img/menu/куриное-филе-по-французски.jpg?v=web1",
         "has_image": true,
         "composition_en": "Chicken fillet, spinach, cheese and mushroom sauce",
-        "composition_hy": "Հավի ֆիլե, սպանախ, պանրի և սնկով սոուս"
+        "composition_hy": "Հավի ֆիլե, սպանախ, պանրի և սնկով սոուս",
+        "name_en": "Chicken Fillet French-Style",
+        "name_hy": "Հավի ֆիլե ֆրանսիական ձևով"
       },
       {
         "name": "Индейка на гриле с цитрусовым соусом и киноа",
@@ -800,7 +850,8 @@
         "has_image": true,
         "name_en": "Beef Stroganoff (chicken / veal)",
         "name_hy": "Հորթի բեֆստրոգանով (բրինձ / կարտոֆիլ)",
-        "composition_en": "Chicken or veal in cream sauce, rice or potatoes"
+        "composition_en": "Chicken or veal in cream sauce, rice or potatoes",
+        "composition_hy": "Հավ կամ հորթի միս սերուցքային սոուսում, բրինձ կամ կարտոֆիլ"
       },
       {
         "name": "Пеппер стейк",
@@ -808,7 +859,11 @@
         "composition": "Стейк с перечным соусом",
         "id": "pepper-steik",
         "local_image": "img/menu/пеппер-стейк.jpg?v=web3",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Pepper Steak",
+        "name_hy": "Պեպպեր սթեյք",
+        "composition_en": "Steak with pepper sauce",
+        "composition_hy": "Սթեյք պղպեղի սոուսով"
       },
       {
         "name": "Долма",
@@ -830,7 +885,9 @@
         "local_image": "img/menu/баклажаны-фаршированны.jpg?v=fit800",
         "has_image": true,
         "name_en": "Stuffed eggplants",
-        "name_hy": "Լցոնված սմբուկ"
+        "name_hy": "Լցոնված սմբուկ",
+        "composition_en": "With meat or vegetables",
+        "composition_hy": "Մսով կամ բանջարեղենով"
       }
     ]
   },
@@ -875,7 +932,9 @@
         "price": "1 800",
         "id": "solenye-orehi",
         "local_image": "img/menu/солёные-орехи.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Salted Nuts",
+        "name_hy": "Աղի ընկույզ"
       },
       {
         "name": "Немецкая закуска",
@@ -885,7 +944,9 @@
         "local_image": "img/menu/немецкая-закуска.jpg?v=ig2",
         "has_image": true,
         "name_en": "German appetizer",
-        "name_hy": "Գերմանական նախուտեստ"
+        "name_hy": "Գերմանական նախուտեստ",
+        "composition_en": "Idaho potatoes, cheese balls, garlic bread",
+        "composition_hy": "Այդահո կարտոֆիլ, պանրի գնդիկներ, սխտորով հաց"
       },
       {
         "name": "Острые куриные крылышки",
@@ -925,7 +986,11 @@
         "composition": "Кебаб куриный и говяжий, фирменный шашлык, овощи · На 3–5 человек",
         "id": "domik",
         "local_image": "img/menu/домик-сет.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Domik",
+        "name_hy": "Դոմիկ",
+        "composition_en": "Chicken and beef kebab, signature barbecue, vegetables · For 3–5 people",
+        "composition_hy": "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն · 3–5 հոգու համար"
       },
       {
         "name": "Семейный домик",
@@ -936,7 +1001,8 @@
         "has_image": true,
         "name_en": "Mixed grill skewers",
         "name_hy": "Խորովածի տեսականի",
-        "composition_en": "Large charcoal barbecue platter with vegetables · For 3–5 people"
+        "composition_en": "Large charcoal barbecue platter with vegetables · For 3–5 people",
+        "composition_hy": "Խորովածի մեծ տեսականի ածուխի վրա, բանջարեղեն · 3–5 հոգու համար"
       },
       {
         "name": "Фламинго",
@@ -946,7 +1012,9 @@
         "local_image": "img/menu/фламинго.jpg?v=st2",
         "has_image": true,
         "name_en": "Flamingo",
-        "name_hy": "Ֆլամինգո"
+        "name_hy": "Ֆլամինգո",
+        "composition_en": "Chicken, chicken fillet, turkey, chicken wings, vegetables · For 3–5 people",
+        "composition_hy": "Ճուտ, հավի ֆիլե, հնդկահավ, հավի թևիկներ, բանջարեղեն · 3–5 հոգու համար"
       },
       {
         "name": "Стейк рибай",
@@ -968,7 +1036,9 @@
         "local_image": "img/menu/немецкий-сет.jpg?v=ctr1",
         "has_image": true,
         "name_en": "German set",
-        "name_hy": "Գերմանական սեթ"
+        "name_hy": "Գերմանական սեթ",
+        "composition_en": "Assorted sausages, cheese balls, garlic bread, vegetables · For 3–5 people",
+        "composition_hy": "Նրբերշիկների տեսականի, պանրի գնդիկներ, սխտորով հաց, բանջարեղեն · 3–5 հոգու համար"
       },
       {
         "name": "Медуза",
@@ -978,7 +1048,9 @@
         "local_image": "img/menu/медуза.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Jellyfish salad",
-        "name_hy": "Մեդուզա աղցան"
+        "name_hy": "Մեդուզա աղցան",
+        "composition_en": "Trout, seafood, mussels, squid · For 3–5 people",
+        "composition_hy": "Իշխան, ծովամթերք, միդիա, կաղամար · 3–5 հոգու համար"
       }
     ]
   },
@@ -1089,7 +1161,11 @@
         "sizes": "обычный / с бастурмой",
         "id": "hachapuri-adzharskii",
         "local_image": "img/menu/хачапури-аджарский.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Adjarian Khachapuri",
+        "name_hy": "Աջարական խաչապուրի",
+        "composition_en": "Boat-shaped bread with cheese, egg and butter",
+        "composition_hy": "Նավակաձև խաչապուրի պանրով, ձվով և կարագով"
       },
       {
         "name": "Хачапури имеретинский",
@@ -1097,7 +1173,11 @@
         "composition": "Закрытый, с сыром",
         "id": "hachapuri-imeretinskii",
         "local_image": "img/menu/хачапури-имеретинский.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Imeretian Khachapuri",
+        "name_hy": "Իմերեթական խաչապուրի",
+        "composition_en": "Closed, with cheese",
+        "composition_hy": "Փակ, պանրով"
       },
       {
         "name": "Хачапури мегрельский",
@@ -1105,7 +1185,11 @@
         "composition": "С сыром внутри и сверху",
         "id": "hachapuri-megrelskii",
         "local_image": "img/menu/хачапури-мегрельский.jpg?v=web2",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Megrelian Khachapuri",
+        "name_hy": "Մեգրելական խաչապուրի",
+        "composition_en": "Cheese inside and on top",
+        "composition_hy": "Պանիր՝ ներսում և վրան"
       },
       {
         "sub": "Бургеры и сэндвичи",
@@ -1177,7 +1261,9 @@
         "local_image": "img/menu/креветки.jpg?v=ig3",
         "has_image": true,
         "name_en": "Shrimp",
-        "name_hy": "Ծովախեցգետին"
+        "name_hy": "Ծովախեցգետին",
+        "composition_en": "Regular shrimp 250 g or king prawns 200 g",
+        "composition_hy": "Սովորական ծովախեցգետին 250 գ կամ արքայական՝ 200 գ"
       },
       {
         "name": "Форель",
@@ -1189,7 +1275,8 @@
         "name_en": "Trout",
         "name_hy": "Իշխան",
         "sizes": "1 кг",
-        "composition_en": "Grilled rainbow trout"
+        "composition_en": "Grilled rainbow trout",
+        "composition_hy": "Ծիածանագույն իշխան գրիլի վրա"
       },
       {
         "name": "Стейк лосося",
@@ -1199,7 +1286,9 @@
         "local_image": "img/menu/лосось.jpg?v=web2",
         "has_image": true,
         "name_en": "Salmon",
-        "name_hy": "Սաղմոն"
+        "name_hy": "Սաղմոն",
+        "composition_en": "Grilled salmon steak",
+        "composition_hy": "Սաղմոնի սթեյք գրիլի վրա"
       },
       {
         "name": "Стерлядь",
@@ -1346,7 +1435,9 @@
         "local_image": "img/menu/овощи-гриль.jpg?v=fit800",
         "has_image": true,
         "name_en": "Grilled vegetables",
-        "name_hy": "Գրիլ բանջարեղեն"
+        "name_hy": "Գրիլ բանջարեղեն",
+        "composition_en": "Mushrooms, eggplant, zucchini, pepper",
+        "composition_hy": "Սունկ, սմբուկ, դդմիկ, պղպեղ"
       }
     ]
   },
@@ -1465,7 +1556,9 @@
         "local_image": "img/menu/тандырный-хлеб.jpg?v=fit800",
         "has_image": true,
         "name_en": "Fresh bread",
-        "name_hy": "Թարմ հաց"
+        "name_hy": "Թարմ հաց",
+        "composition_en": "Fresh warm homemade bread",
+        "composition_hy": "Թարմ տաք տնական հաց"
       },
       {
         "name": "Фокачча",
@@ -1508,7 +1601,9 @@
         "local_image": "img/menu/шоколадный-пирог.jpg?v=fit800",
         "has_image": true,
         "name_en": "Chocolate cake",
-        "name_hy": "Շոկոլադե կարկանդակ"
+        "name_hy": "Շոկոլադե կարկանդակ",
+        "composition_en": "Chocolate tart",
+        "composition_hy": "Շոկոլադե տարտ"
       },
       {
         "name": "Яблочный пирог",
@@ -1662,14 +1757,18 @@
         "local_image": "img/menu/фруктовый-ассорти.jpg?v=fit800",
         "has_image": true,
         "name_en": "Fruit platter",
-        "name_hy": "Մրգային ասորտի"
+        "name_hy": "Մրգային ասորտի",
+        "composition_en": "Seasonal fresh fruit platter",
+        "composition_hy": "Սեզոնային թարմ մրգերի տեսականի"
       },
       {
         "name": "Арбуз и дыня",
         "price": "1 500",
         "id": "arbuz-i-dynya",
         "local_image": "img/menu/арбуз-и-дыня.jpg?v=web1",
-        "has_image": true
+        "has_image": true,
+        "name_en": "Watermelon & Melon",
+        "name_hy": "Ձմերուկ և սեխ"
       }
     ]
   }
