@@ -90,7 +90,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/print-menu.css?v=14">
+<link rel="stylesheet" href="css/print-menu.css?v=15">
 <style>
   .book-dish__name .dish-size{font-weight:400;font-style:italic;opacity:.6;font-size:.8em;margin-left:.45em;letter-spacing:.02em}
   .book-cat__note{text-align:center;font-style:italic;font-size:.84rem;letter-spacing:.03em;color:#8f6f3e;margin:-.55rem 0 1.1rem}
@@ -108,6 +108,14 @@ HEAD = '''<!DOCTYPE html>
 <body>'''
 
 SCRIPT = '<script src="js/print-paginate.js?v=6"></script>'
+
+# Армянская капитель: отключаем CSS-uppercase (он ломает лигатуру «և»),
+# текст заголовков подаётся уже заглавными из Python — см. hy_upper().
+HY_CASE_CSS = """<style>
+  .book-cat__title, .book-subcat, .bar-sec__title,
+  .catalog__kicker, .catalog__cats, .bar-part__title, .bar-part__sub,
+  .book-cover__sub, .book-cover__menu { text-transform: none !important; }
+</style>"""
 
 
 def esc(t):
@@ -286,6 +294,11 @@ try:
 except Exception:
     pass
 
+def hy_upper(s):
+    """Заглавные для армянского. Unicode превращает лигатуру «և» в архаичное
+    «ԵՒ» (классическая орфография) — в современном восточноармянском нужно «ԵՎ»."""
+    return s.upper().replace("ԵՒ", "ԵՎ")
+
 def _pick(pair):
     return pair[0] if LANG == 'en' else pair[1]
 def T_ui(s):
@@ -396,7 +409,7 @@ def render_catalog(cat):
     # раскладка: >3 фото — редакционная мозаика (герой+лента+блок), 3 — аккуратный ряд
     photos_cls = "catalog__photos catalog__photos--" + ("mosaic" if len(srcs) > 3 else "trio")
     if cat.get("cats"):
-        line = ' &#183; '.join(esc(T_sec(c)) for c in cat["cats"])
+        line = ' &#183; '.join(esc(hy_upper(T_sec(c)) if LANG=='hy' else T_sec(c)) for c in cat["cats"])
     else:
         line = esc(T_ui(cat.get("subtitle", "")))
     cls = "catalog-spread" + ("" if photos else " catalog-spread--divider")
@@ -407,7 +420,7 @@ def render_catalog(cat):
             '<div class="catalog__frame" aria-hidden="true"></div>'
             '<div class="catalog__inner">'
             '<div class="catalog__top">'
-            f'<div class="catalog__kicker">{esc(T_ui(cat.get("kicker", "Меню · DoMik")))}</div>'
+            f'<div class="catalog__kicker">{esc(hy_upper(T_ui(cat.get("kicker","Меню · DoMik"))) if LANG=="hy" else T_ui(cat.get("kicker","Меню · DoMik")))}</div>'
             f'<h2 class="catalog__title">{esc(T_ui(cat["title"]))}</h2>'
             '<div class="catalog__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>'
             f'<div class="catalog__cats">{line}</div>'
@@ -424,8 +437,8 @@ if LANG == 'en':
                  .replace('Цахкадзор, ул.&nbsp;Хачатура&nbsp;Кечареци&nbsp;6', 'Tsaghkadzor, 6&nbsp;Khachatur&nbsp;Kecharetsi&nbsp;St') \
                  .replace('ежедневно&nbsp;11:00&ndash;23:00', 'daily&nbsp;11:00&ndash;23:00')
 elif LANG == 'hy':
-    cover = cover.replace('Ресторан Цахкадзора', 'Ծաղկաձորի ռեստորան') \
-                 .replace('>Меню<', '>Մենյու<') \
+    cover = cover.replace('Ресторан Цахкадзора', 'ԾԱՂԿԱՁՈՐԻ ՌԵՍՏՈՐԱՆ') \
+                 .replace('>Меню<', '>ՄԵՆՅՈՒ<') \
                  .replace('Цахкадзор, ул.&nbsp;Хачатура&nbsp;Кечареци&nbsp;6', 'Ծաղկաձոր, Խաչատուր&nbsp;Կեչառեցու&nbsp;փ.&nbsp;6') \
                  .replace('ежедневно&nbsp;11:00&ndash;23:00', 'ամեն&nbsp;օր&nbsp;11:00&ndash;23:00')
 parts = [cover]   # обложка; первый разворот — «Начало трапезы» перед «Завтрак»
@@ -443,6 +456,7 @@ for sec in pm:
     if sec.get('page_break'):                    # раздел начинается с нового листа
         parts.append('<div class="book-break"></div>')
     sec_title = T_sec(sec['name'].strip())
+    if LANG == 'hy': sec_title = hy_upper(sec_title)
     cat_title = fill(CAT_TITLE, TITLE=esc(sec_title))
     if len(sec_title) > 20:                      # длинный заголовок — мельче, в одну строку
         cat_title = cat_title.replace('book-cat__title', 'book-cat__title book-cat__title--long', 1)
@@ -454,7 +468,8 @@ for sec in pm:
             parts.append('<div class="book-break"></div>')
             continue
         if it.get('sub'):                       # подзаголовок-подраздел
-            parts.append(fill(SUBCAT_TITLE, TITLE=esc(T_sub(it['sub'].strip()))))
+            _sub = T_sub(it['sub'].strip())
+            parts.append(fill(SUBCAT_TITLE, TITLE=esc(hy_upper(_sub) if LANG=='hy' else _sub)))
             continue
         name_html = esc(T_name(it['name'].strip()))
         if it.get('sizes'):
@@ -477,7 +492,8 @@ if not NO_BAR:
 def emit_curated_bar(sec):
     """Кухонная (curated) секция print-menu.json как раздел бара (К пиву)."""
     global bar_rows_total
-    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(T_bar_sec(sec['name'].strip()))))
+    _bs = T_bar_sec(sec['name'].strip())
+    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(hy_upper(_bs) if LANG=='hy' else _bs)))
     for it in sec['items']:
         p = (it.get('price') or '').strip()
         if any(ch.isdigit() for ch in p):
@@ -487,10 +503,12 @@ def emit_curated_bar(sec):
 
 for sec in (bar if not NO_BAR else []):
     title = sec['section'].strip()
-    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(T_bar_sec(title))))
+    _bt = T_bar_sec(title)
+    parts.append(fill(BAR_SEC_TITLE, TITLE=esc(hy_upper(_bt) if LANG=='hy' else _bt)))
     for it in sec['items']:
         if it.get('sub'):                   # подзаголовок-подраздел внутри раздела бара
-            parts.append(fill(SUBCAT_TITLE, TITLE=esc(T_sub(it['sub'].strip()))))
+            _s2 = T_sub(it['sub'].strip())
+            parts.append(fill(SUBCAT_TITLE, TITLE=esc(hy_upper(_s2) if LANG=='hy' else _s2)))
             continue
         p = (it.get('price') or '').strip()
         if any(ch.isdigit() for ch in p):
@@ -515,6 +533,7 @@ parts.append(render_catalog(FAREWELL))
 # ---------- сборка ----------
 head_out = HEAD
 if LANG == 'hy':
+    head_out = head_out.replace('</head>', HY_CASE_CSS + '\n</head>')
     head_out = head_out.replace(
         '<link rel="stylesheet" href="css/print-menu.css',
         '<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;500;600&display=swap" rel="stylesheet">\n'
