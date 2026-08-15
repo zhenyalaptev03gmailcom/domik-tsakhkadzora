@@ -20,7 +20,7 @@ def esc(s): return html.escape(str(s), quote=True)
 NOTE_TR = {
     "На выбор вид пасты: феттучини, спагетти, пенне":
         ("Choose your pasta: fettuccine, spaghetti, penne",
-         "Ընտրեք մակարոնի տեսակը՝ ֆետուչինի, սպագետի, պենne"),
+         "Ընտրությամբ մակարոն՝ ֆետուչինի, սպագետտի, պեննե"),
 }
 
 def webp_of(local):
