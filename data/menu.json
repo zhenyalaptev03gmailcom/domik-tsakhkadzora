@@ -74,7 +74,7 @@
         "local_image": "img/menu/сырники-шоколадные.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Chocolate syrniki",
-        "name_hy": "Շոկոլադե սըրնիկի",
+        "name_hy": "Շոկոլադե սըրնիկներ",
         "composition_en": "Cottage cheese, chocolate, sour cream",
         "composition_hy": "Կաթնաշոռ, շոկոլադ, թթվասեր"
       },
@@ -86,9 +86,9 @@
         "local_image": "img/menu/панкейк-с-нутеллой.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Pancakes with Nutella and poppy seeds",
-        "name_hy": "Փենքեյք Նուտելլայով և կակաչով",
+        "name_hy": "Փենքեյք նուտելլայով",
         "composition_en": "Pancakes, Nutella",
-        "composition_hy": "Փանքեյքեր, նուտելլա"
+        "composition_hy": "Փենքեյքեր, նուտելլա"
       },
       {
         "name": "Чиа пудинг",
@@ -132,7 +132,7 @@
         "local_image": "img/menu/винная-тарелка.jpg?v=fit800",
         "has_image": true,
         "name_en": "Wine platter",
-        "name_hy": "Գինու ափսե",
+        "name_hy": "Գինու խորտիկների տեսականի",
         "composition_en": "Cheese & charcuterie board for wine",
         "composition_hy": "Պանրի և մսի տեսականի գինու հետ"
       },
@@ -144,9 +144,9 @@
         "local_image": "img/menu/армянская-мясная-тарел.jpg?v=fit800",
         "has_image": true,
         "name_en": "Armenian meat platter",
-        "name_hy": "Հայկական մսային ափսե",
+        "name_hy": "Հայկական մսեղենի տեսականի",
         "composition_en": "Assorted meat delicacies",
-        "composition_hy": "Մսային նրբերշիկների տեսականի"
+        "composition_hy": "Մսեղենի տեսականի"
       },
       {
         "name": "Армянская сырная тарелка",
@@ -157,7 +157,7 @@
         "local_image": "img/menu/армянская-сырная-тарел.jpg?v=fit800",
         "has_image": true,
         "name_en": "Armenian cheese platter",
-        "name_hy": "Հայկական պանրի ափսե",
+        "name_hy": "Հայկական պանիրների տեսականի",
         "composition_en": "Armenian cheese platter",
         "composition_hy": "Հայկական պանիրների տեսականի"
       },
@@ -181,7 +181,7 @@
         "local_image": "img/menu/брускетта.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Bruschetta",
-        "name_hy": "Բրուսկետա",
+        "name_hy": "Բրուսկետտա լոլիկով",
         "composition_en": "Ciabatta, tomatoes, basil, olive oil",
         "composition_hy": "Չիաբատա, լոլիկ, ռեհան, ձիթապտղի յուղ"
       },
@@ -225,7 +225,7 @@
         "local_image": "img/menu/соления.jpg?v=fit800",
         "has_image": true,
         "name_en": "Pickles",
-        "name_hy": "Թթուներ"
+        "name_hy": "Տնական թթուներ"
       },
       {
         "name": "Режан",
@@ -421,7 +421,7 @@
         "local_image": "img/menu/классическая-бурата.jpg?v=web2",
         "has_image": true,
         "name_en": "Burrata",
-        "name_hy": "Բուրատա",
+        "name_hy": "Դասական բուռատա",
         "composition_en": "Burrata, tomatoes, olive oil, greens mix",
         "composition_hy": "Բուռատա, լոլիկ, ձիթապտղի յուղ, կանաչիներ"
       },
@@ -469,7 +469,7 @@
         "local_image": "img/menu/армянский-салат.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Armenian salad",
-        "name_hy": "Հայկական աղցան",
+        "name_hy": "Հայկական աղցան նռան սոուսով",
         "composition_en": "Grilled veal, eggplant, plum, walnut, pomegranate sauce",
         "composition_hy": "Գրիլի հորթի միս, սմբուկ, սալոր, ընկույզ, նռան սոուս"
       },
@@ -493,7 +493,7 @@
         "local_image": "img/menu/салат-с-креветками.jpg?v=fit800",
         "has_image": true,
         "name_en": "Shrimp salad",
-        "name_hy": "Աղցան ծովախեցգետինով",
+        "name_hy": "Աղցան ծովախեցգետնով",
         "composition_en": "Shrimp, avocado, mixed greens, cucumber, quinoa, citrus sauce",
         "composition_hy": "Ծովախեցգետին, ավոկադո, խառը կանաչի, վարունգ, կինոա, ցիտրուսային սոուս"
       },
@@ -1285,7 +1285,7 @@
         "local_image": "img/menu/лосось.jpg?v=web2",
         "has_image": true,
         "name_en": "Salmon",
-        "name_hy": "Սաղմոն",
+        "name_hy": "Սաղմոնի սթեյք",
         "composition_en": "Grilled salmon steak",
         "composition_hy": "Սաղմոնի սթեյք գրիլի վրա"
       },
@@ -1398,7 +1398,7 @@
         "local_image": "img/menu/аришта.jpg?v=fit800",
         "has_image": true,
         "name_en": "Arishta",
-        "name_hy": "Արիշտա",
+        "name_hy": "Տնական արիշտա",
         "composition_en": "Homemade Armenian arishta noodles",
         "composition_hy": "Տնական հայկական արիշտա"
       },
