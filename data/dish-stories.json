@@ -5,20 +5,15 @@
     "en": "French breakfast — eggs, fresh pastries and coffee: a calm morning in the mountains of Tsaghkadzor.",
     "hy": "Ֆրանսիական նախաճաշ — ձու, թարմ թխվածքեղեն և սուրճ. հանգիստ առավոտ Ծաղկաձորի լեռներում։"
   },
-  "fried-eggs": {
-    "ru": "Утреннее блюдо Яичница — энергия для дня в горах: сытно, без спешки, с кофе или чаем.",
-    "en": "Our Fried Eggs morning dish — fuel for a day in the mountains: hearty, unhurried, with coffee or tea.",
-    "hy": "Տապակած ձու առավոտյան ուտեստը — եռանդ լեռներում անցկացվող օրվա համար. կշտացնող, առանց շտապելու, սուրճով կամ թեյով։"
-  },
   "pancake-with-nutella-and-poppy-seeds": {
     "ru": "Утреннее блюдо Панкейк с нутеллой и маком — энергия для дня в горах: сытно, без спешки, с кофе или чаем.",
     "en": "Our Pancake with Nutella and poppy seeds morning dish — fuel for a day in the mountains: hearty, unhurried, with coffee or tea.",
     "hy": "Փենքեյք Nutella-ով և կակաչով առավոտյան ուտեստը — եռանդ լեռներում անցկացվող օրվա համար. կշտացնող, առանց շտապելու, սուրճով կամ թեյով։"
   },
   "chocolate-syrniki": {
-    "ru": "Утреннее блюдо Сырники шоколадные — энергия для дня в горах: сытно, без спешки, с кофе или чаем.",
-    "en": "Our Chocolate Syrniki morning dish — fuel for a day in the mountains: hearty, unhurried, with coffee or tea.",
-    "hy": "Շոկոլադե կաթնաշոռի կարկանդակներ առավոտյան ուտեստը — եռանդ լեռներում անցկացվող օրվա համար. կշտացնող, առանց շտապելու, սուրճով կամ թեյով։"
+    "ru": "Утреннее блюдо Сырники — энергия для дня в горах: сытно, без спешки, с кофе или чаем.",
+    "en": "Our Syrniki morning dish — fuel for a day in the mountains: hearty, unhurried, with coffee or tea.",
+    "hy": "Կաթնաշոռով պանրիկները առավոտյան ուտեստ են՝ եռանդ լեռներում անցկացվող օրվա համար. կշտացնող, առանց շտապելու, սուրճով կամ թեյով։"
   },
   "pancakes-with-cottage-cheese23": {
     "ru": "Утреннее блюдо Блины с творогом — энергия для дня в горах: сытно, без спешки, с кофе или чаем.",
@@ -701,8 +696,8 @@
     "hy": "Խաշ — հարուստ արգանակ, սխտոր և լավաշ. ձմեռային առավոտի հայկական ավանդույթ։"
   },
   "hashlama": {
-    "ru": "Хашлама — баранина, томлённая с овощами: неспешное блюдо для большого стола.",
-    "en": "Khashlama — lamb slow-braised with vegetables: an unhurried dish for a full table.",
+    "ru": "Хашлама Домик — баранина, томлённая с овощами: неспешное блюдо для большого стола.",
+    "en": "Khashlama Domik — lamb slow-braised with vegetables: an unhurried dish for a full table.",
     "hy": "Խաշլամա — գառան միս, դանդաղ շոգեխաշված բանջարեղենով. անշտապ ուտեստ մեծ սեղանի համար։"
   },
   "pelmeni": {

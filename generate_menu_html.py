@@ -20,7 +20,20 @@ def esc(s): return html.escape(str(s), quote=True)
 NOTE_TR = {
     "На выбор вид пасты: феттучини, спагетти, пенне":
         ("Choose your pasta: fettuccine, spaghetti, penne",
-         "Ընտրությամբ մակարոն՝ ֆետուչինի, սպագետտի, պեննե"),
+         "Ընտրությամբ պաստա՝ ֆետուչինի, սպագետտի, պեննե"),
+    "На углях": ("Charcoal-grilled", "Ածուխի վրա"),
+    "На 3–5 человек": ("For 3–5 people", "3–5 հոգու համար"),
+}
+
+# подписи порций у позиций с двумя ценами
+SIZES_TR = {
+    "1 кг": ("1 kg", "1 կգ"),
+    "0,5 кг": ("0.5 kg", "0,5 կգ"),
+    "0,5 / 1": ("0.5 / 1", "0,5 / 1"),
+    "куриный / говяжий": ("chicken / beef", "հավի / տավարի"),
+    "обычный / с бастурмой": ("regular / with basturma", "սովորական / բաստուրմայով"),
+    "мясной / с овощами": ("meat / vegetable", "մսով / բանջարեղենով"),
+    "яичница / омлет": ("fried eggs / omelette", "տապակած ձու / ձվածեղ"),
 }
 
 def webp_of(local):
@@ -54,7 +67,9 @@ def card(it, delay):
     if it.get("name_hy"): tr += f' data-tr-hy="{esc(it["name_hy"])}"'
     size = ""
     if it.get("sizes"):
-        size = f'<span class="menu-card__size">{esc(it["sizes"])}</span>'
+        z = SIZES_TR.get(it["sizes"])
+        ztr = f' data-tr-en="{esc(z[0])}" data-tr-hy="{esc(z[1])}"' if z else ""
+        size = f'<span class="menu-card__size"{ztr}>{esc(it["sizes"])}</span>'
     parts.append('<div class="menu-card__body">'
                  f'<span class="menu-card__name"{tr}>{name}</span>'
                  f'{size}<span class="price">{price_html(it.get("price",""))}</span>'
