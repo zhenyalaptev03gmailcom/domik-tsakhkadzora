@@ -686,6 +686,11 @@
     "slug": "osnovnye-blyuda",
     "items": [
       {
+        "sub": "На углях",
+        "sub_en": "Charcoal-Grilled",
+        "sub_hy": "Ածուխի վրա"
+      },
+      {
         "name": "Фирменный кебаб",
         "price": "2 300 / 2 500",
         "id": "signature-kebab2",
@@ -743,6 +748,11 @@
         "composition_en": "Lamb leg, arishta noodles · serves 3–4",
         "composition_hy": "Գառան բուդ · 3–4 հոգու",
         "local_image": "img/menu/викинг-бараний.jpg?v=cl1"
+      },
+      {
+        "sub": "Из кухни",
+        "sub_en": "From the Kitchen",
+        "sub_hy": "Խոհանոցից"
       },
       {
         "name": "Куриное филе с рисом",
@@ -864,8 +874,7 @@
         "composition_en": "Aged ribeye steak",
         "composition_hy": "Հնեցված ռիբայ սթեյք"
       }
-    ],
-    "note": "На углях"
+    ]
   },
   {
     "id": "2144",
