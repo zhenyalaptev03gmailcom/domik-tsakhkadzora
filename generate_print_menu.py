@@ -174,8 +174,8 @@ SUPPLEMENT_NAME = {
  "Паста песто": ("Pasta Pesto", "Պաստա պեստո"),
  "Куриное филе по-французски": ("Chicken Fillet French-Style", "Հավի ֆիլե ֆրանսիական ձևով"),
  "Пеппер стейк": ("Pepper Steak", "Պեպպեր սթեյք"),
- "Солёные орехи": ("Salted Nuts", "Աղի ընկույզ"),
- "Домик": ("Domik", "Դոմիկ"),
+ "Фисташки солёные": ("Salted Pistachios", "Աղի պիստակ"),
+ "Домик семейный": ("Domik Family", "Դոմիկ ընտանեկան"),
  "Хачапури аджарский": ("Adjarian Khachapuri", "Աջարական խաչապուրի"),
  "Хачапури имеретинский": ("Imeretian Khachapuri", "Իմերեթական խաչապուրի"),
  "Хачапури мегрельский": ("Megrelian Khachapuri", "Մեգրելական խաչապուրի"),
@@ -198,12 +198,11 @@ SUPPLEMENT_DESC = {
  "Домашний куриный суп": ("Chicken, noodles, vegetables", "Հավ, արիշտա, բանջարեղեն"),
  "Паста песто": ("Pesto sauce, Parmesan", "Պեստո սոուս, պարմեզան"),
  "Паста карбонара": ("Pasta, pancetta, cream, egg, Parmesan, black pepper", "Պաստա, պանչետտա, սերուցք, ձու, պարմեզան, սև պղպեղ"),
- "Цыплёнок с овощами": ("Grilled chicken with vegetables", "Գրիլի ճուտ բանջարեղենով"),
- "Бефстроганов (курица / телятина)": ("Chicken or veal in cream sauce, rice or potatoes", "Հավով/հորթով, բրինձ/կարտոֆիլ"),
+  "Бефстроганов (курица / телятина)": ("Chicken or veal in cream sauce, rice or potatoes", "Հավով/հորթով, բրինձ/կարտոֆիլ"),
  "Пеппер стейк": ("Steak with pepper sauce", "Սթեյք պղպեղի սոուսով"),
  "Баклажан фаршированный": ("With meat or vegetables", "Մսով կամ բանջարեղենով"),
- "Домик": ("Chicken and beef kebab, signature barbecue, vegetables", "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն"),
- "Семейный домик": ("Large charcoal barbecue platter with vegetables", "Խորովածի մեծ տեսականի ածուխի վրա, բանջարեղեն"),
+ "Домик семейный": ("Chicken and beef kebab, signature barbecue, vegetables", "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն"),
+ "Семейный домик": ("Pork, veal, lamb, chicken fillet, grilled vegetables", "Խոզ, հորթ, գառ, հավի ֆիլե, գրիլ բանջարեղեն"),
  "Фламинго": ("Chicken, chicken fillet, turkey, chicken wings, vegetables", "Ճուտ, հավի ֆիլե, հնդկահավ, հավի թևիկներ, բանջարեղեն"),
  "Немецкий сет": ("Assorted sausages, cheese balls, garlic bread, vegetables", "Նրբերշիկների տեսականի, պանրի գնդիկներ, սխտորով հաց, բանջարեղեն"),
  "Медуза": ("Trout, seafood, mussels, squid", "Իշխան, ծովամթերք, միդիա, կաղամար"),
@@ -218,7 +217,7 @@ SUPPLEMENT_DESC = {
  "Шоколадный тарт": ("Chocolate tart", "Շոկոլադե տարտ"),
  "Фруктовый ассорти": ("Seasonal fresh fruit platter", "Սեզոնային թարմ մրգերի տեսականի"),
  "Немецкая закуска": ("Idaho potatoes, cheese balls, garlic bread", "Այդահո կարտոֆիլ, պանրի գնդիկներ, սխտորով հաց"),
- "Доме": ("Dessert of the day", "Օրվա աղանդեր"),
+ "Доме": ("Dessert of the day", "Օրվա աղանդ"),
 }
 SEC_TR = {
  "Завтрак": ("Breakfast", "Նախաճաշ"),
@@ -259,13 +258,14 @@ UI_TR = {
  "Барная карта": ("Bar List", "Բարային քարտ"),
  "На углях": ("Charcoal-grilled", "Ածուխի վրա"),
  "На 3–5 человек": ("For 3–5 people", "3–5 հոգու համար"),
+ "На углях · На 3–5 человек": ("Charcoal-grilled · For 3–5 people", "Ածուխի վրա · 3–5 հոգու համար"),
  "Вино · Коктейли · Кофе · Чай": ("Wine · Cocktails · Coffee · Tea", "Գինի · Կոկտեյլներ · Սուրճ · Թեյ"),
  "Напитки и авторские коктейли": ("Drinks and signature cocktails", "Ըմպելիքներ և հեղինակային կոկտեյլներ"),
  "DoMik": ("DoMik", "DoMik"),
  "На выбор вид пасты: феттучини, спагетти, пенне": ("Choice of pasta: fettuccine, spaghetti, penne", "Ընտրությամբ պաստա՝ ֆետուչինի, սպագետտի, պեննե"),
  "Начало трапезы": ("To Start", "Ճաշի սկիզբ"),
  "Главные блюда": ("Main Courses", "Հիմնական ուտեստներ"),
- "Огонь и море": ("Fire & Sea", "Կրակ և ծով"),
+ "Огонь и море": ("Fire & Sea", "Կրակ ու ծով"),
  "Сладкая часть": ("Sweet Part", "Քաղցր մաս"),
  "От шеф-повара": ("Chef's Specials", "Շեֆ-խոհարարից"),
  "Рыба и морепродукты": ("Fish & Seafood", "Ձուկ և ծովամթերք"),
@@ -369,7 +369,7 @@ CATALOGS = [
      "cats": ["Паста", "Основные блюда", "От шеф-повара"],
      "dishes": ["Паста карбонара", "Паста четыре сыра", "Фирменный кебаб",
                 "Пеппер стейк", "Долма", "Куриное филе по-французски",
-                "Стейк рибай", "Домик", "Медуза"],
+                "Стейк рибай", "Домик семейный", "Медуза"],
      "note": "Паста, мясо на углях и авторские сеты"},
     {"before": "Печь и гриль", "bg": "img/print/catalog-3.jpg",
      "title": "Огонь и море",
@@ -382,7 +382,7 @@ CATALOGS = [
      "title": "Сладкая часть",
      "cats": ["Гарниры", "Детское меню", "Хлеб", "Десерты"],
      "dishes": ["Тирамису", "Чизкейк сан-себастьян", "Шоколадный вулкан",
-                "Брауни", "Кокосовый тарт", "Яблочный пирог",
+                "Брауни", "Кокосовый тарт", "Яблочный тарт",
                 "Гата армянская", "Фруктовый ассорти", "Мороженое"],
      "note": "Десерты, детям и к столу"},
 ]
@@ -478,6 +478,8 @@ for sec in pm:
         if it.get('sub'):                       # подзаголовок-подраздел
             _sub = T_sub(it['sub'].strip())
             parts.append(fill(SUBCAT_TITLE, TITLE=esc(hy_upper(_sub) if LANG=='hy' else _sub)))
+            if it.get('note'):                  # подпись под подзаголовком (как у раздела)
+                parts.append('<p class="book-cat__note flow-keep">' + esc(T_ui(it['note'].strip())) + '</p>')
             continue
         name_html = esc(T_name(it['name'].strip()))
         if it.get('sizes'):
@@ -545,7 +547,9 @@ if LANG == 'hy':
     head_out = head_out.replace(
         '<link rel="stylesheet" href="css/print-menu.css',
         '<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Armenian:wght@400;500;600&display=swap" rel="stylesheet">\n'
-        '<style>:root{--serif:\'Cormorant Garamond\',\'Noto Serif Armenian\',Georgia,serif !important}</style>\n'
+        '<style>:root{--serif:\'Noto Serif Armenian\',Georgia,serif !important}</style>\n'  # один шрифт на всю армянскую книгу: Cormorant тонкий, а армянский рисует
+        # Noto — латиница брендов в баре выглядела заметно легче кириллицы/армянского
+        
         '<link rel="stylesheet" href="css/print-menu.css')
 out = (head_out + "\n" + TOOLBAR + '\n<div id="book" class="book">\n'
        + "\n".join(parts) + "\n"

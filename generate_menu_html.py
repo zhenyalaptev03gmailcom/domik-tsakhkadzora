@@ -23,6 +23,7 @@ NOTE_TR = {
          "Ընտրությամբ պաստա՝ ֆետուչինի, սպագետտի, պեննե"),
     "На углях": ("Charcoal-grilled", "Ածուխի վրա"),
     "На 3–5 человек": ("For 3–5 people", "3–5 հոգու համար"),
+    "На углях · На 3–5 человек": ("Charcoal-grilled · For 3–5 people", "Ածուխի վրա · 3–5 հոգու համար"),
 }
 
 # подписи порций у позиций с двумя ценами
@@ -126,6 +127,12 @@ for i, c in enumerate(MENU):
             if marker.get("sub_en"): stt += f' data-tr-en="{esc(marker["sub_en"])}"'
             if marker.get("sub_hy"): stt += f' data-tr-hy="{esc(marker["sub_hy"])}"'
             s.append(f'        <h4 class="menu-subcat"{stt}>{esc(marker["sub"])}</h4>')
+            if marker.get("note"):              # подпись под подзаголовком
+                ntr2 = ""
+                eh = NOTE_TR.get(marker["note"])
+                if eh:
+                    ntr2 = f' data-tr-en="{esc(eh[0])}" data-tr-hy="{esc(eh[1])}"'
+                s.append(f'        <p class="menu-cat-note"{ntr2}>{esc(marker["note"])}</p>')
         if items:
             s.append("        " + grid(items))
     s.append('      </section>')

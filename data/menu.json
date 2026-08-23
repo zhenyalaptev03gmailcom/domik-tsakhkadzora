@@ -70,14 +70,11 @@
       {
         "name": "Панкейк с нутеллой",
         "price": "2 100",
-        "composition": "Панкейки, нутелла",
         "id": "pancake-with-nutella-and-poppy-seeds",
         "local_image": "img/menu/панкейк-с-нутеллой.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Pancakes with Nutella and poppy seeds",
-        "name_hy": "Փանքեյք նուտելլայով",
-        "composition_en": "Pancakes, Nutella",
-        "composition_hy": "Փանքեյքեր, նուտելլա"
+        "name_hy": "Փանքեյք նուտելլայով"
       },
       {
         "name": "Чиа пудинг",
@@ -128,27 +125,21 @@
       {
         "name": "Армянская мясная тарелка",
         "price": "4 500",
-        "composition": "Ассорти мясных деликатесов",
         "id": "armenian-meat-plate2",
         "local_image": "img/menu/армянская-мясная-тарел.jpg?v=fit800",
         "has_image": true,
         "name_en": "Armenian meat platter",
-        "name_hy": "Հայկական մսեղենի տեսականի",
-        "composition_en": "Assorted meat delicacies",
-        "composition_hy": "Մսեղենի տեսականի"
+        "name_hy": "Հայկական մսի տեսականի"
       },
       {
         "name": "Армянская сырная тарелка",
         "price": "2 200 / 4 000",
-        "composition": "Ассорти армянских сыров",
         "sizes": "0,5 / 1",
         "id": "armenian-cheese-plate",
         "local_image": "img/menu/армянская-сырная-тарел.jpg?v=fit800",
         "has_image": true,
         "name_en": "Armenian cheese platter",
-        "name_hy": "Հայկական պանիրների տեսականի",
-        "composition_en": "Armenian cheese platter",
-        "composition_hy": "Հայկական պանիրների տեսականի"
+        "name_hy": "Հայկական պանրի տեսականի"
       },
       {
         "name": "Фирменная бурата",
@@ -158,21 +149,18 @@
         "local_image": "img/menu/фирменная-бурата.jpg?v=ig1268",
         "has_image": true,
         "name_en": "Signature Burrata",
-        "name_hy": "Ֆիրմային բուռատա",
+        "name_hy": "Ֆիրմային բուրատա",
         "composition_en": "Focaccia, tomato, burrata, greens mix",
-        "composition_hy": "Ֆոկաչա, լոլիկ, բուռատա, կանաչիների խառնուրդ"
+        "composition_hy": "Ֆոկաչա, լոլիկ, բուռատա, միքս կանաչի"
       },
       {
         "name": "Брускетта с томатами",
         "price": "2 200",
-        "composition": "Чиабатта, помидоры, базилик, оливковое масло",
         "id": "bruschetta2345678910",
         "local_image": "img/menu/брускетта.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Bruschetta",
-        "name_hy": "Բրուսկետտա լոլիկով",
-        "composition_en": "Ciabatta, tomatoes, basil, olive oil",
-        "composition_hy": "Չիաբատա, լոլիկ, ռեհան, ձիթապտղի յուղ"
+        "name_hy": "Բրուսկետա լոլիկով"
       },
       {
         "name": "Брускетта с тунцом",
@@ -180,20 +168,17 @@
         "id": "brusketta-s-tuntsom",
         "has_image": true,
         "name_en": "Tuna bruschetta",
-        "name_hy": "Բրուսկետտա թունայով",
+        "name_hy": "Բրուսկետա թունայով",
         "local_image": "img/menu/брускетта-с-тунцом.jpg?v=cl1"
       },
       {
         "name": "Армянская зелень",
         "price": "1 800",
-        "composition": "Свежая армянская зелень",
         "id": "armenian-greens234",
         "local_image": "img/menu/армянская-зелень.jpg?v=fit800",
         "has_image": true,
         "name_en": "Armenian greens",
-        "name_hy": "Հայկական կանաչի",
-        "composition_en": "Fresh Armenian herbs",
-        "composition_hy": "Թարմ հայկական կանաչի"
+        "name_hy": "Հայկական կանաչի"
       },
       {
         "name": "Домашние соленья",
@@ -207,14 +192,11 @@
       {
         "name": "Хумус",
         "price": "1 200",
-        "composition": "Нутовый хумус, оливковое масло, лаваш",
         "id": "hummus23456789101112131415161718",
         "local_image": "img/menu/хумус.jpg?v=fit800",
         "has_image": true,
         "name_en": "Hummus",
-        "name_hy": "Հումուս",
-        "composition_en": "Chickpea hummus, olive oil, lavash",
-        "composition_hy": "Սիսեռի հումուս, ձիթապտղի յուղ, լավաշ"
+        "name_hy": "Հումուս"
       },
       {
         "name": "Режан",
@@ -228,14 +210,11 @@
       {
         "name": "Мацун сцеженный",
         "price": "1 200",
-        "composition": "Сцеженный мацун",
         "id": "matsun-expressed",
         "local_image": "img/menu/мацун-сцеженый.jpg?v=fit800",
         "has_image": true,
         "name_en": "Strained matsoni",
-        "name_hy": "Քամած մածուն",
-        "composition_en": "Strained matsun",
-        "composition_hy": "Քամած մածուն"
+        "name_hy": "Քամած մածուն"
       }
     ]
   },
@@ -285,14 +264,11 @@
       {
         "name": "Блинчики с мясом",
         "price": "1 800",
-        "composition": "Тонкие блинчики с мясной начинкой",
         "id": "blinchiki-s-myasom",
         "local_image": "img/menu/блинчики-с-мясом.jpg?v=web1",
         "has_image": true,
         "name_en": "Crepes with Meat",
-        "name_hy": "Մսով նրբաբլիթ",
-        "composition_en": "Thin crepes with meat filling",
-        "composition_hy": "Բարակ բլիթներ մսի միջուկով"
+        "name_hy": "Մսով նրբաբլիթ"
       },
       {
         "name": "Тако с курицей",
@@ -371,7 +347,7 @@
         "local_image": "img/menu/греческий-салат.jpg?v=fit800",
         "has_image": true,
         "name_en": "Greek salad",
-        "name_hy": "Հունական աղցան",
+        "name_hy": "Հունական",
         "composition_en": "Tomatoes, cucumbers, bell pepper, feta, olives, red onion",
         "composition_hy": "Լոլիկ, վարունգ, պղպեղ, ֆետա, ձիթապտուղ, կարմիր սոխ"
       },
@@ -382,7 +358,10 @@
         "local_image": "img/menu/летный-салат.jpg?v=fit800",
         "has_image": true,
         "name_en": "Summer salad",
-        "name_hy": "Ամառային աղցան"
+        "name_hy": "Ամառային",
+        "composition": "Огурцы, помидоры, перец, лук",
+        "composition_en": "Cucumber, tomato, pepper, onion",
+        "composition_hy": "Վարունգ, լոլիկ, պղպեղ, սոխ"
       },
       {
         "name": "Салат капрезе",
@@ -392,7 +371,7 @@
         "local_image": "img/menu/салат-капрезе.jpg?v=fit800",
         "has_image": true,
         "name_en": "Caprese salad",
-        "name_hy": "Կապրեզե աղցան",
+        "name_hy": "Կապրեզե",
         "composition_en": "Mozzarella, tomatoes, basil",
         "composition_hy": "Մոցարելլա, լոլիկ, ռեհան"
       },
@@ -404,7 +383,7 @@
         "local_image": "img/menu/классическая-бурата.jpg?v=web2",
         "has_image": true,
         "name_en": "Burrata",
-        "name_hy": "Դասական բուռատա",
+        "name_hy": "Դասական բուրատա",
         "composition_en": "Burrata, tomatoes, greens mix",
         "composition_hy": "Բուռատա, լոլիկ, կանաչիներ"
       },
@@ -416,7 +395,7 @@
         "local_image": "img/menu/салат-цезарь.jpg?v=fit800",
         "has_image": true,
         "name_en": "Caesar salad",
-        "name_hy": "Կեսար աղցան",
+        "name_hy": "Կեսար",
         "composition_en": "Chicken fillet, romaine, parmesan, croutons, Caesar dressing",
         "composition_hy": "Հավի ֆիլե, պարմեզան, չորահաց, Կեսար սոուս"
       },
@@ -428,9 +407,9 @@
         "local_image": "img/menu/цезарь-с-креветками.jpg?v=web1",
         "has_image": true,
         "name_en": "Caesar with Shrimp",
-        "name_hy": "Ցեզար ծովախեցգետնով",
+        "name_hy": "Կեսար ծովախեցգետնով",
         "composition_en": "Shrimp, romaine, Parmesan, croutons, Caesar dressing",
-        "composition_hy": "Ծովախեցգետին, պարմեզան, չորահաց, Ցեզար սոուս"
+        "composition_hy": "Ծովախեցգետին, պարմեզան, չորահաց, Կեսար սոուս"
       },
       {
         "name": "Салат из стейка ангус",
@@ -442,7 +421,7 @@
         "name_en": "Angus steak salad",
         "name_hy": "Անգուս սթեյք աղցան",
         "composition_en": "Angus steak, mixed greens, vegetables, sauce",
-        "composition_hy": "Անգուս սթեյք, խառը կանաչի, բանջարեղեն, սոուս"
+        "composition_hy": "Անգուս սթեյք, միքս կանաչի, բանջարեղեն, սոուս"
       },
       {
         "name": "Армянский салат с гранатовым соусом",
@@ -458,13 +437,13 @@
       },
       {
         "name": "Салат гурман",
-        "price": "3 800",
+        "price": "3 900",
         "composition": "Хрустящие баклажаны, бастурма, фирменный соус",
         "id": "gourmet-salad",
         "local_image": "img/menu/салат-гурман.jpg?v=st4",
         "has_image": true,
         "name_en": "Gourmet salad",
-        "name_hy": "Գուրման աղցան",
+        "name_hy": "Գուրման աղցան / հորթի միս",
         "composition_en": "Crispy eggplants, basturma, signature sauce",
         "composition_hy": "Խրթխրթան սմբուկ, բաստուրմա, ֆիրմային սոուս"
       },
@@ -476,9 +455,9 @@
         "local_image": "img/menu/салат-с-креветками.jpg?v=fit800",
         "has_image": true,
         "name_en": "Shrimp salad",
-        "name_hy": "Աղցան ծովախեցգետնով",
+        "name_hy": "Ծովախեցգետնով",
         "composition_en": "Shrimp, avocado, mixed greens, cucumber, quinoa, citrus sauce",
-        "composition_hy": "Ծովախեցգետին, ավոկադո, խառը կանաչի, վարունգ, կինոա, ցիտրուսային սոուս"
+        "composition_hy": "Ծովախեցգետին, ավոկադո, միքս կանաչի, վարունգ, կինոա, ցիտրուսային սոուս"
       },
       {
         "name": "Салат с тунцом",
@@ -486,7 +465,7 @@
         "id": "salat-s-tuntsom",
         "has_image": true,
         "name_en": "Tuna salad",
-        "name_hy": "Թունայով աղցան",
+        "name_hy": "Թունայով",
         "local_image": "img/menu/салат-с-тунцом.jpg?v=cl1"
       }
     ]
@@ -560,15 +539,15 @@
       },
       {
         "name": "Славянская солянка",
-        "price": "2 200",
+        "price": "2 300",
         "composition": "Ассорти мяса, соленья, оливки, лимон, наваристый бульон",
         "id": "slavic-solyanka",
         "local_image": "img/menu/славянская-солянка.jpg?v=ig3",
         "has_image": true,
         "name_en": "Slavic solyanka",
-        "name_hy": "Սլավոնական սոլյանկա",
+        "name_hy": "Սլավոնական Սալյանկա",
         "composition_en": "Assorted meats, pickles, olives, lemon, rich broth",
-        "composition_hy": "Մսի տեսականի, թթուներ, ձիթապտուղ, կիտրոն, հարուստ արգանակ"
+        "composition_hy": "Մսի տեսականի, թթուներ, ձիթապտուղ, կիտրոն, արգանակ"
       },
       {
         "name": "Суп из морепродуктов",
@@ -578,9 +557,9 @@
         "local_image": "img/menu/суп-из-морепродуктов.jpg?v=red1",
         "has_image": true,
         "name_en": "Seafood soup",
-        "name_hy": "Ծովամթերքի ապուր",
+        "name_hy": "Ծովամթերք ապուր",
         "composition_en": "Seafood in red (tomato) broth, vegetables",
-        "composition_hy": "Ծովամթերք կարմիր (լոլիկի) արգանակում, բանջարեղեն"
+        "composition_hy": "Ծովամթերք լոլիկի արգանակում, բանջարեղեն"
       }
     ]
   },
@@ -738,18 +717,6 @@
         "name_hy": "Հորթի խորոված"
       },
       {
-        "name": "Викинг бараний",
-        "price": "9 500",
-        "composition": "Нога баранины, аришта · 3–4 человека",
-        "id": "viking-baraniy",
-        "has_image": true,
-        "name_en": "Lamb Viking (leg)",
-        "name_hy": "Գառան «Վիկինգ» (բուդ)",
-        "composition_en": "Lamb leg, arishta noodles · serves 3–4",
-        "composition_hy": "Գառան բուդ · 3–4 հոգու",
-        "local_image": "img/menu/викинг-бараний.jpg?v=cl1"
-      },
-      {
         "sub": "Из кухни",
         "sub_en": "From the Kitchen",
         "sub_hy": "Խոհանոցից"
@@ -757,26 +724,11 @@
       {
         "name": "Куриное филе с рисом",
         "price": "3 200",
-        "composition": "Куриное филе, рис",
         "id": "chicken-fillet-with-rice",
         "local_image": "img/menu/куриное-филе-с-рисом.jpg?v=fit800",
         "has_image": true,
         "name_en": "Chicken fillet with rice",
-        "name_hy": "Հավի ֆիլե բրնձով",
-        "composition_en": "Chicken fillet, rice",
-        "composition_hy": "Հավի ֆիլե, բրինձ"
-      },
-      {
-        "name": "Цыплёнок с овощами",
-        "price": "3 400",
-        "composition": "Цыплёнок на гриле с овощами",
-        "id": "chicken-with-vegetables234",
-        "local_image": "img/menu/курица-с-овощами.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Chicken with vegetables",
-        "name_hy": "Հավ բանջարեղենով",
-        "composition_en": "Grilled chicken with vegetables",
-        "composition_hy": "Գրիլի ճուտ բանջարեղենով"
+        "name_hy": "Հավի ֆիլե բրնձով"
       },
       {
         "name": "Куриное филе по-французски",
@@ -791,16 +743,22 @@
         "name_hy": "Հավի ֆիլե ֆրանսիական ձևով"
       },
       {
+        "name": "Цыплёнок на гриле с овощами",
+        "price": "3 400",
+        "id": "chicken-with-vegetables234",
+        "local_image": "img/menu/курица-с-овощами.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Grilled chicken with vegetables",
+        "name_hy": "Գրիլի ճուտ բանջարեղենով"
+      },
+      {
         "name": "Индейка на гриле с цитрусовым соусом и киноа",
         "price": "5 200",
-        "composition": "Индейка на гриле, цитрусовый соус, киноа",
         "id": "grilled-turkey-with-citrus-sauce-and-quinoa",
         "local_image": "img/menu/индейка-на-гриле-с-цит.jpg?v=fit800",
         "has_image": true,
         "name_en": "Grilled turkey with citrus sauce and quinoa",
-        "name_hy": "Գրիլ հնդկահավ ցիտրուսային սոուսով և կինոայով",
-        "composition_en": "Grilled turkey, citrus sauce, quinoa",
-        "composition_hy": "Գրիլի վրա հնդկահավ, ցիտրուսային սոուս, կինոա"
+        "name_hy": "Գրիլ հնդկահավ ցիտրուսային սոուսով և կինոայով"
       },
       {
         "name": "Тепаньяки со свининой на гриле",
@@ -828,7 +786,7 @@
       },
       {
         "name": "Бефстроганов (курица / телятина)",
-        "price": "3 200 – 3 500",
+        "price": "3 200 / 3 500",
         "composition": "Курица или телятина в сливочном соусе, рис или картофель",
         "id": "beef-stroganoff-veal",
         "local_image": "img/menu/бефстроганов.jpg?v=ig3",
@@ -865,16 +823,95 @@
       {
         "name": "Стейк рибай",
         "price": "14 500",
-        "composition": "Выдержанный стейк рибай",
         "id": "ribeye-steak2345678910111213",
         "local_image": "img/menu/стейк-рибай.jpg?v=fit800",
         "has_image": true,
         "name_en": "Ribeye steak",
-        "name_hy": "Ռիբայ սթեյք",
-        "composition_en": "Aged ribeye steak",
-        "composition_hy": "Հնեցված ռիբայ սթեյք"
+        "name_hy": "Ռիբայ սթեյք"
       }
     ]
+  },
+  {
+    "id": "2145",
+    "name": "Блюда от шеф-повара",
+    "name_en": "Chef's specials",
+    "name_hy": "Շեֆ-խոհարարի ուտեստներ",
+    "slug": "blyuda-ot-shef-povara",
+    "items": [
+      {
+        "name": "Домик семейный",
+        "price": "14 500",
+        "composition": "Кебаб куриный и говяжий, фирменный шашлык, овощи",
+        "id": "domik",
+        "local_image": "img/menu/домик-сет.jpg?v=web1",
+        "has_image": true,
+        "name_en": "Domik Family",
+        "name_hy": "Դոմիկ ընտանեկան",
+        "composition_en": "Chicken and beef kebab, signature barbecue, vegetables",
+        "composition_hy": "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն"
+      },
+      {
+        "name": "Семейный домик",
+        "price": "28 500",
+        "composition": "Большое ассорти шашлыков на углях, овощи",
+        "id": "assortment-of-barbecue",
+        "local_image": "img/menu/ассорти-шашлыков.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Mixed grill skewers",
+        "name_hy": "Խորովածի տեսականի",
+        "composition_en": "Large charcoal barbecue platter with vegetables",
+        "composition_hy": "Խոզ, հորթ, գառ, հավի ֆիլե, գրիլ բանջարեղեն"
+      },
+      {
+        "name": "Фламинго",
+        "price": "14 000",
+        "composition": "Цыплёнок, куриное филе, индейка, куриные крылышки, овощи",
+        "id": "flamingo2",
+        "local_image": "img/menu/фламинго.jpg?v=st2",
+        "has_image": true,
+        "name_en": "Flamingo",
+        "name_hy": "Ֆլամինգո",
+        "composition_en": "Chicken, chicken fillet, turkey, chicken wings, vegetables",
+        "composition_hy": "Ճուտ, հավի ֆիլե, հնդկահավ, հավի թևիկներ, բանջարեղեն"
+      },
+      {
+        "name": "Немецкий сет",
+        "price": "24 000",
+        "composition": "Ассорти сосисок, сырные шарики, чесночный хлеб, овощи",
+        "id": "german-set",
+        "local_image": "img/menu/немецкий-сет.jpg?v=ctr1",
+        "has_image": true,
+        "name_en": "German set",
+        "name_hy": "Գերմանական սեթ",
+        "composition_en": "Assorted sausages, cheese balls, garlic bread, vegetables",
+        "composition_hy": "Նրբերշիկների տեսականի, պանրի գնդիկներ, սխտորով հաց, բանջարեղեն"
+      },
+      {
+        "name": "Медуза",
+        "price": "27 500",
+        "composition": "Форель, морепродукты, мидии, кальмар",
+        "id": "jellyfish",
+        "local_image": "img/menu/медуза.jpg?v=ctr1",
+        "has_image": true,
+        "name_en": "Jellyfish salad",
+        "name_hy": "Մեդուզա սեթ",
+        "composition_en": "Trout, seafood, mussels, squid",
+        "composition_hy": "Իշխան, ծովամթերք, միդիա, կաղամար"
+      },
+      {
+        "name": "Викинг бараний",
+        "price": "9 500",
+        "composition": "Нога баранины, аришта · 3–4 человека",
+        "id": "viking-baraniy",
+        "has_image": true,
+        "name_en": "Lamb Viking (leg)",
+        "name_hy": "Գառան «Վիկինգ» (բուդ)",
+        "composition_en": "Lamb leg, arishta noodles · serves 3–4",
+        "composition_hy": "Գառան բուդ · 3–4 հոգու",
+        "local_image": "img/menu/викинг-бараний.jpg?v=cl1"
+      }
+    ],
+    "note": "На углях · На 3–5 человек"
   },
   {
     "id": "2144",
@@ -914,13 +951,13 @@
         "name_hy": "Գերմանական երշիկների տեսականի"
       },
       {
-        "name": "Солёные орехи",
+        "name": "Фисташки солёные",
         "price": "1 800",
         "id": "solenye-orehi",
         "local_image": "img/menu/солёные-орехи.jpg?v=web1",
         "has_image": true,
-        "name_en": "Salted Nuts",
-        "name_hy": "Աղի ընկույզ"
+        "name_en": "Salted Pistachios",
+        "name_hy": "Աղի պիստակ"
       },
       {
         "name": "Немецкая закуска",
@@ -959,76 +996,6 @@
         "local_image": "img/menu/свиная-рулька.jpg?v=cl1"
       }
     ]
-  },
-  {
-    "id": "2145",
-    "name": "Блюда от шеф-повара",
-    "name_en": "Chef's specials",
-    "name_hy": "Շեֆ-խոհարարի ուտեստներ",
-    "slug": "blyuda-ot-shef-povara",
-    "items": [
-      {
-        "name": "Домик",
-        "price": "14 500",
-        "composition": "Кебаб куриный и говяжий, фирменный шашлык, овощи",
-        "id": "domik",
-        "local_image": "img/menu/домик-сет.jpg?v=web1",
-        "has_image": true,
-        "name_en": "Domik",
-        "name_hy": "Դոմիկ",
-        "composition_en": "Chicken and beef kebab, signature barbecue, vegetables",
-        "composition_hy": "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն"
-      },
-      {
-        "name": "Семейный домик",
-        "price": "28 500",
-        "composition": "Большое ассорти шашлыков на углях, овощи",
-        "id": "assortment-of-barbecue",
-        "local_image": "img/menu/ассорти-шашлыков.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Mixed grill skewers",
-        "name_hy": "Խորովածի տեսականի",
-        "composition_en": "Large charcoal barbecue platter with vegetables",
-        "composition_hy": "Խորովածի մեծ տեսականի ածուխի վրա, բանջարեղեն"
-      },
-      {
-        "name": "Фламинго",
-        "price": "14 000",
-        "composition": "Цыплёнок, куриное филе, индейка, куриные крылышки, овощи",
-        "id": "flamingo2",
-        "local_image": "img/menu/фламинго.jpg?v=st2",
-        "has_image": true,
-        "name_en": "Flamingo",
-        "name_hy": "Ֆլամինգո",
-        "composition_en": "Chicken, chicken fillet, turkey, chicken wings, vegetables",
-        "composition_hy": "Ճուտ, հավի ֆիլե, հնդկահավ, հավի թևիկներ, բանջարեղեն"
-      },
-      {
-        "name": "Немецкий сет",
-        "price": "24 000",
-        "composition": "Ассорти сосисок, сырные шарики, чесночный хлеб, овощи",
-        "id": "german-set",
-        "local_image": "img/menu/немецкий-сет.jpg?v=ctr1",
-        "has_image": true,
-        "name_en": "German set",
-        "name_hy": "Գերմանական սեթ",
-        "composition_en": "Assorted sausages, cheese balls, garlic bread, vegetables",
-        "composition_hy": "Նրբերշիկների տեսականի, պանրի գնդիկներ, սխտորով հաց, բանջարեղեն"
-      },
-      {
-        "name": "Медуза",
-        "price": "27 500",
-        "composition": "Форель, морепродукты, мидии, кальмар",
-        "id": "jellyfish",
-        "local_image": "img/menu/медуза.jpg?v=ctr1",
-        "has_image": true,
-        "name_en": "Jellyfish salad",
-        "name_hy": "Մեդուզա սեթ",
-        "composition_en": "Trout, seafood, mussels, squid",
-        "composition_hy": "Իշխան, ծովամթերք, միդիա, կաղամար"
-      }
-    ],
-    "note": "На 3–5 человек"
   },
   {
     "id": "2146",
@@ -1160,31 +1127,26 @@
       {
         "sub": "Бургеры и сэндвичи",
         "sub_en": "Burgers & sandwiches",
-        "sub_hy": "Բուրգերներ և սենդվիչներ"
+        "sub_hy": "Բուրգերներ և սենդվիչներ",
+        "note": "На углях"
       },
       {
         "name": "Бургер гриль",
         "price": "2 600",
-        "composition": "Котлета на углях, булочка, овощи, соус",
         "id": "burger-grill",
         "local_image": "img/menu/бургер-гриль.jpg?v=fit800",
         "has_image": true,
         "name_en": "Grilled burger",
-        "name_hy": "Գրիլ բուրգեր",
-        "composition_en": "Charcoal-grilled patty, bun, vegetables, sauce",
-        "composition_hy": "Ածխի վրա կոտլետ, բուլկի, բանջարեղեն, սոուս"
+        "name_hy": "Գրիլ բուրգեր"
       },
       {
         "name": "Сэндвич гриль",
         "price": "2 500",
-        "composition": "Сэндвич на гриле",
         "id": "sandwich-grill",
         "local_image": "img/menu/сэндвич-гриль.jpg?v=web3",
         "has_image": true,
         "name_en": "Grilled sandwich",
-        "name_hy": "Գրիլ սենդվիչ",
-        "composition_en": "Grilled sandwich",
-        "composition_hy": "Գրիլի վրա սենդվիչ"
+        "name_hy": "Գրիլ սենդվիչ"
       }
     ]
   },
@@ -1198,14 +1160,11 @@
       {
         "name": "Филе форели с зеленым луком",
         "price": "4 500",
-        "composition": "Филе форели, зелёный лук",
         "id": "trout-fillet-with-green-onions",
         "local_image": "img/menu/филе-форели-с-зеленым.jpg?v=fit800",
         "has_image": true,
         "name_en": "Trout fillet with green onion",
-        "name_hy": "Իշխանի ֆիլե կանաչ սոխով",
-        "composition_en": "Trout fillet, green onion",
-        "composition_hy": "Իշխանի ֆիլե, կանաչ սոխ"
+        "name_hy": "Իշխանի ֆիլե կանաչ սոխով"
       },
       {
         "name": "Мидии",
@@ -1247,14 +1206,11 @@
       {
         "name": "Стейк лосося",
         "price": "7 000",
-        "composition": "Стейк лосося на гриле",
         "id": "salmon23456789101112",
         "local_image": "img/menu/лосось.jpg?v=web2",
         "has_image": true,
         "name_en": "Salmon",
-        "name_hy": "Սաղմոնի սթեյք",
-        "composition_en": "Grilled salmon steak",
-        "composition_hy": "Սաղմոնի սթեյք գրիլի վրա"
+        "name_hy": "Սաղմոնի սթեյք"
       },
       {
         "name": "Стерлядь",
@@ -1336,86 +1292,65 @@
       {
         "name": "Картофель гриль",
         "price": "1 100",
-        "composition": "Картофель на гриле",
         "id": "grilled-potatoes23456",
         "local_image": "img/menu/картофель-гриль.jpg?v=fit800",
         "has_image": true,
         "name_en": "Grilled potatoes",
-        "name_hy": "Գրիլ կարտոֆիլ",
-        "composition_en": "Grilled potatoes",
-        "composition_hy": "Գրիլի վրա կարտոֆիլ"
+        "name_hy": "Գրիլ կարտոֆիլ"
       },
       {
         "name": "Картофель по деревенски",
         "price": "1 200",
-        "composition": "Картофель по-деревенски",
         "id": "country-style-potatoes2345",
         "local_image": "img/menu/картофель-по-деревенск.jpg?v=fit800",
         "has_image": true,
         "name_en": "Country-style potatoes",
-        "name_hy": "Գյուղական ոճի կարտոֆիլ",
-        "composition_en": "Country-style potatoes",
-        "composition_hy": "Գյուղական ոճով կարտոֆիլ"
+        "name_hy": "Գյուղական ոճի կարտոֆիլ"
       },
       {
         "name": "Рис",
         "price": "1 200",
-        "composition": "Отварной рис",
         "id": "rice23456789101112131415161718192021222324252627282930",
         "local_image": "img/menu/рис.jpg?v=fit800",
         "has_image": true,
         "name_en": "Rice",
-        "name_hy": "Բրինձ",
-        "composition_en": "Boiled rice",
-        "composition_hy": "Եփած բրինձ"
+        "name_hy": "Բրինձ"
       },
       {
-        "name": "Домашняя аришта",
+        "name": "Домашняя армянская лапша аришта",
         "price": "1 200",
-        "composition": "Домашняя армянская лапша аришта",
         "id": "arishta2345678910",
         "local_image": "img/menu/аришта.jpg?v=fit800",
         "has_image": true,
-        "name_en": "Arishta",
-        "name_hy": "Տնական արիշտա",
-        "composition_en": "Homemade Armenian arishta noodles",
-        "composition_hy": "Տնական հայկական արիշտա"
+        "name_en": "Homemade Armenian arishta noodles",
+        "name_hy": "Տնական հայկական արիշտա"
       },
       {
         "name": "Фаршированный картофель",
         "price": "1 500",
-        "composition": "Картофель с начинкой",
         "id": "stuffed-potatoes",
         "local_image": "img/menu/фаршированный-картофел.jpg?v=fit800",
         "has_image": true,
         "name_en": "Stuffed potatoes",
-        "name_hy": "Լցոնած կարտոֆիլ",
-        "composition_en": "Stuffed potatoes",
-        "composition_hy": "Լցոնած կարտոֆիլ"
+        "name_hy": "Լցոնած կարտոֆիլ"
       },
       {
         "name": "Фаршированные грибы",
         "price": "1 900",
-        "composition": "Шампиньоны с начинкой",
         "id": "stuffed-mushrooms23",
         "local_image": "img/menu/фаршированные-грибы.jpg?v=fit800",
         "has_image": true,
         "name_en": "Stuffed mushrooms",
-        "name_hy": "Խորոված սնկով լցոնած սունկ",
-        "composition_en": "Stuffed champignons",
-        "composition_hy": "Լցոնած շամպինիոն"
+        "name_hy": "Խորոված սնկով լցոնած սունկ"
       },
       {
         "name": "Овощи гриль",
         "price": "2 000",
-        "composition": "Грибы, баклажан, кабачок, перец",
         "id": "grilled-vegetables234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950",
         "local_image": "img/menu/овощи-гриль.jpg?v=fit800",
         "has_image": true,
         "name_en": "Grilled vegetables",
-        "name_hy": "Գրիլ բանջարեղեն",
-        "composition_en": "Mushrooms, eggplant, zucchini, pepper",
-        "composition_hy": "Սունկ, սմբուկ, դդմիկ, պղպեղ"
+        "name_hy": "Գրիլ բանջարեղեն"
       }
     ]
   },
@@ -1429,85 +1364,64 @@
       {
         "name": "Рисовая каша",
         "price": "1 200",
-        "composition": "Рис, молоко",
         "id": "rice-porrige2",
         "local_image": "img/menu/рисовая-каша.jpg?v=fit800",
         "has_image": true,
         "name_en": "Rice porridge",
-        "name_hy": "Բրնձով շիլա",
-        "composition_en": "Rice, milk",
-        "composition_hy": "Բրինձ, կաթ"
+        "name_hy": "Բրնձով շիլա"
       },
       {
         "name": "Картофель пюре",
         "price": "1 200",
-        "composition": "Картофельное пюре",
         "id": "mashed-potatoes2345678910111213141516171819202122232425262728293031323334",
         "local_image": "img/menu/картофель-пюре.jpg?v=fit800",
         "has_image": true,
         "name_en": "Mashed potatoes",
-        "name_hy": "Կարտոֆիլի պյուրե",
-        "composition_en": "Mashed potatoes",
-        "composition_hy": "Կարտոֆիլի պյուրե"
+        "name_hy": "Կարտոֆիլի պյուրե"
       },
       {
         "name": "Картофель фри",
         "price": "1 000",
-        "composition": "Картофель фри",
         "id": "french-fries23456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960",
         "local_image": "img/menu/картофель-фри.jpg?v=fit800",
         "has_image": true,
         "name_en": "French fries",
-        "name_hy": "Ֆրի կարտոֆիլ",
-        "composition_en": "French fries",
-        "composition_hy": "Ֆրի կարտոֆիլ"
+        "name_hy": "Ֆրի կարտոֆիլ"
       },
       {
         "name": "Спагетти мак энд чиз",
         "price": "1 200",
-        "composition": "Спагетти с сырным соусом",
         "id": "spaghetti-mac-and-cheese",
         "local_image": "img/menu/спагетти-мак-энд-чиз.jpg?v=fit800",
         "has_image": true,
         "name_en": "Spaghetti mac and cheese",
-        "name_hy": "Սպագետի մակ էնդ չիզ",
-        "composition_en": "Spaghetti with cheese sauce",
-        "composition_hy": "Սպագետի պանրի սոուսով"
+        "name_hy": "Սպագետի մակ էնդ չիզ"
       },
       {
-        "name": "Пельмени",
+        "name": "Пельмени с мясом",
         "price": "1 700",
-        "composition": "Пельмени с мясом",
         "id": "pelmeni",
         "local_image": "img/menu/пельмени.jpg?v=st4",
         "has_image": true,
-        "name_en": "Pelmeni",
-        "name_hy": "Պելմենի",
-        "composition_en": "Meat dumplings",
-        "composition_hy": "Մսով պելմեններ"
+        "name_en": "Meat dumplings",
+        "name_hy": "Պելմենի մսով"
       },
       {
         "name": "Мини бургер с куриной грудкой и фри",
         "price": "2 100",
-        "composition": "Мини-бургер с куриной грудкой, картофель фри",
         "id": "mini-burger-with-chicken-breast-and-fries",
         "local_image": "img/menu/мини-бургер-с-куриной.jpg?v=fit800",
         "has_image": true,
         "name_en": "Mini chicken breast burger with fries",
-        "name_hy": "Մինի բուրգեր հավի կրծքով և ֆրիով",
-        "composition_en": "Mini burger with chicken breast, French fries",
-        "composition_hy": "Մինի բուրգեր հավի կրծքամսով, ֆրի կարտոֆիլ"
+        "name_hy": "Մինի բուրգեր հավի կրծքամսով և ֆրիով"
       },
       {
         "name": "Наггетсы",
         "price": "1 700",
-        "composition": "Куриные наггетсы с картофелем фри",
         "id": "naggetsy",
         "has_image": true,
         "name_en": "Chicken nuggets",
-        "name_hy": "Հավի նագետս",
-        "composition_en": "Chicken nuggets with french fries",
-        "composition_hy": "Հավի նագետս ֆրի կարտոֆիլով",
+        "name_hy": "Նագեթս",
         "local_image": "img/menu/наггетсы.jpg?v=cl1"
       },
       {
@@ -1516,7 +1430,7 @@
         "id": "kotlety-po-domashnemu-s-kartofelnym-pyure",
         "has_image": true,
         "name_en": "Homestyle cutlets with mashed potatoes",
-        "name_hy": "Տնական կոտլետներ կարտոֆիլի պյուրեով",
+        "name_hy": "Տնական կոտլետ կարտոֆիլի պյուրեով",
         "local_image": "img/menu/котлеты-по-домашнему.jpg?v=cl1"
       }
     ]
@@ -1564,110 +1478,83 @@
       {
         "name": "Кокосовый тарт",
         "price": "2 000",
-        "composition": "Кокосовый тарт",
         "id": "coconut-tart",
         "local_image": "img/menu/кокосовый-тарт.jpg?v=fit800",
         "has_image": true,
         "name_en": "Coconut tart",
-        "name_hy": "Կոկոսի տարտ",
-        "composition_en": "Coconut tart",
-        "composition_hy": "Կոկոսի տարտ"
+        "name_hy": "Կոկոսի տարտ"
       },
       {
         "name": "Шоколадный тарт",
         "price": "1 600",
-        "composition": "Шоколадный тарт",
         "id": "chocolate-pie",
         "local_image": "img/menu/шоколадный-пирог.jpg?v=fit800",
         "has_image": true,
         "name_en": "Chocolate cake",
-        "name_hy": "Շոկոլադե կարկանդակ",
-        "composition_en": "Chocolate tart",
-        "composition_hy": "Շոկոլադե տարտ"
+        "name_hy": "Շոկոլադե տարտ"
       },
       {
-        "name": "Яблочный пирог",
+        "name": "Яблочный тарт",
         "price": "2 000",
-        "composition": "Яблочный пирог",
         "id": "apple-pie",
         "local_image": "img/menu/яблочный-пирог.jpg?v=st4",
         "has_image": true,
-        "name_en": "Apple pie",
-        "name_hy": "Խնձորով կարկանդակ",
-        "composition_en": "Apple pie",
-        "composition_hy": "Խնձորով կարկանդակ"
+        "name_en": "Apple tart",
+        "name_hy": "Խնձորով տարտ"
       },
       {
         "name": "Медовик",
         "price": "2 100",
-        "composition": "Медовые коржи, сливочный крем",
         "id": "medovik",
         "local_image": "img/menu/медовик.jpg?v=cl1",
         "has_image": true,
         "name_en": "Honey cake",
-        "name_hy": "Մեղրով տորթ",
-        "composition_en": "Honey cake layers, cream filling",
-        "composition_hy": "Մեղրով խմորաշերտեր, սերուցքային կրեմ"
+        "name_hy": "Մեղրով տորթ"
       },
       {
         "name": "Шоколадный вулкан",
         "price": "1 900",
-        "composition": "Шоколадный фондан с жидким центром",
         "id": "chocolate-volcano",
         "local_image": "img/menu/шоколадный-вулкан.jpg?v=fit800",
         "has_image": true,
         "name_en": "Chocolate fondant",
-        "name_hy": "Շոկոլադե հրաբուխ",
-        "composition_en": "Chocolate fondant with molten center",
-        "composition_hy": "Շոկոլադե ֆոնդան հեղուկ միջուկով"
+        "name_hy": "Շոկոլադե հրաբուխ"
       },
       {
         "name": "Брауни",
         "price": "2 200",
-        "composition": "Шоколадный брауни",
         "id": "brownie2345678910111213141516171819",
         "local_image": "img/menu/брауни.jpg?v=fit800",
         "has_image": true,
         "name_en": "Brownie",
-        "name_hy": "Բրաունի",
-        "composition_en": "Chocolate brownie",
-        "composition_hy": "Շոկոլադե բրաունի"
+        "name_hy": "Բրաունի"
       },
       {
         "name": "Чизкейк сан-себастьян",
         "price": "2 200",
-        "composition": "Баскский чизкейк сан-себастьян",
         "id": "cheesecake-san-sebastian",
         "local_image": "img/menu/чизкейк-сан-себастьян.jpg?v=ig1",
         "has_image": true,
         "name_en": "San Sebastián cheesecake",
-        "name_hy": "Սան Սեբաստիան չիզքեյք",
-        "composition_en": "Basque San Sebastián cheesecake",
-        "composition_hy": "Բասկական Սան Սեբաստիան չիզքեյք"
+        "name_hy": "Սան Սեբաստիան չիզքեյք"
       },
       {
         "name": "Тирамису",
         "price": "2 000",
-        "composition": "Тирамису с маскарпоне и кофе",
         "id": "tiramisu234567891011121314151617",
         "local_image": "img/menu/тирамису.jpg?v=fit800",
         "has_image": true,
         "name_en": "Tiramisu",
-        "name_hy": "Տիրամիսու",
-        "composition_en": "Tiramisu with mascarpone and coffee",
-        "composition_hy": "Տիրամիսու մասկարպոնեով և սուրճով"
+        "name_hy": "Տիրամիսու"
       },
       {
         "name": "Гата армянская",
         "price": "2 000",
-        "composition": "Традиционная армянская выпечка",
         "id": "domina-dessert",
         "local_image": "img/menu/гата.jpg?v=2",
         "has_image": true,
         "name_en": "Armenian gata",
-        "name_hy": "Հայկական գաթա",
-        "composition_en": "Traditional Armenian pastry",
-        "composition_hy": "Ավանդական հայկական թխվածք"
+        "name_hy": "Հայկական գաթա"
       },
       {
         "name": "Морковное пирожное",
@@ -1675,7 +1562,7 @@
         "id": "morkovnoe-pirozhnoe",
         "has_image": true,
         "name_en": "Carrot cake",
-        "name_hy": "Գազարի կեքս",
+        "name_hy": "Գազարի տորթ",
         "local_image": "img/menu/морковное-пирожное.jpg?v=cl1"
       },
       {
@@ -1699,38 +1586,29 @@
       {
         "name": "Мороженое",
         "price": "700",
-        "composition": "На выбор: ванильное, шоколадное, клубничное",
         "id": "ice-cream234567891011",
         "local_image": "img/menu/мороженое.jpg?v=fit800",
         "has_image": true,
         "name_en": "Ice cream",
-        "name_hy": "Պաղպաղակ",
-        "composition_en": "Choice of: vanilla, chocolate, strawberry",
-        "composition_hy": "Ընտրությամբ՝ վանիլ, շոկոլադ, ելակ"
+        "name_hy": "Պաղպաղակ"
       },
       {
         "name": "Фруктовое мороженое",
         "price": "1 500",
-        "composition": "Ассорти фруктов и мороженое на выбор: ванильное, клубничное, шоколадное",
         "id": "fruit-icecream",
         "local_image": "img/menu/фруктовое-мороженое.jpg?v=fit800",
         "has_image": true,
         "name_en": "Fruit sorbet",
-        "name_hy": "Մրգային պաղպաղակ",
-        "composition_en": "Fruit assortment and ice cream of choice: vanilla, strawberry, chocolate",
-        "composition_hy": "Մրգային ասորտի և պաղպաղակ ընտրությամբ՝ վանիլ, ելակ, շոկոլադ"
+        "name_hy": "Մրգային պաղպաղակ"
       },
       {
         "name": "Фруктовый ассорти",
         "price": "3 500 / 7 500",
-        "composition": "Ассорти свежих фруктов по сезону",
         "id": "fruit-assortment-seasonal",
         "local_image": "img/menu/фруктовый-ассорти.jpg?v=fit800",
         "has_image": true,
         "name_en": "Fruit platter",
-        "name_hy": "Մրգային ասորտի",
-        "composition_en": "Seasonal fresh fruit platter",
-        "composition_hy": "Սեզոնային թարմ մրգերի տեսականի"
+        "name_hy": "Մրգային ասորտի"
       },
       {
         "name": "Арбуз и дыня",
