@@ -26,12 +26,13 @@ P = lambda *a: os.path.join(ROOT, *a)
 SITE, GEN, MENU_HTML = P("data", "menu.json"), P("generate_print_menu.py"), P("menu.html")
 CSV_ = P("data", "перевод-hy-на-проверку.csv")
 # рабочая копия на рабочем столе — её и правит носитель языка
-DESK = os.path.join(os.path.expanduser("~"), "Desktop", "Домик — армянский перевод.csv")
+DESK = os.path.join(os.path.expanduser("~"), "Desktop", "Домик — армянский перевод.xlsx")
+DESK_CSV = os.path.join(os.path.expanduser("~"), "Desktop", "Домик — армянский перевод.csv")
 
 
 def newest_csv():
     """Берём тот файл, который правили последним: в репозитории или на рабочем столе."""
-    have = [p for p in (CSV_, DESK) if os.path.exists(p)]
+    have = [p for p in (DESK, DESK_CSV, CSV_) if os.path.exists(p)]
     return max(have, key=os.path.getmtime) if have else None
 HEADER = ["Раздел", "Тип", "Ключ", "Русский", "Текущий перевод", "Исправление"]
 
@@ -102,12 +103,44 @@ def export():
             rows.append(["Печатная книга", KIND[dname], key, ru, pair[1], ""])
     rows += bar_rows()
 
-    for path in (CSV_, DESK):
-        with io.open(path, "w", encoding="utf-8-sig", newline="") as f:
-            w = csv.writer(f); w.writerow(HEADER); w.writerows(rows)
-    print(f"Таблица для вычитки: {DESK}")
+    with io.open(CSV_, "w", encoding="utf-8-sig", newline="") as f:
+        w = csv.writer(f); w.writerow(HEADER); w.writerows(rows)
+    made = write_xlsx(rows)
+    print(f"Таблица для вычитки: {made or DESK_CSV}")
     print(f"Копия в репозитории:  {CSV_}")
     print(f"Строк: {len(rows)}. Носитель правит только колонку «Исправление».")
+
+
+def write_xlsx(rows):
+    """Готовая книга Excel: шапка закреплена, колонка «Исправление» подсвечена,
+    служебный «Ключ» спрятан. Без openpyxl откатываемся на CSV."""
+    try:
+        from openpyxl import Workbook
+        from openpyxl.styles import Font, PatternFill, Alignment
+    except ImportError:
+        with io.open(DESK_CSV, "w", encoding="utf-8-sig", newline="") as f:
+            w = csv.writer(f); w.writerow(HEADER); w.writerows(rows)
+        return None
+    wb = Workbook(); ws = wb.active; ws.title = "Перевод"
+    ws.append(HEADER); ws.append([]) if False else None
+    for r in rows: ws.append(r)
+    head_fill = PatternFill("solid", fgColor="3E2C18")
+    edit_fill = PatternFill("solid", fgColor="FFF6DC")
+    for c in ws[1]:
+        c.font = Font(bold=True, color="FFFFFF"); c.fill = head_fill
+        c.alignment = Alignment(vertical="center")
+    for w, letter in zip((16, 14, 34, 42, 46, 46), "ABCDEF"):
+        ws.column_dimensions[letter].width = w
+    ws.column_dimensions["C"].hidden = True          # «Ключ» — служебный
+    wrap = Alignment(wrap_text=True, vertical="top")
+    for row in ws.iter_rows(min_row=2):
+        for c in row[3:]: c.alignment = wrap
+        row[5].fill = edit_fill                       # «Исправление»
+    ws.freeze_panes = "A2"
+    ws.auto_filter.ref = f"A1:F{ws.max_row}"
+    wb.save(DESK)
+    if os.path.exists(DESK_CSV): os.remove(DESK_CSV)  # чтобы не путались две копии
+    return DESK
 
 
 def apply():
@@ -115,7 +148,14 @@ def apply():
     if not src_csv:
         sys.exit("Таблицы нет — сначала python3 review_hy.py --export")
     print(f"Читаю правки из: {src_csv}\n")
-    rows = list(csv.DictReader(io.open(src_csv, encoding="utf-8-sig")))
+    if src_csv.endswith(".xlsx"):
+        from openpyxl import load_workbook
+        ws = load_workbook(src_csv, data_only=True).active
+        head = [str(c.value or "") for c in ws[1]]
+        rows = [dict(zip(head, [("" if c.value is None else str(c.value)) for c in r]))
+                for r in ws.iter_rows(min_row=2)]
+    else:
+        rows = list(csv.DictReader(io.open(src_csv, encoding="utf-8-sig")))
     fixes = {r["Ключ"].strip(): r["Исправление"].strip()
              for r in rows if r.get("Ключ") and (r.get("Исправление") or "").strip()}
     if not fixes:
