@@ -19,7 +19,7 @@
 и подписи книги (словари в generate_print_menu.py), разделы и подписи бара
 (атрибуты data-tr-hy в menu.html — оттуда их берут и сайт, и печатная книга).
 """
-import csv, io, json, os, re, sys
+import csv, io, json, os, re, subprocess, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 P = lambda *a: os.path.join(ROOT, *a)
@@ -139,8 +139,26 @@ def write_xlsx(rows):
     ws.freeze_panes = "A2"
     ws.auto_filter.ref = f"A1:F{ws.max_row}"
     wb.save(DESK)
+    unlock_xlsx(DESK)
     if os.path.exists(DESK_CSV): os.remove(DESK_CSV)  # чтобы не путались две копии
     return DESK
+
+
+def unlock_xlsx(path):
+    """Excel на macOS открывает файл только для чтения из-за карантина Finder,
+    а openpyxl всегда пишет пустой <workbookProtection/>. Убираем оба."""
+    import zipfile, shutil, tempfile
+    tmp = tempfile.mktemp(suffix=".xlsx")
+    with zipfile.ZipFile(path) as z, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as out:
+        for item in z.infolist():
+            data = z.read(item.filename)
+            if item.filename == "xl/workbook.xml":
+                data = re.sub(rb"<workbookProtection\s*/>", b"", data)
+            out.writestr(item, data)
+    shutil.move(tmp, path)
+    # снимаем карантин Finder — иначе Excel открывает «только для чтения»
+    subprocess.run(["xattr", "-d", "com.apple.quarantine", path],
+                   stderr=subprocess.DEVNULL, check=False)
 
 
 def apply():
