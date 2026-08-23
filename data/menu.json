@@ -839,14 +839,14 @@
     "slug": "blyuda-ot-shef-povara",
     "items": [
       {
-        "name": "Домик семейный",
+        "name": "Сет Домик",
         "price": "14 500",
         "composition": "Кебаб куриный и говяжий, фирменный шашлык, овощи",
         "id": "domik",
         "local_image": "img/menu/домик-сет.jpg?v=web1",
         "has_image": true,
-        "name_en": "Domik Family",
-        "name_hy": "Դոմիկ ընտանեկան",
+        "name_en": "Domik Set",
+        "name_hy": "Դոմիկ սեթ",
         "composition_en": "Chicken and beef kebab, signature barbecue, vegetables",
         "composition_hy": "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն"
       },
