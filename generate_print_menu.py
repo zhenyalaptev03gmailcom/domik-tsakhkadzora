@@ -63,8 +63,8 @@ BAR_PART = '''<section class="bar-part flow-keep book-break">
   <div class="bar-part__frame"></div>
   <div class="bar-part__inner">
     <div class="bar-part__diamonds" aria-hidden="true">&#9670;&nbsp;&#9670;&nbsp;&#9670;</div>
-    <h2 class="bar-part__title">Барная&nbsp;карта</h2>
-    <div class="bar-part__sub">Напитки и коктейли</div>
+    <h2 class="bar-part__title">Bar&nbsp;List</h2>
+    <div class="bar-part__sub">Drinks and cocktails</div>
   </div>
 </section>'''
 
@@ -221,8 +221,8 @@ SUPPLEMENT_DESC = {
 }
 SEC_TR = {
  "Завтрак": ("Breakfast", "Նախաճաշ"),
- "Закуски": ("Appetizers", "Նախուտեստներ"),
- "Горячие закуски": ("Hot Appetizers", "Տաք նախուտեստներ"),
+ "Закуски": ("Appetizers", "Նախուտեստ"),
+ "Горячие закуски": ("Hot Appetizers", "Տաք նախուտեստ"),
  "Салаты": ("Salads", "Աղցաններ"),
  "Суп": ("Soup", "Ապուր"),
  "Паста": ("Pasta", "Պաստա"),
@@ -230,19 +230,19 @@ SEC_TR = {
  "К пиву": ("Beer Snacks", "Գարեջրի խորտիկներ"),
  "Блюда от шеф-повара": ("Chef's Specials", "Շեֆ-խոհարարի ուտեստներ"),
  "Печь и гриль": ("Oven & Grill", "Փուռ և գրիլ"),
- "Жареная рыба и морепродукты": ("Fried Fish & Seafood", "Տապակած ձուկ և ծովամթերք"),
+ "Жареная рыба и морепродукты": ("Fried Fish & Seafood", "Գրիլ ձուկ և ծովամթերք"),
  "Армянские традиции": ("Armenian Traditions", "Ավանդական հայկական ուտեստներ"),
  "Гарниры": ("Sides", "Խավարտ"),
  "Детское меню": ("Kids' Menu", "Մանկական մենյու"),
- "Часть любви": ("Part of Love", "Աղանդերներ"),   # дословное «Սիրո մասը» по-армянски бессмысленно
- "Хлеб": ("Bread", "Հաց"),
+ "Часть любви": ("Part of Love", "Մի կտոր սեր"),   # дословное «Սիրո մասը» по-армянски бессмысленно
+ "Хлеб": ("Bread", "Հացի տեսականի"),
 }
 SUB_TR = {
  "Пицца": ("Pizza", "Պիցցա"),
  "Хачапури": ("Khachapuri", "Խաչապուրի"),
- "Бургеры и сэндвичи": ("Burgers & Sandwiches", "Բուրգերներ և սենդվիչներ"),
+ "Бургеры и сэндвичи": ("Burgers & Sandwiches", "Բուրգեր և սենդվիչ"),
  "На углях": ("Charcoal-Grilled", "Ածուխի վրա"),
- "Из кухни": ("From the Kitchen", "Խոհանոցից"),
+ "Из кухни": ("From the Kitchen", "Հիմնական ուտեստներ"),
  "Горячий кофе": ("Hot Coffee", "Տաք սուրճ"),
  "Холодный кофе": ("Cold Coffee", "Սառը սուրճ"),
 }
@@ -335,23 +335,22 @@ def T_desc(nm, desc):
     key = 'composition_en' if LANG == 'en' else 'composition_hy'
     if it and it.get(key): return it[key]
     if nm.strip() in SUPPLEMENT_DESC: return _pick(SUPPLEMENT_DESC[nm.strip()])
-    return desc
+    return ""   # перевода нет — строку не печатаем; русский текст в чужой книге хуже пустоты
+# Барная карта во ВСЕХ трёх книгах — только по-английски: там почти одни бренды,
+# и ресторан просил не переводить её ни на русский, ни на армянский.
 def T_bar_sec(ru):
-    if LANG == 'ru': return ru
-    if ru in BAR_SEC_TR: return _pick(BAR_SEC_TR[ru])
-    return T_sec(ru)
+    if ru in BAR_SEC_TR: return BAR_SEC_TR[ru][0]
+    return SEC_TR[ru][0] if ru in SEC_TR else ru
 def T_bar_name(ru):
-    if LANG == 'ru': return ru
-    if ru in BAR_NAME_TR: return _pick(BAR_NAME_TR[ru])
-    return T_name(ru)
+    if ru in BAR_NAME_TR: return BAR_NAME_TR[ru][0]
+    return SUPPLEMENT_NAME[ru][0] if ru in SUPPLEMENT_NAME else ru
 def T_bar_vol(ru):
-    if LANG == 'ru' or not ru: return ru
-    if ru in BAR_VOL_TR: return _pick(BAR_VOL_TR[ru])
-    if LANG == 'en': return ru.replace("мл","ml").replace("л","l").replace("фреш","fresh")
-    return ru.replace("мл","մլ").replace("л","լ").replace("фреш","թարմ հյութ")
+    if not ru: return ru
+    if ru in BAR_VOL_TR: return BAR_VOL_TR[ru][0]
+    return ru.replace("мл", "ml").replace("л", "l").replace("фреш", "fresh")
 def T_bar_note(ru):
-    if LANG == 'ru' or not ru: return ru
-    return _pick(BAR_NOTE_TR[ru]) if ru in BAR_NOTE_TR else ru
+    if not ru: return ru
+    return BAR_NOTE_TR[ru][0] if ru in BAR_NOTE_TR else ru
 
 # before — раздел, ПЕРЕД которым вставляется разворот (открывает главу).
 # bg — полностраничный атмосферный фон (img/print/catalog-N.jpg).
@@ -400,10 +399,10 @@ FAREWELL = {
 BAR_SPREAD = {
     "bg": "img/print/catalog-bar.jpg",
     "kicker": "DoMik",
-    "title": "Барная карта",
-    "subtitle": "Вино · Коктейли · Кофе · Чай",
+    "title": "Bar List",
+    "subtitle": "Wine · Cocktails · Coffee · Tea",
     "dishes": [],
-    "note": "Напитки и авторские коктейли",
+    "note": "Drinks and signature cocktails",
 }
 
 def render_catalog(cat):
