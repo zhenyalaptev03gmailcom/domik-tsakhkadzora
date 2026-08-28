@@ -93,11 +93,14 @@ def export():
                 rows.append([sec, "блюдо", "name:" + it["name"], it["name"], it["name_hy"], ""])
             if it.get("composition") and it.get("composition_hy"):
                 rows.append([sec, "состав", "comp:" + it["name"], it["composition"], it["composition_hy"], ""])
+    # разделы и подразделы уже выгружены из menu.json — второй раз не показываем,
+    # иначе одну и ту же фразу правят в двух строках и получаются разные варианты
+    done = {r[3] for r in rows if r[1] in ("раздел", "подраздел")}
     seen = set()
     for dname, d in gen_dicts().items():
         for ru, pair in d.items():
             key = f"{dname}:{ru}"
-            if key in seen:
+            if key in seen or (dname in ("SEC_TR", "SUB_TR") and ru in done):
                 continue
             seen.add(key)
             rows.append(["Печатная книга", KIND[dname], key, ru, pair[1], ""])
