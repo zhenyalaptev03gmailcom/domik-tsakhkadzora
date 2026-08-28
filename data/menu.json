@@ -141,6 +141,24 @@
         "name_hy": "Հայկական պանրի տեսականի"
       },
       {
+        "name": "Домашние соленья",
+        "price": "2 200",
+        "id": "pickling",
+        "local_image": "img/menu/соления.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Pickles",
+        "name_hy": "Տնական թթվի տեսականի"
+      },
+      {
+        "name": "Армянская зелень",
+        "price": "1 800",
+        "id": "armenian-greens234",
+        "local_image": "img/menu/армянская-зелень.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Armenian greens",
+        "name_hy": "Հայկական կանաչի"
+      },
+      {
         "name": "Фирменная бурата",
         "price": "3 800",
         "composition": "Фокачча, помидор, буррата, микс зелени",
@@ -169,24 +187,6 @@
         "name_en": "Tuna bruschetta",
         "name_hy": "Բրուսկետա թունայով",
         "local_image": "img/menu/брускетта-с-тунцом.jpg?v=cl1"
-      },
-      {
-        "name": "Армянская зелень",
-        "price": "1 800",
-        "id": "armenian-greens234",
-        "local_image": "img/menu/армянская-зелень.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Armenian greens",
-        "name_hy": "Հայկական կանաչի"
-      },
-      {
-        "name": "Домашние соленья",
-        "price": "2 200",
-        "id": "pickling",
-        "local_image": "img/menu/соления.jpg?v=fit800",
-        "has_image": true,
-        "name_en": "Pickles",
-        "name_hy": "Տնական թթվի տեսականի"
       },
       {
         "name": "Хумус",
@@ -605,18 +605,6 @@
         "composition_hy": "Պաստա, չորս տեսակի պանիր, սերուցքային սոուս"
       },
       {
-        "name": "Куриное равиоли в белом соусе",
-        "price": "2 700",
-        "composition": "Классический рецепт: равиоли с курицей и пармезаном в сливочном соусе",
-        "id": "kurinoe-ravioli-v-belom-souse",
-        "has_image": true,
-        "name_en": "Chicken ravioli in white sauce",
-        "name_hy": "Հավի ռավիոլի սպիտակ սոուսով",
-        "composition_en": "Classic recipe: ravioli with chicken and parmesan in cream sauce",
-        "composition_hy": "պարմեզան,սերուցքային սոուս",
-        "local_image": "img/menu/куриное-равиоли.jpg?v=cl1"
-      },
-      {
         "name": "Паста карбонара",
         "price": "3 600",
         "composition": "Паста, панчетта, сливки, яйцо, пармезан, чёрный перец",
@@ -651,6 +639,30 @@
         "name_hy": "Պաստա ծովամթերքով",
         "composition_en": "Pasta, seafood, sauce",
         "composition_hy": "ծովամթերք,պանրային սոուս"
+      },
+      {
+        "name": "Куриное равиоли в белом соусе",
+        "price": "2 700",
+        "composition": "Классический рецепт: равиоли с курицей и пармезаном в сливочном соусе",
+        "id": "kurinoe-ravioli-v-belom-souse",
+        "has_image": true,
+        "name_en": "Chicken ravioli in white sauce",
+        "name_hy": "Հավի ռավիոլի սպիտակ սոուսով",
+        "composition_en": "Classic recipe: ravioli with chicken and parmesan in cream sauce",
+        "composition_hy": "պարմեզան,սերուցքային սոուս",
+        "local_image": "img/menu/куриное-равиоли.jpg?v=cl1"
+      },
+      {
+        "name": "Паста ризотто",
+        "price": "2 500",
+        "composition": "Рис, сливочный соус, пармезан",
+        "id": "risotto-pasta",
+        "local_image": "img/menu/паста-ризотто.jpg?v=fit800",
+        "has_image": true,
+        "name_en": "Risotto pasta",
+        "name_hy": "Պաստա ռիզոտո",
+        "composition_en": "Rice, cream sauce, parmesan",
+        "composition_hy": "Բրինձ, սերուցքային սոուս, պարմեզան"
       }
     ],
     "note": "На выбор вид пасты: феттучини, спагетти, пенне"
@@ -839,77 +851,77 @@
       {
         "name": "Сет Домик",
         "price": "14 500",
-        "composition": "Кебаб куриный и говяжий, фирменный шашлык, овощи",
+        "composition": "Кебаб куриный и говяжий, фирменный шашлык, овощи · 3–4 человека",
         "id": "domik",
         "local_image": "img/menu/домик-сет.jpg?v=web1",
         "has_image": true,
         "name_en": "Domik Set",
         "name_hy": "Դոմիկ սեթ",
-        "composition_en": "Chicken and beef kebab, signature barbecue, vegetables",
+        "composition_en": "Chicken and beef kebab, signature barbecue, vegetables · 3–4 people",
         "composition_hy": "Հավի և տավարի քյաբաբ, ֆիրմային խորոված, բանջարեղեն 3-4 անձի համար"
       },
       {
         "name": "Семейный домик",
         "price": "28 500",
-        "composition": "Большое ассорти шашлыков на углях, овощи",
+        "composition": "Большое ассорти шашлыков на углях, овощи · 4–6 человек",
         "id": "assortment-of-barbecue",
         "local_image": "img/menu/ассорти-шашлыков.jpg?v=fit800",
         "has_image": true,
         "name_en": "Mixed grill skewers",
         "name_hy": "Խորովածի սեթ",
-        "composition_en": "Large charcoal barbecue platter with vegetables",
+        "composition_en": "Large charcoal barbecue platter with vegetables · 4–6 people",
         "composition_hy": "Խոզ, հորթ, գառ, հավի ֆիլե, գրիլ բանջարեղեն 4-6 անձի համար"
       },
       {
         "name": "Фламинго",
         "price": "14 000",
-        "composition": "Цыплёнок, куриное филе, индейка, куриные крылышки, овощи",
+        "composition": "Цыплёнок, куриное филе, индейка, куриные крылышки, овощи · 3–4 человека",
         "id": "flamingo2",
         "local_image": "img/menu/фламинго.jpg?v=st2",
         "has_image": true,
         "name_en": "Flamingo",
         "name_hy": "Ֆլամինգո",
-        "composition_en": "Chicken, chicken fillet, turkey, chicken wings, vegetables",
+        "composition_en": "Chicken, chicken fillet, turkey, chicken wings, vegetables · 3–4 people",
         "composition_hy": "Ճուտ, հավի ֆիլե, հնդկահավ, հավի թևիկներ, բանջարեղեն 3-4 անձի համար"
       },
       {
         "name": "Немецкий сет",
         "price": "24 000",
-        "composition": "Ассорти сосисок, сырные шарики, чесночный хлеб, овощи",
+        "composition": "Ассорти сосисок, сырные шарики, чесночный хлеб, овощи · 3–5 человек",
         "id": "german-set",
         "local_image": "img/menu/немецкий-сет.jpg?v=ctr1",
         "has_image": true,
         "name_en": "German set",
         "name_hy": "Գերմանական սեթ",
-        "composition_en": "Assorted sausages, cheese balls, garlic bread, vegetables",
+        "composition_en": "Assorted sausages, cheese balls, garlic bread, vegetables · 3–5 people",
         "composition_hy": "Նրբերշիկների տեսականի, պանրի գնդիկներ, սխտորով հաց, բանջարեղեն 3-5 անձի համար"
       },
       {
         "name": "Медуза",
         "price": "27 500",
-        "composition": "Форель, морепродукты, мидии, кальмар",
+        "composition": "Форель, морепродукты, мидии, кальмар · 3–5 человек",
         "id": "jellyfish",
         "local_image": "img/menu/медуза.jpg?v=ctr1",
         "has_image": true,
         "name_en": "Jellyfish salad",
         "name_hy": "Մեդուզա սեթ",
-        "composition_en": "Trout, seafood, mussels, squid",
+        "composition_en": "Trout, seafood, mussels, squid · 3–5 people",
         "composition_hy": "Իշխան, ծովամթերք, միդիա, կաղամար 3-5 անձի համար"
       },
       {
         "name": "Викинг бараний",
         "price": "9 500",
-        "composition": "Нога баранины, аришта · 3–4 человека",
+        "composition": "Нога баранины, аришта · 2–3 человека",
         "id": "viking-baraniy",
         "has_image": true,
         "name_en": "Lamb Viking (leg)",
         "name_hy": "Գառան «Վիկինգ»",
-        "composition_en": "Lamb leg, arishta noodles · serves 3–4",
+        "composition_en": "Lamb leg, arishta noodles · 2–3 people",
         "composition_hy": "Գառան բուդ 2-3 անձի համար",
         "local_image": "img/menu/викинг-бараний.jpg?v=cl1"
       }
     ],
-    "note": "На углях · На 3–5 человек"
+    "note": "На углях"
   },
   {
     "id": "2144",
@@ -1236,7 +1248,7 @@
         "has_image": true,
         "local_image": "img/menu/рагу-из-баранины.jpg?v=hb1",
         "name_en": "Khashlama Domik",
-        "name_hy": "Գառան խաշլամա",
+        "name_hy": "Գառան խաշլամա Դոմիկ",
         "composition_en": "Braised lamb with vegetables"
       },
       {
