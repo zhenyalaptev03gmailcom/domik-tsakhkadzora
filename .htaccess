@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────
+#  domiktsakhadzor.am — настройки Apache (хостинг internet.am)
+#  Каждый блок в <IfModule>: если модуля нет, строки пропускаются,
+#  а не роняют сайт с ошибкой 500.
+# ─────────────────────────────────────────────────────────────
+
+AddDefaultCharset UTF-8
+
+# Своя страница «не найдено» вместо стандартной страницы Apache
+ErrorDocument 404 /404.html
+
+# Один адрес сайта: https и без www — иначе поисковики видят 4 копии
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://domiktsakhadzor.am%{REQUEST_URI} [L,R=301]
+
+  # /index.html → / (главная доступна по одному адресу)
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ / [L,R=301]
+</IfModule>
+
+# Типы файлов
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+  AddType application/json .json
+  AddType video/mp4 .mp4
+</IfModule>
+
+# Сжатие текста: страница меню 272 КБ → ~40 КБ
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/json application/javascript text/javascript image/svg+xml
+</IfModule>
+
+# Кеширование. Стили, скрипты и фото подключаются с ?v=… — при изменении
+# меняется адрес, поэтому их можно хранить долго. HTML и данные — коротко,
+# чтобы правки меню были видны сразу.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                          "access plus 1 hour"
+  ExpiresByType text/html                 "access plus 0 seconds"
+  ExpiresByType application/json          "access plus 5 minutes"
+  ExpiresByType application/xml           "access plus 1 hour"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType text/javascript           "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 month"
+  ExpiresByType video/mp4                 "access plus 1 month"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|json)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Служебные файлы не отдаём
+<IfModule mod_authz_core.c>
+  <FilesMatch "\.(py|md|csv|bak|staged|zip|sh|yml)$">
+    Require all denied
+  </FilesMatch>
+  <FilesMatch "^\.(ht|git)">
+    Require all denied
+  </FilesMatch>
+</IfModule>

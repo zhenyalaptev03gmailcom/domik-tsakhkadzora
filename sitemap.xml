@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/menu.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/gallery.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/events.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/reviews.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/contacts.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://domiktsakhadzor.am/</loc><lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://domiktsakhadzor.am/menu.html</loc><lastmod>2026-09-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://domiktsakhadzor.am/contacts.html</loc><lastmod>2026-07-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://domiktsakhadzor.am/events.html</loc><lastmod>2026-07-23</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://domiktsakhadzor.am/gallery.html</loc><lastmod>2026-07-23</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://domiktsakhadzor.am/reviews.html</loc><lastmod>2026-07-23</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
 </urlset>

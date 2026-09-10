@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zhenyalaptev03gmailcom.github.io/domik-tsakhkadzora/sitemap.xml
+Sitemap: https://domiktsakhadzor.am/sitemap.xml
