@@ -166,6 +166,14 @@ dh2 = re.sub(r'(<script id="domik-menu-bundle" type="application/json">).*?(</sc
              dh, count=1, flags=re.DOTALL)
 open(P("dish.html"), "w", encoding="utf-8", newline="").write(dh2)
 
+# тот же список встроен в menu.html — его читает всплывающее окно блюда (menu-dish-modal.js);
+# без обновления окно показывало устаревшие позиции, цены и старые пути к фото
+mh = open(P("menu.html"), "r", encoding="utf-8", newline="").read()
+mh3 = re.sub(r'(<script id="domik-menu-bundle" type="application/json">).*?(</script>)',
+             lambda m: m.group(1) + json.dumps(bundle, ensure_ascii=False) + m.group(2),
+             mh, count=1, flags=re.DOTALL)
+open(P("menu.html"), "w", encoding="utf-8", newline="").write(mh3)
+
 ncards = sum(1 for c in MENU for it in c["items"] if "sub" not in it)
 nnoimg = sum(1 for c in MENU for it in c["items"] if "sub" not in it and not it.get("local_image"))
 print(f"menu.html: {len(MENU)} разделов, {ncards} карточек ({nnoimg} без фото); бандл обновлён, историй {len(bundle['stories'])}")
